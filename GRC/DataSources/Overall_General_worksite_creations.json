@@ -1,0 +1,103 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr64e_overal_genera_worksite_creations",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr64e_overal_genera_worksite_creation",
+    "Name": "Overall_General_worksite_creations",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr64e_location": "Location",
+      "cr64e_overal_genera_worksite_creation_AsyncOperations": "System Jobs",
+      "cr64e_overal_genera_worksite_creation_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr64e_overal_genera_worksite_creation_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr64e_overal_genera_worksite_creation_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr64e_overal_genera_worksite_creation_ProcessSession": "Process Sessions",
+      "cr64e_overal_genera_worksite_creation_SyncErrors": "Sync Errors",
+      "cr64e_overal_genera_worksite_creationid": "Overal_Genera_worksite_creation",
+      "cr64e_plantname": "Plant name",
+      "cr64e_quantity": "Quantity ",
+      "cr64e_startdate": "Start date ",
+      "cr64e_volunteercontact": "Volunteer contact",
+      "cr64e_volunteerdate": "Volunter date",
+      "cr64e_volunteername": "Volunteer Name ",
+      "cr64e_workerdate": "Worker date ",
+      "cr64e_workername": "Worker Name ",
+      "cr64e_worksitename": "Worksite Name ",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Overall_General_worksite_creations",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Overall_General_worksite_creations (Views)",
+    "Name": "_cr64e_overal_genera_worksite_creation_views",
+    "RelatedEntityName": "Overall_General_worksite_creations",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1117e5ef-b0a4-4ea9-a597-624b3bab3865": "Active Overall_General_worksite_creations",
+      "1dfc3a23-5644-4282-bf2c-ef16c1df17ff": "Overal_Genera_worksite_creation Advanced Find View",
+      "9ed3d7c2-f56e-4641-89d3-97e8d4420ff3": "Overal_Genera_worksite_creation Associated View",
+      "c6ae2d37-3361-4426-be47-44db0767b102": "Overal_Genera_worksite_creation Lookup View",
+      "f712c7d3-7364-46e4-bf18-ba83acfa50d0": "Inactive Overall_General_worksite_creations"
+    }
+  },
+  {
+    "DisplayName": "Status (Overall_General_worksite_creations)",
+    "Name": "cr64e_overal_genera_worksite_creation_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Overall_General_worksite_creations"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Overall_General_worksite_creations",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Overall_General_worksite_creations)",
+    "Name": "cr64e_overal_genera_worksite_creation_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Overall_General_worksite_creations"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Overall_General_worksite_creations",
+    "Type": "OptionSetInfo"
+  }
+]
