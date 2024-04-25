@@ -327,19 +327,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Make Site'.Icon1_3.AccessibleLabel"
+                  "fullyQualifiedName": "UploadRecording.Icon1_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Make Site'.Icon1_3.AccessibleLabel",
+                  "fullyQualifiedName": "UploadRecording.Icon1_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Make Site",
-                "type": "'Make Site'.Icon1_3"
+                "module": "UploadRecording",
+                "type": "UploadRecording.Icon1_1"
               }
             }
           ],
@@ -357,19 +357,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Make Site'.Icon1_3.TabIndex"
+                  "fullyQualifiedName": "UploadRecording.Icon1_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Make Site'.Icon1_3.TabIndex",
+                  "fullyQualifiedName": "UploadRecording.Icon1_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Make Site",
-                "type": "'Make Site'.Icon1_3"
+                "module": "UploadRecording",
+                "type": "UploadRecording.Icon1_1"
               }
             }
           ],
@@ -387,19 +387,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Make Site'.Container3_1.AddMediaButton2_1.AccessibleLabel"
+                  "fullyQualifiedName": "UploadRecording.Container3.AddMediaButton2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Make Site'.Container3_1.AddMediaButton2_1.AccessibleLabel",
+                  "fullyQualifiedName": "UploadRecording.Container3.AddMediaButton2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Make Site",
-                "type": "'Make Site'.Container3_1.AddMediaButton2_1"
+                "module": "UploadRecording",
+                "type": "UploadRecording.Container3.AddMediaButton2"
               }
             }
           ],
@@ -417,19 +417,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Make Site'.Container3_1.TextInput1_1.AccessibleLabel"
+                  "fullyQualifiedName": "UploadRecording.Container3.TextInput1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Make Site'.Container3_1.TextInput1_1.AccessibleLabel",
+                  "fullyQualifiedName": "UploadRecording.Container3.TextInput1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Make Site",
-                "type": "'Make Site'.Container3_1.TextInput1_1"
+                "module": "UploadRecording",
+                "type": "UploadRecording.Container3.TextInput1"
               }
             }
           ],
@@ -621,6 +621,126 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Make Site'.Icon1_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Make Site'.Icon1_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Make Site",
+                "type": "'Make Site'.Icon1_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Make Site'.Icon1_3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Make Site'.Icon1_3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Make Site",
+                "type": "'Make Site'.Icon1_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Make Site'.Container3_1.AddMediaButton2_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Make Site'.Container3_1.AddMediaButton2_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Make Site",
+                "type": "'Make Site'.Container3_1.AddMediaButton2_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Make Site'.Container3_1.TextInput1_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Make Site'.Container3_1.TextInput1_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Make Site",
+                "type": "'Make Site'.Container3_1.TextInput1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -920,126 +1040,6 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "UploadRecording.Icon1_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "UploadRecording.Icon1_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "UploadRecording",
-                "type": "UploadRecording.Icon1_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "UploadRecording.Icon1_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "UploadRecording.Icon1_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "UploadRecording",
-                "type": "UploadRecording.Icon1_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "UploadRecording.Container3.AddMediaButton2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "UploadRecording.Container3.AddMediaButton2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "UploadRecording",
-                "type": "UploadRecording.Container3.AddMediaButton2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "UploadRecording.Container3.TextInput1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "UploadRecording.Container3.TextInput1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "UploadRecording",
-                "type": "UploadRecording.Container3.TextInput1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 3
         }
       ],
       "tool": {
