@@ -1,0 +1,621 @@
+"'Sites Screen' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+
+    RectQuickActionBar1_1 As rectangle:
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName1_1 As label:
+        Align: =Align.Center
+        Fill: =RGBA(187, 221, 140, 1)
+        Height: =88
+        Size: =27
+        Text: ="Green River Coalition"
+        Width: =Parent.Width
+        ZIndex: =2
+
+    Canvas1_1 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =RectQuickActionBar1_1.Y + RectQuickActionBar1_1.Height
+        ZIndex: =3
+
+        DataCard1_1 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =800
+            Visible: =true
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Rectangle2_1 As rectangle:
+                BorderColor: =RGBA(128, 128, 128, 1)
+                BorderThickness: =2
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =700
+                Width: =594
+                X: =20
+                Y: =125
+                ZIndex: =1
+
+            Label1_1 As label:
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Site: "& SelectedSite
+                Width: =334
+                X: =20
+                Y: =33
+                ZIndex: =5
+
+            Rectangle4_1 As rectangle:
+                Fill: =RGBA(128, 128, 128, 1)
+                Height: =6
+                Width: =380
+                X: =20
+                Y: =103
+                ZIndex: =6
+
+            Container1 As groupContainer.manualLayoutContainer:
+                Height: =700
+                Visible: =false
+                Width: =594
+                X: =20
+                Y: =125
+                ZIndex: =7
+
+                "Gallery2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+                    BorderColor: =RGBA(149, 149, 149, 1)
+                    BorderThickness: =2
+                    DelayItemLoading: =true
+                    Height: =619
+                    Items: =SiteAssociateds
+                    Layout: =Layout.Vertical
+                    LoadingSpinner: =LoadingSpinner.Data
+                    ShowNavigation: =true
+                    TemplatePadding: =0
+                    TemplateSize: =291
+                    Width: =594
+                    Y: =125
+                    ZIndex: =3
+
+                    Rectangle5_1 As rectangle:
+                        Height: =291
+                        Width: =594
+                        ZIndex: =1
+
+                    Image1 As image:
+                        Height: =72
+                        OnSelect: =Select(Parent)
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Width: =72
+                        X: =16
+                        Y: =40 
+                        ZIndex: =2
+
+                    Title1 As label:
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Text: =ThisItem.'Date and Time'
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Parent.TemplateWidth - 173
+                        X: =103
+                        Y: =11
+                        ZIndex: =3
+
+                    Subtitle1 As label:
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =Parent.Height
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Text: =ThisItem.SiteUpdateText
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Title1.Width
+                        X: =Title1.X
+                        Y: =Title1.Y + Title1.Height
+                        ZIndex: =4
+
+                    Separator1 As rectangle:
+                        Height: =8
+                        OnSelect: =Select(Parent)
+                        Width: =Parent.TemplateWidth
+                        Y: =Parent.TemplateHeight - Self.Height
+                        ZIndex: =5
+
+                    Rectangle1 As rectangle:
+                        Height: =Subtitle1.Height
+                        OnSelect: =Select(Parent)
+                        Visible: =ThisItem.IsSelected
+                        Width: =4
+                        Y: =
+                        ZIndex: =6
+
+            Container1_1 As groupContainer.manualLayoutContainer:
+                ContentLanguage: =
+                Height: =759
+                Width: =594
+                X: =20
+                Y: =48
+                ZIndex: =8
+
+                Rectangle5 As rectangle:
+                    BorderColor: =RGBA(204, 231, 246, 1)
+                    BorderThickness: =3
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =140
+                    Width: =239
+                    X: =15
+                    Y: =511
+                    ZIndex: =1
+
+                Image8 As image:
+                    Height: =189
+                    Image: |
+                        =If(
+                            IsBlank(LookUp(Sites, 'Site name' = SelectedSite).SiteMainImage),
+                            '93492771',
+                            LookUp(Sites, 'Site name' = SelectedSite).SiteMainImage
+                        )
+                    Width: =594
+                    Y: =145
+                    ZIndex: =3
+
+                Button3 As button:
+                    Size: =12
+                    Text: ="Edit"
+                    Width: =70
+                    X: =500
+                    Y: =20
+                    ZIndex: =4
+
+                Label2 As label:
+                    Height: =70
+                    Size: =18
+                    Text: |-
+                        ="Plants needed:"
+                    Width: =218
+                    X: =19
+                    Y: =511
+                    ZIndex: =5
+
+                Label2_1 As label:
+                    Height: =70
+                    Size: =18
+                    Text: |-
+                        ="Plants planted:"
+                    Width: =218
+                    X: =19
+                    Y: =581
+                    ZIndex: =6
+
+                Label5 As label:
+                    Color: =RGBA(203, 102, 102, 1)
+                    Height: =70
+                    Size: =21
+                    Text: ="150"
+                    Width: =88
+                    X: =190
+                    Y: =511
+                    ZIndex: =7
+
+                Label5_1 As label:
+                    Color: =RGBA(127, 178, 57, 1)
+                    Height: =70
+                    Size: =21
+                    Text: ="20"
+                    Width: =88
+                    X: =190
+                    Y: =581
+                    ZIndex: =8
+
+                Button5 As button:
+                    Fill: =RGBA(187, 221, 140, 1)
+                    Height: =61
+                    OnSelect: =Navigate(ImageView, ScreenTransition.Cover)
+                    Size: =24
+                    Text: ="Pictures"
+                    Width: =155
+                    X: =35
+                    Y: =417
+                    ZIndex: =9
+
+                Button5_1 As button:
+                    Fill: =RGBA(187, 221, 140, 1)
+                    Height: =59
+                    Size: =24
+                    Text: ="Plant Map"
+                    Width: =178
+                    X: =392
+                    Y: =417
+                    ZIndex: =10
+
+                Button5_2 As button:
+                    Fill: =RGBA(187, 221, 140, 1)
+                    Height: =52
+                    Size: =24
+                    Text: ="Update"
+                    Width: =127
+                    X: =71
+                    Y: =671
+                    ZIndex: =11
+
+                Label6 As label:
+                    Color: =RGBA(99, 139, 44, 1)
+                    Fill: =RGBA(232, 244, 217, 1)
+                    Height: =42
+                    Size: =14
+                    Text: |-
+                        ="Status: Active"
+                    Width: =143
+                    X: =225
+                    Y: =92
+                    ZIndex: =12
+
+                Label6_1 As label:
+                    Color: =RGBA(99, 139, 44, 1)
+                    Fill: =RGBA(232, 244, 217, 1)
+                    Height: =42
+                    Size: =12
+                    Text: |-
+                        ="Land Owner: " & LookUp(Sites, 'Site name' = SelectedSite).LandOwner
+                    Width: =175
+                    X: =407
+                    Y: =92
+                    ZIndex: =13
+
+                Label6_2 As label:
+                    Color: =RGBA(99, 139, 44, 1)
+                    Fill: =RGBA(232, 244, 217, 1)
+                    Height: =42
+                    Size: =12
+                    Text: |-
+                        ="Location: " & LookUp(Sites, 'Site name' = SelectedSite).SiteLocation
+                    Width: =175
+                    X: =15
+                    Y: =92
+                    ZIndex: =14
+
+                Label6_3 As label:
+                    Color: =RGBA(99, 139, 44, 1)
+                    Fill: =RGBA(232, 244, 217, 1)
+                    Height: =42
+                    Size: =12
+                    Text: |-
+                        ="Dig Date: "& Text(LookUp(Sites, 'Site name' = SelectedSite).'Created On', "mm/dd/yyyy")
+                    Width: =175
+                    X: =15
+                    Y: =342
+                    ZIndex: =15
+
+                Label6_4 As label:
+                    Color: =RGBA(99, 139, 44, 1)
+                    Fill: =RGBA(232, 244, 217, 1)
+                    Height: =42
+                    Size: =12
+                    Text: |-
+                        ="Last work date: " & Text(
+                            Last(
+                                Sort(
+                                    Filter(SiteAssociateds, 'Site Name' = SelectedSite), 
+                                    'Created On',SortOrder.Ascending
+                        
+                                )
+                            ).'Created On', 
+                            "mm/dd/yyyy"
+                        )
+                        
+                        //This gets the latest work date
+                    Width: =175
+                    X: =395
+                    Y: =342
+                    ZIndex: =16
+
+                Image4 As image:
+                    Height: =228
+                    Image: =ECOregionsWEB
+                    Width: =252
+                    X: =330
+                    Y: =478
+                    ZIndex: =17
+
+                Button5_3 As button:
+                    Fill: =RGBA(187, 221, 140, 1)
+                    Height: =59
+                    Text: ="Important Files"
+                    Width: =127
+                    X: =239
+                    Y: =417
+                    ZIndex: =18
+
+        DataCard3 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =541
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =3
+
+            "Gallery5_1 As gallery.'BrowseLayout_Flexible_NewsFeed_ver5.0'":
+                DelayItemLoading: =true
+                Fill: =RGBA(232, 244, 217, 1)
+                Height: =393
+                Items: =Sort(Filter(SiteAssociateds,'Site Name' = SelectedSite),'Created On', SortOrder.Descending)
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplatePadding: =0
+                TemplateSize: =393
+                Width: =594
+                X: =19
+                Y: =87
+                ZIndex: =1
+
+                Title7_1 As label:
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =Self.Size * 1.8
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =ThisItem.'Created On'
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Parent.TemplateWidth - Image7_1.Width - 80
+                    X: =32
+                    Y: =32
+                    ZIndex: =1
+
+                Body5_1 As label:
+                    AutoHeight: =true
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =Self.Size * 4
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =ThisItem.SiteUpdateText
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Title7_1.Width
+                    X: =32
+                    Y: =Title7_1.Y + Title7_1.Height + 8
+                    ZIndex: =2
+
+                Image7_1 As image:
+                    Height: =160
+                    Image: =ThisItem.Image
+                    OnSelect: =Select(Parent)
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
+                    Width: =160
+                    X: =Parent.TemplateWidth - Self.Width - 32
+                    Y: =Title7_1.Y
+                    ZIndex: =3
+
+                Separator5_1 As rectangle:
+                    Height: =1
+                    OnSelect: =Select(Parent)
+                    Width: =Parent.TemplateWidth
+                    Y: =Max(Parent.TemplateHeight - 1, Body5_1.Y + Body5_1.Height + 10)
+                    ZIndex: =4
+
+                UploadedImage1 As image:
+                    Height: =AddMediaButton1.Height
+                    Image: =
+                    ImagePosition: =ImagePosition.Fill
+                    OnSelect: =Select(Parent)
+                    Width: =AddMediaButton1.Width
+                    X: =
+                    Y: =AddMediaButton1.Y
+                    ZIndex: =6
+
+            Label3 As label:
+                Height: =47
+                Size: =21
+                Text: ="Site Recordings"
+                Width: =560
+                X: =40
+                Y: =40
+                ZIndex: =2
+
+            Button2 As button:
+                Fill: =RGBA(127, 178, 57, 1)
+                Height: =45
+                OnSelect: |+
+                    =Navigate(UploadRecording, ScreenTransition.Cover, {SelectedSite: SelectedSite})
+                    
+                    
+                    
+                Size: =14
+                Text: ="Add Recording"
+                Width: =172
+                X: =410
+                Y: =25
+                ZIndex: =3
+
+        DataCard4 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(187, 221, 140, 1)
+            Height: =100
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =4
+
+            DataTable1 As dataTable.datatable:
+                BorderStyle: =BorderStyle.Solid
+                DisplayMode: =DisplayMode.Edit
+                Fill: =RGBA(0, 0, 0, 0)
+                HeadingSize: =21
+                Height: =500
+                Items: =SiteAssociateds
+                Size: =21
+                Width: =640
+                X: =0
+                Y: =53
+                ZIndex: =1
+
+                "'Site Name_Column1' As dataTableColumn.textualColumn":
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Site Name"
+                    FieldName: ="cr64e_siteid"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =1
+                    Text: =ThisItem.'Site Name'
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =19
+
+                "'Text Update_Column1' As dataTableColumn.textualColumn":
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Text Update"
+                    FieldName: ="cr64e_textupdate"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =2
+                    Text: =ThisItem.'Text Update'
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =20
+
+                "'Date and Time_Column1' As dataTableColumn.dateTimeColumn":
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Date and Time"
+                    FieldName: ="cr64e_dateandtime"
+                    FieldVariantName: ="dateTimeColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =3
+                    Text: =Text(ThisItem.'Date and Time',DateTimeFormat.LongDateTime)
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =21
+
+                SiteUpdateText_Column1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="SiteUpdateText"
+                    FieldName: ="cr64e_siteupdatetext"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =4
+                    Text: =ThisItem.SiteUpdateText
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =22
+
+                cr64e_UploadedImageId_Column1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="cr64e_UploadedImageId"
+                    FieldName: ="cr64e_uploadedimageid"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =5
+                    Text: =ThisItem.cr64e_UploadedImageId
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =23
+
+                UploadedImage_Column1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="UploadedImage"
+                    FieldName: ="cr64e_uploadedimage"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =8
+                    Text: =ThisItem.UploadedImage
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =24
+
+                cr64e_ImageId_Column1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="cr64e_ImageId"
+                    FieldName: ="cr64e_imageid"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =9
+                    Text: =ThisItem.cr64e_ImageId
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =25
+
+                Image_Column1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Image"
+                    FieldName: ="cr64e_image"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =12
+                    Text: =ThisItem.Image
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =26
+
+                ImageName_Column1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="ImageName"
+                    FieldName: ="cr64e_imagename"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =13
+                    Text: =ThisItem.ImageName
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =27
+
+    Circle1_1 As circle:
+        Fill: =RGBA(127, 178, 57, 1)
+        Height: =70
+        Width: =72
+        X: =552
+        Y: =9
+        ZIndex: =4
+
+    Icon1_2 As icon.ArrowLeft:
+        Icon: =Icon.ArrowLeft
+        OnSelect: =Navigate('Main Dashboard', ScreenTransition.Cover)
+        X: =20
+        Y: =15
+        ZIndex: =5
+

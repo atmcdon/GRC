@@ -1,0 +1,97 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr64e_imagetexts",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr64e_imagetext",
+    "MaxGetRowsCount": 500,
+    "Name": "ImageTexts",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr64e_image": "Image",
+      "cr64e_imageid": "cr64e_ImageId",
+      "cr64e_imagetext_AsyncOperations": "System Jobs",
+      "cr64e_imagetext_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr64e_imagetext_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr64e_imagetext_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr64e_imagetext_ProcessSession": "Process Sessions",
+      "cr64e_imagetext_SyncErrors": "Sync Errors",
+      "cr64e_imagetextid": "ImageText",
+      "cr64e_text": "Text",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "ImageTexts",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "ImageTexts (Views)",
+    "Name": "_cr64e_imagetext_views",
+    "RelatedEntityName": "ImageTexts",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "103a817a-f7c8-4da6-ae92-6baf610f823d": "Active ImageTexts",
+      "8ab65365-4a25-4ad2-8884-68abf3f27ce0": "Inactive ImageTexts",
+      "91e50c38-6e4d-410b-aab8-b301a6423257": "ImageText Associated View",
+      "c70120dc-8019-448f-9a71-4dc4a7d3475d": "ImageText Advanced Find View",
+      "e1797097-4514-4b43-8177-a3a099a2d5c2": "ImageText Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (ImageTexts)",
+    "Name": "cr64e_imagetext_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "ImageTexts"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "ImageTexts",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (ImageTexts)",
+    "Name": "cr64e_imagetext_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "ImageTexts"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "ImageTexts",
+    "Type": "OptionSetInfo"
+  }
+]

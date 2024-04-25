@@ -1,0 +1,57 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_cr64e_sites_forms",
+      "Namespace": "Sites (Forms)",
+      "Values": {
+        "Information": "46212c68-10ed-4a36-a0a9-5748fa2e1b90"
+      }
+    },
+    {
+      "Kind": "default.cds_cr64e_newtable_forms",
+      "Namespace": "New tables (Forms)",
+      "Values": {
+        "Information": "98f77f91-bdd9-4da7-a291-ccc08addcfa0"
+      }
+    },
+    {
+      "Kind": "default.cds_cr64e_siteassociated_forms",
+      "Namespace": "SiteAssociateds (Forms)",
+      "Values": {
+        "Information": "cd658c6e-ef37-4bee-8a59-c2c7d44ba092"
+      }
+    },
+    {
+      "Kind": "default.cds_cr64e_worksites_forms",
+      "Namespace": "Worksites (Forms)",
+      "Values": {
+        "Information": "25f46b6c-0165-494c-b95c-f8abace284dd"
+      }
+    },
+    {
+      "Kind": "default.cds_cr64e_imagetext_forms",
+      "Namespace": "ImageTexts (Forms)",
+      "Values": {
+        "Information": "c5691de3-3310-4cc7-99f5-fa2cbee703de"
+      }
+    },
+    {
+      "Kind": "default.cds_systemuser_forms",
+      "Namespace": "Users (Forms)",
+      "Values": {
+        "Application User": "d26924ef-4d80-46f7-ab1d-e6ae80a54ce8",
+        "Information": "094fb08a-77bb-49e0-b7ea-8dbddfd01294",
+        "User": "c2cd9e55-d4b4-4b55-9951-16ead79643e5",
+        "User form – Business": "c2413504-7eb2-4c59-a087-95d819866114",
+        "User Hierarchy Tile Form": "c68d6c09-d7a7-4959-8d0f-44b8cff9b452"
+      }
+    },
+    {
+      "Kind": "default.cds_cr64e_siteassociated_forms",
+      "Namespace": "Site Associated (Forms)",
+      "Values": {
+        "Information": "cd658c6e-ef37-4bee-8a59-c2c7d44ba092"
+      }
+    }
+  ]
+}

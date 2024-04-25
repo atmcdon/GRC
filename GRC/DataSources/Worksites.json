@@ -1,0 +1,119 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr64e_worksiteses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr64e_worksites",
+    "MaxGetRowsCount": 500,
+    "Name": "Worksites",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr64e_activesite": "ActiveSite",
+      "cr64e_lastdateworked": "LastDateWorked",
+      "cr64e_parcel": "Parcel",
+      "cr64e_sitename": "SiteName",
+      "cr64e_worksites_AsyncOperations": "System Jobs",
+      "cr64e_worksites_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr64e_worksites_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr64e_worksites_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr64e_worksites_ProcessSession": "Process Sessions",
+      "cr64e_worksites_SyncErrors": "Sync Errors",
+      "cr64e_worksitesid": "Worksites",
+      "cr64e_workstartdate": "WorkStartDate",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Worksites",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Worksites (Views)",
+    "Name": "_cr64e_worksites_views",
+    "RelatedEntityName": "Worksites",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0ec4684b-d521-48c9-ae57-df2e5ce86874": "Active Worksites",
+      "119d8325-3667-4e54-afae-de3422c7a099": "Worksites Advanced Find View",
+      "7cd8e680-af33-447a-9fdc-8a3afb14cefe": "Inactive Worksites",
+      "7d7b6c82-3dc4-4a6b-a6ee-600c7dcc4e79": "Worksites Associated View",
+      "a182b178-9bf7-4ca1-b270-b3a098674365": "Worksites Lookup View"
+    }
+  },
+  {
+    "DisplayName": "ActiveSite (Worksites)",
+    "Name": "cr64e_worksites_cr64e_activesite",
+    "OptionSetInfoNameMapping": {
+      "0": "Yes",
+      "1": "No"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr64e_activesite",
+        "OptionSetReferenceEntityName": "Worksites"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "cr64e_activesite",
+    "RelatedEntityName": "Worksites",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Worksites)",
+    "Name": "cr64e_worksites_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Worksites"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Worksites",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Worksites)",
+    "Name": "cr64e_worksites_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Worksites"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Worksites",
+    "Type": "OptionSetInfo"
+  }
+]

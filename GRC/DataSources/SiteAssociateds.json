@@ -1,0 +1,105 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr64e_siteassociateds",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr64e_siteassociated",
+    "MaxGetRowsCount": 500,
+    "Name": "SiteAssociateds",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr64e_dateandtime": "Date and Time",
+      "cr64e_image": "Image",
+      "cr64e_imageid": "cr64e_ImageId",
+      "cr64e_imagename": "ImageName",
+      "cr64e_siteassociated_AsyncOperations": "System Jobs",
+      "cr64e_siteassociated_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr64e_siteassociated_DuplicateBaseRecord": "Duplicate Records (cr64e_siteassociated_DuplicateBaseRecord)",
+      "cr64e_siteassociated_DuplicateMatchingRecord": "Duplicate Records (cr64e_siteassociated_DuplicateMatchingRecord)",
+      "cr64e_siteassociated_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr64e_siteassociated_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr64e_siteassociated_ProcessSession": "Process Sessions",
+      "cr64e_siteassociated_SyncErrors": "Sync Errors",
+      "cr64e_siteassociatedid": "Site Associated",
+      "cr64e_siteid": "Site Name",
+      "cr64e_siteupdatetext": "SiteUpdateText",
+      "cr64e_textupdate": "Text Update",
+      "cr64e_uploadedimage": "UploadedImage",
+      "cr64e_uploadedimageid": "cr64e_UploadedImageId",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "SiteAssociateds",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "SiteAssociateds (Views)",
+    "Name": "_cr64e_siteassociated_views",
+    "RelatedEntityName": "SiteAssociateds",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1511338f-4af7-4b45-b63b-19e60e9e307a": "Site Associated Advanced Find View",
+      "608168b0-5b63-4827-98f9-790b06514fbd": "Site Associated Associated View",
+      "977fee55-6b81-4bbc-a2d6-0f20cc91bfe6": "Inactive Site Associated",
+      "996dd9b8-a037-4610-9a99-fde0bd193d76": "Active Site Associated",
+      "f2de5266-c1b0-4574-b0b8-956d8abee074": "Site Associated Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (SiteAssociateds)",
+    "Name": "cr64e_siteassociated_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "SiteAssociateds"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "SiteAssociateds",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (SiteAssociateds)",
+    "Name": "cr64e_siteassociated_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "SiteAssociateds"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "SiteAssociateds",
+    "Type": "OptionSetInfo"
+  }
+]
