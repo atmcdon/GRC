@@ -1,0 +1,75 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr64e_prototypedatabases",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr64e_prototypedatabase",
+    "Name": "Work Site Data Entry",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "cr64e_locationofsite": "Location of Site",
+      "cr64e_nameoftoolsused": "Name of Tools used",
+      "cr64e_numberoftoolsused": "Number of tools used",
+      "cr64e_numberofvolunteers": "Number of Volunteers",
+      "cr64e_ownerofsite": "Owner of Site",
+      "cr64e_plantspeciesbytype": "Plant species by type",
+      "cr64e_plantsspeciesamount": "Plants Species Amount",
+      "cr64e_prototypedatabaseid": "Work Site Data Entry",
+      "cr64e_volunteernames": "Volunteer Names",
+      "cr64e_worksitename": "Worksite Name",
+      "cr64e_workstartdate": "Work Start Date",
+      "createdon": "Created On",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedon": "Modified On",
+      "overriddencreatedon": "Record Created On",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Work Site Data Entry",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Status (Work Site Data Entry)",
+    "Name": "new_reserveentity_rp53fd1p1ekxpa_t7_be48b529b0_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Work Site Data Entry"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Work Site Data Entry",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Work Site Data Entry)",
+    "Name": "new_reserveentity_rp53fd1p1ekxpa_t7_be48b529b0_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Work Site Data Entry"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Work Site Data Entry",
+    "Type": "OptionSetInfo"
+  }
+]

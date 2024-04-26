@@ -1,0 +1,49 @@
+Header As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =80
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Rectangle3 As rectangle:
+        Fill: =RGBA(127, 178, 57, 1)
+        Height: =87
+        Width: =640
+        ZIndex: =1
+
+    Button6 As button:
+        Color: =RGBA(0, 16, 96, 1)
+        Fill: =RGBA(209, 232, 178, 1)
+        Height: =57
+        RadiusBottomLeft: =90
+        RadiusBottomRight: =90
+        RadiusTopLeft: =90
+        RadiusTopRight: =90
+        Size: =8
+        Text: ="Button"
+        Width: =60
+        X: =552
+        Y: =15
+        ZIndex: =2
+
+    Label7 As label:
+        Color: =RGBA(241, 244, 249, 1)
+        Font: =Font.'Segoe UI'
+        Height: =70
+        Size: =21
+        Text: ="Green River Coalition "
+        Width: =327
+        X: =87
+        Y: =8
+        ZIndex: =3
+
+    Icon2 As icon.Notebook:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =57
+        Icon: =Icon.Notebook
+        Width: =62
+        X: =12
+        Y: =15
+        ZIndex: =4
+

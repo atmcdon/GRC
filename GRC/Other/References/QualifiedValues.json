@@ -47,6 +47,13 @@
       }
     },
     {
+      "Kind": "default.cds_cr64e_overal_genera_worksite_creation_forms",
+      "Namespace": "Overall_General_worksite_creations (Forms)",
+      "Values": {
+        "Information": "8b787af7-2e1e-4344-8b1c-ddd4601d52d9"
+      }
+    },
+    {
       "Kind": "default.cds_cr64e_siteassociated_forms",
       "Namespace": "Site Associated (Forms)",
       "Values": {
@@ -54,11 +61,14 @@
       }
     },
     {
-      "Kind": "default.cds_cr64e_overal_genera_worksite_creation_forms",
-      "Namespace": "Overall_General_worksite_creations (Forms)",
-      "Values": {
-        "Information": "8b787af7-2e1e-4344-8b1c-ddd4601d52d9"
-      }
+      "Kind": "default.cds_cr64e_worksites1_forms",
+      "Namespace": "Worksites_1 (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_cr64e_prototypedatabase_forms",
+      "Namespace": "Work Site Data Entry (Forms)",
+      "Values": {}
     }
   ]
 }

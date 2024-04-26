@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "cr64e_overal_genera_worksite_creation",
+    "MaxGetRowsCount": 500,
     "Name": "Overall_General_worksite_creations",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
