@@ -25,7 +25,8 @@ LoginPage As screen:
         ZIndex: =3
 
     TextInput2 As text:
-        Default: ="Text input"
+        Default: |
+            =
         Height: =70
         Size: =21
         Width: =505
@@ -46,6 +47,12 @@ LoginPage As screen:
     Button7 As button:
         Fill: =RGBA(127, 178, 57, 1)
         Height: =70
+        OnSelect: |-
+            =// OnSelect property of the Button_Submit
+            UpdateContext({
+                varUser: LookUp('Username and Passwords', Username = TextInput2.Text)
+            });
+            Label9_2.Text = Concatenate("Username: ", varUser.Username, "; Password: ", varUser.PrimaryColumn);
         Size: =24
         Text: ="Login"
         Width: =280
