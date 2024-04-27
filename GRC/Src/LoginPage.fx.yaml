@@ -50,9 +50,12 @@ LoginPage As screen:
         OnSelect: |-
             =// OnSelect property of the Button_Submit
             UpdateContext({
-                varUser: LookUp('Username and Passwords', Username = TextInput2.Text)
+                varUser: LookUp('Username and Passwords', Username = TextInput2_1.Text)
             });
-            Label9_2.Text = Concatenate("Username: ", varUser.Username, "; Password: ", varUser.PrimaryColumn);
+            
+            
+            // Set the Text property of Label9_2 to display testText
+            Label9_2.Text = Concatenate("Test", varUser.Username)
         Size: =24
         Text: ="Login"
         Width: =280
