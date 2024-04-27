@@ -1,0 +1,71 @@
+LoginPage As screen:
+
+    Rectangle8 As rectangle:
+        Fill: =RGBA(209, 232, 178, 1)
+        Height: =421
+        Width: =640
+        ZIndex: =1
+
+    Label9 As label:
+        Height: =70
+        Size: =21
+        Text: ="Username"
+        Width: =560
+        X: =80
+        Y: =500
+        ZIndex: =2
+
+    Label9_1 As label:
+        Height: =70
+        Size: =21
+        Text: ="Password"
+        Width: =560
+        X: =80
+        Y: =704
+        ZIndex: =3
+
+    TextInput2 As text:
+        Default: ="Text input"
+        Height: =70
+        Size: =21
+        Width: =505
+        X: =80
+        Y: =558
+        ZIndex: =4
+
+    TextInput2_1 As text:
+        Default: ="Text input"
+        Height: =70
+        Size: =21
+        Width: =505
+        X: =80
+        Y: =774
+        ZIndex: =5
+
+    Button7 As button:
+        Fill: =RGBA(127, 178, 57, 1)
+        Height: =70
+        Size: =24
+        Text: ="Login"
+        Width: =280
+        X: =180
+        Y: =931
+        ZIndex: =6
+
+    Circle2 As circle:
+        Fill: =RGBA(127, 178, 57, 1)
+        Height: =256
+        Width: =263
+        X: =180
+        Y: =29
+        ZIndex: =7
+
+    Label9_2 As label:
+        Height: =70
+        Size: =21
+        Text: ="Login"
+        Width: =183
+        X: =268
+        Y: =302
+        ZIndex: =8
+

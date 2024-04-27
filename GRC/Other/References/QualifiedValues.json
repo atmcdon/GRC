@@ -54,21 +54,25 @@
       }
     },
     {
+      "Kind": "default.cds_cr64e_worksites1_forms",
+      "Namespace": "Worksites_1 (Forms)",
+      "Values": {
+        "Information": "d3febcce-e323-417d-94af-b90927c99959"
+      }
+    },
+    {
+      "Kind": "default.cds_cr64e_prototypedatabase_forms",
+      "Namespace": "Work Site Data Entry (Forms)",
+      "Values": {
+        "Information": "3f877043-8a94-4c41-863f-c2f772eafedf"
+      }
+    },
+    {
       "Kind": "default.cds_cr64e_siteassociated_forms",
       "Namespace": "Site Associated (Forms)",
       "Values": {
         "Information": "cd658c6e-ef37-4bee-8a59-c2c7d44ba092"
       }
-    },
-    {
-      "Kind": "default.cds_cr64e_worksites1_forms",
-      "Namespace": "Worksites_1 (Forms)",
-      "Values": {}
-    },
-    {
-      "Kind": "default.cds_cr64e_prototypedatabase_forms",
-      "Namespace": "Work Site Data Entry (Forms)",
-      "Values": {}
     }
   ]
 }
