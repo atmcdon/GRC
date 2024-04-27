@@ -36,6 +36,7 @@ LoginPage As screen:
     TextInput2_1 As text:
         Default: ="Text input"
         Height: =70
+        Mode: =TextMode.Password
         Size: =21
         Width: =505
         X: =80

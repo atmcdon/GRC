@@ -73,6 +73,11 @@
       "Values": {
         "Information": "cd658c6e-ef37-4bee-8a59-c2c7d44ba092"
       }
+    },
+    {
+      "Kind": "default.cds_cr64e_usernameandpassword1_forms",
+      "Namespace": "Username and Passwords (Forms)",
+      "Values": {}
     }
   ]
 }
