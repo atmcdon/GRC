@@ -1,0 +1,61 @@
+"Screen3 As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+
+    RectQuickActionBar4 As rectangle:
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName4 As label:
+        Align: =Align.Center
+        Fill: =RGBA(187, 221, 140, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =88
+        Italic: =true
+        Size: =27
+        Text: ="Adding to Big Soos Creek"
+        Width: =Parent.Width
+        ZIndex: =2
+
+    Canvas4 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =RectQuickActionBar4.Y + RectQuickActionBar4.Height
+        ZIndex: =3
+
+        DataCard6 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height - 100
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+        DataCard8 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+    Circle1_2 As circle:
+        Fill: =RGBA(127, 178, 57, 1)
+        Height: =70
+        Width: =72
+        X: =552
+        Y: =9
+        ZIndex: =4
+
+    Form1 As form:
+        Width: =640
+        Y: =40
+        ZIndex: =5
+

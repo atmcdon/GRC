@@ -18,7 +18,6 @@
         BorderThickness: =0
         Height: =Parent.Height - Self.Y
         Width: =Parent.Width
-        Y: =RectQuickActionBar1_1.Y + RectQuickActionBar1_1.Height
         ZIndex: =3
 
         DataCard1_1 As dataCard:
@@ -27,7 +26,7 @@
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =800
+            Height: =1181
             Visible: =true
             Width: =Parent.Width
             X: =0
@@ -50,16 +49,16 @@
                 Text: |-
                     ="Site: "& SelectedSite
                 Width: =334
-                X: =20
-                Y: =33
+                X: =43
+                Y: =125
                 ZIndex: =5
 
             Rectangle4_1 As rectangle:
                 Fill: =RGBA(128, 128, 128, 1)
-                Height: =6
-                Width: =380
-                X: =20
-                Y: =103
+                Height: =46
+                Width: =351
+                X: =115
+                Y: =137
                 ZIndex: =6
 
             Container1 As groupContainer.manualLayoutContainer:
@@ -149,60 +148,61 @@
 
             Container1_1 As groupContainer.manualLayoutContainer:
                 ContentLanguage: =
-                Height: =759
+                Height: =1056
                 Width: =594
                 X: =20
-                Y: =48
+                Y: =125
                 ZIndex: =8
 
                 Rectangle5 As rectangle:
                     BorderColor: =RGBA(204, 231, 246, 1)
                     BorderThickness: =3
                     Fill: =RGBA(0, 0, 0, 0)
-                    Height: =140
+                    Height: =118
                     Width: =239
-                    X: =15
-                    Y: =511
+                    X: =298
+                    Y: =929
                     ZIndex: =1
 
                 Image8 As image:
-                    Height: =189
+                    Height: =244
                     Image: |
                         =If(
                             IsBlank(LookUp(Sites, 'Site name' = SelectedSite).SiteMainImage),
                             '93492771',
                             LookUp(Sites, 'Site name' = SelectedSite).SiteMainImage
                         )
-                    Width: =594
-                    Y: =145
+                    Width: =550
+                    X: =11
+                    Y: =196
                     ZIndex: =3
 
                 Button3 As button:
                     Size: =12
-                    Text: ="Edit"
-                    Width: =70
-                    X: =500
-                    Y: =20
+                    Text: ="Update"
+                    Width: =111
+                    X: =461
+                    Y: =17
                     ZIndex: =4
 
                 Label2 As label:
-                    Height: =70
+                    Height: =59
                     Size: =18
                     Text: |-
                         ="Plants needed:"
                     Width: =218
-                    X: =19
-                    Y: =511
+                    X: =302
+                    Y: =929
                     ZIndex: =5
 
                 Label2_1 As label:
-                    Height: =70
+                    Height: =48
                     Size: =18
                     Text: |-
                         ="Plants planted:"
                     Width: =218
-                    X: =19
-                    Y: =581
+                    X: =302
+                    Y: =988
                     ZIndex: =6
 
                 Label5 As label:
@@ -211,8 +211,8 @@
                     Size: =21
                     Text: ="150"
                     Width: =88
-                    X: =190
-                    Y: =511
+                    X: =473
+                    Y: =929
                     ZIndex: =7
 
                 Label5_1 As label:
@@ -221,135 +221,184 @@
                     Size: =21
                     Text: ="20"
                     Width: =88
-                    X: =190
-                    Y: =581
+                    X: =482
+                    Y: =988
                     ZIndex: =8
 
                 Button5 As button:
                     Fill: =RGBA(187, 221, 140, 1)
-                    Height: =61
+                    Height: =49
                     OnSelect: =Navigate(ImageView, ScreenTransition.Cover)
                     Size: =24
-                    Text: ="Pictures"
-                    Width: =155
-                    X: =35
-                    Y: =417
+                    Text: ="Photos"
+                    Width: =134
+                    X: =271
+                    Y: =463
                     ZIndex: =9
 
                 Button5_1 As button:
                     Fill: =RGBA(187, 221, 140, 1)
-                    Height: =59
+                    Height: =50
                     Size: =24
                     Text: ="Plant Map"
                     Width: =178
-                    X: =392
-                    Y: =417
+                    X: =333
+                    Y: =1054
                     ZIndex: =10
-
-                Button5_2 As button:
-                    Fill: =RGBA(187, 221, 140, 1)
-                    Height: =52
-                    Size: =24
-                    Text: ="Update"
-                    Width: =127
-                    X: =71
-                    Y: =671
-                    ZIndex: =11
 
                 Label6 As label:
                     Color: =RGBA(99, 139, 44, 1)
                     Fill: =RGBA(232, 244, 217, 1)
-                    Height: =42
+                    Height: =54
                     Size: =14
                     Text: |-
                         ="Status: Active"
-                    Width: =143
-                    X: =225
-                    Y: =92
+                    Width: =217
+                    X: =25
+                    Y: =470
                     ZIndex: =12
 
                 Label6_1 As label:
                     Color: =RGBA(99, 139, 44, 1)
                     Fill: =RGBA(232, 244, 217, 1)
-                    Height: =42
-                    Size: =12
+                    Height: =55
+                    Size: =14
                     Text: |-
                         ="Land Owner: " & LookUp(Sites, 'Site name' = SelectedSite).LandOwner
-                    Width: =175
-                    X: =407
-                    Y: =92
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =217
+                    X: =27
+                    Y: =918
                     ZIndex: =13
 
                 Label6_2 As label:
                     Color: =RGBA(99, 139, 44, 1)
                     Fill: =RGBA(232, 244, 217, 1)
-                    Height: =42
-                    Size: =12
+                    Height: =62
+                    Size: =14
                     Text: |-
                         ="Location: " & LookUp(Sites, 'Site name' = SelectedSite).SiteLocation
-                    Width: =175
-                    X: =15
-                    Y: =92
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =212
+                    X: =30
+                    Y: =992
                     ZIndex: =14
 
                 Label6_3 As label:
                     Color: =RGBA(99, 139, 44, 1)
                     Fill: =RGBA(232, 244, 217, 1)
-                    Height: =42
-                    Size: =12
+                    Height: =56
+                    Size: =14
                     Text: |-
-                        ="Dig Date: "& Text(LookUp(Sites, 'Site name' = SelectedSite).'Created On', "mm/dd/yyyy")
-                    Width: =175
-                    X: =15
-                    Y: =342
+                        ="Work Began Date:"
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =217
+                    X: =27
+                    Y: =840
                     ZIndex: =15
 
                 Label6_4 As label:
                     Color: =RGBA(99, 139, 44, 1)
                     Fill: =RGBA(232, 244, 217, 1)
-                    Height: =42
-                    Size: =12
+                    Height: =96
+                    Size: =14
                     Text: |-
-                        ="Last work date: " & Text(
-                            Last(
-                                Sort(
-                                    Filter(SiteAssociateds, 'Site Name' = SelectedSite), 
-                                    'Created On',SortOrder.Ascending
-                        
-                                )
-                            ).'Created On', 
-                            "mm/dd/yyyy"
-                        )
-                        
-                        //This gets the latest work date
-                    Width: =175
-                    X: =395
-                    Y: =342
+                        ="Last worked on: "
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =253
+                    X: =25
+                    Y: =88
                     ZIndex: =16
 
                 Image4 As image:
                     Height: =228
                     Image: =ECOregionsWEB
                     Width: =252
-                    X: =330
-                    Y: =478
+                    X: =296
+                    Y: =727
                     ZIndex: =17
 
                 Button5_3 As button:
                     Fill: =RGBA(187, 221, 140, 1)
-                    Height: =59
-                    Text: ="Important Files"
+                    Height: =49
+                    Size: =24
+                    Text: ="Notes"
                     Width: =127
-                    X: =239
-                    Y: =417
+                    X: =426
+                    Y: =463
                     ZIndex: =18
+
+                Label11 As label:
+                    Color: =RGBA(99, 139, 44, 1)
+                    Fill: =RGBA(232, 244, 217, 1)
+                    Height: =95
+                    Size: =14
+                    Text: |-
+                        ="Recent Development:"
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =261
+                    X: =292
+                    Y: =89
+                    ZIndex: =19
+
+                Label6_5 As label:
+                    Color: =RGBA(99, 139, 44, 1)
+                    Fill: =RGBA(232, 244, 217, 1)
+                    Height: =107
+                    Size: =14
+                    Text: |-
+                        ="Workers Last Here:"
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =217
+                    X: =25
+                    Y: =554
+                    ZIndex: =20
+
+                Label6_6 As label:
+                    Color: =RGBA(99, 139, 44, 1)
+                    Fill: =RGBA(232, 244, 217, 1)
+                    Height: =209
+                    Size: =14
+                    Text: |-
+                        ="Tools Used Last:"
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =148
+                    X: =264
+                    Y: =535
+                    ZIndex: =21
+
+                Label6_7 As label:
+                    Color: =RGBA(99, 139, 44, 1)
+                    Fill: =RGBA(232, 244, 217, 1)
+                    Height: =209
+                    Size: =14
+                    Text: |-
+                        ="Plants Used Last:"
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =146
+                    X: =424
+                    Y: =535
+                    ZIndex: =22
+
+                Label6_8 As label:
+                    Color: =RGBA(99, 139, 44, 1)
+                    Fill: =RGBA(232, 244, 217, 1)
+                    Height: =111
+                    Size: =14
+                    Text: |-
+                        ="Most Recent Time In and Time Out:"
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =217
+                    X: =25
+                    Y: =694
+                    ZIndex: =23
 
         DataCard3 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =541
+            Height: =445
             Width: =640
             X: =0
             Y: =1
@@ -358,15 +407,15 @@
             "Gallery5_1 As gallery.'BrowseLayout_Flexible_NewsFeed_ver5.0'":
                 DelayItemLoading: =true
                 Fill: =RGBA(232, 244, 217, 1)
-                Height: =393
+                Height: =284
                 Items: =Sort(Filter(SiteAssociateds,'Site Name' = SelectedSite),'Created On', SortOrder.Descending)
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
-                TemplateSize: =393
+                TemplateSize: =223
                 Width: =594
-                X: =19
-                Y: =87
+                X: =23
+                Y: =120
                 ZIndex: =1
 
                 Title7_1 As label:
@@ -436,7 +485,7 @@
                 Text: ="Site Recordings"
                 Width: =560
                 X: =40
-                Y: =40
+                Y: =22
                 ZIndex: =2
 
             Button2 As button:
@@ -450,8 +499,8 @@
                 Size: =14
                 Text: ="Add Recording"
                 Width: =172
-                X: =410
-                Y: =25
+                X: =428
+                Y: =24
                 ZIndex: =3
 
         DataCard4 As dataCard.blankCard:
@@ -459,7 +508,7 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(187, 221, 140, 1)
-            Height: =100
+            Height: =604
             Width: =640
             X: =0
             Y: =2
@@ -615,7 +664,7 @@
     Icon1_2 As icon.ArrowLeft:
         Icon: =Icon.ArrowLeft
         OnSelect: =Navigate('Main Dashboard', ScreenTransition.Cover)
-        X: =20
+        X: =30
         Y: =15
         ZIndex: =5
 

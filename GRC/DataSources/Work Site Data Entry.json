@@ -62,7 +62,7 @@
     }
   },
   {
-    "DisplayName": "Status (Work Site Data Entry)_1",
+    "DisplayName": "Status (Work Site Data Entry)",
     "Name": "cr64e_prototypedatabase_statecode",
     "OptionSetInfoNameMapping": {
       "0": "Active",
@@ -82,48 +82,8 @@
     "Type": "OptionSetInfo"
   },
   {
-    "DisplayName": "Status Reason (Work Site Data Entry)_1",
-    "Name": "cr64e_prototypedatabase_statuscode",
-    "OptionSetInfoNameMapping": {
-      "1": "Active",
-      "2": "Inactive"
-    },
-    "OptionSetIsBooleanValued": false,
-    "OptionSetIsGlobal": false,
-    "OptionSetReference": {
-      "OptionSetReferenceItem0": {
-        "OptionSetReferenceColumnName": "statuscode",
-        "OptionSetReferenceEntityName": "Work Site Data Entry"
-      }
-    },
-    "OptionSetTypeKey": "StatusType",
-    "RelatedColumnInvariantName": "statuscode",
-    "RelatedEntityName": "Work Site Data Entry",
-    "Type": "OptionSetInfo"
-  },
-  {
-    "DisplayName": "Status (Work Site Data Entry)",
-    "Name": "new_reserveentity_rp53fd1p1ekxpa_t7_be48b529b0_statecode",
-    "OptionSetInfoNameMapping": {
-      "0": "Active",
-      "1": "Inactive"
-    },
-    "OptionSetIsBooleanValued": false,
-    "OptionSetIsGlobal": false,
-    "OptionSetReference": {
-      "OptionSetReferenceItem0": {
-        "OptionSetReferenceColumnName": "statecode",
-        "OptionSetReferenceEntityName": "Work Site Data Entry"
-      }
-    },
-    "OptionSetTypeKey": "StateType",
-    "RelatedColumnInvariantName": "statecode",
-    "RelatedEntityName": "Work Site Data Entry",
-    "Type": "OptionSetInfo"
-  },
-  {
     "DisplayName": "Status Reason (Work Site Data Entry)",
-    "Name": "new_reserveentity_rp53fd1p1ekxpa_t7_be48b529b0_statuscode",
+    "Name": "cr64e_prototypedatabase_statuscode",
     "OptionSetInfoNameMapping": {
       "1": "Active",
       "2": "Inactive"

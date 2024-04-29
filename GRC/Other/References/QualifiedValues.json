@@ -68,17 +68,17 @@
       }
     },
     {
-      "Kind": "default.cds_cr64e_siteassociated_forms",
-      "Namespace": "Site Associated (Forms)",
-      "Values": {
-        "Information": "cd658c6e-ef37-4bee-8a59-c2c7d44ba092"
-      }
-    },
-    {
       "Kind": "default.cds_cr64e_usernameandpassword1_forms",
       "Namespace": "Username and Passwords (Forms)",
       "Values": {
         "Information": "a4aaf933-2e4f-48ce-ad05-d045016d4de3"
+      }
+    },
+    {
+      "Kind": "default.cds_cr64e_siteassociated_forms",
+      "Namespace": "Site Associated (Forms)",
+      "Values": {
+        "Information": "cd658c6e-ef37-4bee-8a59-c2c7d44ba092"
       }
     }
   ]
