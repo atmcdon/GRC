@@ -6,6 +6,7 @@ ImageView As screen:
         ZIndex: =1
 
         "Gallery6 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver5.0'":
+            '#CopilotOverlayLabel': ="Filtered"
             DelayItemLoading: =true
             Height: =992
             Items: =Sort(SiteAssociateds, 'Created On', SortOrder.Descending)
