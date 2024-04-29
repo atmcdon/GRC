@@ -47,12 +47,13 @@ LoginPage As screen:
     Button7 As button:
         Fill: =RGBA(127, 178, 57, 1)
         Height: =70
-        OnSelect: |
+        OnSelect: |-
             =If(
-                !IsBlank(LookUp('Username and Passwords', Username = TextInput2.Text).Username),
-                !IsBlank(LookUp('Username and Passwords', Password = TextInput2_1.Text).Password),
+                !IsBlank(LookUp('Username and Passwords', Username = TextInput2.Text && 'Password (cr64e_primarycolumn)' = TextInput2_1.Text)),
                 Navigate('Main Dashboard'),
+                
                 Notify("Username not found or Password is incorrect!", NotificationType.Error)  
+            )
         Size: =24
         Text: ="Login"
         Width: =280
