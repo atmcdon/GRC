@@ -89,13 +89,6 @@
       }
     },
     {
-      "Kind": "default.cds_cr64e_siteassociated_forms",
-      "Namespace": "Site Associated (Forms)",
-      "Values": {
-        "Information": "cd658c6e-ef37-4bee-8a59-c2c7d44ba092"
-      }
-    },
-    {
       "Kind": "default.cds_cr64e_worksitevolunteerrecord_forms",
       "Namespace": "Worksite Volunteer Record (Forms)",
       "Values": {
@@ -107,6 +100,13 @@
       "Namespace": "Workers (Forms)",
       "Values": {
         "Information": "ec5ac276-cdce-4036-ac2b-dca434bef7bc"
+      }
+    },
+    {
+      "Kind": "default.cds_cr64e_siteassociated_forms",
+      "Namespace": "Site Associated (Forms)",
+      "Values": {
+        "Information": "cd658c6e-ef37-4bee-8a59-c2c7d44ba092"
       }
     }
   ]

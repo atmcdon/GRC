@@ -90,7 +90,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "Back Button",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 189,
+        "PublishOrderIndex": 190,
         "Rules": [
           {
             "Category": "Data",
@@ -398,7 +398,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "Back Button",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 190,
+        "PublishOrderIndex": 191,
         "Rules": [
           {
             "Category": "Design",
@@ -530,7 +530,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638500390636330456",
+    "LastModifiedTimestamp": "638500407933431824",
     "Name": "Back Button",
     "Rules": [
       {
@@ -589,7 +589,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638500390636330456",
+  "LastModifiedTimestamp": "638500407933431824",
   "Name": "39bd6c49f8e342dca250ee009e4cc3e7",
   "OverridableProperties": {},
   "Version": "1.0"

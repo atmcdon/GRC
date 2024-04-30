@@ -20,7 +20,7 @@
             ZIndex: =1
 
             Rectangle2_1 As rectangle:
-                BorderColor: =RGBA(128, 128, 128, 1)
+                BorderColor: =RGBA(0, 0, 0, 0)
                 BorderThickness: =2
                 Fill: =RGBA(0, 0, 0, 0)
                 Height: =700
@@ -48,6 +48,7 @@
                 ZIndex: =6
 
             Container1 As groupContainer.manualLayoutContainer:
+                BorderColor: =RGBA(0, 0, 0, 0)
                 Height: =700
                 Visible: =false
                 Width: =594
@@ -135,7 +136,7 @@
 
             Container1_1 As groupContainer.manualLayoutContainer:
                 ContentLanguage: =
-                Height: =1056
+                Height: =1200
                 Width: =594
                 X: =20
                 Y: =125
@@ -147,21 +148,20 @@
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =118
                     Width: =239
-                    X: =298
-                    Y: =929
+                    X: =330
+                    Y: =969
                     ZIndex: =1
 
                 Image8 As image:
-                    Height: =244
+                    Height: =204
                     Image: |
                         =If(
                             IsBlank(LookUp(Sites, 'Site name' = SelectedSite).SiteMainImage),
                             '93492771',
                             LookUp(Sites, 'Site name' = SelectedSite).SiteMainImage
                         )
-                    Width: =550
-                    X: =11
-                    Y: =196
+                    Width: =594
+                    Y: =308
                     ZIndex: =3
 
                 Button3 As button:
@@ -178,8 +178,8 @@
                     Text: |-
                         ="Plants needed:"
                     Width: =218
-                    X: =302
-                    Y: =929
+                    X: =328
+                    Y: =963
                     ZIndex: =5
 
                 Label2_1 As label:
@@ -188,8 +188,8 @@
                     Text: |-
                         ="Plants planted:"
                     Width: =218
-                    X: =302
-                    Y: =988
+                    X: =330
+                    Y: =1023
                     ZIndex: =6
 
                 Label5 As label:
@@ -198,8 +198,8 @@
                     Size: =21
                     Text: ="150"
                     Width: =88
-                    X: =473
-                    Y: =929
+                    X: =506
+                    Y: =957
                     ZIndex: =7
 
                 Label5_1 As label:
@@ -208,8 +208,8 @@
                     Size: =21
                     Text: ="20"
                     Width: =88
-                    X: =482
-                    Y: =988
+                    X: =506
+                    Y: =1012
                     ZIndex: =8
 
                 Button5 As button:
@@ -219,8 +219,8 @@
                     Size: =24
                     Text: ="Photos"
                     Width: =134
-                    X: =271
-                    Y: =463
+                    X: =32
+                    Y: =1127
                     ZIndex: =9
 
                 Button5_1 As button:
@@ -229,8 +229,8 @@
                     Size: =24
                     Text: ="Plant Map"
                     Width: =178
-                    X: =333
-                    Y: =1054
+                    X: =387
+                    Y: =1126
                     ZIndex: =10
 
                 Label6 As label:
@@ -240,69 +240,65 @@
                     Size: =14
                     Text: |-
                         ="Status: Active"
-                    Width: =217
-                    X: =25
-                    Y: =470
+                    Width: =255
+                    X: =27
+                    Y: =87
                     ZIndex: =12
 
                 Label6_1 As label:
                     Color: =RGBA(99, 139, 44, 1)
                     Fill: =RGBA(232, 244, 217, 1)
-                    Height: =55
+                    Height: =49
                     Size: =14
                     Text: |-
                         ="Land Owner: " & LookUp(Sites, 'Site name' = SelectedSite).LandOwner
-                    VerticalAlign: =VerticalAlign.Top
-                    Width: =217
+                    Width: =540
                     X: =27
-                    Y: =918
+                    Y: =235
                     ZIndex: =13
 
                 Label6_2 As label:
                     Color: =RGBA(99, 139, 44, 1)
                     Fill: =RGBA(232, 244, 217, 1)
-                    Height: =62
+                    Height: =50
                     Size: =14
                     Text: |-
                         ="Location: " & LookUp(Sites, 'Site name' = SelectedSite).SiteLocation
-                    VerticalAlign: =VerticalAlign.Top
-                    Width: =212
-                    X: =30
-                    Y: =992
+                    Width: =255
+                    X: =310
+                    Y: =87
                     ZIndex: =14
 
                 Label6_3 As label:
                     Color: =RGBA(99, 139, 44, 1)
                     Fill: =RGBA(232, 244, 217, 1)
-                    Height: =56
+                    Height: =50
                     Size: =14
                     Text: |-
                         ="Work Began Date:"
-                    VerticalAlign: =VerticalAlign.Top
-                    Width: =217
+                    Width: =255
                     X: =27
-                    Y: =840
+                    Y: =164
                     ZIndex: =15
 
                 Label6_4 As label:
                     Color: =RGBA(99, 139, 44, 1)
                     Fill: =RGBA(232, 244, 217, 1)
-                    Height: =96
+                    Height: =50
                     Size: =14
                     Text: |-
                         ="Last worked on: "
-                    VerticalAlign: =VerticalAlign.Top
-                    Width: =253
-                    X: =25
-                    Y: =88
+                    Width: =255
+                    X: =310
+                    Y: =164
                     ZIndex: =16
 
                 Image4 As image:
-                    Height: =228
+                    Height: =154
                     Image: =ECOregionsWEB
-                    Width: =252
-                    X: =296
-                    Y: =727
+                    Width: =217
+                    X: =32
+                    Y: =951
                     ZIndex: =17
 
                 Button5_3 As button:
@@ -311,34 +307,34 @@
                     Size: =24
                     Text: ="Notes"
                     Width: =127
-                    X: =426
-                    Y: =463
+                    X: =211
+                    Y: =1127
                     ZIndex: =18
 
                 Label11 As label:
                     Color: =RGBA(99, 139, 44, 1)
                     Fill: =RGBA(232, 244, 217, 1)
-                    Height: =95
+                    Height: =81
                     Size: =14
                     Text: |-
                         ="Recent Development:"
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =261
-                    X: =292
-                    Y: =89
+                    Width: =540
+                    X: =32
+                    Y: =532
                     ZIndex: =19
 
                 Label6_5 As label:
                     Color: =RGBA(99, 139, 44, 1)
                     Fill: =RGBA(232, 244, 217, 1)
-                    Height: =107
+                    Height: =82
                     Size: =14
                     Text: |-
                         ="Workers Last Here:"
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =217
-                    X: =25
-                    Y: =554
+                    Width: =542
+                    X: =32
+                    Y: =628
                     ZIndex: =20
 
                 Label6_6 As label:
@@ -350,8 +346,8 @@
                         ="Tools Used Last:"
                     VerticalAlign: =VerticalAlign.Top
                     Width: =148
-                    X: =264
-                    Y: =535
+                    X: =263
+                    Y: =734
                     ZIndex: =21
 
                 Label6_7 As label:
@@ -363,22 +359,35 @@
                         ="Plants Used Last:"
                     VerticalAlign: =VerticalAlign.Top
                     Width: =146
-                    X: =424
-                    Y: =535
+                    X: =426
+                    Y: =734
                     ZIndex: =22
 
                 Label6_8 As label:
                     Color: =RGBA(99, 139, 44, 1)
                     Fill: =RGBA(232, 244, 217, 1)
-                    Height: =111
+                    Height: =90
                     Size: =14
                     Text: |-
-                        ="Most Recent Time In and Time Out:"
+                        ="Most Recent Time in:"
                     VerticalAlign: =VerticalAlign.Top
                     Width: =217
-                    X: =25
-                    Y: =694
+                    X: =32
+                    Y: =734
                     ZIndex: =23
+
+                Label6_9 As label:
+                    Color: =RGBA(99, 139, 44, 1)
+                    Fill: =RGBA(232, 244, 217, 1)
+                    Height: =90
+                    Size: =14
+                    Text: |-
+                        ="Most Recent Time out:"
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =217
+                    X: =32
+                    Y: =851
+                    ZIndex: =24
 
         DataCard3 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
