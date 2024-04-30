@@ -1,0 +1,103 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr64e_workerses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr64e_workers",
+    "Name": "Workers",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr64e_enddateworked": "EndDateWorked",
+      "cr64e_name": "Name",
+      "cr64e_siteworked": "SiteWorked",
+      "cr64e_startdateworked": "StartDateWorked",
+      "cr64e_timein": "TimeIn",
+      "cr64e_timeout": "TimeOut",
+      "cr64e_workdone": "WorkDone",
+      "cr64e_workers_AsyncOperations": "System Jobs",
+      "cr64e_workers_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr64e_workers_DuplicateBaseRecord": "Duplicate Records (cr64e_workers_DuplicateBaseRecord)",
+      "cr64e_workers_DuplicateMatchingRecord": "Duplicate Records (cr64e_workers_DuplicateMatchingRecord)",
+      "cr64e_workers_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr64e_workers_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr64e_workers_ProcessSession": "Process Sessions",
+      "cr64e_workers_SyncErrors": "Sync Errors",
+      "cr64e_workersid": "Workers",
+      "cr64e_workertype": "WorkerType",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Workers",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Workers (Views)",
+    "Name": "_cr64e_workers_views",
+    "RelatedEntityName": "Workers",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "6d03e10a-36ff-482d-811d-67d5011fd003": "Workers Lookup View",
+      "7397605e-9602-445b-9915-1fd3ca5dcbc7": "Inactive Workers",
+      "8237ee2b-51f4-49b9-91d0-aae0a1931138": "Workers Advanced Find View",
+      "a1d8609d-fadb-48da-b402-227a9534f59b": "Active Workers",
+      "aece2e28-b648-4820-9cc6-fc27d19e0a6a": "Workers Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (Workers)",
+    "Name": "cr64e_workers_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Workers"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Workers",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Workers)",
+    "Name": "cr64e_workers_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Workers"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Workers",
+    "Type": "OptionSetInfo"
+  }
+]

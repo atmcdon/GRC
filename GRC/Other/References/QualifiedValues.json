@@ -94,6 +94,20 @@
       "Values": {
         "Information": "cd658c6e-ef37-4bee-8a59-c2c7d44ba092"
       }
+    },
+    {
+      "Kind": "default.cds_cr64e_worksitevolunteerrecord_forms",
+      "Namespace": "Worksite Volunteer Record (Forms)",
+      "Values": {
+        "Information": "d2fda7b6-9dc1-4728-8f04-a7113fb6430a"
+      }
+    },
+    {
+      "Kind": "default.cds_cr64e_workers_forms",
+      "Namespace": "Workers (Forms)",
+      "Values": {
+        "Information": "ec5ac276-cdce-4036-ac2b-dca434bef7bc"
+      }
     }
   ]
 }
