@@ -75,13 +75,6 @@
       }
     },
     {
-      "Kind": "default.cds_cr64e_siteassociated_forms",
-      "Namespace": "Site Associated (Forms)",
-      "Values": {
-        "Information": "cd658c6e-ef37-4bee-8a59-c2c7d44ba092"
-      }
-    },
-    {
       "Kind": "default.cds_cr64e_plants_forms",
       "Namespace": "Plants (Forms)",
       "Values": {
@@ -93,6 +86,13 @@
       "Namespace": "ToolLists (Forms)",
       "Values": {
         "Information": "6738779d-58e2-40e7-b69a-b5dd2b20326f"
+      }
+    },
+    {
+      "Kind": "default.cds_cr64e_siteassociated_forms",
+      "Namespace": "Site Associated (Forms)",
+      "Values": {
+        "Information": "cd658c6e-ef37-4bee-8a59-c2c7d44ba092"
       }
     }
   ]
