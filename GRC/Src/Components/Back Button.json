@@ -90,7 +90,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "Back Button",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 185,
+        "PublishOrderIndex": 189,
         "Rules": [
           {
             "Category": "Data",
@@ -398,7 +398,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "Back Button",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 186,
+        "PublishOrderIndex": 190,
         "Rules": [
           {
             "Category": "Design",
