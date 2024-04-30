@@ -102,7 +102,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 10,
+    "BindingErrorCount": 6,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "Phone",
@@ -141,7 +141,6 @@
     "UploadRecording",
     "Make Site",
     "Input Data for new Worksite",
-    "New Worksite view",
     "LoginPage",
     "Screen3",
     "New Worksite Entry",

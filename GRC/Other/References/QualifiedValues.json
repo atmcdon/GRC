@@ -103,16 +103,18 @@
       }
     },
     {
+      "Kind": "default.cds_cr64e_newtable1_forms",
+      "Namespace": "New tables_1 (Forms)",
+      "Values": {
+        "Information": "db3228f4-55db-4c3a-bbff-fb5fce4f6b79"
+      }
+    },
+    {
       "Kind": "default.cds_cr64e_siteassociated_forms",
       "Namespace": "Site Associated (Forms)",
       "Values": {
         "Information": "cd658c6e-ef37-4bee-8a59-c2c7d44ba092"
       }
-    },
-    {
-      "Kind": "default.cds_cr64e_newtable1_forms",
-      "Namespace": "New tables_1 (Forms)",
-      "Values": {}
     }
   ]
 }
