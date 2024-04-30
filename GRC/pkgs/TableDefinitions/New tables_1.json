@@ -3,6 +3,10 @@
   "EntityName": "New tables_1",
   "environmentVariableName": "",
   "InstanceUrl": "https://org27bb28dd.crm.dynamics.com/",
+  "LocalReferenceDSJson": {
+    "entitySetName": "cr64e_newtable1s",
+    "logicalName": "cr64e_newtable1"
+  },
   "state": "Configured",
   "TableDefinition": {
     "BooleanOptionSetAttribute": "{\"@odata.context\":\"https://org27bb28dd.crm.dynamics.com/api/data/v9.0/$metadata#EntityDefinitions('cr64e_newtable1')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(MetadataId,LogicalName,SchemaName,DisplayName,OptionSet())\",\"value\":[]}",
