@@ -45,7 +45,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 231,
+        "PublishOrderIndex": 247,
         "Rules": [
           {
             "Category": "Design",
@@ -233,7 +233,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 232,
+        "PublishOrderIndex": 248,
         "Rules": [
           {
             "Category": "Data",
@@ -519,7 +519,16 @@
           "FocusedBorderColor",
           "ZIndex",
           "BorderThickness",
-          "FocusedBorderThickness"
+          "FocusedBorderThickness",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "false",
+            "InvariantPropertyName": "OnSelect",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
+          "AutoDisableOnSelect"
         ],
         "ControlUniqueId": "12",
         "HasDynamicProperties": false,
@@ -535,7 +544,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 233,
+        "PublishOrderIndex": 249,
         "Rules": [
           {
             "Category": "Design",
@@ -674,6 +683,18 @@
             "InvariantScript": "2",
             "Property": "FocusedBorderThickness",
             "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "true",
+            "Property": "AutoDisableOnSelect",
+            "RuleProviderType": "User"
+          },
+          {
+            "Category": "Behavior",
+            "InvariantScript": "",
+            "Property": "OnSelect",
+            "RuleProviderType": "User"
           }
         ],
         "StyleName": "defaultIconStyle",
@@ -795,7 +816,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "Header",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 234,
+        "PublishOrderIndex": 250,
         "Rules": [
           {
             "Category": "Data",
@@ -1040,7 +1061,7 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638500507357351801",
+    "LastModifiedTimestamp": "638500553119064098",
     "Name": "Header",
     "Rules": [
       {
@@ -1099,7 +1120,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638500507357351801",
+  "LastModifiedTimestamp": "638500553119064098",
   "Name": "f47192bf105b4847998aaa464406192b",
   "OverridableProperties": {},
   "Version": "1.0"

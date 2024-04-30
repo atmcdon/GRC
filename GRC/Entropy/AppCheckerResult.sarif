@@ -1298,18 +1298,18 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen9"
+                  "fullyQualifiedName": "Screen15"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen9",
+                  "fullyQualifiedName": "Screen15",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "module": "Screen9",
-                "type": "Screen9"
+                "module": "Screen15",
+                "type": "Screen15"
               }
             }
           ],
@@ -1327,19 +1327,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen9.EditForm5.'Owner of Site_DataCard17'.DataCardValue152.AccessibleLabel"
+                  "fullyQualifiedName": "'New Worksite Entry'.EditForm5.'Owner of Site_DataCard17'.DataCardValue152.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen9.EditForm5.'Owner of Site_DataCard17'.DataCardValue152.AccessibleLabel",
+                  "fullyQualifiedName": "'New Worksite Entry'.EditForm5.'Owner of Site_DataCard17'.DataCardValue152.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Screen9",
-                "type": "Screen9.EditForm5.'Owner of Site_DataCard17'.DataCardValue152"
+                "module": "New Worksite Entry",
+                "type": "'New Worksite Entry'.EditForm5.'Owner of Site_DataCard17'.DataCardValue152"
               }
             }
           ],
@@ -1357,19 +1357,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen9.EditForm5.'Plant species by type_DataCard17'.DataCardValue155.AccessibleLabel"
+                  "fullyQualifiedName": "'New Worksite Entry'.EditForm5.'Plant species by type_DataCard17'.DataCardValue155.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen9.EditForm5.'Plant species by type_DataCard17'.DataCardValue155.AccessibleLabel",
+                  "fullyQualifiedName": "'New Worksite Entry'.EditForm5.'Plant species by type_DataCard17'.DataCardValue155.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Screen9",
-                "type": "Screen9.EditForm5.'Plant species by type_DataCard17'.DataCardValue155"
+                "module": "New Worksite Entry",
+                "type": "'New Worksite Entry'.EditForm5.'Plant species by type_DataCard17'.DataCardValue155"
               }
             }
           ],
@@ -1387,19 +1387,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen9.EditForm5.'Name of Tools used_DataCard17'.DataCardValue156.AccessibleLabel"
+                  "fullyQualifiedName": "'New Worksite Entry'.EditForm5.'Name of Tools used_DataCard17'.DataCardValue156.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen9.EditForm5.'Name of Tools used_DataCard17'.DataCardValue156.AccessibleLabel",
+                  "fullyQualifiedName": "'New Worksite Entry'.EditForm5.'Name of Tools used_DataCard17'.DataCardValue156.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Screen9",
-                "type": "Screen9.EditForm5.'Name of Tools used_DataCard17'.DataCardValue156"
+                "module": "New Worksite Entry",
+                "type": "'New Worksite Entry'.EditForm5.'Name of Tools used_DataCard17'.DataCardValue156"
               }
             }
           ],
@@ -1417,19 +1417,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen9.EditForm5.'Plants Species Amount_DataCard17'.DataCardValue154.AccessibleLabel"
+                  "fullyQualifiedName": "'New Worksite Entry'.EditForm5.'Plants Species Amount_DataCard17'.DataCardValue154.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen9.EditForm5.'Plants Species Amount_DataCard17'.DataCardValue154.AccessibleLabel",
+                  "fullyQualifiedName": "'New Worksite Entry'.EditForm5.'Plants Species Amount_DataCard17'.DataCardValue154.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Screen9",
-                "type": "Screen9.EditForm5.'Plants Species Amount_DataCard17'.DataCardValue154"
+                "module": "New Worksite Entry",
+                "type": "'New Worksite Entry'.EditForm5.'Plants Species Amount_DataCard17'.DataCardValue154"
               }
             }
           ],
@@ -1447,19 +1447,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen9.EditForm5.'Work Start Date_DataCard17'.DataCardValue153.AccessibleLabel"
+                  "fullyQualifiedName": "'New Worksite Entry'.EditForm5.'Work Start Date_DataCard17'.DataCardValue153.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen9.EditForm5.'Work Start Date_DataCard17'.DataCardValue153.AccessibleLabel",
+                  "fullyQualifiedName": "'New Worksite Entry'.EditForm5.'Work Start Date_DataCard17'.DataCardValue153.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Screen9",
-                "type": "Screen9.EditForm5.'Work Start Date_DataCard17'.DataCardValue153"
+                "module": "New Worksite Entry",
+                "type": "'New Worksite Entry'.EditForm5.'Work Start Date_DataCard17'.DataCardValue153"
               }
             }
           ],
@@ -1477,19 +1477,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen9.EditForm5.'Number of tools used_DataCard17'.DataCardValue157.AccessibleLabel"
+                  "fullyQualifiedName": "Screen15.TextSearchBox1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen9.EditForm5.'Number of tools used_DataCard17'.DataCardValue157.AccessibleLabel",
+                  "fullyQualifiedName": "Screen15.TextSearchBox1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Screen9",
-                "type": "Screen9.EditForm5.'Number of tools used_DataCard17'.DataCardValue157"
+                "module": "Screen15",
+                "type": "Screen15.TextSearchBox1"
               }
             }
           ],
@@ -1507,19 +1507,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen9.EditForm5.'Location of Site_DataCard17'.DataCardValue151.AccessibleLabel"
+                  "fullyQualifiedName": "Screen15.BrowseGallery1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen9.EditForm5.'Location of Site_DataCard17'.DataCardValue151.AccessibleLabel",
+                  "fullyQualifiedName": "Screen15.BrowseGallery1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Screen15",
+                "type": "Screen15.BrowseGallery1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Screen15.BrowseGallery1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Screen15.BrowseGallery1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Screen9",
-                "type": "Screen9.EditForm5.'Location of Site_DataCard17'.DataCardValue151"
+                "module": "Screen15",
+                "type": "Screen15.BrowseGallery1"
               }
             }
           ],
@@ -1537,19 +1567,79 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen9.EditForm5.'Worksite Name_DataCard16'.DataCardValue150.AccessibleLabel"
+                  "fullyQualifiedName": "'New Worksite Entry'.EditForm5.'Number of tools used_DataCard17'.DataCardValue157.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen9.EditForm5.'Worksite Name_DataCard16'.DataCardValue150.AccessibleLabel",
+                  "fullyQualifiedName": "'New Worksite Entry'.EditForm5.'Number of tools used_DataCard17'.DataCardValue157.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Screen9",
-                "type": "Screen9.EditForm5.'Worksite Name_DataCard16'.DataCardValue150"
+                "module": "New Worksite Entry",
+                "type": "'New Worksite Entry'.EditForm5.'Number of tools used_DataCard17'.DataCardValue157"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'New Worksite Entry'.EditForm5.'Location of Site_DataCard17'.DataCardValue151.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'New Worksite Entry'.EditForm5.'Location of Site_DataCard17'.DataCardValue151.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "New Worksite Entry",
+                "type": "'New Worksite Entry'.EditForm5.'Location of Site_DataCard17'.DataCardValue151"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'New Worksite Entry'.EditForm5.'Worksite Name_DataCard16'.DataCardValue150.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'New Worksite Entry'.EditForm5.'Worksite Name_DataCard16'.DataCardValue150.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "New Worksite Entry",
+                "type": "'New Worksite Entry'.EditForm5.'Worksite Name_DataCard16'.DataCardValue150"
               }
             }
           ],

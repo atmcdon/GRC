@@ -53,7 +53,7 @@ LoginPage As screen:
                 Navigate('Main Dashboard'),
                 
                 Notify("Username not found or Password is incorrect!", NotificationType.Error)  
-            )
+            ) 
         Size: =24
         Text: ="Login"
         Width: =280

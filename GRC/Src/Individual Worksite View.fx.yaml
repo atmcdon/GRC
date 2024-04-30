@@ -1,4 +1,5 @@
 "'Individual Worksite View' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    OnVisible: =
 
     Canvas1_1 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -38,14 +39,6 @@
                 X: =43
                 Y: =125
                 ZIndex: =5
-
-            Rectangle4_1 As rectangle:
-                Fill: =RGBA(128, 128, 128, 1)
-                Height: =46
-                Width: =351
-                X: =115
-                Y: =137
-                ZIndex: =6
 
             Container1 As groupContainer.manualLayoutContainer:
                 BorderColor: =RGBA(0, 0, 0, 0)

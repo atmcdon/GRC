@@ -42,6 +42,7 @@ Header As CanvasComponent:
         Color: =RGBA(255, 255, 255, 1)
         Height: =57
         Icon: =Icon.Notebook
+        OnSelect: =
         Width: =62
         X: =12
         Y: =15
