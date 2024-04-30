@@ -85,7 +85,7 @@
     Icon1_3 As icon.ArrowLeft:
         Icon: =Icon.ArrowLeft
         OnSelect: |
-            =Navigate('Sites Screen', ScreenTransition.UnCover)
+            =Navigate('Individual Worksite View', ScreenTransition.UnCover)
         X: =20
         Y: =15
         ZIndex: =2

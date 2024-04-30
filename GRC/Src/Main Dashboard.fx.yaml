@@ -177,7 +177,7 @@
             Height: =50
             Icon: =Icon.ChevronRight
             OnSelect: |+
-                =Navigate('Sites Screen', ScreenTransition.None, {SelectedSite: ThisItem.'Site name'})
+                =Navigate('Individual Worksite View', ScreenTransition.None, {SelectedSite: ThisItem.'Site name'})
                 
             PaddingBottom: =16
             PaddingLeft: =16

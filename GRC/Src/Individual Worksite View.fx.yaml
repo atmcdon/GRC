@@ -1,4 +1,4 @@
-"'Sites Screen' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+"'Individual Worksite View' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
 
     Canvas1_1 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0

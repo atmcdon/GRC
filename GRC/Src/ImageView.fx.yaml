@@ -61,7 +61,7 @@ ImageView As screen:
 
         Icon1 As icon.ArrowLeft:
             Icon: =Icon.ArrowLeft
-            OnSelect: =Navigate('Sites Screen', ScreenTransition.Cover)
+            OnSelect: =Navigate('Individual Worksite View', ScreenTransition.Cover)
             X: =20
             Y: =15
             ZIndex: =2

@@ -136,13 +136,14 @@
   },
   "ScreenOrder": [
     "Main Dashboard",
-    "Sites Screen",
+    "Individual Worksite View",
     "ImageView",
     "UploadRecording",
     "Make Site",
     "Input Data for new Worksite",
     "New Worksite view",
     "LoginPage",
-    "Screen3"
+    "Screen3",
+    "Screen9"
   ]
 }
