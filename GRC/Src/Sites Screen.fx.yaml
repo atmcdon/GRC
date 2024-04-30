@@ -1,19 +1,5 @@
 "'Sites Screen' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
 
-    RectQuickActionBar1_1 As rectangle:
-        Height: =88
-        Width: =Parent.Width
-        ZIndex: =1
-
-    LblAppName1_1 As label:
-        Align: =Align.Center
-        Fill: =RGBA(187, 221, 140, 1)
-        Height: =88
-        Size: =27
-        Text: ="Green River Coalition"
-        Width: =Parent.Width
-        ZIndex: =2
-
     Canvas1_1 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Height: =Parent.Height - Self.Y
@@ -505,18 +491,122 @@
                 Y: =24
                 ZIndex: =3
 
-    Circle1_1 As circle:
-        Fill: =RGBA(127, 178, 57, 1)
-        Height: =70
-        Width: =72
-        X: =552
-        Y: =9
-        ZIndex: =4
+        "'Plants Data Card' As dataCard.blankCard":
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =4
 
-    Icon1_2 As icon.ArrowLeft:
-        Icon: =Icon.ArrowLeft
-        OnSelect: =Navigate('Main Dashboard', ScreenTransition.Cover)
-        X: =30
-        Y: =15
-        ZIndex: =5
+            "'Plants Table' As dataTable.datatable":
+                BorderStyle: =BorderStyle.Solid
+                DisplayMode: =DisplayMode.Edit
+                Fill: =RGBA(0, 0, 0, 0)
+                HeadingSize: =21
+                Height: =500
+                Items: =Plants
+                Size: =21
+                Width: =640
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+                PlantName_Column1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="PlantName"
+                    FieldName: ="cr64e_plantname"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =1
+                    Text: =ThisItem.PlantName
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =24
+
+                Quantity_Column1 As dataTableColumn.numberColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Quantity"
+                    FieldName: ="cr64e_quantity"
+                    FieldVariantName: ="numberColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =2
+                    Text: =ThisItem.Quantity
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =25
+
+                Vendor_Column1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Vendor"
+                    FieldName: ="cr64e_vendor"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =3
+                    Text: =ThisItem.Vendor
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =26
+
+                RecentlyUsedAt_Column1 As dataTableColumn.dateTimeColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="RecentlyUsedAt"
+                    FieldName: ="cr64e_recentlyusedat"
+                    FieldVariantName: ="dateTimeColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =4
+                    Text: =Text(ThisItem.RecentlyUsedAt,DateTimeFormat.LongDateTime)
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =27
+
+                Schedule_Column1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Schedule"
+                    FieldName: ="cr64e_schedule"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =5
+                    Text: =ThisItem.Schedule
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =28
+
+        "'Tools Data Card' As dataCard.blankCard":
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =640
+            X: =0
+            Y: =3
+            ZIndex: =5
+
+        "'People Data Card' As dataCard.blankCard":
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =640
+            X: =0
+            Y: =4
+            ZIndex: =6
+
+    Header_3 As Header:
+        ZIndex: =4
 
