@@ -160,7 +160,7 @@
 
                 Button3 As button:
                     Size: =12
-                    Text: ="Update"
+                    Text: ="New Entry"
                     Width: =111
                     X: =461
                     Y: =17
