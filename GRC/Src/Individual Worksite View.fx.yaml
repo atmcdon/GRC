@@ -566,7 +566,7 @@
             Label10_3 As label:
                 Height: =70
                 Size: =21
-                Text: ="Plant Species at 'worksite name'"
+                Text: ="Plant Species at " & SelectedSite
                 Width: =560
                 X: =40
                 ZIndex: =2
@@ -643,7 +643,7 @@
             Label10_2 As label:
                 Height: =70
                 Size: =21
-                Text: ="Tools Used at 'worksite name'"
+                Text: ="Tools Used at "& SelectedSite
                 Width: =560
                 X: =40
                 ZIndex: =2
@@ -778,7 +778,7 @@
             Label10 As label:
                 Height: =70
                 Size: =21
-                Text: ="Hourly Workers at 'worksite name'"
+                Text: ="Hourly Workers at " & SelectedSite
                 Width: =560
                 X: =40
                 Y: =370
@@ -787,7 +787,7 @@
             Label10_1 As label:
                 Height: =70
                 Size: =21
-                Text: ="Volunteers at 'worksite name'"
+                Text: ="Volunteers at " & SelectedSite
                 Width: =560
                 X: =40
                 ZIndex: =4
