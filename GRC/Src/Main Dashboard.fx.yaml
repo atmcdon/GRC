@@ -101,6 +101,17 @@
             Y: =1
             ZIndex: =2
 
+        DataCard4 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =548
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =3
+
     Circle1 As circle:
         Fill: =RGBA(127, 178, 57, 1)
         Height: =70
