@@ -36,7 +36,7 @@
                 DelayItemLoading: =true
                 Fill: =RGBA(174, 230, 115, 0.21)
                 Height: =439
-                Items: ='Worksite Volunteer Record'
+                Items: =Workers
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
@@ -54,7 +54,7 @@
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Text: =ThisItem.'Worksite Name '
+                    Text: =ThisItem.Name
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Parent.TemplateWidth - 86
                     X: =16
@@ -69,7 +69,7 @@
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Text: =ThisItem.Location
+                    Text: =ThisItem.SiteWorked
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Title11_2.Width
                     X: =Title11_2.X
@@ -84,7 +84,7 @@
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Text: =ThisItem.'Start date '
+                    Text: =ThisItem.StartDateWorked
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Title11_2.Width
                     X: =Title11_2.X
@@ -149,7 +149,7 @@
                 HeadingFill: =RGBA(127, 178, 57, 1)
                 HeadingSize: =15
                 Height: =256
-                Items: ='Worksite Volunteer Record'
+                Items: =Workers
                 SelectedFill: =
                 Size: =15
                 Width: =570
@@ -157,95 +157,131 @@
                 Y: =107
                 ZIndex: =1
 
-                "'Worksite Name _Column1' As dataTableColumn.textualColumn":
-                    AutoWidth: =false
+                Name_Column3 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Worksite Name "
-                    FieldName: ="cr64e_worksitename"
+                    FieldDisplayName: ="Name"
+                    FieldName: ="cr64e_name"
                     FieldVariantName: ="textualColumn"
-                    Height: =255
+                    Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     Order: =1
-                    Text: =ThisItem.'Worksite Name '
-                    Width: =236
-                    X: =23
+                    Text: =ThisItem.Name
+                    Width: =100
+                    X: =0
                     Y: =0
                     ZIndex: =7
 
-                Location_Column1 As dataTableColumn.textualColumn:
-                    AutoWidth: =false
+                SiteWorked_Column2 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Location"
-                    FieldName: ="cr64e_location"
+                    FieldDisplayName: ="SiteWorked"
+                    FieldName: ="cr64e_siteworked"
                     FieldVariantName: ="textualColumn"
-                    Height: =255
+                    Height: =Parent.Height
                     LayoutHeight: =Parent.Height
-                    Order: =4
-                    Text: =ThisItem.Location
-                    Width: =134
+                    Order: =2
+                    Text: =ThisItem.SiteWorked
+                    Width: =100
                     X: =0
                     Y: =0
                     ZIndex: =8
 
-                "'Start date _Column1' As dataTableColumn.dateTimeColumn":
-                    AutoWidth: =false
+                StartDateWorked_Column1 As dataTableColumn.dateTimeColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Start date "
-                    FieldName: ="cr64e_startdate"
+                    FieldDisplayName: ="StartDateWorked"
+                    FieldName: ="cr64e_startdateworked"
                     FieldVariantName: ="dateTimeColumn"
-                    Height: =256
+                    Height: =Parent.Height
                     LayoutHeight: =Parent.Height
-                    Order: =6
-                    Text: =Text(ThisItem.'Start date ',DateTimeFormat.LongDateTime)
-                    Width: =378
-                    X: =1084
+                    Order: =3
+                    Text: =Text(ThisItem.StartDateWorked,DateTimeFormat.LongDateTime)
+                    Width: =100
+                    X: =0
                     Y: =0
                     ZIndex: =9
 
-                "'Volunteer Name _Column2' As dataTableColumn.textualColumn":
-                    AutoWidth: =false
+                EndDateWorked_Column1 As dataTableColumn.dateTimeColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Volunteer Name "
-                    FieldName: ="cr64e_volunteername"
-                    FieldVariantName: ="textualColumn"
-                    Height: =255
+                    FieldDisplayName: ="EndDateWorked"
+                    FieldName: ="cr64e_enddateworked"
+                    FieldVariantName: ="dateTimeColumn"
+                    Height: =Parent.Height
                     LayoutHeight: =Parent.Height
-                    Order: =2
-                    Text: =ThisItem.'Volunteer Name '
-                    Width: =260
-                    X: =225
+                    Order: =4
+                    Text: =Text(ThisItem.EndDateWorked,DateTimeFormat.LongDateTime)
+                    Width: =100
+                    X: =0
                     Y: =0
                     ZIndex: =10
 
-                "'Volunteer contact_Column2' As dataTableColumn.textualColumn":
-                    AutoWidth: =false
+                WorkDone_Column3 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Volunteer contact"
-                    FieldName: ="cr64e_volunteercontact"
+                    FieldDisplayName: ="WorkDone"
+                    FieldName: ="cr64e_workdone"
                     FieldVariantName: ="textualColumn"
-                    Height: =255
+                    Height: =Parent.Height
                     LayoutHeight: =Parent.Height
-                    Order: =3
-                    Text: =ThisItem.'Volunteer contact'
-                    Width: =288
+                    Order: =5
+                    Text: =ThisItem.WorkDone
+                    Width: =100
                     X: =0
                     Y: =0
                     ZIndex: =11
 
-                "'Volunter date_Column2' As dataTableColumn.dateTimeColumn":
-                    AutoWidth: =false
+                TimeIn_Column2 As dataTableColumn.dateTimeColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Volunter date"
-                    FieldName: ="cr64e_volunteerdate"
+                    FieldDisplayName: ="TimeIn"
+                    FieldName: ="cr64e_timein"
                     FieldVariantName: ="dateTimeColumn"
-                    Height: =255
+                    Height: =Parent.Height
                     LayoutHeight: =Parent.Height
-                    Order: =5
-                    Text: =Text(ThisItem.'Volunter date',DateTimeFormat.LongDateTime)
-                    Width: =396
-                    X: =200
+                    Order: =6
+                    Text: =Text(ThisItem.TimeIn,DateTimeFormat.LongDateTime)
+                    Width: =100
+                    X: =0
                     Y: =0
                     ZIndex: =12
+
+                TimeOut_Column2 As dataTableColumn.dateTimeColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="TimeOut"
+                    FieldName: ="cr64e_timeout"
+                    FieldVariantName: ="dateTimeColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =7
+                    Text: =Text(ThisItem.TimeOut,DateTimeFormat.LongDateTime)
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =13
+
+                WorkerType_Column3 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="WorkerType"
+                    FieldName: ="cr64e_workertype"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =8
+                    Text: =ThisItem.WorkerType
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =14
+
+                WorkerID_Column1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="WorkerID"
+                    FieldName: ="cr64e_workerid"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =9
+                    Text: =ThisItem.WorkerID
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =15
 
             Label14_2 As label:
                 Height: =70
