@@ -331,15 +331,8 @@
                             LookUp('Site Histories', SiteName = GlobalSelectedSite).Workers
                         )
                     Size: =14
-                    Text: |
-                        =// Create or refresh the collection for site histories based on the selected site
-                        ClearCollect(
-                            FilteredSiteHistory,
-                            Filter(
-                                'Site Histories',
-                                SiteName = GlobalSelectedSite
-                            )
-                        );
+                    Text: |-
+                        ="Recent Workers: " & LookUp('Site Histories', SiteName = GlobalSelectedSite, Workers)
                     VerticalAlign: =VerticalAlign.Top
                     Width: =542
                     X: =32
