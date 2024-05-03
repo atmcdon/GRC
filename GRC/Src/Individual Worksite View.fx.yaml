@@ -325,8 +325,16 @@
                     Fill: =RGBA(232, 244, 217, 1)
                     Height: =82
                     Size: =14
-                    Text: |-
-                        ="Workers Last Here:"
+                    Text: |
+                        ="Workers Last Here:" &
+                        If(
+                            !IsBlank(GlobalSelectedSite),
+                            LookUp(
+                                'Workers',
+                                Name = Trim(First(Split(GlobalSelectedSite, ",")).Value)
+                            ).Name,  // Assuming 'Email' is the field you want to display
+                            "No workers listed"
+                        )
                     VerticalAlign: =VerticalAlign.Top
                     Width: =542
                     X: =32
@@ -475,7 +483,7 @@
             Label3 As label:
                 Height: =47
                 Size: =21
-                Text: ="Site Recordings"
+                Text: ="Site History"
                 Width: =560
                 X: =40
                 Y: =22
@@ -485,12 +493,12 @@
                 Fill: =RGBA(127, 178, 57, 1)
                 Height: =45
                 OnSelect: |+
-                    =Navigate(UploadRecording, ScreenTransition.Cover, {SelectedSite: SelectedSite})
+                    =Navigate(UploadRecording, ScreenTransition.Cover, {GlobalSelectedSite: GlobalSelectedSite})
                     
                     
                     
                 Size: =14
-                Text: ="Add Recording"
+                Text: ="Add Entry"
                 Width: =172
                 X: =428
                 Y: =24
