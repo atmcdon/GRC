@@ -18,6 +18,7 @@
       "cr64e_timeout": "TimeOut",
       "cr64e_workdone": "WorkDone",
       "cr64e_workerid": "WorkerID",
+      "cr64e_WorkerIDs": "WorkerIDs",
       "cr64e_workers_AsyncOperations": "System Jobs",
       "cr64e_workers_BulkDeleteFailures": "Bulk Delete Failures",
       "cr64e_workers_DuplicateBaseRecord": "Duplicate Records (cr64e_workers_DuplicateBaseRecord)",

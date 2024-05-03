@@ -108,7 +108,7 @@
                     OnSelect: |
                         =
                         Set(GlobalSelectedSite, ThisItem.'Site name');
-                        Set(varworkerID, LookUp('Site Histories', SiteName = GlobalSelectedSite, Workers));
+                        Set(varworkerID, LookUp('Site Histories', SiteName = GlobalSelectedSite, 'Workers (cr64e_workers)'));
                         Navigate('Individual Worksite View', ScreenTransition.Cover);
                     PaddingBottom: =16
                     PaddingLeft: =16

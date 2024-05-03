@@ -511,7 +511,7 @@
         Workers_DataCard1 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="cr64e_workers"
-            Default: =ThisItem.Workers
+            Default: =ThisItem.'Workers (cr64e_workers)'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@'Site Histories'],DataSourceInfo.DisplayName,cr64e_workers)
             Fill: =RGBA(0, 0, 0, 0)
