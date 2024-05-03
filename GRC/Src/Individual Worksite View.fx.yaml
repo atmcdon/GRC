@@ -150,9 +150,9 @@
                     Height: =204
                     Image: |
                         =If(
-                            IsBlank(LookUp(Sites, 'Site name' = SelectedSite).SiteMainImage),
+                            IsBlank(LookUp(Sites, 'Site name' = GlobalSelectedSite).SiteMainImage),
                             '93492771',
-                            LookUp(Sites, 'Site name' = SelectedSite).SiteMainImage
+                            LookUp(Sites, 'Site name' = GlobalSelectedSite).SiteMainImage
                         )
                     Width: =594
                     Y: =308
@@ -268,7 +268,7 @@
                     Fill: =RGBA(232, 244, 217, 1)
                     Height: =50
                     Size: =14
-                    Text: ="Work Began on " & LookUp('Work Site Data Entry','Worksite Name' = GlobalSelectedSite).'Work Start Date'
+                    Text: ="Work Began on " & LookUp('Site Histories','SiteName' = GlobalSelectedSite).'Work Start Date'
                     Width: =255
                     X: =27
                     Y: =164
@@ -310,7 +310,10 @@
                     Height: =81
                     Size: =14
                     Text: |
-                        ="Recent Development:" & Filter('Site Histories', 'Site Name' = GlobalSelectedSite).Text
+                        ="Recent Development: " & First(Sort(
+                            Filter('Site Histories', 'SiteName' = GlobalSelectedSite),
+                            'Created On'
+                        )).Development
                     VerticalAlign: =VerticalAlign.Top
                     Width: =540
                     X: =32
@@ -566,7 +569,7 @@
             Label10_3 As label:
                 Height: =70
                 Size: =21
-                Text: ="Plant Species at " & SelectedSite
+                Text: ="Plant Species at " & GlobalSelectedSite
                 Width: =560
                 X: =40
                 ZIndex: =2
@@ -643,7 +646,7 @@
             Label10_2 As label:
                 Height: =70
                 Size: =21
-                Text: ="Tools Used at "& SelectedSite
+                Text: ="Tools Used at "& GlobalSelectedSite
                 Width: =560
                 X: =40
                 ZIndex: =2
@@ -778,7 +781,7 @@
             Label10 As label:
                 Height: =70
                 Size: =21
-                Text: ="Hourly Workers at " & SelectedSite
+                Text: ="Hourly Workers at " & GlobalSelectedSite
                 Width: =560
                 X: =40
                 Y: =370
@@ -787,7 +790,7 @@
             Label10_1 As label:
                 Height: =70
                 Size: =21
-                Text: ="Volunteers at " & SelectedSite
+                Text: ="Volunteers at " & GlobalSelectedSite
                 Width: =560
                 X: =40
                 ZIndex: =4
