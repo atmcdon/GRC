@@ -1,4 +1,4 @@
-"Screen1 As screen.'phoneLayout_HeaderAndForm_ver3.0'":
+"'New Entry Editing Form' As screen.'phoneLayout_HeaderAndForm_ver3.0'":
 
     RectQuickActionBar2 As rectangle:
         Height: =88

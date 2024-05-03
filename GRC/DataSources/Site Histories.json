@@ -99,45 +99,5 @@
     "RelatedColumnInvariantName": "statuscode",
     "RelatedEntityName": "Site Histories",
     "Type": "OptionSetInfo"
-  },
-  {
-    "DisplayName": "Status (Site Histories)",
-    "Name": "new_reserveentity_rp53fd1p1ekxpa_t7_421c18f555_statecode",
-    "OptionSetInfoNameMapping": {
-      "0": "Active",
-      "1": "Inactive"
-    },
-    "OptionSetIsBooleanValued": false,
-    "OptionSetIsGlobal": false,
-    "OptionSetReference": {
-      "OptionSetReferenceItem0": {
-        "OptionSetReferenceColumnName": "statecode",
-        "OptionSetReferenceEntityName": "Site Histories"
-      }
-    },
-    "OptionSetTypeKey": "StateType",
-    "RelatedColumnInvariantName": "statecode",
-    "RelatedEntityName": "Site Histories",
-    "Type": "OptionSetInfo"
-  },
-  {
-    "DisplayName": "Status Reason (Site Histories)",
-    "Name": "new_reserveentity_rp53fd1p1ekxpa_t7_421c18f555_statuscode",
-    "OptionSetInfoNameMapping": {
-      "1": "Active",
-      "2": "Inactive"
-    },
-    "OptionSetIsBooleanValued": false,
-    "OptionSetIsGlobal": false,
-    "OptionSetReference": {
-      "OptionSetReferenceItem0": {
-        "OptionSetReferenceColumnName": "statuscode",
-        "OptionSetReferenceEntityName": "Site Histories"
-      }
-    },
-    "OptionSetTypeKey": "StatusType",
-    "RelatedColumnInvariantName": "statuscode",
-    "RelatedEntityName": "Site Histories",
-    "Type": "OptionSetInfo"
   }
 ]

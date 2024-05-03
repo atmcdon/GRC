@@ -102,7 +102,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 50,
+    "BindingErrorCount": 37,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "Phone",
@@ -142,11 +142,13 @@
     "Make Site",
     "Input Data for new Worksite",
     "LoginPage",
-    "Screen3",
+    "Unnamed Screen",
     "New Worksite Entry",
     "Successful Database entry screen",
     "Editing Table for PLANTS",
-    "Screen5",
-    "Screen1"
+    "Unnamed Screen 2",
+    "New Entry Editing Form",
+    "Plants Overview Screen",
+    "Tools Overview Screen"
   ]
 }
