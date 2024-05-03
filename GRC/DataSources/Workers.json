@@ -14,6 +14,7 @@
       "cr64e_name": "Name",
       "cr64e_siteworked": "SiteWorked",
       "cr64e_startdateworked": "StartDateWorked",
+      "cr64e_syncid": "syncID",
       "cr64e_timein": "TimeIn",
       "cr64e_timeout": "TimeOut",
       "cr64e_workdone": "WorkDone",

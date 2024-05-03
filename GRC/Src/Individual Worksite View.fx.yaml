@@ -268,7 +268,7 @@
                     Fill: =RGBA(232, 244, 217, 1)
                     Height: =50
                     Size: =14
-                    Text: ="Work Began on " & LookUp('Site Histories','SiteName' = GlobalSelectedSite).'Work Start Date'
+                    Text: ="Work Began on " & LookUp('Site Histories',SiteName = GlobalSelectedSite).'Work Start Date'
                     Width: =255
                     X: =27
                     Y: =164
@@ -311,7 +311,7 @@
                     Size: =14
                     Text: |
                         ="Recent Development: " & First(Sort(
-                            Filter('Site Histories', 'SiteName' = GlobalSelectedSite),
+                            Filter('Site Histories', SiteName = GlobalSelectedSite),
                             'Created On'
                         )).Development
                     VerticalAlign: =VerticalAlign.Top
@@ -324,17 +324,22 @@
                     Color: =RGBA(99, 139, 44, 1)
                     Fill: =RGBA(232, 244, 217, 1)
                     Height: =82
+                    OnSelect: |-
+                        ="Recent Workers: " & If(
+                            IsBlank(LookUp('Site Histories', SiteName = GlobalSelectedSite)),
+                            "No workers found",
+                            LookUp('Site Histories', SiteName = GlobalSelectedSite).Workers
+                        )
                     Size: =14
                     Text: |
-                        ="Workers Last Here:" &
-                        If(
-                            !IsBlank(GlobalSelectedSite),
-                            LookUp(
-                                'Workers',
-                                Name = Trim(First(Split(GlobalSelectedSite, ",")).Value)
-                            ).Name,  // Assuming 'Email' is the field you want to display
-                            "No workers listed"
-                        )
+                        =// Create or refresh the collection for site histories based on the selected site
+                        ClearCollect(
+                            FilteredSiteHistory,
+                            Filter(
+                                'Site Histories',
+                                SiteName = GlobalSelectedSite
+                            )
+                        );
                     VerticalAlign: =VerticalAlign.Top
                     Width: =542
                     X: =32

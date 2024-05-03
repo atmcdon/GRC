@@ -10,6 +10,7 @@
     "Name": "Site Histories",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
+      "cr64e_cr64e_syncid": "cr64e_syncID",
       "cr64e_datein": "Date In",
       "cr64e_development": "Development",
       "cr64e_generalnotes": "General Notes",
@@ -25,6 +26,7 @@
       "cr64e_sitehistoryid": "Site History",
       "cr64e_sitename": "SiteName",
       "cr64e_starttime": "Start Time",
+      "cr64e_syncid": "syncID",
       "cr64e_tools": "Tools",
       "cr64e_workers": "Workers",
       "createdby": "Created By",
