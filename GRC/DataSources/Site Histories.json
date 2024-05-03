@@ -61,7 +61,7 @@
     }
   },
   {
-    "DisplayName": "Status (Site Histories)_1",
+    "DisplayName": "Status (Site Histories)",
     "Name": "cr64e_sitehistory_statecode",
     "OptionSetInfoNameMapping": {
       "0": "Active",
@@ -81,7 +81,7 @@
     "Type": "OptionSetInfo"
   },
   {
-    "DisplayName": "Status Reason (Site Histories)_1",
+    "DisplayName": "Status Reason (Site Histories)",
     "Name": "cr64e_sitehistory_statuscode",
     "OptionSetInfoNameMapping": {
       "1": "Active",
