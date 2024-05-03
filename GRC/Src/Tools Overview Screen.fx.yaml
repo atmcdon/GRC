@@ -142,19 +142,19 @@
             Y: =1
             ZIndex: =3
 
-            DataTable3_1 As dataTable.datatable:
+            ToolsOverviewTable As dataTable.datatable:
                 BorderStyle: =BorderStyle.Solid
                 DisplayMode: =DisplayMode.Edit
                 Fill: =RGBA(0, 0, 0, 0)
                 HeadingFill: =RGBA(127, 178, 57, 1)
                 HeadingSize: =15
-                Height: =255
+                Height: =266
                 Items: =ToolLists
                 SelectedFill: =
                 Size: =15
-                Width: =578
-                X: =28
-                Y: =109
+                Width: =555
+                X: =51
+                Y: =97
                 ZIndex: =1
 
                 ToolName_Column2 As dataTableColumn.textualColumn:
@@ -163,11 +163,11 @@
                     FieldDisplayName: ="ToolName"
                     FieldName: ="cr64e_toolname"
                     FieldVariantName: ="textualColumn"
-                    Height: =255
+                    Height: =266
                     LayoutHeight: =Parent.Height
                     Order: =2
                     Text: =ThisItem.ToolName
-                    Width: =204
+                    Width: =172
                     X: =0
                     Y: =0
                     ZIndex: =7
@@ -238,7 +238,7 @@
                     ="All Tool Logs
                     "
                 Width: =560
-                X: =28
+                X: =51
                 Y: =27
                 ZIndex: =2
 
