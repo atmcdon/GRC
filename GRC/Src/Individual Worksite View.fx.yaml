@@ -128,8 +128,8 @@
                         ZIndex: =6
 
             Container1_1 As groupContainer.manualLayoutContainer:
-                ContentLanguage: |-
-                    ="Site: "&LookUp(Sites,'Site name' = SelectedSite).'Site name')
+                ContentLanguage: |
+                    ="Site: "&LookUp(Sites,'Site name' = GlobalSelectedSite).'Site name'
                 Height: =1200
                 Width: =594
                 X: =20
@@ -323,6 +323,7 @@
                 Label6_5 As label:
                     Color: =RGBA(99, 139, 44, 1)
                     Fill: =RGBA(232, 244, 217, 1)
+                    FontWeight: =FontWeight.Lighter
                     Height: =82
                     OnSelect: |-
                         ="Recent Workers: " & If(
@@ -332,7 +333,17 @@
                         )
                     Size: =14
                     Text: |-
-                        ="Recent Workers: " & LookUp('Site Histories', SiteName = GlobalSelectedSite, Workers)
+                        =If(
+                                IsBlank(LookUp('Site Histories', SiteName = GlobalSelectedSite, Workers)),
+                                "No workers found",
+                                Concat(
+                                    ForAll(
+                                        Split(varworkerID, ","),
+                                        LookUp(Workers, WorkerID = Trim(Result), WorkerName)
+                                    ),
+                                    WorkerName & ", "
+                                )
+                            )
                     VerticalAlign: =VerticalAlign.Top
                     Width: =542
                     X: =32
