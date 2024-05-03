@@ -290,3 +290,12 @@
                     Width: =635
                     ZIndex: =1
 
+    ToolLogsBackButton_1 As icon.ChevronLeft:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back(ScreenTransition.None)
+        X: =14
+        Y: =12
+        ZIndex: =4
+

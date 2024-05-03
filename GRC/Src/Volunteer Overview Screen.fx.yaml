@@ -34,6 +34,7 @@
 
             "Gallery15_2 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
                 DelayItemLoading: =true
+                Fill: =RGBA(174, 230, 115, 0.21)
                 Height: =439
                 Items: ='Worksite Volunteer Record'
                 Layout: =Layout.Vertical
@@ -93,7 +94,7 @@
                 NextArrow5_2 As icon.ChevronRight:
                     AccessibleLabel: =Self.Tooltip
                     Color: =RGBA(166, 166, 166, 1)
-                    Fill: =RGBA(232, 244, 217, 1)
+                    Fill: =RGBA(187, 221, 140, 1)
                     Height: =50
                     Icon: =Icon.Search
                     OnSelect: =Select(Parent)
@@ -307,4 +308,13 @@
                     Height: =101
                     Width: =635
                     ZIndex: =1
+
+    ToolLogsBackButton_2 As icon.ChevronLeft:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back(ScreenTransition.None)
+        X: =14
+        Y: =12
+        ZIndex: =4
 
