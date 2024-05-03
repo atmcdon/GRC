@@ -1,0 +1,310 @@
+"'Volunteer Overview Screen' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+
+    RectQuickActionBar6_2 As rectangle:
+        Fill: =RGBA(127, 178, 57, 1)
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName6_2 As label:
+        Align: =Align.Center
+        Height: =88
+        Size: =27
+        Text: ="Volunteer Logs "
+        Width: =Parent.Width
+        ZIndex: =2
+
+    Canvas5_2 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =999
+        Width: =Parent.Width
+        Y: =88
+        ZIndex: =3
+
+        DataCard16_2 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =618
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+            "Gallery15_2 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
+                DelayItemLoading: =true
+                Height: =439
+                Items: ='Worksite Volunteer Record'
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplatePadding: =0
+                TemplateSize: =116
+                Width: =551
+                X: =47
+                Y: =120
+                ZIndex: =1
+
+                Title11_2 As label:
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =Self.Size * 1.8
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =ThisItem.'Worksite Name '
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Parent.TemplateWidth - 86
+                    X: =16
+                    Y: =(Parent.TemplateHeight - (Self.Size*1.8 + Subtitle6_2.Size*1.8 + 2 + Body6_2.Size*1.8)) / 2
+                    ZIndex: =1
+
+                Subtitle6_2 As label:
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =Self.Size * 1.8
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =ThisItem.Location
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Title11_2.Width
+                    X: =Title11_2.X
+                    Y: =Title11_2.Y + Title11_2.Height
+                    ZIndex: =2
+
+                Body6_2 As label:
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =Self.Size * 1.8
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: =ThisItem.'Start date '
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Title11_2.Width
+                    X: =Title11_2.X
+                    Y: =Subtitle6_2.Y + Subtitle6_2.Height
+                    ZIndex: =3
+
+                NextArrow5_2 As icon.ChevronRight:
+                    AccessibleLabel: =Self.Tooltip
+                    Color: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(232, 244, 217, 1)
+                    Height: =50
+                    Icon: =Icon.Search
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =16
+                    PaddingLeft: =16
+                    PaddingRight: =16
+                    PaddingTop: =16
+                    Tooltip: ="View item details"
+                    Width: =50
+                    X: =Parent.TemplateWidth - Self.Width - 12
+                    Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                    ZIndex: =4
+
+                Separator8_2 As rectangle:
+                    Height: =8
+                    OnSelect: =Select(Parent)
+                    Width: =Parent.TemplateWidth
+                    Y: =Parent.TemplateHeight - Self.Height
+                    ZIndex: =5
+
+                Rectangle13_2 As rectangle:
+                    Height: =Parent.TemplateHeight - Separator8_2.Height
+                    OnSelect: =Select(Parent)
+                    Visible: =ThisItem.IsSelected
+                    Width: =4
+                    ZIndex: =6
+
+            Label13_2 As label:
+                Height: =70
+                Size: =21
+                Text: ="Recent Volunteer Logs"
+                Width: =560
+                X: =40
+                Y: =40
+                ZIndex: =2
+
+        DataCard17_2 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =405
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =3
+
+            DataTable3_2 As dataTable.datatable:
+                BorderStyle: =BorderStyle.Solid
+                DisplayMode: =DisplayMode.Edit
+                Fill: =RGBA(0, 0, 0, 0)
+                HeadingFill: =RGBA(127, 178, 57, 1)
+                HeadingSize: =15
+                Height: =256
+                Items: ='Worksite Volunteer Record'
+                SelectedFill: =
+                Size: =15
+                Width: =570
+                X: =28
+                Y: =107
+                ZIndex: =1
+
+                "'Worksite Name _Column1' As dataTableColumn.textualColumn":
+                    AutoWidth: =false
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Worksite Name "
+                    FieldName: ="cr64e_worksitename"
+                    FieldVariantName: ="textualColumn"
+                    Height: =255
+                    LayoutHeight: =Parent.Height
+                    Order: =1
+                    Text: =ThisItem.'Worksite Name '
+                    Width: =236
+                    X: =23
+                    Y: =0
+                    ZIndex: =7
+
+                Location_Column1 As dataTableColumn.textualColumn:
+                    AutoWidth: =false
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Location"
+                    FieldName: ="cr64e_location"
+                    FieldVariantName: ="textualColumn"
+                    Height: =255
+                    LayoutHeight: =Parent.Height
+                    Order: =4
+                    Text: =ThisItem.Location
+                    Width: =134
+                    X: =0
+                    Y: =0
+                    ZIndex: =8
+
+                "'Start date _Column1' As dataTableColumn.dateTimeColumn":
+                    AutoWidth: =false
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Start date "
+                    FieldName: ="cr64e_startdate"
+                    FieldVariantName: ="dateTimeColumn"
+                    Height: =256
+                    LayoutHeight: =Parent.Height
+                    Order: =6
+                    Text: =Text(ThisItem.'Start date ',DateTimeFormat.LongDateTime)
+                    Width: =378
+                    X: =1084
+                    Y: =0
+                    ZIndex: =9
+
+                "'Volunteer Name _Column2' As dataTableColumn.textualColumn":
+                    AutoWidth: =false
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Volunteer Name "
+                    FieldName: ="cr64e_volunteername"
+                    FieldVariantName: ="textualColumn"
+                    Height: =255
+                    LayoutHeight: =Parent.Height
+                    Order: =2
+                    Text: =ThisItem.'Volunteer Name '
+                    Width: =260
+                    X: =225
+                    Y: =0
+                    ZIndex: =10
+
+                "'Volunteer contact_Column2' As dataTableColumn.textualColumn":
+                    AutoWidth: =false
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Volunteer contact"
+                    FieldName: ="cr64e_volunteercontact"
+                    FieldVariantName: ="textualColumn"
+                    Height: =255
+                    LayoutHeight: =Parent.Height
+                    Order: =3
+                    Text: =ThisItem.'Volunteer contact'
+                    Width: =288
+                    X: =0
+                    Y: =0
+                    ZIndex: =11
+
+                "'Volunter date_Column2' As dataTableColumn.dateTimeColumn":
+                    AutoWidth: =false
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Volunter date"
+                    FieldName: ="cr64e_volunteerdate"
+                    FieldVariantName: ="dateTimeColumn"
+                    Height: =255
+                    LayoutHeight: =Parent.Height
+                    Order: =5
+                    Text: =Text(ThisItem.'Volunter date',DateTimeFormat.LongDateTime)
+                    Width: =396
+                    X: =200
+                    Y: =0
+                    ZIndex: =12
+
+            Label14_2 As label:
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="All Volunteer Logs
+                    "
+                Width: =560
+                X: =28
+                Y: =27
+                ZIndex: =2
+
+        DataCard18_2 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =103
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =4
+
+            Container7_5 As groupContainer.manualLayoutContainer:
+                Height: =102
+                Width: =635
+                X: =5
+                ZIndex: =1
+
+                Button9_3 As button:
+                    Fill: =RGBA(127, 178, 57, 1)
+                    Height: =61
+                    Size: =24
+                    Text: ="Need Help ?"
+                    Width: =253
+                    X: =168
+                    Y: =24
+                    ZIndex: =1
+
+        ToolsOverviewFooter_2 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =640
+            X: =0
+            Y: =3
+            ZIndex: =5
+
+            Container7_6 As groupContainer.manualLayoutContainer:
+                Height: =102
+                Width: =635
+                X: =5
+                ZIndex: =1
+
+                Rectangle14_4 As rectangle:
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(209, 232, 178, 1)
+                    Height: =101
+                    Width: =635
+                    ZIndex: =1
+
