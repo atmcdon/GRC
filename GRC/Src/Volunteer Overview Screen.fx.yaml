@@ -309,6 +309,14 @@
                     Width: =635
                     ZIndex: =1
 
+                Label15_3 As label:
+                    Height: =57
+                    Size: =21
+                    Text: =Concatenate("Green River Coalition ", Char(169), "2024")
+                    Width: =383
+                    X: =126
+                    ZIndex: =2
+
     ToolLogsBackButton_2 As icon.ChevronLeft:
         BorderColor: =RGBA(0, 0, 0, 1)
         Color: =RGBA(255, 255, 255, 1)
