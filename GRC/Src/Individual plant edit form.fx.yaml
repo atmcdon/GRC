@@ -39,7 +39,7 @@
     LblAppName9 As label:
         Height: =88
         Size: =27
-        Text: ="[Title]"
+        Text: ="Edit Data for " & PlantGallery.Selected.PlantName
         Width: =Parent.Width - IconCancel2.Width - IconAccept2.Width
         Wrap: =false
         X: =IconCancel2.X + IconCancel2.Width
