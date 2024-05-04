@@ -2,9 +2,99 @@
     OnVisible: =
 
     RectQuickActionBar8 As rectangle:
+        Fill: =RGBA(127, 178, 57, 1)
         Height: =88
         Width: =Parent.Width
         ZIndex: =1
+
+    "PlantGallery As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
+        DelayItemLoading: =true
+        Height: =838
+        Items: =Plants
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =116
+        Width: =Parent.Width
+        Y: =TextSearchBox1.Y + TextSearchBox1.Height
+        ZIndex: =1
+
+        Title5 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.PlantName
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 86
+            X: =16
+            Y: =(Parent.TemplateHeight - (Self.Size*1.8 + Subtitle5.Size*1.8 + 2 + Body1.Size*1.8)) / 2
+            ZIndex: =1
+
+        Subtitle5 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Quantity
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title5.Width
+            X: =Title5.X
+            Y: =Title5.Y + Title5.Height
+            ZIndex: =2
+
+        Body1 As label:
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.'Created On'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title5.Width
+            X: =Title5.X
+            Y: =Subtitle5.Y + Subtitle5.Height
+            ZIndex: =3
+
+        NextArrow3 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            Color: =RGBA(166, 166, 166, 1)
+            Height: =50
+            Icon: =Icon.ChevronRight
+            OnSelect: |-
+                =Navigate('Individual plant edit form',Transition.None,{ SelectedPlant: PlantGallery.Selected})
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Tooltip: ="View item details"
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =4
+
+        Separator11 As rectangle:
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Rectangle12 As rectangle:
+            Height: =Parent.TemplateHeight - Separator11.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
 
     LblAppName8 As label:
         Height: =88
@@ -12,7 +102,7 @@
         Text: ="Plants Table"
         Width: =241
         Wrap: =false
-        X: =145
+        X: =199
         ZIndex: =2
 
     TextSearchBox1 As text:
@@ -48,92 +138,6 @@
         Y: =TextSearchBox1.Y + TextSearchBox1.Height
         ZIndex: =8
 
-    "PlantGallery As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-        DelayItemLoading: =true
-        Height: =838
-        Items: =Plants
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        ShowScrollbar: =false
-        TemplatePadding: =0
-        TemplateSize: =104
-        Width: =Parent.Width
-        Y: =TextSearchBox1.Y + TextSearchBox1.Height
-        ZIndex: =9
-
-        Image12 As image:
-            Height: =72
-            OnSelect: =Select(Parent)
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
-            Width: =72
-            X: =16
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =1
-
-        Title3 As label:
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.PlantName
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - 173
-            X: =103
-            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle3.Size * 1.8)) / 2
-            ZIndex: =2
-
-        Subtitle3 As label:
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.Quantity
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Title3.Width
-            X: =Title3.X
-            Y: =Title3.Y + Title3.Height
-            ZIndex: =3
-
-        NextArrow2 As icon.ChevronRight:
-            AccessibleLabel: =Self.Tooltip
-            Color: =RGBA(166, 166, 166, 1)
-            Height: =50
-            Icon: =Icon.ChevronRight
-            OnSelect: |-
-                =Navigate('Individual plant edit form',Transition.None,{ SelectedPlant: PlantGallery.Selected})
-            PaddingBottom: =16
-            PaddingLeft: =16
-            PaddingRight: =16
-            PaddingTop: =16
-            Tooltip: ="View item details"
-            Width: =50
-            X: =Parent.TemplateWidth - Self.Width - 12
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =4
-
-        Separator9 As rectangle:
-            Height: =8
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =Parent.TemplateHeight - Self.Height
-            ZIndex: =5
-
-        Rectangle10 As rectangle:
-            Height: =Parent.TemplateHeight - Separator9.Height
-            OnSelect: =Select(Parent)
-            Visible: =ThisItem.IsSelected
-            Width: =4
-            ZIndex: =6
-
     Button11 As button:
         Fill: =RGBA(127, 178, 57, 1)
         Height: =82
@@ -153,9 +157,10 @@
         ZIndex: =11
 
     Icon6 As icon.ChevronLeft:
+        Color: =RGBA(255, 255, 255, 1)
         Icon: =Icon.ChevronLeft
         OnSelect: =Navigate('Individual Worksite View')
-        X: =25
+        X: =4
         Y: =12
         ZIndex: =12
 
