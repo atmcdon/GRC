@@ -140,18 +140,17 @@
     "ImageView",
     "UploadRecording",
     "Make Site",
-    "Input Data for new Worksite",
     "LoginPage",
     "Unnamed Screen",
     "New Worksite Entry",
     "Successful Database entry screen",
-    "Editing Table for PLANTS",
     "Unnamed Screen 2",
     "New Entry Editing Form",
     "Plants Overview Screen",
     "Tools Overview Screen",
     "Volunteer Overview Screen",
     "Worker Overview Screen",
-    "Screen1"
+    "Editing Table for plants",
+    "Individual plant edit form"
   ]
 }

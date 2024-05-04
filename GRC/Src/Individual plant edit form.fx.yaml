@@ -1,94 +1,76 @@
-"Screen1 As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+"'Individual plant edit form' As screen.'phoneLayout_HeaderAndForm_ver3.0'":
+    ContentLanguage: =""
+    OnVisible: =EditForm(EditForm2)
 
-    RectQuickActionBar5 As rectangle:
+    RectQuickActionBar9 As rectangle:
         Height: =88
         Width: =Parent.Width
         ZIndex: =1
 
-    LblAppName5 As label:
-        Align: =Align.Center
+    IconCancel2 As icon.Cancel:
+        AccessibleLabel: =Self.Tooltip
+        Height: =88
+        Icon: =Icon.Cancel
+        OnSelect: =Back()
+        PaddingBottom: =22
+        PaddingLeft: =22
+        PaddingRight: =22
+        PaddingTop: =22
+        TabIndex: =0
+        Tooltip: ="Cancel item"
+        Width: =88
+        ZIndex: =2
+
+    IconAccept2 As icon.Check:
+        AccessibleLabel: =Self.Tooltip
+        Height: =88
+        Icon: =Icon.Check
+        OnSelect: =SubmitForm(EditForm2) & Navigate('Editing Table for plants',ScreenTransition.None)
+        PaddingBottom: =22
+        PaddingLeft: =22
+        PaddingRight: =22
+        PaddingTop: =22
+        TabIndex: =0
+        Tooltip: ="Submit item"
+        Width: =88
+        X: =Parent.Width - Self.Width
+        ZIndex: =3
+
+    LblAppName9 As label:
         Height: =88
         Size: =27
         Text: ="[Title]"
-        Width: =Parent.Width
-        ZIndex: =2
-
-    Canvas2 As fluidGrid.fluidGridWithBlankCard:
-        BorderThickness: =0
-        Height: =Parent.Height - Self.Y
-        Width: =Parent.Width
-        Y: =RectQuickActionBar5.Y + RectQuickActionBar5.Height
-        ZIndex: =3
-
-        DataCard7 As dataCard:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderStyle: =BorderStyle.Solid
-            BorderThickness: =0
-            DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =645
-            Width: =Parent.Width
-            X: =0
-            Y: =0
-            ZIndex: =1
-
-        DataCard9 As dataCard.blankCard:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderStyle: =BorderStyle.Solid
-            DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =176
-            Width: =640
-            X: =0
-            Y: =1
-            ZIndex: =2
-
-        DataCard10 As dataCard.blankCard:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderStyle: =BorderStyle.Solid
-            DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =83
-            Width: =640
-            X: =0
-            Y: =2
-            ZIndex: =3
-
-        DataCard11 As dataCard.blankCard:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderStyle: =BorderStyle.Solid
-            DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =102
-            Width: =640
-            X: =0
-            Y: =3
-            ZIndex: =4
-
-    Form2 As form:
-        DataSource: =Sites
-        Height: =819
-        Width: =640
-        Y: =88
+        Width: =Parent.Width - IconCancel2.Width - IconAccept2.Width
+        Wrap: =false
+        X: =IconCancel2.X + IconCancel2.Width
         ZIndex: =4
 
-        "'Site name_DataCard1' As typedDataCard.textualEditCard":
+    EditForm2 As form:
+        DataSource: =Plants
+        Height: =Parent.Height - EditForm2.Y
+        Item: =PlantGallery.Selected
+        Width: =Parent.Width
+        Y: =RectQuickActionBar9.Height
+        ZIndex: =5
+
+        PlantName_DataCard1 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
-            DataField: ="cr64e_sitename"
-            Default: =ThisItem.'Site name'
+            ContentLanguage: =""
+            DataField: ="cr64e_plantname"
+            Default: =ThisItem.PlantName
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Sites],DataSourceInfo.DisplayName,cr64e_sitename)
+            DisplayName: =DataSourceInfo([@Plants],DataSourceInfo.DisplayName,cr64e_plantname)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Sites], DataSourceInfo.MaxLength, cr64e_sitename)
-            Required: =true
-            Update: =DataCardValue6.Text
+            MaxLength: =DataSourceInfo([@Plants], DataSourceInfo.MaxLength, cr64e_plantname)
+            Required: =false
+            Update: =DataCardValue33.Text
             Width: =640
             X: =0
             Y: =0
-            ZIndex: =5
+            ZIndex: =6
 
-            DataCardKey9 As label:
+            DataCardKey43 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -99,13 +81,14 @@
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue6 As text:
+            DataCardValue33 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Height: =70
                 MaxLength: =Parent.MaxLength
+                OnSelect: =SelectedPlant
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -115,10 +98,10 @@
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey9.Y + DataCardKey9.Height + 5
+                Y: =DataCardKey43.Y + DataCardKey43.Height + 5
                 ZIndex: =2
 
-            ErrorMessage7 As label:
+            ErrorMessage38 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -131,37 +114,36 @@
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue6.Y + DataCardValue6.Height
+                Y: =DataCardValue33.Y + DataCardValue33.Height
                 ZIndex: =3
 
-            StarVisible7 As label:
+            StarVisible38 As label:
                 Align: =Align.Center
-                Height: =DataCardKey9.Height
+                Height: =DataCardKey43.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey9.Y
+                Y: =DataCardKey43.Y
                 ZIndex: =4
 
-        "'Plant Inventory_DataCard1' As typedDataCard.textualEditCard":
+        Quantity_DataCard1 As typedDataCard.numberEditCard:
             BorderStyle: =BorderStyle.Solid
-            DataField: ="cr64e_plantinventory"
-            Default: =ThisItem.'Plant Inventory'
+            DataField: ="cr64e_quantity"
+            Default: =ThisItem.Quantity
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Sites],DataSourceInfo.DisplayName,cr64e_plantinventory)
+            DisplayName: =DataSourceInfo([@Plants],DataSourceInfo.DisplayName,cr64e_quantity)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Sites], DataSourceInfo.MaxLength, cr64e_plantinventory)
             Required: =false
-            Update: =DataCardValue7.Text
+            Update: =Value(DataCardValue34.Text)
             Width: =640
             X: =0
             Y: =1
-            ZIndex: =5
+            ZIndex: =6
 
-            DataCardKey10 As label:
+            DataCardKey44 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -172,13 +154,13 @@
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue7 As text:
+            DataCardValue34 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
                 Height: =70
-                MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -188,10 +170,10 @@
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey10.Y + DataCardKey10.Height + 5
+                Y: =DataCardKey44.Y + DataCardKey44.Height + 5
                 ZIndex: =2
 
-            ErrorMessage8 As label:
+            ErrorMessage39 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -204,37 +186,37 @@
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue7.Y + DataCardValue7.Height
+                Y: =DataCardValue34.Y + DataCardValue34.Height
                 ZIndex: =3
 
-            StarVisible8 As label:
+            StarVisible39 As label:
                 Align: =Align.Center
-                Height: =DataCardKey10.Height
+                Height: =DataCardKey44.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey10.Y
+                Y: =DataCardKey44.Y
                 ZIndex: =4
 
-        SiteLocation_DataCard1 As typedDataCard.textualEditCard:
+        Vendor_DataCard1 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
-            DataField: ="cr64e_sitelocation"
-            Default: =ThisItem.SiteLocation
+            DataField: ="cr64e_vendor"
+            Default: =ThisItem.Vendor
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Sites],DataSourceInfo.DisplayName,cr64e_sitelocation)
+            DisplayName: =DataSourceInfo([@Plants],DataSourceInfo.DisplayName,cr64e_vendor)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Sites], DataSourceInfo.MaxLength, cr64e_sitelocation)
+            MaxLength: =DataSourceInfo([@Plants], DataSourceInfo.MaxLength, cr64e_vendor)
             Required: =false
-            Update: =DataCardValue8.Text
+            Update: =DataCardValue35.Text
             Width: =640
             X: =0
             Y: =2
-            ZIndex: =5
+            ZIndex: =6
 
-            DataCardKey11 As label:
+            DataCardKey45 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -245,7 +227,7 @@
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue8 As text:
+            DataCardValue35 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
@@ -261,10 +243,10 @@
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey11.Y + DataCardKey11.Height + 5
+                Y: =DataCardKey45.Y + DataCardKey45.Height + 5
                 ZIndex: =2
 
-            ErrorMessage9 As label:
+            ErrorMessage40 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -277,37 +259,36 @@
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue8.Y + DataCardValue8.Height
+                Y: =DataCardValue35.Y + DataCardValue35.Height
                 ZIndex: =3
 
-            StarVisible9 As label:
+            StarVisible40 As label:
                 Align: =Align.Center
-                Height: =DataCardKey11.Height
+                Height: =DataCardKey45.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey11.Y
+                Y: =DataCardKey45.Y
                 ZIndex: =4
 
-        LandOwner_DataCard1 As typedDataCard.textualEditCard:
+        RecentlyUsedAt_DataCard1 As typedDataCard.dateTimeEditCard:
             BorderStyle: =BorderStyle.Solid
-            DataField: ="cr64e_landowner"
-            Default: =ThisItem.LandOwner
+            DataField: ="cr64e_recentlyusedat"
+            Default: =ThisItem.RecentlyUsedAt
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Sites],DataSourceInfo.DisplayName,cr64e_landowner)
+            DisplayName: =DataSourceInfo([@Plants],DataSourceInfo.DisplayName,cr64e_recentlyusedat)
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Sites], DataSourceInfo.MaxLength, cr64e_landowner)
             Required: =false
-            Update: =DataCardValue9.Text
+            Update: =If(Not IsBlank(DateValue6.SelectedDate), DateValue6.SelectedDate + Time(Value(HourValue6.Selected.Value), Value(MinuteValue6.Selected.Value), 0))
             Width: =640
             X: =0
             Y: =3
-            ZIndex: =5
+            ZIndex: =6
 
-            DataCardKey12 As label:
+            DataCardKey46 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -318,26 +299,75 @@
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue9 As text:
+            DateValue6 As datepicker:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                Default: =Parent.Default
-                DelayOutput: =true
+                DefaultDate: =Parent.Default
                 DisplayMode: =Parent.DisplayMode
+                EndYear: =Year(Today())+100
                 Height: =70
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =21
+                IsEditable: =true
+                PaddingBottom: =0
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                Size: =24
+                StartYear: =1899
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =(Parent.Width - 60) / 2
                 X: =30
-                Y: =DataCardKey12.Y + DataCardKey12.Height + 5
+                Y: =DataCardKey46.Y + DataCardKey46.Height + 5
                 ZIndex: =2
 
-            ErrorMessage10 As label:
+            HourValue6 As dropdown:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Text(Hour(Parent.Default),"00")
+                DisplayMode: =Parent.DisplayMode
+                Height: =DateValue6.Height
+                Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23"]
+                PaddingBottom: =5
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =5
+                PaddingTop: =5
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =DateValue6.Width / 2 - 10
+                X: =DateValue6.X + DateValue6.Width + 10
+                Y: =DateValue6.Y
+                ZIndex: =3
+
+            Separator10 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Bold
+                Height: =HourValue6.Height
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =21
+                Text: |-
+                    =":"
+                Width: =10
+                Wrap: =false
+                X: =HourValue6.X + HourValue6.Width
+                Y: =HourValue6.Y
+                ZIndex: =4
+
+            MinuteValue6 As dropdown:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Text(Minute(Parent.Default),"00")
+                DisplayMode: =Parent.DisplayMode
+                Height: =HourValue6.Height
+                Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"]
+                PaddingBottom: =5
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =5
+                PaddingTop: =5
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =HourValue6.Width
+                X: =HourValue6.X + HourValue6.Width + Separator10.Width
+                Y: =HourValue6.Y
+                ZIndex: =5
+
+            ErrorMessage41 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -350,35 +380,37 @@
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue9.Y + DataCardValue9.Height
-                ZIndex: =3
+                Y: =HourValue6.Y + HourValue6.Height
+                ZIndex: =6
 
-            StarVisible10 As label:
+            StarVisible41 As label:
                 Align: =Align.Center
-                Height: =DataCardKey12.Height
+                Height: =DataCardKey46.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey12.Y
-                ZIndex: =4
+                Y: =DataCardKey46.Y
+                ZIndex: =7
 
-        cr64e_SiteMainImageId_DataCard1 As typedDataCard.textualViewCard:
+        Schedule_DataCard1 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
-            DataField: ="cr64e_sitemainimageid"
-            Default: =ThisItem.cr64e_SiteMainImageId
-            DisplayMode: =DisplayMode.View
-            DisplayName: =DataSourceInfo([@Sites],DataSourceInfo.DisplayName,cr64e_sitemainimageid)
+            DataField: ="cr64e_schedule"
+            Default: =ThisItem.Schedule
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Plants],DataSourceInfo.DisplayName,cr64e_schedule)
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =40
+            Height: =50
+            MaxLength: =DataSourceInfo([@Plants], DataSourceInfo.MaxLength, cr64e_schedule)
             Required: =false
+            Update: =DataCardValue36.Text
             Width: =640
             X: =0
             Y: =4
-            ZIndex: =5
+            ZIndex: =6
 
-            DataCardKey13 As label:
+            DataCardKey47 As label:
                 AutoHeight: =true
                 Height: =48
                 Size: =21
@@ -389,64 +421,26 @@
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue10 As label:
-                AutoHeight: =true
-                DisplayMode: =Parent.DisplayMode
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =21
-                Text: =Parent.Default
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey13.Y + DataCardKey13.Height + 5
-                ZIndex: =2
-
-        SiteMainImage_DataCard1 As typedDataCard.addLargePictureCard:
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="cr64e_sitemainimage"
-            Default: =ThisItem.SiteMainImage
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Sites],DataSourceInfo.DisplayName,cr64e_sitemainimage)
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =Image9.Image
-            Width: =640
-            X: =0
-            Y: =5
-            ZIndex: =5
-
-            DataCardKey14 As label:
-                AutoHeight: =true
-                Height: =48
-                Size: =21
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            Image9 As image:
+            DataCardValue36 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
-                Height: =AddPicture3.Height
-                Image: =If(IsBlank(AddPicture3.Media), Parent.Default, AddPicture3.Media)
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
                 Tooltip: =Parent.DisplayName
-                Width: =AddPicture3.Width
-                X: =AddPicture3.X
-                Y: =AddPicture3.Y
-                ZIndex: =2
-
-            AddPicture3 As addMedia:
-                Height: =320
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey14.Y + DataCardKey14.Height + 5
-                ZIndex: =3
+                Y: =DataCardKey47.Y + DataCardKey47.Height + 5
+                ZIndex: =2
 
-            ErrorMessage11 As label:
+            ErrorMessage42 As label:
                 AutoHeight: =true
                 Height: =10
                 Live: =Live.Assertive
@@ -459,17 +453,17 @@
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =Image9.Y + Image9.Height
-                ZIndex: =4
+                Y: =DataCardValue36.Y + DataCardValue36.Height
+                ZIndex: =3
 
-            StarVisible11 As label:
+            StarVisible42 As label:
                 Align: =Align.Center
-                Height: =DataCardKey14.Height
+                Height: =DataCardKey47.Height
                 Size: =21
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey14.Y
-                ZIndex: =5
+                Y: =DataCardKey47.Y
+                ZIndex: =4
 

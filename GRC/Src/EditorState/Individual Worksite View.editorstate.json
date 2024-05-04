@@ -10202,7 +10202,7 @@
       "MetaDataIDKey": "",
       "Name": "PurchasedDate_Column1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10919,7 +10919,7 @@
       "MetaDataIDKey": "",
       "Name": "ReplacementNeeded_Column1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13242,7 +13242,7 @@
       "MetaDataIDKey": "",
       "Name": "WorkDone_Column1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13593,7 +13593,7 @@
       "MetaDataIDKey": "",
       "Name": "WorkerType_Column1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

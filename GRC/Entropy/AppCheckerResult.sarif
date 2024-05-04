@@ -5725,48 +5725,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1"
+                  "fullyQualifiedName": "'Individual plant edit form'.EditForm2.PlantName_DataCard1.DataCardValue33.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "module": "Screen1",
-                "type": "Screen1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Low"
-          },
-          "ruleId": "acc-ReadableScreenNameNeeded",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen1.Form2.'Site name_DataCard1'.DataCardValue6.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen1.Form2.'Site name_DataCard1'.DataCardValue6.AccessibleLabel",
+                  "fullyQualifiedName": "'Individual plant edit form'.EditForm2.PlantName_DataCard1.DataCardValue33.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Screen1",
-                "type": "Screen1.Form2.'Site name_DataCard1'.DataCardValue6"
+                "module": "Individual plant edit form",
+                "type": "'Individual plant edit form'.EditForm2.PlantName_DataCard1.DataCardValue33"
               }
             }
           ],
@@ -5784,19 +5755,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Form2.'Plant Inventory_DataCard1'.DataCardValue7.AccessibleLabel"
+                  "fullyQualifiedName": "'Individual plant edit form'.EditForm2.Vendor_DataCard1.DataCardValue35.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Form2.'Plant Inventory_DataCard1'.DataCardValue7.AccessibleLabel",
+                  "fullyQualifiedName": "'Individual plant edit form'.EditForm2.Vendor_DataCard1.DataCardValue35.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Screen1",
-                "type": "Screen1.Form2.'Plant Inventory_DataCard1'.DataCardValue7"
+                "module": "Individual plant edit form",
+                "type": "'Individual plant edit form'.EditForm2.Vendor_DataCard1.DataCardValue35"
               }
             }
           ],
@@ -5814,19 +5785,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Form2.SiteLocation_DataCard1.DataCardValue8.AccessibleLabel"
+                  "fullyQualifiedName": "'Individual plant edit form'.EditForm2.Quantity_DataCard1.DataCardValue34.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Form2.SiteLocation_DataCard1.DataCardValue8.AccessibleLabel",
+                  "fullyQualifiedName": "'Individual plant edit form'.EditForm2.Quantity_DataCard1.DataCardValue34.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Screen1",
-                "type": "Screen1.Form2.SiteLocation_DataCard1.DataCardValue8"
+                "module": "Individual plant edit form",
+                "type": "'Individual plant edit form'.EditForm2.Quantity_DataCard1.DataCardValue34"
               }
             }
           ],
@@ -5844,19 +5815,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Form2.LandOwner_DataCard1.DataCardValue9.AccessibleLabel"
+                  "fullyQualifiedName": "'Editing Table for plants'.TextSearchBox1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Form2.LandOwner_DataCard1.DataCardValue9.AccessibleLabel",
+                  "fullyQualifiedName": "'Editing Table for plants'.TextSearchBox1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Screen1",
-                "type": "Screen1.Form2.LandOwner_DataCard1.DataCardValue9"
+                "module": "Editing Table for plants",
+                "type": "'Editing Table for plants'.TextSearchBox1"
               }
             }
           ],
@@ -5874,19 +5845,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Screen1.Form2.SiteMainImage_DataCard1.AddPicture3.AccessibleLabel"
+                  "fullyQualifiedName": "'Editing Table for plants'.PlantGallery.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Screen1.Form2.SiteMainImage_DataCard1.AddPicture3.AccessibleLabel",
+                  "fullyQualifiedName": "'Editing Table for plants'.PlantGallery.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Editing Table for plants",
+                "type": "'Editing Table for plants'.PlantGallery"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Editing Table for plants'.PlantGallery.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Editing Table for plants'.PlantGallery.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Screen1",
-                "type": "Screen1.Form2.SiteMainImage_DataCard1.AddPicture3"
+                "module": "Editing Table for plants",
+                "type": "'Editing Table for plants'.PlantGallery"
               }
             }
           ],
@@ -6264,6 +6265,156 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Editing Table for plants'.PlantGallery.NextArrow2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Editing Table for plants'.PlantGallery.NextArrow2.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Editing Table for plants",
+                "type": "'Editing Table for plants'.PlantGallery.NextArrow2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual plant edit form'.EditForm2.Schedule_DataCard1.DataCardValue36.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual plant edit form'.EditForm2.Schedule_DataCard1.DataCardValue36.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Individual plant edit form",
+                "type": "'Individual plant edit form'.EditForm2.Schedule_DataCard1.DataCardValue36"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual plant edit form'.EditForm2.RecentlyUsedAt_DataCard1.MinuteValue6.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual plant edit form'.EditForm2.RecentlyUsedAt_DataCard1.MinuteValue6.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Individual plant edit form",
+                "type": "'Individual plant edit form'.EditForm2.RecentlyUsedAt_DataCard1.MinuteValue6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual plant edit form'.EditForm2.RecentlyUsedAt_DataCard1.HourValue6.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual plant edit form'.EditForm2.RecentlyUsedAt_DataCard1.HourValue6.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Individual plant edit form",
+                "type": "'Individual plant edit form'.EditForm2.RecentlyUsedAt_DataCard1.HourValue6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual plant edit form'.EditForm2.RecentlyUsedAt_DataCard1.DateValue6.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual plant edit form'.EditForm2.RecentlyUsedAt_DataCard1.DateValue6.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Individual plant edit form",
+                "type": "'Individual plant edit form'.EditForm2.RecentlyUsedAt_DataCard1.DateValue6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.varworkerID"
                 }
               ],
@@ -6287,7 +6438,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 11
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -6317,6 +6468,36 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual plant edit form'.EditForm2.Item"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual plant edit form'.EditForm2.Item",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Item",
+                "module": "Individual plant edit form",
+                "type": "'Individual plant edit form'.EditForm2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
           "ruleIndex": 11
         }
       ],
@@ -6483,23 +6664,6 @@
               }
             },
             {
-              "id": "acc-ReadableScreenNameNeeded",
-              "messageStrings": {
-                "issue": {
-                  "text": "Revise screen name"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Give the screen  a title that describes what's on the screen or what it's used for."
-                ],
-                "level": "Low",
-                "primaryCategory": "accessibility",
-                "whyFix": "People who are blind, have low vision, or a reading disability rely on screen titles to navigate using the screen reader. "
-              }
-            },
-            {
               "id": "app-UnusedVariables",
               "messageStrings": {
                 "issue": {
@@ -6514,6 +6678,23 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "This variable is declared but is not referenced by any control, so it is not needed."
+              }
+            },
+            {
+              "id": "app-InefficientDelayLoading",
+              "messageStrings": {
+                "issue": {
+                  "text": "Inefficient delay loading"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Use variables, collections, and navigation context to share state across screens instead."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "Controls that reference controls on other screens can slow down app loading and navigation. Doing this may force the app to load the other screens immediately, rather than waiting until the user navigates to that screen."
               }
             }
           ],
