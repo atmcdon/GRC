@@ -122,6 +122,13 @@
       "Values": {
         "Information": "cd658c6e-ef37-4bee-8a59-c2c7d44ba092"
       }
+    },
+    {
+      "Kind": "default.cds_cr64e_imagegrc_forms",
+      "Namespace": "ImageGRCS (Forms)",
+      "Values": {
+        "Information": "b9138859-1cd3-40a0-a257-bb2e892cf4c0"
+      }
     }
   ]
 }

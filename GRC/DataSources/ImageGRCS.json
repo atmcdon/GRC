@@ -1,0 +1,98 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr64e_imagegrcs",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr64e_imagegrc",
+    "MaxGetRowsCount": 500,
+    "Name": "ImageGRCS",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr64e_image": "Image",
+      "cr64e_imagegrc_AsyncOperations": "System Jobs",
+      "cr64e_imagegrc_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr64e_imagegrc_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr64e_imagegrc_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr64e_imagegrc_ProcessSession": "Process Sessions",
+      "cr64e_imagegrc_SyncErrors": "Sync Errors",
+      "cr64e_imagegrcid": "ImageGRC",
+      "cr64e_imageid": "cr64e_ImageId",
+      "cr64e_imageidnum": "ImageIDNum",
+      "cr64e_newcolumn": "SiteName",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "ImageGRCS",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "ImageGRCS (Views)",
+    "Name": "_cr64e_imagegrc_views",
+    "RelatedEntityName": "ImageGRCS",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "2d7935d2-7950-421e-8617-eaaa7d7c4b68": "Inactive ImageGRCS",
+      "30a0efb4-d977-4af5-92d3-22e485b3834d": "Active ImageGRCS",
+      "66e44b88-114e-43d2-8083-e606a868d18f": "ImageGRC Advanced Find View",
+      "69f3e595-14a0-40ea-8ad5-72a4ba77e0b9": "ImageGRC Associated View",
+      "987a2757-a100-4fe4-a229-b44b79aa8b28": "ImageGRC Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (ImageGRCS)",
+    "Name": "cr64e_imagegrc_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "ImageGRCS"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "ImageGRCS",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (ImageGRCS)",
+    "Name": "cr64e_imagegrc_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "ImageGRCS"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "ImageGRCS",
+    "Type": "OptionSetInfo"
+  }
+]
