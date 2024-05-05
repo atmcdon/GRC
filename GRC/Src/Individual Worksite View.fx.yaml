@@ -1,5 +1,16 @@
 "'Individual Worksite View' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
-    OnVisible: =
+    OnVisible: |
+        =Clear(colSiteToolIDs);
+        ForAll(
+            Filter('Site Histories', SiteName = GlobalSelectedSite),
+            
+            ForAll(
+                Split(Tools, ","),
+                Collect(colSiteToolIDs, Value)
+            )
+        );
+        
+        // collect tools colume fom site histories
 
     Canvas1_1 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -458,7 +469,9 @@
                 DelayItemLoading: =true
                 Fill: =RGBA(232, 244, 217, 1)
                 Height: =284
-                Items: =Sort(Filter('Site Histories',SiteName = GlobalSelectedSite),'Created On', SortOrder.Descending)
+                Items: |+
+                    =Sort(Filter('Site Histories',SiteName = GlobalSelectedSite),'Created On', SortOrder.Descending)
+                    
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
@@ -476,9 +489,7 @@
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Text: |-
-                        =//ThisItem.Development
-                        ThisItem.ImageID
+                    Text: =ThisItem.'Date In'
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Parent.TemplateWidth - Image7_1.Width - 80
                     X: =32
@@ -494,18 +505,51 @@
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Text: =ThisItem.'Date In'
+                    Text: |
+                        =
+                        " Devlopement - " & ThisItem.Development & 
+                        Char(10)  &
+                        Char(10)  &
+                        "Tools Used   - " & ThisItem.Tools &
+                        Char(10)  &
+                        Char(10)  &
+                        "Tools Used   - " & 
+                        
+                        
+                        Concat(
+                            ForAll(
+                                Split(ThisItem.Tools, ","),
+                                LookUp(
+                                    ToolLists,
+                                    ToolID = Trim(Value),
+                                    ToolName
+                                )
+                            ),
+                            Value & ", ",
+                            ""
+                        )
+                        &
+                        Char(10)  
+                        &
+                        Concat(
+                            Filter(colToolSummary, ToolName in ThisItem.Tools),
+                            ToolName & ": " & Text(Count) & "; ",
+                            ""
+                        )
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Title7_1.Width
                     X: =32
-                    Y: =Title7_1.Y + Title7_1.Height + 8
+                    Y: =91
                     ZIndex: =2
 
                 Image7_1 As image:
                     Height: =160
                     Image: |
                         =//LookUp(ImageGRCS, ImageIDNum = ThisItem.ImageID).Image
-                        LookUp(ImageGRCS, ImageIDNum =ThisItem.ImageID).Image
+                        LookUp(
+                                ImageGRCS, 
+                                ImageIDNum = Trim(First(Split(ThisItem.ImageID, ",")).Value)
+                            ).Image
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =8
                     RadiusBottomRight: =8
