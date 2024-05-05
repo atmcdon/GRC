@@ -10,6 +10,7 @@
     "Name": "Plants",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
+      "cr64e_plantidsitematchup": "PlantIDSiteMatchUp",
       "cr64e_plantname": "PlantName",
       "cr64e_plants_AsyncOperations": "System Jobs",
       "cr64e_plants_BulkDeleteFailures": "Bulk Delete Failures",
@@ -21,6 +22,7 @@
       "cr64e_quantity": "Quantity",
       "cr64e_recentlyusedat": "RecentlyUsedAt",
       "cr64e_schedule": "Schedule",
+      "cr64e_sitename": "SiteName",
       "cr64e_vendor": "Vendor",
       "createdby": "Created By",
       "createdon": "Created On",

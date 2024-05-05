@@ -376,7 +376,16 @@
                     Height: =209
                     Size: =14
                     Text: |-
-                        ="Plants Used Last:"
+                        =//"Plants Used Last: " & 
+                        //        LookUp('Plants', SiteName = GlobalSelectedSite, PlantName)
+                        //   &
+                        "Plants Used Last: " & First(
+                            Sort(
+                                Filter('Plants', SiteName = GlobalSelectedSite),
+                                RecentlyUsedAt,
+                                SortOrder.Descending
+                            )
+                        ).PlantName
                     VerticalAlign: =VerticalAlign.Top
                     Width: =146
                     X: =426
@@ -389,7 +398,14 @@
                     Height: =90
                     Size: =14
                     Text: |-
-                        ="Most Recent Time in:"
+                        ="Most Recent Time in: "&
+                        First(
+                            Sort(
+                                Filter('Site Histories', SiteName = GlobalSelectedSite),
+                                'Start Time',
+                                SortOrder.Descending
+                            )
+                        ).'End Time'
                     VerticalAlign: =VerticalAlign.Top
                     Width: =217
                     X: =32
