@@ -504,7 +504,8 @@
                 Image7_1 As image:
                     Height: =160
                     Image: |
-                        =LookUp(ImageGRCS, ImageIDNum = ThisItem.ImageID).Image
+                        =//LookUp(ImageGRCS, ImageIDNum = ThisItem.ImageID).Image
+                        LookUp(ImageGRCS, ImageIDNum =ThisItem.ImageID).Image
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =8
                     RadiusBottomRight: =8
