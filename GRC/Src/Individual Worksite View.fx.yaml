@@ -1,5 +1,5 @@
 "'Individual Worksite View' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
-    OnVisible: |
+    OnVisible: |+
         =// clear any old data from the collection
         Clear(colSiteTools);
         
@@ -43,28 +43,53 @@
         
         ForAll(
             Filter('Site Histories', SiteName = GlobalSelectedSite),
-            Collect(
-                colSiteHistorySummary,
-                {
-                    Date: Text('End Time', "[$-en-US]mm/dd/yyyy"),
-                    TimeRange: Text('Start Time', "h:mm") & " to " & Text('End Time', "h:mm"),
-                    Activity: Development,
-                    Workers: Concat(
-                        ForAll(
-                            Split(LookUp('Site Histories', SiteName = GlobalSelectedSite, 'Workers (cr64e_workers)'), ","),
-                            LookUp(Workers, WorkerID = Trim(Value), Name)
+            With(
+                // Makes Tools and Workers VARS for use in nested ForAll
+                {CurrentTools: Tools, CurrentWorkers: 'Workers (cr64e_workers)', CurrentImageIDs: ImageID},  
+                Collect(
+        
+                    colSiteHistorySummary,
+                    {
+                        Date: Text('End Time', "[$-en-US]mm/dd/yyyy"),
+                        TimeRange: Text('Start Time', "h:mm") & " to " & Text('End Time', "h:mm"),
+                        Activity: Development,
+                        Workers: Concat(
+                            ForAll(
+                                Split(CurrentWorkers, ","),  // Use captured CurrentWorkers
+                                LookUp(Workers, WorkerID = Trim(Value), Name)
+                            ),
+                            Value & ", ",
+                            ""
                         ),
-                        Value & ", ",
-                        ""
-                    ),
-                    ToolSummary: Concat(
-                        colToolCounts,
-                        ToolName & ": " & Text(Count) & "; ",
-                        ""
-                    )
-                }
+                        ToolSummary: Concat(
+                            
+                            ForAll(
+                                Distinct(Split(CurrentTools, ","), Value),
+                                
+                                With(
+                                    {CurrentToolID: Trim(Value)},
+                                    {
+                                        ToolName: LookUp(ToolLists, ToolID = CurrentToolID, ToolName),
+                                        Count: CountRows(Filter(Split(CurrentTools, ","), Trim(Value) = CurrentToolID))
+                                    }
+                                )
+                            ),
+                            ToolName & ": " & Text(Count) & "; ",
+                            ""
+                        ),
+                        ImageIDs: CurrentImageIDs
+                        //    Concat(
+                        //        Split(CurrentImageIDs, ","),
+                        //        Trim(Value) & "; "
+                        //   )
+                        
+                    }
+                )
             )
         );
+        
+        
+        
 
     Canvas1_1 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -565,6 +590,7 @@
                         Char(10)  &
                         Char(10)  &
                         "Tools Used      - " & ThisItem.ToolSummary &
+                        
                         Char(10)  &
                         Char(10)  
                         &
@@ -572,17 +598,18 @@
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Title7_1.Width
                     X: =32
-                    Y: =49
+                    Y: =46
                     ZIndex: =2
 
                 Image7_1 As image:
                     Height: =160
-                    Image: |
+                    Image: |-
                         =//LookUp(ImageGRCS, ImageIDNum = ThisItem.ImageID).Image
                         LookUp(
                                 ImageGRCS, 
-                                ImageIDNum = Trim(First(Split(ThisItem.ImageID, ",")).Value)
+                                ImageIDNum = Trim(First(Split(ThisItem.ImageIDs, ",")).Value)
                             ).Image
+                        //ThisItem.ImageIDs
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =8
                     RadiusBottomRight: =8
@@ -607,7 +634,7 @@
                     OnSelect: =Select(Parent)
                     Width: =AddMediaButton1.Width
                     X: =
-                    Y: =AddMediaButton1.Y
+                    Y: =
                     ZIndex: =6
 
             Label3 As label:
@@ -652,7 +679,8 @@
                 HeadingFill: =RGBA(99, 139, 44, 1)
                 HeadingSize: =15
                 Height: =300
-                Items: =Plants
+                Items: |
+                    =Filter(Plants, SiteName = GlobalSelectedSite)
                 Size: =15
                 Width: =550
                 X: =40
@@ -742,7 +770,7 @@
                 HeadingFill: =RGBA(99, 139, 44, 1)
                 HeadingSize: =15
                 Height: =300
-                Items: =ToolLists
+                Items: =Filter(ToolLists, SiteName = GlobalSelectedSite)
                 Size: =15
                 Width: =550
                 X: =40
