@@ -13,6 +13,7 @@
       "cr64e_cr64e_syncid": "cr64e_syncID",
       "cr64e_datein": "Date In",
       "cr64e_development": "Development",
+      "cr64e_endtime": "End Time",
       "cr64e_generalnotes": "General Notes",
       "cr64e_plants": "Plants",
       "cr64e_sitehistory_AsyncOperations": "System Jobs",
