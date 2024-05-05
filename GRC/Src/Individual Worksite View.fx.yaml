@@ -1,16 +1,70 @@
 "'Individual Worksite View' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     OnVisible: |
-        =Clear(colSiteToolIDs);
+        =// clear any old data from the collection
+        Clear(colSiteTools);
+        
+        // Filter the Site Histories for the selected site and collect the tool names
         ForAll(
             Filter('Site Histories', SiteName = GlobalSelectedSite),
-            
+            // For each WorkHistory item, split the Tools field and look up each tools name
             ForAll(
                 Split(Tools, ","),
-                Collect(colSiteToolIDs, Value)
+                Collect(
+                    colSiteTools,
+                    {
+                        ToolName: LookUp(ToolLists, ToolID = Trim(Value), ToolName),
+                        ToolID: Trim(Value),
+                        StartTime: 'Start Time'
+                    }
+                )
             )
         );
         
-        // collect tools colume fom site histories
+        
+        // First, clear the previous tool count collection
+        Clear(colToolCounts);
+        
+        // Create a unique list of tool names
+        ClearCollect(colUniqueTools, Distinct(colSiteTools, ToolName));
+        
+        // Count each tool and collect the counts
+        ForAll(
+            colUniqueTools,
+            Collect(
+                colToolCounts,
+                {
+                    ToolName: Value,
+                    Count: CountRows(Filter(colSiteTools, ToolName = Value))
+                }
+            )
+        );
+        
+        Clear(colSiteHistorySummary);
+        
+        ForAll(
+            Filter('Site Histories', SiteName = GlobalSelectedSite),
+            Collect(
+                colSiteHistorySummary,
+                {
+                    Date: Text('End Time', "[$-en-US]mm/dd/yyyy"),
+                    TimeRange: Text('Start Time', "h:mm") & " to " & Text('End Time', "h:mm"),
+                    Activity: Development,
+                    Workers: Concat(
+                        ForAll(
+                            Split(LookUp('Site Histories', SiteName = GlobalSelectedSite, 'Workers (cr64e_workers)'), ","),
+                            LookUp(Workers, WorkerID = Trim(Value), Name)
+                        ),
+                        Value & ", ",
+                        ""
+                    ),
+                    ToolSummary: Concat(
+                        colToolCounts,
+                        ToolName & ": " & Text(Count) & "; ",
+                        ""
+                    )
+                }
+            )
+        );
 
     Canvas1_1 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -469,9 +523,7 @@
                 DelayItemLoading: =true
                 Fill: =RGBA(232, 244, 217, 1)
                 Height: =284
-                Items: |+
-                    =Sort(Filter('Site Histories',SiteName = GlobalSelectedSite),'Created On', SortOrder.Descending)
-                    
+                Items: =colSiteHistorySummary
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
@@ -489,7 +541,7 @@
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Text: =ThisItem.'Date In'
+                    Text: =
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Parent.TemplateWidth - Image7_1.Width - 80
                     X: =32
@@ -505,41 +557,22 @@
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Text: |
-                        =
-                        " Devlopement - " & ThisItem.Development & 
+                    Text: |-
+                        =ThisItem.Date & Char(10) & ThisItem.TimeRange &
                         Char(10)  &
                         Char(10)  &
-                        "Tools Used   - " & ThisItem.Tools &
+                        "Devlopement - " & ThisItem.Activity & 
                         Char(10)  &
                         Char(10)  &
-                        "Tools Used   - " & 
-                        
-                        
-                        Concat(
-                            ForAll(
-                                Split(ThisItem.Tools, ","),
-                                LookUp(
-                                    ToolLists,
-                                    ToolID = Trim(Value),
-                                    ToolName
-                                )
-                            ),
-                            Value & ", ",
-                            ""
-                        )
-                        &
+                        "Tools Used      - " & ThisItem.ToolSummary &
+                        Char(10)  &
                         Char(10)  
                         &
-                        Concat(
-                            Filter(colToolSummary, ToolName in ThisItem.Tools),
-                            ToolName & ": " & Text(Count) & "; ",
-                            ""
-                        )
+                        "Workers          - " & ThisItem.Workers
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Title7_1.Width
                     X: =32
-                    Y: =91
+                    Y: =49
                     ZIndex: =2
 
                 Image7_1 As image:
