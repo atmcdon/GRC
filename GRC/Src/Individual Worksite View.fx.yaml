@@ -501,7 +501,7 @@
 
                 Image7_1 As image:
                     Height: =160
-                    Image: =ThisItem.Image
+                    Image: =LookUp(Sites, 'Site name' = GlobalSelectedSite).LandOwner
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =8
                     RadiusBottomRight: =8

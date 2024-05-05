@@ -15,6 +15,7 @@
       "cr64e_development": "Development",
       "cr64e_endtime": "End Time",
       "cr64e_generalnotes": "General Notes",
+      "cr64e_imageid": "ImageID",
       "cr64e_plants": "Plants",
       "cr64e_sitehistory_AsyncOperations": "System Jobs",
       "cr64e_sitehistory_BulkDeleteFailures": "Bulk Delete Failures",
