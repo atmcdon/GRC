@@ -93,9 +93,12 @@
         // Assuming GlobalSelectedSite holds the current site's name
         ClearCollect(colToolIDsFromSiteHistory,
             Distinct(
-                Concatenate(
-                    Filter('Site Histories', SiteName = GlobalSelectedSite),
-                    Tools & ","
+                Split(
+                    Concat(
+                        Filter('Site Histories', SiteName = GlobalSelectedSite),
+                        Tools & ","
+                    ),
+                    ","
                 ),
                 Trim(Value)
             )
@@ -791,7 +794,7 @@
                 HeadingFill: =RGBA(99, 139, 44, 1)
                 HeadingSize: =15
                 Height: =300
-                Items: =ToolLists
+                Items: =colFilteredTools
                 Size: =15
                 Width: =550
                 X: =40
@@ -991,6 +994,16 @@
                 Width: =560
                 X: =40
                 ZIndex: =4
+
+            Label12 As label:
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Tool IDs: " & Concat(colToolIDsFromSiteHistory, Value & ", ")
+                Width: =560
+                X: =205
+                Y: =813
+                ZIndex: =5
 
     Header_3 As Header:
         ZIndex: =4
