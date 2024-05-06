@@ -1,0 +1,211 @@
+"'New Entry For Site History' As screen":
+
+    Canvas2 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =RectQuickActionBar5.Y + RectQuickActionBar5.Height
+        ZIndex: =4
+
+        DataCard7 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =83
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Top_1 As groupContainer.manualLayoutContainer:
+                Height: =88
+                Width: =640
+                Y: =40
+                ZIndex: =1
+
+                RectQuickActionBar2_2 As rectangle:
+                    Height: =88
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                IconCancel1_2 As icon.Cancel:
+                    AccessibleLabel: =Self.Tooltip
+                    Height: =88
+                    Icon: =Icon.Cancel
+                    PaddingBottom: =22
+                    PaddingLeft: =22
+                    PaddingRight: =22
+                    PaddingTop: =22
+                    TabIndex: =0
+                    Tooltip: ="Cancel item"
+                    Width: =88
+                    ZIndex: =2
+
+                IconAccept1_2 As icon.Check:
+                    AccessibleLabel: =Self.Tooltip
+                    Height: =88
+                    Icon: =Icon.Check
+                    OnSelect: =SubmitForm(EditForm1)
+                    PaddingBottom: =22
+                    PaddingLeft: =22
+                    PaddingRight: =22
+                    PaddingTop: =22
+                    TabIndex: =0
+                    Tooltip: ="Submit item"
+                    Width: =88
+                    X: =Parent.Width - Self.Width
+                    ZIndex: =3
+
+                LblAppName2_2 As label:
+                    Height: =88
+                    Size: =27
+                    Text: ="New Entry"
+                    Width: =Parent.Width - IconCancel1_2.Width - IconAccept1_2.Width
+                    Wrap: =false
+                    X: =IconCancel1_2.X + IconCancel1_2.Width
+                    ZIndex: =4
+
+        DataCard9 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =501
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            ToolAdd_1 As groupContainer.manualLayoutContainer:
+                Height: =501
+                Width: =640
+                ZIndex: =1
+
+                DropDownToolsNewEntry_2 As dropdown:
+                    Height: =70
+                    Items: |-
+                        =AddColumns(ToolLists, IDandName, "Tool SN: " & ToolID & " - " & ToolName)
+                    OnSelect: |
+                        =Collect(colSelectedTools, {ToolID: DropDownToolsNewEntry_2.Selected.ToolID, ToolName: DropDownToolsNewEntry_2.Selected.ToolName})
+                    Size: =21
+                    Width: =575
+                    X: =40
+                    Y: =40
+                    ZIndex: =1
+
+                "Gallery3_2 As gallery.'BrowseLayout_Flexible_NewsFeed_ver5.0'":
+                    DelayItemLoading: =true
+                    Height: =254
+                    Items: =colSelectedTools
+                    Layout: =Layout.Vertical
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplatePadding: =0
+                    TemplateSize: =254
+                    Y: =247
+                    ZIndex: =2
+
+                    Title8_2 As label:
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Text: =ThisItem.ToolID
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Parent.TemplateWidth - Image10_2.Width - 80
+                        X: =32
+                        Y: =32
+                        ZIndex: =1
+
+                    Body5_4 As label:
+                        AutoHeight: =true
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =Self.Size * 4
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Text: =ThisItem.ToolName
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Title8_2.Width
+                        X: =32
+                        Y: =Title8_2.Y + Title8_2.Height + 8
+                        ZIndex: =2
+
+                    Image10_2 As image:
+                        Height: =160
+                        OnSelect: =Select(Parent)
+                        RadiusBottomLeft: =8
+                        RadiusBottomRight: =8
+                        RadiusTopLeft: =8
+                        RadiusTopRight: =8
+                        Width: =160
+                        X: =Parent.TemplateWidth - Self.Width - 32
+                        Y: =13
+                        ZIndex: =3
+
+                    Separator4_2 As rectangle:
+                        Height: =1
+                        OnSelect: =Select(Parent)
+                        Width: =Parent.TemplateWidth
+                        Y: =Max(Parent.TemplateHeight - 1, Body5_4.Y + Body5_4.Height + 10)
+                        ZIndex: =4
+
+                Button10_4 As button:
+                    Height: =70
+                    OnSelect: |
+                        =Collect(colSelectedTools, {ToolID: DropDownToolsNewEntry_2.Selected.ToolID, ToolName: DropDownToolsNewEntry_2.Selected.ToolName});
+                    Size: =24
+                    Text: ="Add"
+                    Width: =108
+                    X: =495
+                    Y: =150
+                    ZIndex: =3
+
+                Label16_2 As label:
+                    Height: =70
+                    Size: =21
+                    Text: =DropDownToolsNewEntry.Selected.ToolID
+                    Width: =302
+                    X: =40
+                    Y: =138
+                    ZIndex: =4
+
+                Button10_3 As button:
+                    Height: =70
+                    OnSelect: |
+                        =Clear(colSelectedTools);
+                    Size: =24
+                    Text: ="Clear"
+                    Width: =108
+                    X: =359
+                    Y: =150
+                    ZIndex: =5
+
+        DataCard10 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =3
+
+        DataCard11 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =640
+            X: =0
+            Y: =3
+            ZIndex: =4
+
