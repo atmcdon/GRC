@@ -51,7 +51,6 @@
       "enablepcfmoderndatasets": true,
       "enablerowscopeonetonexpand": false,
       "enablerpawarecomponentdependency": true,
-      "enablerulespanel": false,
       "enablesaveloadcleardataonweb": true,
       "enableupdateifdelegation": false,
       "errorhandling": true,
@@ -64,7 +63,6 @@
       "formularepair": false,
       "generatedebugpublishedapp": false,
       "herocontrols": false,
-      "improvedmediacapture": true,
       "improvedtabstopbehavior": false,
       "isemptyrequirestableargument": true,
       "keeprecentscreensloaded": false,
@@ -83,7 +81,6 @@
       "reactformulabar": true,
       "reliableconcurrent": true,
       "reservedkeywords": false,
-      "reverttooldpowerautomate": false,
       "rtlinstudiopreview": false,
       "rtlsupport": false,
       "showclassicthemes": false,
@@ -102,7 +99,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 133,
+    "BindingErrorCount": 139,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "Phone",
@@ -124,7 +121,7 @@
     "ShowStatusBar": false
   },
   "PublishInfo": {
-    "AppName": "b36ea1dd-b44b-4881-be2c-0d7006338f23",
+    "AppName": "App GRC",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",

@@ -3,10 +3,6 @@
   "EntityName": "ImageGRCS",
   "environmentVariableName": "",
   "InstanceUrl": "https://org27bb28dd.crm.dynamics.com/",
-  "LocalReferenceDSJson": {
-    "entitySetName": "cr64e_imagegrcs",
-    "logicalName": "cr64e_imagegrc"
-  },
   "state": "Configured",
   "TableDefinition": {
     "BooleanOptionSetAttribute": "{\"@odata.context\":\"https://org27bb28dd.crm.dynamics.com/api/data/v9.0/$metadata#EntityDefinitions('cr64e_imagegrc')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(MetadataId,LogicalName,SchemaName,DisplayName,OptionSet())\",\"value\":[]}",

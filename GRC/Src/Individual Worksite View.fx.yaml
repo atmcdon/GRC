@@ -88,6 +88,27 @@
             )
         );
         
+        //----------------------------------------------------------------------------
+        
+        // Assuming GlobalSelectedSite holds the current site's name
+        ClearCollect(colToolIDsFromSiteHistory,
+            Distinct(
+                Concatenate(
+                    Filter('Site Histories', SiteName = GlobalSelectedSite),
+                    Tools & ","
+                ),
+                Trim(Value)
+            )
+        );
+        
+        // Filter ToolLists to include only those tools identified in colToolIDsFromSiteHistory
+        ClearCollect(colFilteredTools,
+            Filter(
+                ToolLists,
+                ToolID in colToolIDsFromSiteHistory.Value
+            )
+        );
+        
         
         
 
@@ -770,7 +791,7 @@
                 HeadingFill: =RGBA(99, 139, 44, 1)
                 HeadingSize: =15
                 Height: =300
-                Items: =Filter(ToolLists, SiteName = GlobalSelectedSite)
+                Items: =ToolLists
                 Size: =15
                 Width: =550
                 X: =40
