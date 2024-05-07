@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "cr64e_imagegrc",
+    "MaxGetRowsCount": 500,
     "Name": "ImageGRCS",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
