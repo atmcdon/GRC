@@ -7,7 +7,7 @@
         Width: =Parent.Width
         ZIndex: =1
 
-    "PlantGallery_1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
+    "ToolGallery As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         DelayItemLoading: =true
         Height: =838
         Items: =ToolLists
@@ -71,7 +71,7 @@
             Height: =50
             Icon: =Icon.ChevronRight
             OnSelect: |-
-                =Navigate('Individual plant edit form',Transition.None,{ SelectedPlant: PlantGallery_1.Selected})
+                =Navigate('Individual tool edit form',Transition.None,{ SelectedTool: ToolGallery.Selected})
             PaddingBottom: =16
             PaddingLeft: =16
             PaddingRight: =16
