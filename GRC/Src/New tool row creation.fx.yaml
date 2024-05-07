@@ -1,6 +1,6 @@
 "'New tool row creation' As screen.'phoneLayout_HeaderAndForm_ver3.0'":
     ContentLanguage: =""
-    OnVisible: =NewForm(EditToolForm)
+    OnVisible: =NewForm(NewToolForm)
 
     RectQuickActionBar9_3 As rectangle:
         Height: =88
@@ -11,7 +11,7 @@
         AccessibleLabel: =Self.Tooltip
         Height: =88
         Icon: =Icon.Cancel
-        OnSelect: =Navigate('Editing Table for plants')
+        OnSelect: =Navigate('Editing table for tools')
         PaddingBottom: =22
         PaddingLeft: =22
         PaddingRight: =22
@@ -25,7 +25,7 @@
         AccessibleLabel: =Self.Tooltip
         Height: =88
         Icon: =Icon.Check
-        OnSelect: =SubmitForm(EditToolForm) & Navigate('Editing table for tools',ScreenTransition.None)
+        OnSelect: =SubmitForm(NewToolForm) & Navigate('Editing table for tools',ScreenTransition.None)
         PaddingBottom: =22
         PaddingLeft: =22
         PaddingRight: =22
@@ -45,9 +45,9 @@
         X: =80
         ZIndex: =4
 
-    EditToolForm As form:
+    NewToolForm As form:
         DataSource: =ToolLists
-        Height: =Parent.Height - EditToolForm.Y
+        Height: =Parent.Height - NewToolForm.Y
         Width: =Parent.Width
         Y: =RectQuickActionBar9_3.Height
         ZIndex: =5

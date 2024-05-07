@@ -1,26 +1,26 @@
-"'Editing table for tools' As screen.'phoneLayout_HeaderAndGallery_ver3.0'":
+"'Editing Table for volunteers' As screen.'phoneLayout_HeaderAndGallery_ver3.0'":
     OnVisible: =
 
-    RectQuickActionBar8_1 As rectangle:
+    RectQuickActionBar8_2 As rectangle:
         Fill: =RGBA(127, 178, 57, 1)
         Height: =88
         Width: =Parent.Width
         ZIndex: =1
 
-    "ToolGallery As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
+    "VolunteerGallery As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver5.0'":
         DelayItemLoading: =true
         Height: =838
-        Items: =ToolLists
+        Items: =Workers
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =116
         Width: =Parent.Width
-        Y: =TextSearchBox1_1.Y + TextSearchBox1_1.Height
+        Y: =TextSearchBox1_2.Y + TextSearchBox1_2.Height
         ZIndex: =1
 
-        Title5_1 As label:
+        Title5_2 As label:
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
@@ -28,14 +28,14 @@
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.ToolName
+            Text: =ThisItem.Name
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 86
             X: =16
-            Y: =(Parent.TemplateHeight - (Self.Size*1.8 + Subtitle5_1.Size*1.8 + 2 + Body1_1.Size*1.8)) / 2
+            Y: =(Parent.TemplateHeight - (Self.Size*1.8 + Subtitle5_2.Size*1.8 + 2 + Body1_2.Size*1.8)) / 2
             ZIndex: =1
 
-        Subtitle5_1 As label:
+        Subtitle5_2 As label:
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
@@ -43,14 +43,14 @@
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.IDnum
+            Text: =ThisItem.SiteWorked
             VerticalAlign: =VerticalAlign.Top
-            Width: =Title5_1.Width
-            X: =Title5_1.X
-            Y: =Title5_1.Y + Title5_1.Height
+            Width: =Title5_2.Width
+            X: =Title5_2.X
+            Y: =Title5_2.Y + Title5_2.Height
             ZIndex: =2
 
-        Body1_1 As label:
+        Body1_2 As label:
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
@@ -58,20 +58,20 @@
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.RecentlyUsedAt
+            Text: =ThisItem.StartDateWorked
             VerticalAlign: =VerticalAlign.Top
-            Width: =Title5_1.Width
-            X: =Title5_1.X
-            Y: =Subtitle5_1.Y + Subtitle5_1.Height
+            Width: =Title5_2.Width
+            X: =Title5_2.X
+            Y: =Subtitle5_2.Y + Subtitle5_2.Height
             ZIndex: =3
 
-        NextArrow3_1 As icon.ChevronRight:
+        NextArrow3_2 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
             Color: =RGBA(166, 166, 166, 1)
             Height: =50
             Icon: =Icon.ChevronRight
             OnSelect: |-
-                =Navigate('Individual tool edit form',Transition.None,{ SelectedTool: ToolGallery.Selected})
+                =Navigate('IndividualVolunteerEdit',Transition.None,{ SelectedVolunteer: VolunteerGallery.Selected})
             PaddingBottom: =16
             PaddingLeft: =16
             PaddingRight: =16
@@ -82,30 +82,30 @@
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =4
 
-        Separator11_1 As rectangle:
+        Separator11_2 As rectangle:
             Height: =8
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - Self.Height
             ZIndex: =5
 
-        Rectangle12_1 As rectangle:
-            Height: =Parent.TemplateHeight - Separator11_1.Height
+        Rectangle12_2 As rectangle:
+            Height: =Parent.TemplateHeight - Separator11_2.Height
             OnSelect: =Select(Parent)
             Visible: =ThisItem.IsSelected
             Width: =4
             ZIndex: =6
 
-    LblAppName8_1 As label:
+    LblAppName8_2 As label:
         Height: =88
         Size: =27
-        Text: ="Tools Table"
-        Width: =241
+        Text: ="Volunteer Table"
+        Width: =283
         Wrap: =false
-        X: =199
+        X: =178
         ZIndex: =2
 
-    TextSearchBox1_1 As text:
+    TextSearchBox1_2 As text:
         Default: =""
         Height: =68
         HintText: ="Search items"
@@ -116,10 +116,10 @@
         RadiusTopRight: =7
         Size: =21
         Width: =Parent.Width
-        Y: =RectQuickActionBar8_1.Height
+        Y: =RectQuickActionBar8_2.Height
         ZIndex: =6
 
-    SearchIcon1_1 As icon.Search:
+    SearchIcon1_2 As icon.Search:
         Height: =Self.Width
         Icon: =Icon.Search
         PaddingBottom: =14
@@ -127,36 +127,36 @@
         PaddingRight: =14
         PaddingTop: =14
         Tooltip: ="Search"
-        Width: =TextSearchBox1_1.Height
-        X: =TextSearchBox1_1.X
-        Y: =TextSearchBox1_1.Y
+        Width: =TextSearchBox1_2.Height
+        X: =TextSearchBox1_2.X
+        Y: =TextSearchBox1_2.Y
         ZIndex: =7
 
-    Rectangle11_1 As rectangle:
+    Rectangle11_2 As rectangle:
         Height: =2
         Width: =Parent.Width
-        Y: =TextSearchBox1_1.Y + TextSearchBox1_1.Height
+        Y: =TextSearchBox1_2.Y + TextSearchBox1_2.Height
         ZIndex: =8
 
-    Button11_1 As button:
+    Button11_2 As button:
         Fill: =RGBA(127, 178, 57, 1)
         Height: =82
-        OnSelect: =Navigate('New tool row creation',ScreenTransition.None)
+        OnSelect: =Navigate('New plant row creation',ScreenTransition.None)
         Size: =24
-        Text: ="Add New Tool"
+        Text: ="Add New Volunteer"
         Width: =589
         X: =25
         Y: =1015
         ZIndex: =10
 
-    Icon4_1 As icon.AddLibrary:
+    Icon4_2 As icon.AddLibrary:
         Color: =RGBA(116, 116, 116, 1)
         Icon: =Icon.AddLibrary
         X: =45
         Y: =1024
         ZIndex: =11
 
-    Icon6_1 As icon.ChevronLeft:
+    Icon6_2 As icon.ChevronLeft:
         Color: =RGBA(255, 255, 255, 1)
         Icon: =Icon.ChevronLeft
         OnSelect: =Navigate('Individual Worksite View')

@@ -148,12 +148,15 @@
     "Volunteer Overview Screen",
     "Worker Overview Screen",
     "Editing Table for plants",
+    "Editing Table for volunteers",
+    "Editing Table for workers",
     "Editing table for tools",
     "Individual plant edit form",
     "Individual tool edit form",
+    "Individual volunteer edit form",
     "New plant row creation",
     "New tool row creation",
-    "New Entry For Site History",
-    "Screen3"
+    "New volunteer row creation",
+    "New Entry For Site History"
   ]
 }
