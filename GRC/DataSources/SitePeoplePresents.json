@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "cr64e_sitepeoplepresent",
+    "MaxGetRowsCount": 500,
     "Name": "SitePeoplePresents",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",

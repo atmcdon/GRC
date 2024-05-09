@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "cr64e_plantslist",
+    "MaxGetRowsCount": 500,
     "Name": "PlantsLists",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",

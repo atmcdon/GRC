@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "cr64e_images",
+    "MaxGetRowsCount": 500,
     "Name": "Images",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",

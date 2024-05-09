@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "cr64e_departments",
+    "MaxGetRowsCount": 500,
     "Name": "Departments",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
