@@ -25,7 +25,7 @@
         AccessibleLabel: =Self.Tooltip
         Height: =88
         Icon: =Icon.Check
-        OnSelect: =SubmitForm(NewVolunteerForm) & Navigate('VolunteerGallery',ScreenTransition.None)
+        OnSelect: =SubmitForm(NewVolunteerForm) & Navigate(VolunteerGallery,ScreenTransition.None)
         PaddingBottom: =22
         PaddingLeft: =22
         PaddingRight: =22

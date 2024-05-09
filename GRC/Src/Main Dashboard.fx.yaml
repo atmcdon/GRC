@@ -430,3 +430,6 @@
         Y: =9
         ZIndex: =4
 
+    NavBar_1 As NavBar:
+        ZIndex: =5
+
