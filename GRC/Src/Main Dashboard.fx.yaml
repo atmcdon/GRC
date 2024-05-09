@@ -18,7 +18,7 @@
         BorderThickness: =0
         Height: =Parent.Height - Self.Y
         Width: =Parent.Width
-        Y: =RectQuickActionBar1.Y + RectQuickActionBar1.Height
+        Y: =NavBar_1.Y + NavBar_1.Height
         ZIndex: =3
 
         DataCard1 As dataCard:
