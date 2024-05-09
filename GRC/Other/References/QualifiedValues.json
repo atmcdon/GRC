@@ -129,6 +129,104 @@
       "Values": {
         "Information": "cd658c6e-ef37-4bee-8a59-c2c7d44ba092"
       }
+    },
+    {
+      "Kind": "default.cds_cr64e_sitesparent_forms",
+      "Namespace": "SitesParents (Forms)",
+      "Values": {
+        "Information": "121554aa-9632-49bc-916c-bd27e4fd16dd"
+      }
+    },
+    {
+      "Kind": "default.cds_cr64e_siteprogressreport_forms",
+      "Namespace": "SiteProgressReports (Forms)",
+      "Values": {
+        "Information": "606e322b-5a2d-46e8-ab9a-c0fbb71474df"
+      }
+    },
+    {
+      "Kind": "default.cds_cr64e_developments_forms",
+      "Namespace": "Developments (Forms)",
+      "Values": {
+        "Information": "1138538b-781b-48e6-b11b-adc261497d46"
+      }
+    },
+    {
+      "Kind": "default.cds_cr64e_developmenttypes_forms",
+      "Namespace": "DevelopmentTypes (Forms)",
+      "Values": {
+        "Information": "da481adf-9e99-46a2-b293-52d805d06772"
+      }
+    },
+    {
+      "Kind": "default.cds_cr64e_sitetoolsused_forms",
+      "Namespace": "SiteToolsUseds (Forms)",
+      "Values": {
+        "Information": "c4220bbe-55ec-42fb-bd31-cfc2e8f251db"
+      }
+    },
+    {
+      "Kind": "default.cds_cr64e_sitepeoplepresent_forms",
+      "Namespace": "SitePeoplePresents (Forms)",
+      "Values": {
+        "Information": "5349319a-46ec-4828-b548-b42b2663100a"
+      }
+    },
+    {
+      "Kind": "default.cds_cr64e_siteplantsused_forms",
+      "Namespace": "SitePlantsUseds (Forms)",
+      "Values": {
+        "Information": "062a2538-f5c1-465d-9319-e92870d18331"
+      }
+    },
+    {
+      "Kind": "default.cds_cr64e_siteimages_forms",
+      "Namespace": "SiteImages (Forms)",
+      "Values": {
+        "Information": "3de824f4-94f8-43cc-9575-e337a2b87798"
+      }
+    },
+    {
+      "Kind": "default.cds_cr64e_toolslist_forms",
+      "Namespace": "ToolsLists (Forms)",
+      "Values": {
+        "Information": "5ed79886-b9b6-46f4-9d6c-8645a51f902c"
+      }
+    },
+    {
+      "Kind": "default.cds_cr64e_plantslist_forms",
+      "Namespace": "PlantsLists (Forms)",
+      "Values": {
+        "Information": "33e8a1e5-c02a-40c6-970f-b90946d8e5ab"
+      }
+    },
+    {
+      "Kind": "default.cds_cr64e_plantvender_forms",
+      "Namespace": "PlantVenders (Forms)",
+      "Values": {
+        "Information": "7d6e8aa4-7881-44ab-845c-c283ed1f4577"
+      }
+    },
+    {
+      "Kind": "default.cds_cr64e_employee_forms",
+      "Namespace": "Employees (Forms)",
+      "Values": {
+        "Information": "f8b64c25-9ae1-4db4-9eee-9d5c2c7f7780"
+      }
+    },
+    {
+      "Kind": "default.cds_cr64e_departments_forms",
+      "Namespace": "Departments (Forms)",
+      "Values": {
+        "Information": "8d039ceb-57e9-4547-af55-d1901a1ba5c4"
+      }
+    },
+    {
+      "Kind": "default.cds_cr64e_images_forms",
+      "Namespace": "Images (Forms)",
+      "Values": {
+        "Information": "15b07869-66a4-4f68-934d-897970f9492f"
+      }
     }
   ]
 }

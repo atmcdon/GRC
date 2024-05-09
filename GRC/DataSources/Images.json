@@ -1,0 +1,96 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr64e_imageses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr64e_images",
+    "Name": "Images",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr64e_imagegrc": "Image",
+      "cr64e_imagegrcid": "cr64e_ImageGRCId",
+      "cr64e_imageid": "ImageID",
+      "cr64e_images_AsyncOperations": "System Jobs",
+      "cr64e_images_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr64e_images_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr64e_images_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr64e_images_ProcessSession": "Process Sessions",
+      "cr64e_images_SyncErrors": "Sync Errors",
+      "cr64e_imagesid": "Images",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Images",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Images (Views)",
+    "Name": "_cr64e_images_views",
+    "RelatedEntityName": "Images",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "3e7cef47-dc7d-4e1e-bad3-74319effc3f2": "Images Advanced Find View",
+      "af0391c4-dbcf-4ef5-b83e-3bc07453353e": "Images Associated View",
+      "b278da5c-2662-4ddb-b5e4-06dee64badde": "Images Lookup View",
+      "c9e645ee-8595-4b4d-ac48-8ca0da3f5a31": "Inactive Images",
+      "e30220b3-8dad-4efa-82e1-e9731cfefc2d": "Active Images"
+    }
+  },
+  {
+    "DisplayName": "Status (Images)",
+    "Name": "cr64e_images_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Images"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Images",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Images)",
+    "Name": "cr64e_images_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Images"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Images",
+    "Type": "OptionSetInfo"
+  }
+]

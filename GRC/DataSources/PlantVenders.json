@@ -1,0 +1,97 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr64e_plantvenders",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr64e_plantvender",
+    "Name": "PlantVenders",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr64e_address": "Address",
+      "cr64e_name": "Name",
+      "cr64e_phonenumber": "PhoneNumber",
+      "cr64e_plantvender_AsyncOperations": "System Jobs",
+      "cr64e_plantvender_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr64e_plantvender_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr64e_plantvender_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr64e_plantvender_ProcessSession": "Process Sessions",
+      "cr64e_plantvender_SyncErrors": "Sync Errors",
+      "cr64e_plantvenderid": "PlantVender",
+      "cr64e_venderid": "VenderID",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "PlantVenders",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "PlantVenders (Views)",
+    "Name": "_cr64e_plantvender_views",
+    "RelatedEntityName": "PlantVenders",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "32d636ce-634b-44fe-b0e4-e4a466489351": "PlantVender Advanced Find View",
+      "738c45f9-105f-4044-9c08-b2a263965b25": "PlantVender Lookup View",
+      "73dd5a10-8fff-4b29-8c76-36d9595927f6": "Inactive PlantVenders",
+      "99ff4da8-24f8-487d-ba96-424fe0d5c903": "Active PlantVenders",
+      "e0909e52-ec94-4e9c-9d02-99dcf016f563": "PlantVender Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (PlantVenders)",
+    "Name": "cr64e_plantvender_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "PlantVenders"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "PlantVenders",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (PlantVenders)",
+    "Name": "cr64e_plantvender_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "PlantVenders"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "PlantVenders",
+    "Type": "OptionSetInfo"
+  }
+]

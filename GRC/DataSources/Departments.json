@@ -1,0 +1,95 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr64e_departmentses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr64e_departments",
+    "Name": "Departments",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr64e_departments_AsyncOperations": "System Jobs",
+      "cr64e_departments_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr64e_departments_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr64e_departments_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr64e_departments_ProcessSession": "Process Sessions",
+      "cr64e_departments_SyncErrors": "Sync Errors",
+      "cr64e_departmentsid": "Departments",
+      "cr64e_departmenttype": "DepartmentType",
+      "cr64e_depid": "DepID",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Departments",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Departments (Views)",
+    "Name": "_cr64e_departments_views",
+    "RelatedEntityName": "Departments",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "05446a9d-d2ef-4e02-8c8f-dc4a2143692b": "Departments Lookup View",
+      "0d063d24-bd2b-439e-83d2-437ff6432363": "Active Departments",
+      "6024a013-08f0-4550-aff8-0ec75cb05226": "Inactive Departments",
+      "77431af5-4065-4c6c-8383-b6701d319795": "Departments Associated View",
+      "c416b528-318c-4d2a-aff8-ba3ec4bd46f9": "Departments Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (Departments)",
+    "Name": "cr64e_departments_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Departments"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Departments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Departments)",
+    "Name": "cr64e_departments_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Departments"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Departments",
+    "Type": "OptionSetInfo"
+  }
+]

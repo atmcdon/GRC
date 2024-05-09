@@ -1,0 +1,95 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr64e_sitepeoplepresents",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr64e_sitepeoplepresent",
+    "Name": "SitePeoplePresents",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr64e_employeeid": "EmployeeID",
+      "cr64e_reportid": "ReportID",
+      "cr64e_sitepeoplepresent_AsyncOperations": "System Jobs",
+      "cr64e_sitepeoplepresent_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr64e_sitepeoplepresent_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr64e_sitepeoplepresent_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr64e_sitepeoplepresent_ProcessSession": "Process Sessions",
+      "cr64e_sitepeoplepresent_SyncErrors": "Sync Errors",
+      "cr64e_sitepeoplepresentid": "SitePeoplePresent",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "SitePeoplePresents",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "SitePeoplePresents (Views)",
+    "Name": "_cr64e_sitepeoplepresent_views",
+    "RelatedEntityName": "SitePeoplePresents",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "28f187e5-0fde-4900-b42e-8232842a8c06": "SitePeoplePresent Lookup View",
+      "6914ebc0-ed97-4571-8fd7-eacf8a6f8376": "SitePeoplePresent Advanced Find View",
+      "6eb83d76-8d4b-4c6d-b9d4-b4526b3ed0ca": "Inactive SitePeoplePresents",
+      "93b25da5-4217-40fc-aa1f-a6f17e1a8c9d": "SitePeoplePresent Associated View",
+      "aeb4fa6c-8ea9-4f39-aec5-950df5d8dca4": "Active SitePeoplePresents"
+    }
+  },
+  {
+    "DisplayName": "Status (SitePeoplePresents)",
+    "Name": "cr64e_sitepeoplepresent_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "SitePeoplePresents"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "SitePeoplePresents",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (SitePeoplePresents)",
+    "Name": "cr64e_sitepeoplepresent_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "SitePeoplePresents"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "SitePeoplePresents",
+    "Type": "OptionSetInfo"
+  }
+]

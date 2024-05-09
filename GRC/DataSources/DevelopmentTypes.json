@@ -1,0 +1,95 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr64e_developmenttypeses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr64e_developmenttypes",
+    "Name": "DevelopmentTypes",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr64e_developmenttypename": "DevelopmentTypeName",
+      "cr64e_developmenttypes_AsyncOperations": "System Jobs",
+      "cr64e_developmenttypes_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr64e_developmenttypes_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr64e_developmenttypes_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr64e_developmenttypes_ProcessSession": "Process Sessions",
+      "cr64e_developmenttypes_SyncErrors": "Sync Errors",
+      "cr64e_developmenttypesid": "DevelopmentTypes",
+      "cr64e_typeid": "TypeID",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "DevelopmentTypes",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "DevelopmentTypes (Views)",
+    "Name": "_cr64e_developmenttypes_views",
+    "RelatedEntityName": "DevelopmentTypes",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "3e167170-bbd8-49ad-8904-fbda211d897a": "Active DevelopmentTypes",
+      "4a280e9c-d103-4c3b-8fa9-f6bf016e2be6": "DevelopmentTypes Lookup View",
+      "a0ca084d-86bf-418b-a53e-2d7c1f3c0bc5": "DevelopmentTypes Associated View",
+      "f60adcfd-bf0d-4e4c-b80b-7aace6b6269f": "Inactive DevelopmentTypes",
+      "fa30ce71-b490-49f5-b58a-d9752dbf06eb": "DevelopmentTypes Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (DevelopmentTypes)",
+    "Name": "cr64e_developmenttypes_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "DevelopmentTypes"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "DevelopmentTypes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (DevelopmentTypes)",
+    "Name": "cr64e_developmenttypes_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "DevelopmentTypes"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "DevelopmentTypes",
+    "Type": "OptionSetInfo"
+  }
+]

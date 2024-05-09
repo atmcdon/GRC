@@ -50,7 +50,7 @@ LoginPage As screen:
         OnSelect: |-
             =If(
                 !IsBlank(LookUp('Username and Passwords', Username = TextInput2.Text && 'Password (cr64e_primarycolumn)' = TextInput2_1.Text)),
-                Navigate('Main Dashboard'),
+                Navigate('Main DashboardV1'),
                 
                 Notify("Username not found or Password is incorrect!", NotificationType.Error)  
             ) 

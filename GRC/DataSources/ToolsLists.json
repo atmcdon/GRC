@@ -1,0 +1,117 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr64e_toolslists",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr64e_toolslist",
+    "Name": "ToolsLists",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr64e_replacement": "Replacement",
+      "cr64e_toolid": "ToolID",
+      "cr64e_toolname": "ToolName",
+      "cr64e_toolslist_AsyncOperations": "System Jobs",
+      "cr64e_toolslist_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr64e_toolslist_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr64e_toolslist_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr64e_toolslist_ProcessSession": "Process Sessions",
+      "cr64e_toolslist_SyncErrors": "Sync Errors",
+      "cr64e_toolslistid": "ToolsList",
+      "cr64e_toolsn": "ToolSN",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "ToolsLists",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "ToolsLists (Views)",
+    "Name": "_cr64e_toolslist_views",
+    "RelatedEntityName": "ToolsLists",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "329385bc-1009-4756-9722-ab966ab23955": "Active ToolsLists",
+      "71707085-20b1-4fe2-9c09-3383af579abd": "Inactive ToolsLists",
+      "951d0943-b396-4c97-a656-1c89af2ffbf7": "ToolsList Associated View",
+      "9a3ac575-9836-44e6-92da-36c839894bd5": "ToolsList Lookup View",
+      "fd988586-341c-457c-873a-adf1e7935e4d": "ToolsList Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Replacement (ToolsLists)",
+    "Name": "cr64e_toolslist_cr64e_replacement",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr64e_replacement",
+        "OptionSetReferenceEntityName": "ToolsLists"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "cr64e_replacement",
+    "RelatedEntityName": "ToolsLists",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (ToolsLists)",
+    "Name": "cr64e_toolslist_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "ToolsLists"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "ToolsLists",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (ToolsLists)",
+    "Name": "cr64e_toolslist_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "ToolsLists"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "ToolsLists",
+    "Type": "OptionSetInfo"
+  }
+]

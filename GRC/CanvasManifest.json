@@ -99,7 +99,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 126,
+    "BindingErrorCount": 157,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "Phone",
@@ -121,7 +121,7 @@
     "ShowStatusBar": false
   },
   "PublishInfo": {
-    "AppName": "b36ea1dd-b44b-4881-be2c-0d7006338f23",
+    "AppName": "App GRC",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
@@ -132,8 +132,10 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "Main Dashboard",
+    "Main DashboardV1",
+    "Main DashboardV2",
     "Individual Worksite View",
+    "Individual Worksite ViewV2",
     "ImageView",
     "UploadRecording",
     "Make Site",

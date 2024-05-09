@@ -1,0 +1,96 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr64e_sitesparents",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr64e_sitesparent",
+    "Name": "SitesParents",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr64e_finisheddate": "FinishedDate",
+      "cr64e_siteid": "SiteID",
+      "cr64e_sitename": "SiteName",
+      "cr64e_sitesparent_AsyncOperations": "System Jobs",
+      "cr64e_sitesparent_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr64e_sitesparent_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr64e_sitesparent_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr64e_sitesparent_ProcessSession": "Process Sessions",
+      "cr64e_sitesparent_SyncErrors": "Sync Errors",
+      "cr64e_sitesparentid": "SitesParent",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "SitesParents",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "SitesParents (Views)",
+    "Name": "_cr64e_sitesparent_views",
+    "RelatedEntityName": "SitesParents",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "666d1542-0d40-4983-ba96-d650f89c809b": "Inactive SitesParents",
+      "b4fc024a-ce3f-48fb-ae89-a98feec13d71": "SitesParent Associated View",
+      "e27f955d-f872-4315-a56c-c8f51437287e": "Active SitesParents",
+      "e95584ab-6ddd-4643-96ff-115d0f2d4080": "SitesParent Lookup View",
+      "ec510a10-7b20-4914-a5e0-f4f68b696b59": "SitesParent Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (SitesParents)",
+    "Name": "cr64e_sitesparent_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "SitesParents"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "SitesParents",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (SitesParents)",
+    "Name": "cr64e_sitesparent_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "SitesParents"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "SitesParents",
+    "Type": "OptionSetInfo"
+  }
+]

@@ -1,11 +1,11 @@
-"'Main Dashboard' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+"'Main DashboardV2' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
 
-    RectQuickActionBar1 As rectangle:
+    RectQuickActionBar1_1 As rectangle:
         Height: =88
         Width: =Parent.Width
         ZIndex: =1
 
-    LblAppName1 As label:
+    LblAppName1_1 As label:
         Align: =Align.Center
         Fill: =RGBA(187, 221, 140, 1)
         Height: =88
@@ -14,14 +14,14 @@
         Width: =Parent.Width
         ZIndex: =2
 
-    Canvas1 As fluidGrid.fluidGridWithBlankCard:
+    Canvas1_2 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Height: =Parent.Height - Self.Y
         Width: =Parent.Width
-        Y: =NavBar_1.Y + NavBar_1.Height
+        Y: =NavBar_2.Y + NavBar_2.Height
         ZIndex: =3
 
-        DataCard1 As dataCard:
+        DataCard1_2 As dataCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             BorderThickness: =0
@@ -33,7 +33,7 @@
             Y: =0
             ZIndex: =1
 
-            Rectangle2 As rectangle:
+            Rectangle2_2 As rectangle:
                 BorderColor: =RGBA(128, 128, 128, 1)
                 BorderThickness: =2
                 Fill: =RGBA(0, 0, 0, 0)
@@ -43,11 +43,11 @@
                 Y: =125
                 ZIndex: =1
 
-            "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+            "Gallery1_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
                 '#CopilotOverlayLabel': ="Filtered"
                 DelayItemLoading: =true
                 Height: =432
-                Items: =Sites
+                Items: =SitesParents
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
@@ -57,7 +57,7 @@
                 Y: =135
                 ZIndex: =1
 
-                Image2 As image:
+                Image2_1 As image:
                     Height: =72
                     Image: =ThisItem.SiteMainImage
                     OnSelect: =Select(Parent)
@@ -70,7 +70,7 @@
                     Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
                     ZIndex: =1
 
-                Title2 As label:
+                Title2_1 As label:
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =Self.Size * 1.8
                     OnSelect: =Select(Parent)
@@ -78,14 +78,15 @@
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Text: =ThisItem.'Site name'
+                    Text: |-
+                        ="Site Number: " & ThisItem.SiteID
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Parent.TemplateWidth - 173
                     X: =103
-                    Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2.Size * 1.8)) / 2
+                    Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle2_1.Size * 1.8)) / 2
                     ZIndex: =2
 
-                Subtitle2 As label:
+                Subtitle2_1 As label:
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =Self.Size * 1.8
                     OnSelect: =Select(Parent)
@@ -93,25 +94,26 @@
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Text: =ThisItem.'Plant Inventory'
+                    Text: |-
+                        ="Site Name: " & ThisItem.SiteName
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =Title2.Width
-                    X: =Title2.X
-                    Y: =Title2.Y + Title2.Height
+                    Width: =Title2_1.Width
+                    X: =Title2_1.X
+                    Y: =Title2_1.Y + Title2_1.Height
                     ZIndex: =3
 
-                NextArrow1 As icon.ChevronRight:
+                NextArrow1_1 As icon.ChevronRight:
                     AccessibleLabel: =Self.Tooltip
                     Color: =RGBA(166, 166, 166, 1)
                     Height: =50
                     Icon: =Icon.ChevronRight
                     OnSelect: |
                         =
-                        Set(GlobalSelectedSite, ThisItem.'Site name');
-                        Set(varworkerID, LookUp('Site Histories', SiteName = GlobalSelectedSite, 'Workers (cr64e_workers)'));
+                        Set(GlobalSelectedSite2, ThisItem.SiteID);
+                        //Set(varworkerID, LookUp('Site Histories', SiteName = GlobalSelectedSite, 'Workers (cr64e_workers)'));
                         
                         
-                        Navigate('Individual Worksite View', ScreenTransition.Cover);
+                        Navigate('Individual Worksite ViewV2', ScreenTransition.Cover);
                     PaddingBottom: =16
                     PaddingLeft: =16
                     PaddingRight: =16
@@ -122,21 +124,21 @@
                     Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
                     ZIndex: =4
 
-                Separator2 As rectangle:
+                Separator2_1 As rectangle:
                     Height: =8
                     OnSelect: =Select(Parent)
                     Width: =Parent.TemplateWidth
                     Y: =Parent.TemplateHeight - Self.Height
                     ZIndex: =5
 
-                Rectangle9 As rectangle:
-                    Height: =Parent.TemplateHeight - Separator2.Height
+                Rectangle9_1 As rectangle:
+                    Height: =Parent.TemplateHeight - Separator2_1.Height
                     OnSelect: =Select(Parent)
                     Visible: =ThisItem.IsSelected
                     Width: =4
                     ZIndex: =6
 
-            Button1 As button:
+            Button1_4 As button:
                 Fill: =RGBA(127, 178, 57, 1)
                 Height: =64
                 Size: =24
@@ -146,7 +148,7 @@
                 Y: =795
                 ZIndex: =2
 
-            Button1_1 As button:
+            Button1_3 As button:
                 Fill: =RGBA(127, 178, 57, 1)
                 Height: =64
                 Size: =24
@@ -156,7 +158,7 @@
                 Y: =795
                 ZIndex: =3
 
-            Button1_2 As button:
+            Button1_5 As button:
                 Fill: =RGBA(127, 178, 57, 1)
                 Height: =64
                 Size: =24
@@ -166,7 +168,7 @@
                 Y: =795
                 ZIndex: =4
 
-            Label1 As label:
+            Label1_4 As label:
                 Height: =70
                 Size: =21
                 Text: ="Restoration Sites"
@@ -175,7 +177,7 @@
                 Y: =33
                 ZIndex: =5
 
-            Rectangle4 As rectangle:
+            Rectangle4_3 As rectangle:
                 Fill: =RGBA(128, 128, 128, 1)
                 Height: =6
                 Width: =380
@@ -183,7 +185,7 @@
                 Y: =103
                 ZIndex: =6
 
-        DataCard2 As dataCard.blankCard:
+        DataCard2_1 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
@@ -194,7 +196,7 @@
             Y: =1
             ZIndex: =2
 
-        DataCard4 As dataCard.blankCard:
+        DataCard4_1 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
@@ -205,7 +207,7 @@
             Y: =2
             ZIndex: =3
 
-            Label1_2 As label:
+            Label1_5 As label:
                 Height: =70
                 Size: =21
                 Text: ="Work Order's Summary"
@@ -214,7 +216,7 @@
                 Y: =40
                 ZIndex: =1
 
-            Rectangle4_1 As rectangle:
+            Rectangle4_4 As rectangle:
                 Fill: =RGBA(128, 128, 128, 1)
                 Height: =6
                 Width: =380
@@ -222,7 +224,7 @@
                 Y: =110
                 ZIndex: =2
 
-            "Gallery5_2 As gallery.'BrowseLayout_Flexible_NewsFeed_ver5.0'":
+            "Gallery5_3 As gallery.'BrowseLayout_Flexible_NewsFeed_ver5.0'":
                 '#CopilotOverlayLabel': ="Filtered"
                 DelayItemLoading: =true
                 Fill: =RGBA(232, 244, 217, 1)
@@ -237,7 +239,7 @@
                 Y: =136
                 ZIndex: =3
 
-                Title7_2 As label:
+                Title7_3 As label:
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =Self.Size * 1.8
                     OnSelect: =Select(Parent)
@@ -247,12 +249,12 @@
                     PaddingTop: =0
                     Text: =ThisItem.'Created On'
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =Parent.TemplateWidth - Image7_2.Width - 80
+                    Width: =Parent.TemplateWidth - Image7_3.Width - 80
                     X: =32
                     Y: =32
                     ZIndex: =1
 
-                Body5_2 As label:
+                Body5_3 As label:
                     AutoHeight: =true
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =Self.Size * 4
@@ -263,12 +265,12 @@
                     PaddingTop: =0
                     Text: =ThisItem.SiteUpdateText
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =Title7_2.Width
+                    Width: =Title7_3.Width
                     X: =32
-                    Y: =Title7_2.Y + Title7_2.Height + 8
+                    Y: =Title7_3.Y + Title7_3.Height + 8
                     ZIndex: =2
 
-                Image7_2 As image:
+                Image7_3 As image:
                     Height: =160
                     Image: =ThisItem.Image
                     OnSelect: =Select(Parent)
@@ -278,17 +280,17 @@
                     RadiusTopRight: =8
                     Width: =160
                     X: =Parent.TemplateWidth - Self.Width - 32
-                    Y: =Title7_2.Y
+                    Y: =Title7_3.Y
                     ZIndex: =3
 
-                Separator5_2 As rectangle:
+                Separator5_3 As rectangle:
                     Height: =1
                     OnSelect: =Select(Parent)
                     Width: =Parent.TemplateWidth
-                    Y: =Max(Parent.TemplateHeight - 1, Body5_2.Y + Body5_2.Height + 10)
+                    Y: =Max(Parent.TemplateHeight - 1, Body5_3.Y + Body5_3.Height + 10)
                     ZIndex: =4
 
-                UploadedImage1_1 As image:
+                UploadedImage1_2 As image:
                     Height: =AddMediaButton1.Height
                     Image: =ThisItem.UploadedImage
                     ImagePosition: =ImagePosition.Fill
@@ -298,7 +300,7 @@
                     Y: =AddMediaButton1.Y
                     ZIndex: =6
 
-        DataCard5 As dataCard.blankCard:
+        DataCard5_1 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
@@ -309,7 +311,7 @@
             Y: =3
             ZIndex: =4
 
-            Label1_3 As label:
+            Label1_6 As label:
                 Height: =70
                 Size: =21
                 Text: ="All Database Tables"
@@ -318,7 +320,7 @@
                 Y: =40
                 ZIndex: =1
 
-            Rectangle4_2 As rectangle:
+            Rectangle4_5 As rectangle:
                 Fill: =RGBA(128, 128, 128, 1)
                 Height: =6
                 Width: =380
@@ -326,7 +328,7 @@
                 Y: =110
                 ZIndex: =2
 
-            Button8 As button:
+            Button8_4 As button:
                 Fill: =RGBA(127, 178, 57, 1)
                 Height: =62
                 OnSelect: =Navigate('Tools Overview Screen')
@@ -337,7 +339,7 @@
                 Y: =143
                 ZIndex: =3
 
-            Button8_1 As button:
+            Button8_5 As button:
                 Fill: =RGBA(127, 178, 57, 1)
                 Height: =62
                 OnSelect: =Navigate('Plants Overview Screen')
@@ -348,7 +350,7 @@
                 Y: =246
                 ZIndex: =4
 
-            Button8_2 As button:
+            Button8_6 As button:
                 Fill: =RGBA(127, 178, 57, 1)
                 Height: =62
                 OnSelect: =Navigate('Volunteer Overview Screen')
@@ -359,7 +361,7 @@
                 Y: =359
                 ZIndex: =5
 
-            Button8_3 As button:
+            Button8_7 As button:
                 Fill: =RGBA(127, 178, 57, 1)
                 Height: =62
                 OnSelect: =Navigate('Worker Overview Screen')
@@ -370,7 +372,7 @@
                 Y: =472
                 ZIndex: =6
 
-        DataCard19 As dataCard.blankCard:
+        DataCard19_1 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
@@ -381,7 +383,7 @@
             Y: =4
             ZIndex: =5
 
-            Button9 As button:
+            Button9_5 As button:
                 Fill: =RGBA(127, 178, 57, 1)
                 Height: =61
                 Size: =24
@@ -391,7 +393,7 @@
                 Y: =32
                 ZIndex: =1
 
-        Footer As dataCard.blankCard:
+        Footer_1 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
@@ -402,19 +404,19 @@
             Y: =5
             ZIndex: =6
 
-            Container7 As groupContainer.manualLayoutContainer:
+            Container7_9 As groupContainer.manualLayoutContainer:
                 Height: =113
                 Width: =635
                 ZIndex: =1
 
-                Rectangle14 As rectangle:
+                Rectangle14_1 As rectangle:
                     DisplayMode: =DisplayMode.View
                     Fill: =RGBA(209, 232, 178, 1)
                     Height: =113
                     Width: =635
                     ZIndex: =1
 
-            Label15 As label:
+            Label15_5 As label:
                 Height: =57
                 Size: =21
                 Text: =Concatenate("Green River Coalition ", Char(169), "2024")
@@ -422,7 +424,7 @@
                 X: =126
                 ZIndex: =2
 
-    Circle1 As circle:
+    Circle1_1 As circle:
         Fill: =RGBA(127, 178, 57, 1)
         Height: =70
         Width: =72
@@ -430,6 +432,6 @@
         Y: =9
         ZIndex: =4
 
-    NavBar_1 As NavBar:
+    NavBar_2 As NavBar:
         ZIndex: =5
 

@@ -1,0 +1,98 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr64e_plantslists",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr64e_plantslist",
+    "Name": "PlantsLists",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr64e_plantid": "PlantID",
+      "cr64e_plantname": "PlantName",
+      "cr64e_plantslist_AsyncOperations": "System Jobs",
+      "cr64e_plantslist_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr64e_plantslist_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr64e_plantslist_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr64e_plantslist_ProcessSession": "Process Sessions",
+      "cr64e_plantslist_SyncErrors": "Sync Errors",
+      "cr64e_plantslistid": "PlantsList",
+      "cr64e_quantityatsite": "QuantityAtSite",
+      "cr64e_quantitytotal": "QuantityTotal",
+      "cr64e_venderid": "VenderID",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "PlantsLists",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "PlantsLists (Views)",
+    "Name": "_cr64e_plantslist_views",
+    "RelatedEntityName": "PlantsLists",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "2f6adb1b-4d45-4428-a757-41d58702b536": "PlantsList Lookup View",
+      "33d51ce6-9be1-47c5-abfc-b9ebb6c0fd73": "PlantsList Associated View",
+      "3c98f020-5430-465b-9ecd-5efc0f85720b": "Inactive PlantsLists",
+      "5b26aa73-ec0b-4277-b3a8-c740980b389f": "PlantsList Advanced Find View",
+      "b37b6e57-c963-4a7b-ba45-f7d6d21aecde": "Active PlantsLists"
+    }
+  },
+  {
+    "DisplayName": "Status (PlantsLists)",
+    "Name": "cr64e_plantslist_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "PlantsLists"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "PlantsLists",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (PlantsLists)",
+    "Name": "cr64e_plantslist_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "PlantsLists"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "PlantsLists",
+    "Type": "OptionSetInfo"
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr64e_siteprogressreports",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr64e_siteprogressreport",
+    "Name": "SiteProgressReports",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr64e_developmentid": "DevelopmentID",
+      "cr64e_endtime": "EndTime",
+      "cr64e_generalnotes": "GeneralNotes",
+      "cr64e_reportid": "ReportID",
+      "cr64e_siteid": "SiteID",
+      "cr64e_siteprogressreport_AsyncOperations": "System Jobs",
+      "cr64e_siteprogressreport_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr64e_siteprogressreport_DuplicateBaseRecord": "Duplicate Records (cr64e_siteprogressreport_DuplicateBaseRecord)",
+      "cr64e_siteprogressreport_DuplicateMatchingRecord": "Duplicate Records (cr64e_siteprogressreport_DuplicateMatchingRecord)",
+      "cr64e_siteprogressreport_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr64e_siteprogressreport_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr64e_siteprogressreport_ProcessSession": "Process Sessions",
+      "cr64e_siteprogressreport_SyncErrors": "Sync Errors",
+      "cr64e_siteprogressreportid": "SiteProgressReport",
+      "cr64e_timestart": "TimeStart",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "SiteProgressReports",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "SiteProgressReports (Views)",
+    "Name": "_cr64e_siteprogressreport_views",
+    "RelatedEntityName": "SiteProgressReports",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "3eb93c48-3db1-48f1-ab30-550f0fbaf327": "SiteProgressReport Advanced Find View",
+      "578d198a-2b48-4b82-906b-7055be6bd0ab": "Active SiteProgressReports",
+      "8da1a43d-05e3-49a0-90d3-363def768c29": "SiteProgressReport Lookup View",
+      "ac0e2910-e023-4425-ba27-fa5976f98202": "Inactive SiteProgressReports",
+      "fe5d19c7-4170-4a8e-bd0b-b8d23e5b15ee": "SiteProgressReport Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (SiteProgressReports)",
+    "Name": "cr64e_siteprogressreport_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "SiteProgressReports"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "SiteProgressReports",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (SiteProgressReports)",
+    "Name": "cr64e_siteprogressreport_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "SiteProgressReports"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "SiteProgressReports",
+    "Type": "OptionSetInfo"
+  }
+]

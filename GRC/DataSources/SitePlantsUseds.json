@@ -1,0 +1,96 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr64e_siteplantsuseds",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr64e_siteplantsused",
+    "Name": "SitePlantsUseds",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr64e_plantid": "PlantID",
+      "cr64e_quantity": "QuantityUsed",
+      "cr64e_reportid": "ReportID",
+      "cr64e_siteplantsused_AsyncOperations": "System Jobs",
+      "cr64e_siteplantsused_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr64e_siteplantsused_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr64e_siteplantsused_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr64e_siteplantsused_ProcessSession": "Process Sessions",
+      "cr64e_siteplantsused_SyncErrors": "Sync Errors",
+      "cr64e_siteplantsusedid": "SitePlantsUsed",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "SitePlantsUseds",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "SitePlantsUseds (Views)",
+    "Name": "_cr64e_siteplantsused_views",
+    "RelatedEntityName": "SitePlantsUseds",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "2729c865-a21a-491f-b5e4-b9b62cb5fd2f": "SitePlantsUsed Lookup View",
+      "91cce493-2497-4a17-a68d-73cb47ccefe4": "SitePlantsUsed Associated View",
+      "c1c2c199-0668-4310-8e49-02bcc54be289": "SitePlantsUsed Advanced Find View",
+      "d8c0e4b5-a3e0-43fc-bb77-6874f298d615": "Inactive SitePlantsUseds",
+      "dd3ece4b-4b83-463a-a0a3-4f265f4c668d": "Active SitePlantsUseds"
+    }
+  },
+  {
+    "DisplayName": "Status (SitePlantsUseds)",
+    "Name": "cr64e_siteplantsused_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "SitePlantsUseds"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "SitePlantsUseds",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (SitePlantsUseds)",
+    "Name": "cr64e_siteplantsused_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "SitePlantsUseds"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "SitePlantsUseds",
+    "Type": "OptionSetInfo"
+  }
+]

@@ -1273,12 +1273,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.Items"
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.Items",
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.Items",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1291,8 +1291,8 @@
               },
               "properties": {
                 "member": "Items",
-                "module": "Main Dashboard",
-                "type": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2"
+                "module": "Main DashboardV1",
+                "type": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2"
               }
             }
           ],
@@ -1313,12 +1313,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.Items"
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.Items",
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.Items",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1331,8 +1331,8 @@
               },
               "properties": {
                 "member": "Items",
-                "module": "Main Dashboard",
-                "type": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2"
+                "module": "Main DashboardV1",
+                "type": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2"
               }
             }
           ],
@@ -1353,12 +1353,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.Items"
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.Items",
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.Items",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1371,8 +1371,8 @@
               },
               "properties": {
                 "member": "Items",
-                "module": "Main Dashboard",
-                "type": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2"
+                "module": "Main DashboardV1",
+                "type": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2"
               }
             }
           ],
@@ -1393,12 +1393,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Image"
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Image"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Image",
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Image",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1411,8 +1411,8 @@
               },
               "properties": {
                 "member": "Image",
-                "module": "Main Dashboard",
-                "type": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1"
+                "module": "Main DashboardV1",
+                "type": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1"
               }
             }
           ],
@@ -1433,12 +1433,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Y"
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Y"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Y",
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Y",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1451,8 +1451,8 @@
               },
               "properties": {
                 "member": "Y",
-                "module": "Main Dashboard",
-                "type": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1"
+                "module": "Main DashboardV1",
+                "type": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1"
               }
             }
           ],
@@ -1473,12 +1473,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Y"
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Y"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Y",
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Y",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1491,8 +1491,8 @@
               },
               "properties": {
                 "member": "Y",
-                "module": "Main Dashboard",
-                "type": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1"
+                "module": "Main DashboardV1",
+                "type": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1"
               }
             }
           ],
@@ -1510,12 +1510,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Width"
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Width"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Width",
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Width",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1528,8 +1528,8 @@
               },
               "properties": {
                 "member": "Width",
-                "module": "Main Dashboard",
-                "type": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1"
+                "module": "Main DashboardV1",
+                "type": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1"
               }
             }
           ],
@@ -1550,12 +1550,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Width"
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Width"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Width",
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Width",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1568,8 +1568,8 @@
               },
               "properties": {
                 "member": "Width",
-                "module": "Main Dashboard",
-                "type": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1"
+                "module": "Main DashboardV1",
+                "type": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1"
               }
             }
           ],
@@ -1587,12 +1587,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Height"
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Height"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Height",
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Height",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1605,8 +1605,8 @@
               },
               "properties": {
                 "member": "Height",
-                "module": "Main Dashboard",
-                "type": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1"
+                "module": "Main DashboardV1",
+                "type": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1"
               }
             }
           ],
@@ -1627,12 +1627,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Height"
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Height"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Height",
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1.Height",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1645,8 +1645,8 @@
               },
               "properties": {
                 "member": "Height",
-                "module": "Main Dashboard",
-                "type": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1"
+                "module": "Main DashboardV1",
+                "type": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.UploadedImage1_1"
               }
             }
           ],
@@ -1664,12 +1664,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.Title7_2.Text"
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.Title7_2.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.Title7_2.Text",
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.Title7_2.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1682,8 +1682,8 @@
               },
               "properties": {
                 "member": "Text",
-                "module": "Main Dashboard",
-                "type": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.Title7_2"
+                "module": "Main DashboardV1",
+                "type": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.Title7_2"
               }
             }
           ],
@@ -1704,12 +1704,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.Image7_2.Image"
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.Image7_2.Image"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.Image7_2.Image",
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.Image7_2.Image",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1722,8 +1722,8 @@
               },
               "properties": {
                 "member": "Image",
-                "module": "Main Dashboard",
-                "type": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.Image7_2"
+                "module": "Main DashboardV1",
+                "type": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.Image7_2"
               }
             }
           ],
@@ -1744,12 +1744,12 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.Body5_2.Text"
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.Body5_2.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.Body5_2.Text",
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.Body5_2.Text",
                   "relativeAddress": 0
                 },
                 "region": {
@@ -1762,8 +1762,8 @@
               },
               "properties": {
                 "member": "Text",
-                "module": "Main Dashboard",
-                "type": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.Body5_2"
+                "module": "Main DashboardV1",
+                "type": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.Body5_2"
               }
             }
           ],
@@ -5154,19 +5154,1389 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Editing Table for plants'.Icon6.AccessibleLabel"
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard1_2.Gallery1_1.Image2_1.Image"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Editing Table for plants'.Icon6.AccessibleLabel",
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard1_2.Gallery1_1.Image2_1.Image",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 14,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".SiteMainImage"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Image",
+                "module": "Main DashboardV2",
+                "type": "'Main DashboardV2'.Canvas1_2.DataCard1_2.Gallery1_1.Image2_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "SiteMainImage"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 6,
+                  "snippet": {
+                    "text": "SiteAssociateds"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Main DashboardV2",
+                "type": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "SiteAssociateds"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 4,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "Sort"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Main DashboardV2",
+                "type": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sort"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 12,
+                  "charOffset": 22,
+                  "snippet": {
+                    "text": "'Created On'"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Main DashboardV2",
+                "type": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Created On"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.UploadedImage1_2.Image"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.UploadedImage1_2.Image",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 14,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".UploadedImage"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Image",
+                "module": "Main DashboardV2",
+                "type": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.UploadedImage1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "UploadedImage"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.UploadedImage1_2.Y"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.UploadedImage1_2.Y",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "AddMediaButton1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Y",
+                "module": "Main DashboardV2",
+                "type": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.UploadedImage1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "AddMediaButton1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.UploadedImage1_2.Y"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.UploadedImage1_2.Y",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 15,
+                  "snippet": {
+                    "text": ".Y"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Y",
+                "module": "Main DashboardV2",
+                "type": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.UploadedImage1_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.UploadedImage1_2.Width"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.UploadedImage1_2.Width",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "AddMediaButton1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Width",
+                "module": "Main DashboardV2",
+                "type": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.UploadedImage1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "AddMediaButton1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.UploadedImage1_2.Width"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.UploadedImage1_2.Width",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 15,
+                  "snippet": {
+                    "text": ".Width"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Width",
+                "module": "Main DashboardV2",
+                "type": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.UploadedImage1_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.UploadedImage1_2.Height"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.UploadedImage1_2.Height",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "AddMediaButton1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Height",
+                "module": "Main DashboardV2",
+                "type": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.UploadedImage1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "AddMediaButton1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.UploadedImage1_2.Height"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.UploadedImage1_2.Height",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 7,
+                  "charOffset": 15,
+                  "snippet": {
+                    "text": ".Height"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Height",
+                "module": "Main DashboardV2",
+                "type": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.UploadedImage1_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.Title7_3.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.Title7_3.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 13,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".'Created On'"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Main DashboardV2",
+                "type": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.Title7_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Created On"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.Image7_3.Image"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.Image7_3.Image",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".Image"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Image",
+                "module": "Main DashboardV2",
+                "type": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.Image7_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Image"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.Body5_3.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.Body5_3.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".SiteUpdateText"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Main DashboardV2",
+                "type": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.Body5_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "SiteUpdateText"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.OnVisible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 11,
+                  "charOffset": 444,
+                  "snippet": {
+                    "text": "Trim(Value)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Trim"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.OnVisible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 442,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.OnVisible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 11,
+                  "charOffset": 1724,
+                  "snippet": {
+                    "text": "Trim(Value)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Trim"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.OnVisible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 1722,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "SiteAssociateds"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "SiteAssociateds"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Rectangle1_1.Visible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Rectangle1_1.Visible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "ThisItem"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Visible",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Rectangle1_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ThisItem"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Rectangle1_1.Visible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Rectangle1_1.Visible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 11,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".IsSelected"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Visible",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Rectangle1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Title1_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Title1_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "ThisItem"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Title1_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ThisItem"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Title1_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Title1_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 16,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".'Date and Time'"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Title1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Title1_1.FontWeight"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Title1_1.FontWeight",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 3,
+                  "snippet": {
+                    "text": "ThisItem"
+                  }
+                }
+              },
+              "properties": {
+                "member": "FontWeight",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Title1_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ThisItem"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Title1_1.FontWeight"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Title1_1.FontWeight",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 11,
+                  "charOffset": 11,
+                  "snippet": {
+                    "text": ".IsSelected"
+                  }
+                }
+              },
+              "properties": {
+                "member": "FontWeight",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Title1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Title1_1.FontWeight"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Title1_1.FontWeight",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "If"
+                  }
+                }
+              },
+              "properties": {
+                "member": "FontWeight",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Title1_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "If"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Subtitle1_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Subtitle1_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "ThisItem"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Subtitle1_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ThisItem"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Subtitle1_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Subtitle1_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 8,
+                  "snippet": {
+                    "text": ".SiteUpdateText"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Subtitle1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Subtitle1_1.FontWeight"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Subtitle1_1.FontWeight",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 3,
+                  "snippet": {
+                    "text": "ThisItem"
+                  }
+                }
+              },
+              "properties": {
+                "member": "FontWeight",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Subtitle1_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ThisItem"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Subtitle1_1.FontWeight"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Subtitle1_1.FontWeight",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 11,
+                  "charOffset": 11,
+                  "snippet": {
+                    "text": ".IsSelected"
+                  }
+                }
+              },
+              "properties": {
+                "member": "FontWeight",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Subtitle1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Subtitle1_1.FontWeight"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Subtitle1_1.FontWeight",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "If"
+                  }
+                }
+              },
+              "properties": {
+                "member": "FontWeight",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.Subtitle1_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "If"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.UploadedImage1_3.Width"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.UploadedImage1_3.Width",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "AddMediaButton1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Width",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.UploadedImage1_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "AddMediaButton1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.UploadedImage1_3.Width"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.UploadedImage1_3.Width",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 15,
+                  "snippet": {
+                    "text": ".Width"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Width",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.UploadedImage1_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.UploadedImage1_3.Height"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.UploadedImage1_3.Height",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "AddMediaButton1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Height",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.UploadedImage1_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "AddMediaButton1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.UploadedImage1_3.Height"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.UploadedImage1_3.Height",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 7,
+                  "charOffset": 15,
+                  "snippet": {
+                    "text": ".Height"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Height",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.UploadedImage1_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "NavBar.Gallery9.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "NavBar.Gallery9.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Editing Table for plants",
-                "type": "'Editing Table for plants'.Icon6"
+                "module": "NavBar",
+                "type": "NavBar.Gallery9"
               }
             }
           ],
@@ -5184,589 +6554,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Editing Table for plants'.Icon6.TabIndex"
+                  "fullyQualifiedName": "NavBar.Gallery9.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Editing Table for plants'.Icon6.TabIndex",
+                  "fullyQualifiedName": "NavBar.Gallery9.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Editing Table for plants",
-                "type": "'Editing Table for plants'.Icon6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Editing Table for plants'.TextSearchBox1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Editing Table for plants'.TextSearchBox1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Editing Table for plants",
-                "type": "'Editing Table for plants'.TextSearchBox1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Editing Table for plants'.PlantGallery.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Editing Table for plants'.PlantGallery.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Editing Table for plants",
-                "type": "'Editing Table for plants'.PlantGallery"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Editing Table for plants'.PlantGallery.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Editing Table for plants'.PlantGallery.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Editing Table for plants",
-                "type": "'Editing Table for plants'.PlantGallery"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Editing Table for plants'.PlantGallery.NextArrow3.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Editing Table for plants'.PlantGallery.NextArrow3.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Editing Table for plants",
-                "type": "'Editing Table for plants'.PlantGallery.NextArrow3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.PlantName_DataCard1_1.DataCardValue33_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.PlantName_DataCard1_1.DataCardValue33_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "New plant row creation",
-                "type": "'New plant row creation'.NewPlantForm.PlantName_DataCard1_1.DataCardValue33_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.Quantity_DataCard1_1.DataCardValue34_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.Quantity_DataCard1_1.DataCardValue34_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "New plant row creation",
-                "type": "'New plant row creation'.NewPlantForm.Quantity_DataCard1_1.DataCardValue34_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.Vendor_DataCard1_1.DataCardValue35_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.Vendor_DataCard1_1.DataCardValue35_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "New plant row creation",
-                "type": "'New plant row creation'.NewPlantForm.Vendor_DataCard1_1.DataCardValue35_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.RecentlyUsedAt_DataCard1_1.DateValue6_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.RecentlyUsedAt_DataCard1_1.DateValue6_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "New plant row creation",
-                "type": "'New plant row creation'.NewPlantForm.RecentlyUsedAt_DataCard1_1.DateValue6_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.RecentlyUsedAt_DataCard1_1.HourValue6_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.RecentlyUsedAt_DataCard1_1.HourValue6_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "New plant row creation",
-                "type": "'New plant row creation'.NewPlantForm.RecentlyUsedAt_DataCard1_1.HourValue6_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.RecentlyUsedAt_DataCard1_1.MinuteValue6_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.RecentlyUsedAt_DataCard1_1.MinuteValue6_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "New plant row creation",
-                "type": "'New plant row creation'.NewPlantForm.RecentlyUsedAt_DataCard1_1.MinuteValue6_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.Schedule_DataCard1_1.DataCardValue36_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.Schedule_DataCard1_1.DataCardValue36_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "New plant row creation",
-                "type": "'New plant row creation'.NewPlantForm.Schedule_DataCard1_1.DataCardValue36_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Worker Overview Screen'.ToolLogsBackButton_3.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Worker Overview Screen'.ToolLogsBackButton_3.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Worker Overview Screen",
-                "type": "'Worker Overview Screen'.ToolLogsBackButton_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Worker Overview Screen'.ToolLogsBackButton_3.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Worker Overview Screen'.ToolLogsBackButton_3.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Worker Overview Screen",
-                "type": "'Worker Overview Screen'.ToolLogsBackButton_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Worker Overview Screen'.Canvas5_3.DataCard16_3.Gallery15_3.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Worker Overview Screen'.Canvas5_3.DataCard16_3.Gallery15_3.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Worker Overview Screen",
-                "type": "'Worker Overview Screen'.Canvas5_3.DataCard16_3.Gallery15_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Worker Overview Screen'.Canvas5_3.DataCard16_3.Gallery15_3.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Worker Overview Screen'.Canvas5_3.DataCard16_3.Gallery15_3.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Worker Overview Screen",
-                "type": "'Worker Overview Screen'.Canvas5_3.DataCard16_3.Gallery15_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Plants Overview Screen'.ToolLogsBackButton_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Plants Overview Screen'.ToolLogsBackButton_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Plants Overview Screen",
-                "type": "'Plants Overview Screen'.ToolLogsBackButton_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Plants Overview Screen'.ToolLogsBackButton_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Plants Overview Screen'.ToolLogsBackButton_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Plants Overview Screen",
-                "type": "'Plants Overview Screen'.ToolLogsBackButton_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Plants Overview Screen'.Canvas5.DataCard16.Gallery15.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Plants Overview Screen'.Canvas5.DataCard16.Gallery15.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Plants Overview Screen",
-                "type": "'Plants Overview Screen'.Canvas5.DataCard16.Gallery15"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Plants Overview Screen'.Canvas5.DataCard16.Gallery15.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Plants Overview Screen'.Canvas5.DataCard16.Gallery15.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Plants Overview Screen",
-                "type": "'Plants Overview Screen'.Canvas5.DataCard16.Gallery15"
+                "module": "NavBar",
+                "type": "NavBar.Gallery9"
               }
             }
           ],
@@ -6007,6 +6807,186 @@
                 "member": "TabIndex",
                 "module": "Volunteer Overview Screen",
                 "type": "'Volunteer Overview Screen'.Canvas5_2.DataCard16_2.Gallery15_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Editing Table for plants'.Icon6.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Editing Table for plants'.Icon6.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Editing Table for plants",
+                "type": "'Editing Table for plants'.Icon6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Editing Table for plants'.Icon6.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Editing Table for plants'.Icon6.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Editing Table for plants",
+                "type": "'Editing Table for plants'.Icon6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Editing Table for plants'.TextSearchBox1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Editing Table for plants'.TextSearchBox1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Editing Table for plants",
+                "type": "'Editing Table for plants'.TextSearchBox1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Editing Table for plants'.PlantGallery.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Editing Table for plants'.PlantGallery.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Editing Table for plants",
+                "type": "'Editing Table for plants'.PlantGallery"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Editing Table for plants'.PlantGallery.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Editing Table for plants'.PlantGallery.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Editing Table for plants",
+                "type": "'Editing Table for plants'.PlantGallery"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Editing Table for plants'.PlantGallery.NextArrow3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Editing Table for plants'.PlantGallery.NextArrow3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Editing Table for plants",
+                "type": "'Editing Table for plants'.PlantGallery.NextArrow3"
               }
             }
           ],
@@ -6564,19 +7544,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard1.Gallery1.AccessibleLabel"
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard1.Gallery1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard1.Gallery1.AccessibleLabel",
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard1.Gallery1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Main Dashboard",
-                "type": "'Main Dashboard'.Canvas1.DataCard1.Gallery1"
+                "module": "Main DashboardV1",
+                "type": "'Main DashboardV1'.Canvas1.DataCard1.Gallery1"
               }
             }
           ],
@@ -6594,19 +7574,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard1.Gallery1.TabIndex"
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard1.Gallery1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard1.Gallery1.TabIndex",
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard1.Gallery1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Main Dashboard",
-                "type": "'Main Dashboard'.Canvas1.DataCard1.Gallery1"
+                "module": "Main DashboardV1",
+                "type": "'Main DashboardV1'.Canvas1.DataCard1.Gallery1"
               }
             }
           ],
@@ -6624,19 +7604,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard1.Gallery1.NextArrow1.TabIndex"
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard1.Gallery1.NextArrow1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard1.Gallery1.NextArrow1.TabIndex",
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard1.Gallery1.NextArrow1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Main Dashboard",
-                "type": "'Main Dashboard'.Canvas1.DataCard1.Gallery1.NextArrow1"
+                "module": "Main DashboardV1",
+                "type": "'Main DashboardV1'.Canvas1.DataCard1.Gallery1.NextArrow1"
               }
             }
           ],
@@ -6654,19 +7634,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.AccessibleLabel"
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.AccessibleLabel",
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Main Dashboard",
-                "type": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2"
+                "module": "Main DashboardV1",
+                "type": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2"
               }
             }
           ],
@@ -6684,19 +7664,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.TabIndex"
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2.TabIndex",
+                  "fullyQualifiedName": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Main Dashboard",
-                "type": "'Main Dashboard'.Canvas1.DataCard4.Gallery5_2"
+                "module": "Main DashboardV1",
+                "type": "'Main DashboardV1'.Canvas1.DataCard4.Gallery5_2"
               }
             }
           ],
@@ -6708,6 +7688,216 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.PlantName_DataCard1_1.DataCardValue33_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.PlantName_DataCard1_1.DataCardValue33_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "New plant row creation",
+                "type": "'New plant row creation'.NewPlantForm.PlantName_DataCard1_1.DataCardValue33_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.Quantity_DataCard1_1.DataCardValue34_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.Quantity_DataCard1_1.DataCardValue34_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "New plant row creation",
+                "type": "'New plant row creation'.NewPlantForm.Quantity_DataCard1_1.DataCardValue34_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.Vendor_DataCard1_1.DataCardValue35_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.Vendor_DataCard1_1.DataCardValue35_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "New plant row creation",
+                "type": "'New plant row creation'.NewPlantForm.Vendor_DataCard1_1.DataCardValue35_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.RecentlyUsedAt_DataCard1_1.DateValue6_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.RecentlyUsedAt_DataCard1_1.DateValue6_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "New plant row creation",
+                "type": "'New plant row creation'.NewPlantForm.RecentlyUsedAt_DataCard1_1.DateValue6_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.RecentlyUsedAt_DataCard1_1.HourValue6_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.RecentlyUsedAt_DataCard1_1.HourValue6_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "New plant row creation",
+                "type": "'New plant row creation'.NewPlantForm.RecentlyUsedAt_DataCard1_1.HourValue6_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.RecentlyUsedAt_DataCard1_1.MinuteValue6_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.RecentlyUsedAt_DataCard1_1.MinuteValue6_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "New plant row creation",
+                "type": "'New plant row creation'.NewPlantForm.RecentlyUsedAt_DataCard1_1.MinuteValue6_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.Schedule_DataCard1_1.DataCardValue36_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'New plant row creation'.NewPlantForm.Schedule_DataCard1_1.DataCardValue36_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "New plant row creation",
+                "type": "'New plant row creation'.NewPlantForm.Schedule_DataCard1_1.DataCardValue36_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -9054,6 +10244,126 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Worker Overview Screen'.ToolLogsBackButton_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Worker Overview Screen'.ToolLogsBackButton_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Worker Overview Screen",
+                "type": "'Worker Overview Screen'.ToolLogsBackButton_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Worker Overview Screen'.ToolLogsBackButton_3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Worker Overview Screen'.ToolLogsBackButton_3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Worker Overview Screen",
+                "type": "'Worker Overview Screen'.ToolLogsBackButton_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Worker Overview Screen'.Canvas5_3.DataCard16_3.Gallery15_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Worker Overview Screen'.Canvas5_3.DataCard16_3.Gallery15_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Worker Overview Screen",
+                "type": "'Worker Overview Screen'.Canvas5_3.DataCard16_3.Gallery15_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Worker Overview Screen'.Canvas5_3.DataCard16_3.Gallery15_3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Worker Overview Screen'.Canvas5_3.DataCard16_3.Gallery15_3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Worker Overview Screen",
+                "type": "'Worker Overview Screen'.Canvas5_3.DataCard16_3.Gallery15_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Individual volunteer edit form'.IndividualVolunteerEdit.Name_DataCard1.DataCardValue10.AccessibleLabel"
                 }
               ],
@@ -10014,19 +11324,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NavBar.Gallery9.TabIndex"
+                  "fullyQualifiedName": "'Plants Overview Screen'.ToolLogsBackButton_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NavBar.Gallery9.TabIndex",
+                  "fullyQualifiedName": "'Plants Overview Screen'.ToolLogsBackButton_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Plants Overview Screen",
+                "type": "'Plants Overview Screen'.ToolLogsBackButton_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Plants Overview Screen'.ToolLogsBackButton_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Plants Overview Screen'.ToolLogsBackButton_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "NavBar",
-                "type": "NavBar.Gallery9"
+                "module": "Plants Overview Screen",
+                "type": "'Plants Overview Screen'.ToolLogsBackButton_1"
               }
             }
           ],
@@ -10044,19 +11384,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "NavBar.Gallery9.AccessibleLabel"
+                  "fullyQualifiedName": "'Plants Overview Screen'.Canvas5.DataCard16.Gallery15.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "NavBar.Gallery9.AccessibleLabel",
+                  "fullyQualifiedName": "'Plants Overview Screen'.Canvas5.DataCard16.Gallery15.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "NavBar",
-                "type": "NavBar.Gallery9"
+                "module": "Plants Overview Screen",
+                "type": "'Plants Overview Screen'.Canvas5.DataCard16.Gallery15"
               }
             }
           ],
@@ -10068,6 +11408,546 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Plants Overview Screen'.Canvas5.DataCard16.Gallery15.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Plants Overview Screen'.Canvas5.DataCard16.Gallery15.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Plants Overview Screen",
+                "type": "'Plants Overview Screen'.Canvas5.DataCard16.Gallery15"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard1_2.Gallery1_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard1_2.Gallery1_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Main DashboardV2",
+                "type": "'Main DashboardV2'.Canvas1_2.DataCard1_2.Gallery1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard1_2.Gallery1_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard1_2.Gallery1_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Main DashboardV2",
+                "type": "'Main DashboardV2'.Canvas1_2.DataCard1_2.Gallery1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard1_2.Gallery1_1.NextArrow1_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard1_2.Gallery1_1.NextArrow1_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Main DashboardV2",
+                "type": "'Main DashboardV2'.Canvas1_2.DataCard1_2.Gallery1_1.NextArrow1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Main DashboardV2",
+                "type": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Main DashboardV2",
+                "type": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_2.Gallery2_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_3.Label6_15.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_3.Label6_15.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_3.Label6_15"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_3.Label6_15.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_3.Label6_15.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_3.Label6_15"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.'Plants Data Card_1'.Icon7_4.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.'Plants Data Card_1'.Icon7_4.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.'Plants Data Card_1'.Icon7_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.'Plants Data Card_1'.Icon7_4.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.'Plants Data Card_1'.Icon7_4.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.'Plants Data Card_1'.Icon7_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.'Tools Data Card_1'.Icon7_5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.'Tools Data Card_1'.Icon7_5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.'Tools Data Card_1'.Icon7_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.'Tools Data Card_1'.Icon7_5.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.'Tools Data Card_1'.Icon7_5.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.'Tools Data Card_1'.Icon7_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.'People Data Card_1'.Icon7_6.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.'People Data Card_1'.Icon7_6.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.'People Data Card_1'.Icon7_6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.'People Data Card_1'.Icon7_6.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.'People Data Card_1'.Icon7_6.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.'People Data Card_1'.Icon7_6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -10104,19 +11984,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Editing Table for plants'.SelectedSite"
+                  "fullyQualifiedName": "App.GlobalSelectedSite2"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Editing Table for plants'.SelectedSite",
+                  "fullyQualifiedName": "App.GlobalSelectedSite2",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "SelectedSite",
-                "module": "Editing Table for plants",
-                "type": "'Editing Table for plants'"
+                "member": "GlobalSelectedSite2",
+                "module": "App",
+                "type": "App"
               }
             }
           ],
@@ -10147,6 +12027,36 @@
                 "member": "GlobalSelectedSite",
                 "module": "UploadRecording",
                 "type": "UploadRecording"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Editing Table for plants'.SelectedSite"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Editing Table for plants'.SelectedSite",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "SelectedSite",
+                "module": "Editing Table for plants",
+                "type": "'Editing Table for plants'"
               }
             }
           ],
