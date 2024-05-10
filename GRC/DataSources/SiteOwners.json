@@ -1,0 +1,100 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr64e_siteowners",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr64e_siteowner",
+    "Name": "SiteOwners",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr64e_address": "Address",
+      "cr64e_company": "Company",
+      "cr64e_email": "Email",
+      "cr64e_firstname": "FirstName",
+      "cr64e_lastname": "LastName",
+      "cr64e_phonenumber": "PhoneNumber",
+      "cr64e_siteowner_AsyncOperations": "System Jobs",
+      "cr64e_siteowner_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr64e_siteowner_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr64e_siteowner_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr64e_siteowner_ProcessSession": "Process Sessions",
+      "cr64e_siteowner_SyncErrors": "Sync Errors",
+      "cr64e_siteownerid": "SiteOwner",
+      "cr64e_siteownerid1": "SiteOwnerID",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "SiteOwners",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "SiteOwners (Views)",
+    "Name": "_cr64e_siteowner_views",
+    "RelatedEntityName": "SiteOwners",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "08c9cf9a-da8e-424c-ad4f-69d5b8c5c737": "Inactive SiteOwners",
+      "3b31e2a7-a271-4b57-8d8d-5267eb5b6c26": "SiteOwner Associated View",
+      "a28bc2d2-4531-48a9-8898-6fd490090339": "SiteOwner Advanced Find View",
+      "af045efb-4e01-4bf1-8a2d-43f3bb5978ec": "SiteOwner Lookup View",
+      "b31c6805-7520-4221-a8f7-1a1c85c72619": "Active SiteOwners"
+    }
+  },
+  {
+    "DisplayName": "Status (SiteOwners)",
+    "Name": "cr64e_siteowner_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "SiteOwners"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "SiteOwners",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (SiteOwners)",
+    "Name": "cr64e_siteowner_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "SiteOwners"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "SiteOwners",
+    "Type": "OptionSetInfo"
+  }
+]

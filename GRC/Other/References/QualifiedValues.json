@@ -227,6 +227,13 @@
       "Values": {
         "Information": "cd658c6e-ef37-4bee-8a59-c2c7d44ba092"
       }
+    },
+    {
+      "Kind": "default.cds_cr64e_siteowner_forms",
+      "Namespace": "SiteOwners (Forms)",
+      "Values": {
+        "Information": "a612987c-cdf0-440f-930c-eb65b510973f"
+      }
     }
   ]
 }

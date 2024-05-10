@@ -1,6 +1,63 @@
 "'Individual Worksite ViewV2' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     OnVisible: |+
-        =// clear any old data from the collection
+        =
+        Set(varSiteOwnerID, LookUp(SitesParents, SiteID = GlobalSelectedSite2, SiteOwnerID));
+        
+        ClearCollect(
+            collectAllSiteReports,
+            Filter(
+                SiteProgressReports,
+                SiteID = GlobalSelectedSite2  // should be set to the desired SiteID
+            )
+        );
+        
+        ClearCollect(
+            collectLatestSiteReport,
+            First(
+                Sort(
+                    collectAllSiteReports,
+                    'Created On',SortOrder.Descending
+                )
+            )
+        );
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // clear any old data from the collection
         Clear(colSiteTools);
         
         // Filter the Site Histories for the selected site and collect the tool names
@@ -336,7 +393,7 @@
                     Height: =49
                     Size: =14
                     Text: |-
-                        ="Land Owner: " & LookUp(Sites, 'Site name' = GlobalSelectedSite).LandOwner
+                        ="Land Owner: " & LookUp(SiteOwners, SiteOwnerID = varSiteOwnerID, FirstName & " " & LastName)
                     Width: =540
                     X: =27
                     Y: =235
@@ -348,7 +405,7 @@
                     Height: =50
                     Size: =14
                     Text: |-
-                        ="Location: " & LookUp(Sites, 'Site name' = GlobalSelectedSite).SiteLocation
+                        ="Location: " & LookUp(SitesParents, SiteID = GlobalSelectedSite2).SiteLocation
                     Width: =255
                     X: =310
                     Y: =87
@@ -359,7 +416,7 @@
                     Fill: =RGBA(232, 244, 217, 1)
                     Height: =50
                     Size: =14
-                    Text: ="Work Began on " & LookUp('Site Histories',SiteName = GlobalSelectedSite).'Created On'
+                    Text: ="Work Began on " & LookUp(SitesParents, SiteID = GlobalSelectedSite2).'Created On'
                     Width: =255
                     X: =27
                     Y: =164
