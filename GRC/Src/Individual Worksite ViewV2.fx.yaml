@@ -7,7 +7,7 @@
             collectAllSiteReports,
             Filter(
                 SiteProgressReports,
-                SiteID = GlobalSelectedSite2  // should be set to the desired SiteID
+                SiteID = GlobalSelectedSite2 
             )
         );
         
@@ -18,6 +18,17 @@
                     collectAllSiteReports,
                     'Created On',SortOrder.Descending
                 )
+            )
+        );
+        
+        Set(varLatestReportID, First(collectLatestSiteReport).ReportID);
+        
+        //Collects all developments for a site report.
+        ClearCollect(
+            collectDevelopments,
+            Filter(
+                Developments,
+                ReportID = varLatestReportID
             )
         );
         
@@ -427,17 +438,11 @@
                     Fill: =RGBA(232, 244, 217, 1)
                     Height: =50
                     Size: =14
-                    Text: |
-                        ="Last worked on: " &
-                        Text(
-                            First(
-                                Sort(
-                                    Filter('Site Histories', SiteName = GlobalSelectedSite),
-                                    'Start Time',
-                                    SortOrder.Descending
-                                )
-                            ).'End Time',
-                            "[$-en-US]mm/dd/yyyy" 
+                    Text: |-
+                        ="Last worked on: " & If(
+                            IsEmpty(collectLatestSiteReport),
+                            "No report available",
+                            Text(First(collectLatestSiteReport).createdon, DateTimeFormat.LongDate)
                         )
                     Width: =255
                     X: =310
@@ -468,10 +473,17 @@
                     Height: =81
                     Size: =14
                     Text: |
-                        ="Recent Development: " & First(Sort(
-                            Filter('Site Histories', SiteName = GlobalSelectedSite),
-                            'Created On'
-                        )).Development
+                        =If(
+                            IsEmpty(collectDevelopments),
+                            "No developments found for the latest report",
+                            Concat(
+                                collectDevelopments,
+                                Concatenate(
+                                    "Development ID: ", Text(DevelopmentID),
+                                    Char(10)  // Adds a new line for each development for better readability
+                                )
+                            )
+                        )
                     VerticalAlign: =VerticalAlign.Top
                     Width: =540
                     X: =32

@@ -4964,7 +4964,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 906,
+                  "charOffset": 1100,
                   "snippet": {
                     "text": "Trim(Value)"
                   }
@@ -5004,7 +5004,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 904,
+                  "charOffset": 1098,
                   "snippet": {
                     "text": "="
                   }
@@ -5044,7 +5044,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 2186,
+                  "charOffset": 2380,
                   "snippet": {
                     "text": "Trim(Value)"
                   }
@@ -5084,7 +5084,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 2184,
+                  "charOffset": 2378,
                   "snippet": {
                     "text": "="
                   }
