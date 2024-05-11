@@ -22,14 +22,17 @@
         );
         
         Set(varLatestReportID, First(collectLatestSiteReport).ReportID);
+        Set(varTypeID)
         
         //Collects all developments for a site report.
         ClearCollect(
             collectDevelopments,
             Filter(
                 Developments,
-                ReportID = varLatestReportID
-            )
+                ReportID = varLatestReportID,
+                TypeID = varTypeID
+                 
+        
         );
         
         
@@ -476,11 +479,14 @@
                         =If(
                             IsEmpty(collectDevelopments),
                             "No developments found for the latest report",
+                            "Recent Developments: " & 
                             Concat(
+                                
                                 collectDevelopments,
+                                
                                 Concatenate(
-                                    "Development ID: ", Text(DevelopmentID),
-                                    Char(10)  // Adds a new line for each development for better readability
+                                    " ", LookUp(DevelopmentTypes, TypeID = varTypeID, DevelopmentTypeName)
+                        , TypeID, 
                                 )
                             )
                         )

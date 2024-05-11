@@ -99,7 +99,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 144,
+    "BindingErrorCount": 154,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "Phone",
@@ -117,7 +117,7 @@
     "ManualOfflineProfileId": "",
     "Name": "App GRC",
     "OriginatingVersion": "1.339",
-    "ParserErrorCount": 0,
+    "ParserErrorCount": 5,
     "ShowStatusBar": false
   },
   "PublishInfo": {
