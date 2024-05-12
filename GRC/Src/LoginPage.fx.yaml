@@ -65,16 +65,26 @@ LoginPage As screen:
         Fill: =RGBA(127, 178, 57, 1)
         Height: =256
         Width: =263
-        X: =180
-        Y: =29
+        X: =201
+        Y: =31
         ZIndex: =7
 
     Label9_2 As label:
+        Align: =Align.Center
         Height: =70
         Size: =21
-        Text: ="Login"
+        Text: ="User Login"
         Width: =183
-        X: =268
-        Y: =302
+        X: =241
+        Y: =322
         ZIndex: =8
+
+    Icon10 As icon.Globe:
+        Color: =RGBA(99, 139, 44, 1)
+        Height: =223
+        Icon: =Icon.Globe
+        Width: =208
+        X: =228
+        Y: =47
+        ZIndex: =9
 

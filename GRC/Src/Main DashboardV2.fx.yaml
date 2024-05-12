@@ -426,14 +426,14 @@
                 ZIndex: =2
 
     HeaderArea_2 As rectangle:
-        Fill: =RGBA(187, 221, 140, 1)
+        Fill: =RGBA(146, 201, 68, 1)
         Width: =Parent.Width
         ZIndex: =5
 
     NavbarGallery_1 As gallery.galleryHorizontal:
         BorderColor: =RGBA(0, 0, 0, 0)
         DelayItemLoading: =true
-        Height: =110
+        Height: =82
         Items: |-
             =Table(
                 {
@@ -445,32 +445,50 @@
                     MenuText: "New Site", 
                     MenuIcon: Icon.Add, 
                     ScreenToGoTo:'New Entry Editing Form'
+                },
+                {
+                    MenuText: "Logout", 
+                    MenuIcon: Icon.Devices, 
+                    ScreenToGoTo:'LoginPage'
                 }
              ) 
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =ThisItem.ScreenToGoTo
         ShowScrollbar: =false
-        TemplateSize: =111
-        Width: =233
-        X: =407
+        TemplateSize: =99
+        Width: =298
+        X: =342
+        Y: =9
         ZIndex: =6
 
         Icon7_7 As icon.Add:
             Color: =RGBA(116, 116, 116, 1)
+            Height: =51
             Icon: =ThisItem.MenuIcon
             OnSelect: =Navigate(ThisItem.ScreenToGoTo)
-            Width: =54
-            X: =36
+            Width: =46
+            X: =21
             ZIndex: =1
 
         Label19_1 As label:
             Align: =Align.Center
             Color: =RGBA(116, 116, 116, 1)
-            Height: =33
+            Height: =23
             OnSelect: =ThisItem.ScreenToGoTo
             Text: =ThisItem.MenuText
-            Width: =95
-            X: =16
-            Y: =64
+            Width: =88
+            Y: =51
             ZIndex: =2
+
+    "'Header Label' As label":
+        Color: =RGBA(116, 116, 116, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        Size: =21
+        Text: ="Green River Coalition "
+        Width: =296
+        X: =17
+        Y: =15
+        ZIndex: =7
 
