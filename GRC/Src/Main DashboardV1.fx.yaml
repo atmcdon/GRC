@@ -1,26 +1,11 @@
 "'Main DashboardV1' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
 
-    MainNavBar As rectangle:
-        Height: =88
-        Width: =Parent.Width
-        ZIndex: =1
-
-    LblAppName1 As label:
-        Align: =Align.Center
-        Fill: =RGBA(187, 221, 140, 1)
-        Height: =110
-        OnSelect: =
-        Size: =27
-        Text: =
-        Width: =Parent.Width
-        ZIndex: =2
-
     Canvas1 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Height: =Parent.Height - Self.Y
         Width: =Parent.Width
-        Y: =MainNavBar.Y + MainNavBar.Height
-        ZIndex: =3
+        Y: =HeaderArea.Y + HeaderArea.Height
+        ZIndex: =1
 
         DataCard1 As dataCard:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -423,6 +408,11 @@
                 X: =126
                 ZIndex: =2
 
+    HeaderArea As rectangle:
+        Fill: =RGBA(187, 221, 140, 1)
+        Width: =Parent.Width
+        ZIndex: =2
+
     NavbarGallery As gallery.galleryHorizontal:
         BorderColor: =RGBA(0, 0, 0, 0)
         DelayItemLoading: =true
@@ -437,7 +427,7 @@
                 { 
                     MenuText: "New Site", 
                     MenuIcon: Icon.Add, 
-                    ScreenToGoTo: 
+                    ScreenToGoTo:'New Entry Editing Form'
                 }
              ) 
         LoadingSpinner: =LoadingSpinner.Data
@@ -446,7 +436,7 @@
         TemplateSize: =111
         Width: =233
         X: =407
-        ZIndex: =4
+        ZIndex: =3
 
         Icon7 As icon.Add:
             Color: =RGBA(116, 116, 116, 1)

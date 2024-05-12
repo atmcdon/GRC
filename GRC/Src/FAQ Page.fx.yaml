@@ -1,0 +1,118 @@
+"'FAQ Page' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+
+    RectQuickActionBar3 As rectangle:
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName3 As label:
+        Align: =Align.Center
+        Height: =88
+        Size: =22
+        Text: ="Frequently Asked Questions"
+        Width: =Parent.Width
+        ZIndex: =2
+
+    Canvas6 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =RectQuickActionBar3.Y + RectQuickActionBar3.Height
+        ZIndex: =3
+
+        DataCard13 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =277
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Label21 As label:
+                Height: =70
+                Size: =21
+                Text: ="Where do I recieve *** ? "
+                Width: =560
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+            Label22 As label:
+                Height: =130
+                Size: =21
+                Text: =" It is common not to find *** through our app. In order to recieve *** you would need to contact ... " 
+                Width: =560
+                X: =40
+                Y: =110
+                ZIndex: =2
+
+        DataCard15 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =230
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            Label21_1 As label:
+                Height: =70
+                Size: =21
+                Text: ="Where can I send *** to @@@ ? "
+                Width: =560
+                X: =40
+                Y: =30
+                ZIndex: =1
+
+            Label22_1 As label:
+                Height: =130
+                Size: =21
+                Text: ="In order to send *** to ---- you would need to first contact $$$ for approval "
+                Width: =560
+                X: =40
+                Y: =86
+                ZIndex: =2
+
+        DataCard20 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =382
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =3
+
+            Label22_2 As label:
+                Height: =130
+                Size: =21
+                Text: ="What frequently asked questions do Mikey and Greg get from their collaborators?"
+                Width: =560
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+            Label22_3 As label:
+                Height: =130
+                Size: =21
+                Text: ="we might add a button for contact here for questions that are not answered on here. ( check with designer for more details) "
+                Width: =560
+                X: =40
+                Y: =216
+                ZIndex: =2
+
+    Icon9 As icon.ArrowLeft:
+        Color: =RGBA(149, 149, 149, 1)
+        Icon: =Icon.ArrowLeft
+        OnSelect: =Navigate('Main DashboardV2')
+        X: =20
+        Y: =12
+        ZIndex: =4
+

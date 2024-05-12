@@ -4,7 +4,7 @@
         BorderThickness: =0
         Height: =Parent.Height - Self.Y
         Width: =Parent.Width
-        Y: =RectQuickActionBar5.Y + RectQuickActionBar5.Height
+        Y: =Top_2.Y + Top_2.Height
         ZIndex: =4
 
         DataCard7 As dataCard:
@@ -13,59 +13,11 @@
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =83
+            Height: =20
             Width: =Parent.Width
             X: =0
             Y: =0
             ZIndex: =1
-
-            Top_1 As groupContainer.manualLayoutContainer:
-                Height: =88
-                Width: =640
-                Y: =40
-                ZIndex: =1
-
-                RectQuickActionBar2_2 As rectangle:
-                    Height: =88
-                    Width: =Parent.Width
-                    ZIndex: =1
-
-                IconCancel1_2 As icon.Cancel:
-                    AccessibleLabel: =Self.Tooltip
-                    Height: =88
-                    Icon: =Icon.Cancel
-                    PaddingBottom: =22
-                    PaddingLeft: =22
-                    PaddingRight: =22
-                    PaddingTop: =22
-                    TabIndex: =0
-                    Tooltip: ="Cancel item"
-                    Width: =88
-                    ZIndex: =2
-
-                IconAccept1_2 As icon.Check:
-                    AccessibleLabel: =Self.Tooltip
-                    Height: =88
-                    Icon: =Icon.Check
-                    OnSelect: =SubmitForm(EditForm1)
-                    PaddingBottom: =22
-                    PaddingLeft: =22
-                    PaddingRight: =22
-                    PaddingTop: =22
-                    TabIndex: =0
-                    Tooltip: ="Submit item"
-                    Width: =88
-                    X: =Parent.Width - Self.Width
-                    ZIndex: =3
-
-                LblAppName2_2 As label:
-                    Height: =88
-                    Size: =27
-                    Text: ="New Entry"
-                    Width: =Parent.Width - IconCancel1_2.Width - IconAccept1_2.Width
-                    Wrap: =false
-                    X: =104
-                    ZIndex: =4
 
         DataCard9 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -207,5 +159,53 @@
             Width: =640
             X: =0
             Y: =3
+            ZIndex: =4
+
+    Top_2 As groupContainer.manualLayoutContainer:
+        Height: =88
+        Width: =640
+        ZIndex: =6
+
+        RectQuickActionBar2_4 As rectangle:
+            Height: =88
+            Width: =Parent.Width
+            ZIndex: =1
+
+        IconCancel1_3 As icon.Cancel:
+            AccessibleLabel: =Self.Tooltip
+            Height: =88
+            Icon: =Icon.Cancel
+            OnSelect: =Back()
+            PaddingBottom: =22
+            PaddingLeft: =22
+            PaddingRight: =22
+            PaddingTop: =22
+            TabIndex: =0
+            Tooltip: ="Cancel item"
+            Width: =88
+            ZIndex: =2
+
+        IconAccept1_3 As icon.Check:
+            AccessibleLabel: =Self.Tooltip
+            Height: =88
+            Icon: =Icon.Check
+            OnSelect: =SubmitForm(EditForm1) && Navigate('Main DashboardV2')
+            PaddingBottom: =22
+            PaddingLeft: =22
+            PaddingRight: =22
+            PaddingTop: =22
+            TabIndex: =0
+            Tooltip: ="Submit item"
+            Width: =88
+            X: =Parent.Width - Self.Width
+            ZIndex: =3
+
+        LblAppName2_3 As label:
+            Height: =88
+            Size: =27
+            Text: ="New Entry"
+            Width: =Parent.Width - IconCancel1_3.Width - IconAccept1_3.Width
+            Wrap: =false
+            X: =88
             ZIndex: =4
 

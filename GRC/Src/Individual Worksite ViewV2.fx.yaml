@@ -237,6 +237,7 @@
         BorderThickness: =0
         Height: =Parent.Height - Self.Y
         Width: =Parent.Width
+        Y: =HeaderArea.Y + HeaderArea.Height
         ZIndex: =3
 
         DataCard1_3 As dataCard:
@@ -1011,6 +1012,52 @@
                 Y: =36
                 ZIndex: =6
 
-    Header_4 As Header:
-        ZIndex: =4
+    HeaderArea_1 As rectangle:
+        Fill: =RGBA(187, 221, 140, 1)
+        Width: =Parent.Width
+        ZIndex: =5
+
+    NavbarGallery_2 As gallery.galleryHorizontal:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DelayItemLoading: =true
+        Height: =110
+        Items: |-
+            =Table(
+                {
+                    MenuText: "Home", 
+                    MenuIcon: Icon.Home, 
+                    ScreenToGoTo: 'Main DashboardV2'
+                },
+                { 
+                    MenuText: "New Site", 
+                    MenuIcon: Icon.Add, 
+                    ScreenToGoTo: 'New Entry Editing Form'
+                }
+             ) 
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =ThisItem.ScreenToGoTo
+        ShowScrollbar: =false
+        TemplateSize: =111
+        Width: =233
+        X: =407
+        ZIndex: =6
+
+        Icon7_8 As icon.Add:
+            Color: =RGBA(116, 116, 116, 1)
+            Icon: =ThisItem.MenuIcon
+            OnSelect: =Navigate(ThisItem.ScreenToGoTo)
+            Width: =54
+            X: =36
+            ZIndex: =1
+
+        Label19_2 As label:
+            Align: =Align.Center
+            Color: =RGBA(116, 116, 116, 1)
+            Height: =33
+            OnSelect: =ThisItem.ScreenToGoTo
+            Text: =ThisItem.MenuText
+            Width: =95
+            X: =16
+            Y: =64
+            ZIndex: =2
 
