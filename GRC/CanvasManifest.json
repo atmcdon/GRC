@@ -99,7 +99,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 154,
+    "BindingErrorCount": 165,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "Phone",
@@ -117,7 +117,7 @@
     "ManualOfflineProfileId": "",
     "Name": "App GRC",
     "OriginatingVersion": "1.339",
-    "ParserErrorCount": 5,
+    "ParserErrorCount": 7,
     "ShowStatusBar": false
   },
   "PublishInfo": {
@@ -142,7 +142,6 @@
     "LoginPage",
     "Unnamed Screen",
     "New Worksite Entry",
-    "Successful Database entry screen",
     "Unnamed Screen 2",
     "New Entry Editing Form",
     "Plants Overview Screen",

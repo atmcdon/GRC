@@ -64,7 +64,7 @@
                     Text: ="New Entry"
                     Width: =Parent.Width - IconCancel1_2.Width - IconAccept1_2.Width
                     Wrap: =false
-                    X: =IconCancel1_2.X + IconCancel1_2.Width
+                    X: =104
                     ZIndex: =4
 
         DataCard9 As dataCard.blankCard:

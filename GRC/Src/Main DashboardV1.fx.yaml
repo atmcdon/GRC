@@ -1,6 +1,6 @@
 "'Main DashboardV1' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
 
-    RectQuickActionBar1 As rectangle:
+    MainNavBar As rectangle:
         Height: =88
         Width: =Parent.Width
         ZIndex: =1
@@ -8,9 +8,10 @@
     LblAppName1 As label:
         Align: =Align.Center
         Fill: =RGBA(187, 221, 140, 1)
-        Height: =88
+        Height: =110
+        OnSelect: =
         Size: =27
-        Text: ="Green River Coalition"
+        Text: =
         Width: =Parent.Width
         ZIndex: =2
 
@@ -18,7 +19,7 @@
         BorderThickness: =0
         Height: =Parent.Height - Self.Y
         Width: =Parent.Width
-        Y: =NavBar_1.Y + NavBar_1.Height
+        Y: =MainNavBar.Y + MainNavBar.Height
         ZIndex: =3
 
         DataCard1 As dataCard:
@@ -27,7 +28,7 @@
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =Parent.Height - 100
+            Height: =924
             Width: =Parent.Width
             X: =0
             Y: =0
@@ -422,14 +423,47 @@
                 X: =126
                 ZIndex: =2
 
-    Circle1 As circle:
-        Fill: =RGBA(127, 178, 57, 1)
-        Height: =70
-        Width: =72
-        X: =552
-        Y: =9
+    NavbarGallery As gallery.galleryHorizontal:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DelayItemLoading: =true
+        Height: =110
+        Items: |-
+            =Table(
+                {
+                    MenuText: "Home", 
+                    MenuIcon: Icon.Home, 
+                    ScreenToGoTo: 'Main DashboardV2'
+                },
+                { 
+                    MenuText: "New Site", 
+                    MenuIcon: Icon.Add, 
+                    ScreenToGoTo: 
+                }
+             ) 
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =ThisItem.ScreenToGoTo
+        ShowScrollbar: =false
+        TemplateSize: =111
+        Width: =233
+        X: =407
         ZIndex: =4
 
-    NavBar_1 As NavBar:
-        ZIndex: =5
+        Icon7 As icon.Add:
+            Color: =RGBA(116, 116, 116, 1)
+            Icon: =ThisItem.MenuIcon
+            OnSelect: =Navigate(ThisItem.ScreenToGoTo)
+            Width: =54
+            X: =36
+            ZIndex: =1
+
+        Label19 As label:
+            Align: =Align.Center
+            Color: =RGBA(116, 116, 116, 1)
+            Height: =33
+            OnSelect: =ThisItem.ScreenToGoTo
+            Text: =ThisItem.MenuText
+            Width: =95
+            X: =16
+            Y: =64
+            ZIndex: =2
 

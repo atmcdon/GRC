@@ -5,8 +5,8 @@
     "AllowAccessToGlobals": false,
     "AllowCustomization": true,
     "Description": "",
-    "Name": "Data viewing",
-    "TemplateGuid": "3e4e4050a892443e833070052b8c3ea2"
+    "Name": "Component2",
+    "TemplateGuid": "17d396280db345a2ad71a9ed9c3a5a06"
   },
   "ComponentType": "CanvasComponent",
   "CustomGroupControlTemplateName": "",
@@ -19,8 +19,8 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638510725304271264",
-  "Name": "3e4e4050a892443e833070052b8c3ea2",
+  "LastModifiedTimestamp": "638510725562359535",
+  "Name": "17d396280db345a2ad71a9ed9c3a5a06",
   "OverridableProperties": {},
   "Version": "1.0"
 }
