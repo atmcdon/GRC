@@ -449,7 +449,7 @@
                 {
                     MenuText: "Logout", 
                     MenuIcon: Icon.Devices, 
-                    ScreenToGoTo:'LoginPage'
+                    ScreenToGoTo:LoginPage
                 }
              ) 
         LoadingSpinner: =LoadingSpinner.Data

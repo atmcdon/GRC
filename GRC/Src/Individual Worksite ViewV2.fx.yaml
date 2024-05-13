@@ -17,24 +17,29 @@
                 Sort(
                     collectAllSiteReports,
                     'Created On',SortOrder.Descending
+                    
                 )
             )
         );
         
         Set(varLatestReportID, First(collectLatestSiteReport).ReportID);
-        Set(varTypeID)
+        Set(varTypeID, 0);
         
         //Collects all developments for a site report.
         ClearCollect(
             collectDevelopments,
             Filter(
                 Developments,
-                ReportID = varLatestReportID,
+                ReportID = varLatestReportID
+                ,
                 TypeID = varTypeID
-                 
-        
+            )
         );
-        
+        ClearCollect(
+            collectLatestDevelopment,
+            First(Sort(collectDevelopments, 'Created On', SortOrder.Descending))
+            , LookUp(DevelopmentTypes, TypeID1 = varTypeID, DevelopmentTypeName)
+        );
         
         
         
@@ -479,17 +484,8 @@
                     Text: |
                         =If(
                             IsEmpty(collectDevelopments),
-                            "No developments found for the latest report",
-                            "Recent Developments: " & 
-                            Concat(
-                                
-                                collectDevelopments,
-                                
-                                Concatenate(
-                                    " ", LookUp(DevelopmentTypes, TypeID = varTypeID, DevelopmentTypeName)
-                        , TypeID, 
-                                )
-                            )
+                            "No developments found for the selected criteria.",
+                            "Latest Development ID: " & First(collectLatestDevelopment).TypeID & "; Created on: " & Text(First(collectLatestDevelopment).'Created On')
                         )
                     VerticalAlign: =VerticalAlign.Top
                     Width: =540
@@ -1045,7 +1041,7 @@
                 {
                     MenuText: "Logout", 
                     MenuIcon: Icon.Devices, 
-                    ScreenToGoTo:'LoginPage'
+                    ScreenToGoTo:LoginPage
                 }
              ) 
         LoadingSpinner: =LoadingSpinner.Data
