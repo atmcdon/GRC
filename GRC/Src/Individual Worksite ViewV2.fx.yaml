@@ -13,13 +13,43 @@
             )
         );
         
+        
+        ClearCollect(
+            collectRecentAllSiteReports,
+            First(
+                Sort(
+                    Filter(
+                        SiteProgressReports,
+                        SiteID = GlobalSelectedSite2
+                    ),
+                    'Created On',  
+                    SortOrder.Descending
+                )
+            )
+        );
+        
+        
+        
         ClearCollect(
             collectDevelopmentTypeIDs,
             Filter(
                 Developments,
-                ReportID in collectAllSiteReports.ReportID
+                ReportID in collectRecentAllSiteReports.ReportID
             )
         );
+        
+        
+        //ClearCollect(
+        //    collectDevelopmentTypeIDs,
+        //    Filter(
+        //        Developments,
+        //        ReportID in collectAllSiteReports.ReportID
+        //    )
+        //);
+        
+        
+        
+        
         ClearCollect(
             uniqueTypeIDs,
             Distinct(
@@ -30,26 +60,42 @@
         
         
         ClearCollect(
+            collectDevelopmentTypeNames,
+            ForAll(
+                uniqueTypeIDs,
+                {
+                    TypeID: Value,
+                    TypeName: LookUp(
+                        DevelopmentTypes,
+                        TypeID1 = Value,
+                        DevelopmentTypeName
+                    )
+                }
+            )
+        );
+        
+        Set(
+            varDevelopmentTypeNames,
+            Concat(
+                collectDevelopmentTypeNames,
+                TypeName & ", "  // Add a separator, such as a comma and a space
+            )
+        );
+        
+        
+        
+        
+        
+        
+        
+        
+        ClearCollect(
             collectLatestSiteReport,
             First(
                 Sort(
                     collectAllSiteReports,
                     'Created On',SortOrder.Descending
                     
-                )
-            )
-        );
-        
-        Set(
-            varDevelopmentTypeNames,
-            Concatenate(
-                ForAll(
-                    uniqueTypeIDs,
-                    LookUp(
-                        DevelopmentTypes,
-                        TypeID = Value,
-                        DevelopmentTypeName & ", "
-                    )
                 )
             )
         );
@@ -498,7 +544,8 @@
                     Fill: =RGBA(232, 244, 217, 1)
                     Height: =81
                     Size: =14
-                    Text: =varDevelopmentTypeNames
+                    Text: |-
+                        ="Recent Developments: " & varDevelopmentTypeNames
                     VerticalAlign: =VerticalAlign.Top
                     Width: =540
                     X: =32
