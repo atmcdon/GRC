@@ -30,13 +30,6 @@
             )
         );
         
-        ClearCollect(
-            collectTypeIDs,
-            Filter(
-                Developments,
-                ReportID in collectReportIDs.ReportID
-            )
-        );
         
         
         
