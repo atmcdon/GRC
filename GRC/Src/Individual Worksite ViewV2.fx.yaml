@@ -14,8 +14,29 @@
         );
         
         ClearCollect(
-            collectReportIDs,
-            collectAllSiteReports.ReportID
+            collectDevelopmentTypeIDs,
+            Filter(
+                Developments,
+                ReportID in collectAllSiteReports.ReportID
+            )
+        );
+        ClearCollect(
+            uniqueTypeIDs,
+            Distinct(
+                collectDevelopmentTypeIDs,
+                TypeID
+            )
+        );
+        ClearCollect(
+            collectTypeNames,
+            ForAll(
+                uniqueTypeIDs,
+                LookUp(
+                    DevelopmentTypes,
+                    TypeID = Value,
+                    {TypeID: TypeID, TypeName: DevelopmentTypeName}
+                )
+            )
         );
         
         
