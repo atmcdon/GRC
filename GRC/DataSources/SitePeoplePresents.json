@@ -11,6 +11,7 @@
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
       "cr64e_employeeid": "EmployeeID",
+      "cr64e_employeeidstring": "EmployeeIDString",
       "cr64e_reportid": "ReportID",
       "cr64e_sitepeoplepresent_AsyncOperations": "System Jobs",
       "cr64e_sitepeoplepresent_BulkDeleteFailures": "Bulk Delete Failures",

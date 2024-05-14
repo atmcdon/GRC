@@ -105,7 +105,7 @@
         
         
         //Collect employee ID numbers from SitePeoplePresent == ReportID
-        //Collect Emplyee name first last from Employees table == EmployeeID
+        
         
         ClearCollect(
             collectEmployeeIDs,
@@ -117,10 +117,37 @@
             )
         
         );
+        ClearCollect(
+            uniqueEmployeeIDs,
+            Distinct(
+                collectEmployeeIDs,
+                EmployeeID
+            )
+        );
+        
+        //Collect Emplyee name first last from Employees table == EmployeeID
         
         
+        ClearCollect(
+            collectEmployeeNames,
+                ForAll(
+                uniqueEmployeeIDs,
+                {
+                    EmployeeID: Value,
+                    FirstName: LookUp(
+                        Employees,
+                        EmployeeID = Value,
+                        FirstName
+                    ),
         
-        
+                    LastName: LookUp(
+                        Employees,
+                        EmployeeID = Value,
+                        LastName
+                    )
+                }
+            )
+        );
         
         
         
