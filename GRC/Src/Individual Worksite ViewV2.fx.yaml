@@ -29,7 +29,7 @@
         );
         
         
-        
+        //Collects all RECENT Site Reports
         ClearCollect(
             collectDevelopmentTypeIDs,
             Filter(
@@ -38,9 +38,9 @@
             )
         );
         
-        
+        //Collects all Site Reports
         //ClearCollect(
-        //    collectDevelopmentTypeIDs,
+        //    collectRecentDevelopmentTypeIDs,
         //    Filter(
         //        Developments,
         //        ReportID in collectAllSiteReports.ReportID
@@ -49,7 +49,7 @@
         
         
         
-        
+        //Find Collect allTypeID in the collection 
         ClearCollect(
             uniqueTypeIDs,
             Distinct(
@@ -103,6 +103,20 @@
         
         
         
+        
+        //Collect employee ID numbers from SitePeoplePresent == ReportID
+        //Collect Emplyee name first last from Employees table == EmployeeID
+        
+        ClearCollect(
+            collectEmployeeIDs,
+            Filter(
+                SitePeoplePresents,
+                ReportID in collectRecentAllSiteReports.ReportID
+        
+        
+            )
+        
+        );
         
         
         
