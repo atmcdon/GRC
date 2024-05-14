@@ -27,17 +27,6 @@
                 TypeID
             )
         );
-        ClearCollect(
-            collectTypeNames,
-            ForAll(
-                uniqueTypeIDs,
-                LookUp(
-                    DevelopmentTypes,
-                    TypeID = Value,
-                    {TypeID: TypeID, TypeName: DevelopmentTypeName}
-                )
-            )
-        );
         
         
         ClearCollect(
@@ -51,6 +40,19 @@
             )
         );
         
+        Set(
+            varDevelopmentTypeNames,
+            Concatenate(
+                ForAll(
+                    uniqueTypeIDs,
+                    LookUp(
+                        DevelopmentTypes,
+                        TypeID = Value,
+                        DevelopmentTypeName & ", "
+                    )
+                )
+            )
+        );
         
         
         
@@ -496,22 +498,7 @@
                     Fill: =RGBA(232, 244, 217, 1)
                     Height: =81
                     Size: =14
-                    Text: |
-                        =If(
-                            IsEmpty(collectDevelopments),
-                            "No developments found for the selected criteria.",
-                            "Development done recently: "&
-                                Concat(
-                                    
-                                collectDevelopmentsWithTypes,
-                                    Concatenate(
-                                        TypeName,
-                                        Char(10) ,
-                                        LookUp(collectAllSiteReports, ReportID = ReportID, ReportID)
-                                    )
-                            )
-                        
-                        )
+                    Text: =varDevelopmentTypeNames
                     VerticalAlign: =VerticalAlign.Top
                     Width: =540
                     X: =32
