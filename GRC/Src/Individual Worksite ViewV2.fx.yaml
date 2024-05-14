@@ -3,6 +3,8 @@
         =
         Set(varSiteOwnerID, LookUp(SitesParents, SiteID = GlobalSelectedSite2, SiteOwnerID));
         
+        
+        
         ClearCollect(
             collectAllSiteReports,
             Filter(
@@ -10,6 +12,12 @@
                 SiteID = GlobalSelectedSite2 
             )
         );
+        
+        ClearCollect(
+            collectReportIDs,
+            collectAllSiteReports.ReportID
+        );
+        
         
         ClearCollect(
             collectLatestSiteReport,
@@ -22,39 +30,16 @@
             )
         );
         
-        Set(varLatestReportID, First(collectLatestSiteReport).ReportID);
-        Set(varTypeID, 0);
-        
-        
-        
-        
-        //Collects all developments for a site report.
         ClearCollect(
-            collectDevelopments,
+            collectTypeIDs,
             Filter(
                 Developments,
-                ReportID = varLatestReportID
+                ReportID in collectReportIDs.ReportID
             )
         );
         
         
-        //collects recent developments
-        ClearCollect(
-            collectLatestDevelopment,
-            (Sort(collectDevelopments, 'Created On', SortOrder.Descending))
         
-        );
-        
-        
-        ClearCollect(
-            collectDevelopmentsWithTypes,
-            ForAll(
-                collectDevelopments,
-                {
-                    TypeName: LookUp(DevelopmentTypes, TypeID = TypeID, DevelopmentTypeName)
-                }
-            )
-        );
         
         
         
@@ -507,7 +492,8 @@
                                 collectDevelopmentsWithTypes,
                                     Concatenate(
                                         TypeName,
-                                        Char(10) 
+                                        Char(10) ,
+                                        LookUp(collectAllSiteReports, ReportID = ReportID, ReportID)
                                     )
                             )
                         

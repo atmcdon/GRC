@@ -375,7 +375,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 1489,
+                  "charOffset": 1085,
                   "snippet": {
                     "text": "Trim(Value)"
                   }
@@ -415,7 +415,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 1487,
+                  "charOffset": 1083,
                   "snippet": {
                     "text": "="
                   }
@@ -455,7 +455,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 2769,
+                  "charOffset": 2365,
                   "snippet": {
                     "text": "Trim(Value)"
                   }
@@ -495,7 +495,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 2767,
+                  "charOffset": 2363,
                   "snippet": {
                     "text": "="
                   }
@@ -519,6 +519,206 @@
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
           "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_3.Label11_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_3.Label11_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 19,
+                  "charOffset": 16,
+                  "snippet": {
+                    "text": "collectDevelopments"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_3.Label11_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "collectDevelopments"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_3.Label11_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_3.Label11_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 28,
+                  "charOffset": 166,
+                  "snippet": {
+                    "text": "collectDevelopmentsWithTypes"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_3.Label11_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "collectDevelopmentsWithTypes"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_3.Label11_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_3.Label11_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 137,
+                  "snippet": {
+                    "text": "Concat"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_3.Label11_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Concat"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_3.Label11_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_3.Label11_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 237,
+                  "snippet": {
+                    "text": "TypeName"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_3.Label11_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "TypeName"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_3.Label11_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_3.Label11_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 11,
+                  "charOffset": 208,
+                  "snippet": {
+                    "text": "Concatenate"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard1_3.Container1_3.Label11_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Concatenate"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -11759,36 +11959,6 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.varTypeID"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.varTypeID",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "varTypeID",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 8
         },
         {
           "locations": [
