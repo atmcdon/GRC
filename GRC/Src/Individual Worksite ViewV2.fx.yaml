@@ -13,6 +13,7 @@
         ClearCollect(ColToolList, ToolsLists);
         ClearCollect(ColSitePeoplePresent, SitePeoplePresents);
         ClearCollect(ColEmployees, Employees);
+        ClearCollect(ColSitePeople, SitePeople);
         
         // Check column names and sample data
         ClearCollect(DebugCollection, SiteProgressReports);
@@ -48,7 +49,7 @@
             )
         );
         ClearCollect(FilteredSitePeoplePresent,
-            Filter(SitePeoplePresents, ReportID in ReportIDsForSite.ReportID)
+            Filter(ColSitePeople, ReportID in ReportIDsForSite.ReportID)
         );
         
         ClearCollect(EmployeeNamesForReports,
@@ -62,7 +63,7 @@
         // Get Employee Names for each ReportID
         ClearCollect(EmployeeNamesForReports,
             AddColumns(
-                Filter('SitePeoplePresents', 
+                Filter(SitePeoplePresents, 
                     ReportID in ReportIDsForSite.ReportID
                 ),
                 FullName, 
