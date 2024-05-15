@@ -5,149 +5,18 @@
         
         
         
-        ClearCollect(
-            collectAllSiteReports,
-            Filter(
-                SiteProgressReports,
-                SiteID = GlobalSelectedSite2 
-            )
-        );
-        
-        
-        ClearCollect(
-            collectRecentAllSiteReports,
-            First(
-                Sort(
-                    Filter(
-                        SiteProgressReports,
-                        SiteID = GlobalSelectedSite2
-                    ),
-                    'Created On',  
-                    SortOrder.Descending
-                )
-            )
-        );
-        
-        
-        //Collects all RECENT Site Reports
-        ClearCollect(
-            collectDevelopmentTypeIDs,
-            Filter(
-                Developments,
-                ReportID in collectRecentAllSiteReports.ReportID
-            )
-        );
-        
-        //Collects all Site Reports
-        //ClearCollect(
-        //    collectRecentDevelopmentTypeIDs,
-        //    Filter(
-        //        Developments,
-        //        ReportID in collectAllSiteReports.ReportID
-        //    )
-        //);
-        
-        
-        
-        //Find Collect allTypeID in the collection 
-        ClearCollect(
-            uniqueTypeIDs,
-            Distinct(
-                collectDevelopmentTypeIDs,
-                TypeID
-            )
-        );
-        
-        
-        ClearCollect(
-            collectDevelopmentTypeNames,
-            ForAll(
-                uniqueTypeIDs,
-                {
-                    TypeID: Value,
-                    TypeName: LookUp(
-                        DevelopmentTypes,
-                        TypeID1 = Value,
-                        DevelopmentTypeName
-                    )
-                }
-            )
-        );
-        
-        Set(
-            varDevelopmentTypeNames,
-            Concat(
-                collectDevelopmentTypeNames,
-                TypeName & ", "  // Add a separator, such as a comma and a space
-            )
-        );
-        
-        
-        
-        
-        
-        
-        
-        
-        ClearCollect(
-            collectLatestSiteReport,
-            First(
-                Sort(
-                    collectAllSiteReports,
-                    'Created On',SortOrder.Descending
-                    
-                )
-            )
-        );
-        
-        
-        
-        
-        
-        //Collect employee ID numbers from SitePeoplePresent == ReportID
-        
-        
-        ClearCollect(
-            collectEmployeeIDs,
-            Filter(
-                SitePeoplePresents,
-                ReportID in collectRecentAllSiteReports.ReportID
-        
-        
-            )
-        
-        );
-        ClearCollect(
-            uniqueEmployeeIDs,
-            Distinct(
-                collectEmployeeIDs,
-                EmployeeIDString
-            )
-        );
-        
-        //Collect Emplyee name first last from Employees table == EmployeeID
-        
-        
-        ClearCollect(
-            collectEmployeeNames,
-            ForAll(
-                uniqueEmployeeIDs,
-                With(
-                    {empRecord: LookUp(Employees, EmployeeID = Value)},
-                    {
-                        EmployeeID: Value,
-                        FullName: empRecord.FirstName & " " & empRecord.LastName
-                    }
-                )
-            )
-        );
-        
-        
         //-------------------------------------------------------------------------------------------
+        
+        // Check column names and sample data
+        ClearCollect(DebugCollection, SiteProgressReports);
+        
+        
         // Get all ReportIDs for a specific SiteID
+        
         ClearCollect(ReportIDsForSite,
             Filter(SiteProgressReports, SiteID = GlobalSelectedSite2)
         );
+        
         
         // Get Development Types for each ReportID
         ClearCollect(DevelopmentTypesForReports,
@@ -194,157 +63,6 @@
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        // clear any old data from the collection
-        Clear(colSiteTools);
-        
-        // Filter the Site Histories for the selected site and collect the tool names
-        ForAll(
-            Filter('Site Histories', SiteName = GlobalSelectedSite),
-            // For each WorkHistory item, split the Tools field and look up each tools name
-            ForAll(
-                Split(Tools, ","),
-                Collect(
-                    colSiteTools,
-                    {
-                        ToolName: LookUp(ToolLists, ToolID = Trim(Value), ToolName),
-                        ToolID: Trim(Value),
-                        StartTime: 'Start Time'
-                    }
-                )
-            )
-        );
-        
-        
-        // First, clear the previous tool count collection
-        Clear(colToolCounts);
-        
-        // Create a unique list of tool names
-        ClearCollect(colUniqueTools, Distinct(colSiteTools, ToolName));
-        
-        // Count each tool and collect the counts
-        ForAll(
-            colUniqueTools,
-            Collect(
-                colToolCounts,
-                {
-                    ToolName: Value,
-                    Count: CountRows(Filter(colSiteTools, ToolName = Value))
-                }
-            )
-        );
-        
-        Clear(colSiteHistorySummary);
-        
-        ForAll(
-            Filter('Site Histories', SiteName = GlobalSelectedSite),
-            With(
-                // Makes Tools and Workers VARS for use in nested ForAll
-                {CurrentTools: Tools, CurrentWorkers: 'Workers (cr64e_workers)', CurrentImageIDs: ImageID},  
-                Collect(
-        
-                    colSiteHistorySummary,
-                    {
-                        Date: Text('End Time', "[$-en-US]mm/dd/yyyy"),
-                        TimeRange: Text('Start Time', "h:mm") & " to " & Text('End Time', "h:mm"),
-                        Activity: Development,
-                        Workers: Concat(
-                            ForAll(
-                                Split(CurrentWorkers, ","),  // Use captured CurrentWorkers
-                                LookUp(Workers, WorkerID = Trim(Value), Name)
-                            ),
-                            Value & ", ",
-                            ""
-                        ),
-                        ToolSummary: Concat(
-                            
-                            ForAll(
-                                Distinct(Split(CurrentTools, ","), Value),
-                                
-                                With(
-                                    {CurrentToolID: Trim(Value)},
-                                    {
-                                        ToolName: LookUp(ToolLists, ToolID = CurrentToolID, ToolName),
-                                        Count: CountRows(Filter(Split(CurrentTools, ","), Trim(Value) = CurrentToolID))
-                                    }
-                                )
-                            ),
-                            ToolName & ": " & Text(Count) & "; ",
-                            ""
-                        ),
-                        ImageIDs: CurrentImageIDs
-                        //    Concat(
-                        //        Split(CurrentImageIDs, ","),
-                        //        Trim(Value) & "; "
-                        //   )
-                        
-                    }
-                )
-            )
-        );
-        
-        //----------------------------------------------------------------------------
-        
-        //Filters selected sites
-        ClearCollect(colToolIDsFromSiteHistory,
-            Distinct(
-                Split(
-                    Concat(
-                        Filter('Site Histories', SiteName = GlobalSelectedSite),
-                        Tools & ","
-                    ),
-                    ","
-                ),
-                Trim(Value)
-            )
-        );
-        
-        // Filter ToolLists to include only those tools identified in colToolIDsFromSiteHistory 
-        ClearCollect(colFilteredTools,
-            Filter(
-                ToolLists,
-                ToolID in colToolIDsFromSiteHistory.Value
-            )
-        );
-        
-        //----------------------------------------------------------------------------
-        
-        ClearCollect(colWorkerIDsFromSiteHistory,
-            Distinct(
-                Split(
-                    Concat(
-                        Filter('Site Histories', SiteName = GlobalSelectedSite),
-                        'Workers (cr64e_workers)' & ","
-                    ),
-                    ","
-                ),
-                Trim(Value)
-            )
-        );
-        
-        // Filter Workers to include only those tools identified in colWorkerIDsFromSiteHistory 
-        ClearCollect(colFilteredWorkers,
-            Filter(
-                Workers,
-                WorkerID in colWorkerIDsFromSiteHistory.Value
-            )
-        );
         
         
         
@@ -617,7 +335,7 @@
                     Height: =81
                     Size: =14
                     Text: |-
-                        ="Recent Developments: " & varDevelopmentTypeNames
+                        ="Recent Developments: " 
                     VerticalAlign: =VerticalAlign.Top
                     Width: =540
                     X: =32
