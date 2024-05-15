@@ -121,7 +121,7 @@
             uniqueEmployeeIDs,
             Distinct(
                 collectEmployeeIDs,
-                EmployeeID
+                EmployeeIDString
             )
         );
         
@@ -130,26 +130,57 @@
         
         ClearCollect(
             collectEmployeeNames,
-                ForAll(
+            ForAll(
                 uniqueEmployeeIDs,
-                {
-                    EmployeeID: Value,
-                    FirstName: LookUp(
-                        Employees,
-                        EmployeeID = Value,
-                        FirstName
-                    ),
-        
-                    LastName: LookUp(
-                        Employees,
-                        EmployeeID = Value,
-                        LastName
-                    )
-                }
+                With(
+                    {empRecord: LookUp(Employees, EmployeeID = Value)},
+                    {
+                        EmployeeID: Value,
+                        FullName: empRecord.FirstName & " " & empRecord.LastName
+                    }
+                )
             )
         );
         
         
+        //-------------------------------------------------------------------------------------------
+        // Get all ReportIDs for a specific SiteID
+        ClearCollect(ReportIDsForSite,
+            Filter(SiteProgressReports, SiteID = GlobalSelectedSite2)
+        );
+        
+        // Get Development Types for each ReportID
+        ClearCollect(DevelopmentTypesForReports,
+            AddColumns(
+                Filter(Developments, 
+                    ReportID in ReportIDsForSite.ReportID
+                ),
+                DevelopmentTypeName, 
+                LookUp(DevelopmentTypes, TypeID = ThisRecord.TypeID).DevelopmentTypeName
+            )
+        );
+        
+        // Get Tool Names for each ReportID
+        ClearCollect(ToolNamesForReports,
+            AddColumns(
+                Filter(SiteToolsUsed, 
+                    ReportID in ReportIDsForSite.ReportID
+                ),
+                ToolName, 
+                LookUp(ToolList, ToolID = ThisRecord.ToolID).ToolName
+            )
+        );
+        
+        // Get Employee Names for each ReportID
+        ClearCollect(EmployeeNamesForReports,
+            AddColumns(
+                Filter(SitePeoplePresent, 
+                    ReportID in ReportIDsForSite.ReportID
+                ),
+                "EmployeeName", 
+                LookUp(Employees, EmployeeID = ThisRecord.EmployeeID, FirstName & " " & LastName)
+            )
+        );
         
         
         
@@ -605,18 +636,10 @@
                             LookUp('Site Histories', SiteName = GlobalSelectedSite).'Workers (cr64e_workers)'
                         )
                     Size: =14
-                    Text: |
-                        =//"Recent Workers: " & LookUp('Workers', WorkerID = varworkerID).Name &
-                        "Recent Workers: " & Concat(
-                            ForAll(
-                                Split(LookUp('Site Histories', SiteName = GlobalSelectedSite, 'Workers (cr64e_workers)'), ","),
-                                LookUp(Workers, WorkerID = Value, Name)
-                            ),
-                            Value & ", ",
-                            ""
-                        )
+                    Text: |+
+                        =
+                        "Recent Workers: " 
                         
-                        //"Workers: " & varworkerID
                     VerticalAlign: =VerticalAlign.Top
                     Width: =542
                     X: =32
