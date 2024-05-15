@@ -1,9 +1,11 @@
 "'Individual Worksite ViewV2' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     OnVisible: |+
         =
-        //Set(varSiteOwnerID, LookUp(SitesParents, SiteID = GlobalSelectedSite2, SiteOwnerID));
-        
         Set(GlobalSelectedSite2, "0001");
+        
+        Set(varSiteOwnerID, LookUp(SitesParents, SiteID = GlobalSelectedSite2, SiteOwnerID));
+        
+        
         
         //-------------------------------------------------------------------------------------------
         ClearCollect(ColSiteProgressReports, SiteProgressReports);
@@ -24,6 +26,54 @@
         ClearCollect(ReportIDsForSite,
             Filter(SiteProgressReports, SiteID = GlobalSelectedSite2)
         );
+        
+        //------------------------------------------
+        //Most recent Report
+        ClearCollect(LatestSiteReport,
+            First(
+                Sort(
+                    Filter(
+                        SiteProgressReports,
+                        SiteID = GlobalSelectedSite2
+                    ),
+                    EndTime,  
+                    SortOrder.Descending
+                )
+            )
+        );
+        If(
+            !IsEmpty(LatestSiteReport),
+            Set(MostRecentReportID, First(LatestSiteReport).ReportID)
+        );
+        ClearCollect(RecentDevelopmentTypes,
+            Filter(Developments, ReportID = MostRecentReportID)
+        );
+        
+        ClearCollect(RecentEmployees,
+            AddColumns(
+                Filter(SitePeople, ReportID = MostRecentReportID),
+                FullName,
+                LookUp(Employees, EmployeeIDsp = ThisRecord.EmployeeID, FirstName & " " & LastName)
+                
+            )
+        );
+        
+        ClearCollect(RecentToolsUsed,
+            AddColumns(
+                Filter(SiteToolsUseds, ReportID = MostRecentReportID),
+                ToolName, 
+                LookUp(ToolsLists, ToolIDString = ThisRecord.ToolID).ToolName
+            )
+        );
+        
+        
+        //------------------------------------------
+        
+        
+        
+        
+        
+        
         
         // Get Development Types for each ReportID
         ClearCollect(DevelopmentTypesForReports,
@@ -307,9 +357,9 @@
                     Size: =14
                     Text: |-
                         ="Last worked on: " & If(
-                            IsEmpty(collectLatestSiteReport),
+                            IsEmpty(LatestSiteReport),
                             "No report available",
-                            Text(First(collectLatestSiteReport).createdon, DateTimeFormat.LongDate)
+                            Text(First(LatestSiteReport).EndTime, DateTimeFormat.LongDate)
                         )
                     Width: =255
                     X: =310
@@ -361,7 +411,11 @@
                     Size: =14
                     Text: |+
                         =
-                        "Recent Workers: " 
+                        "Recent Workers: " & If(
+                            IsEmpty(RecentEmployees),
+                            "No Workers",
+                            Concat(RecentEmployees, FullName, ", ")
+                        )
                         
                     VerticalAlign: =VerticalAlign.Top
                     Width: =542
@@ -375,13 +429,10 @@
                     Height: =209
                     Size: =14
                     Text: |-
-                        ="Tools Used Last: " & Concat(
-                            ForAll(
-                                Split(LookUp('Site Histories', SiteName = GlobalSelectedSite, Tools), ","),
-                                LookUp(ToolLists, IDnum = Value, ToolName)
-                            ),
-                            Value & ", ",
-                            ""
+                        ="Tools Used Last: " & If(
+                            IsEmpty(RecentToolsUsed),
+                            "No tools used",
+                            Concat(RecentToolsUsed, ToolName, ", ")
                         )
                     VerticalAlign: =VerticalAlign.Top
                     Width: =148
@@ -417,14 +468,11 @@
                     Height: =90
                     Size: =14
                     Text: |-
-                        ="Most Recent Time in: "&
-                        First(
-                            Sort(
-                                Filter('Site Histories', SiteName = GlobalSelectedSite),
-                                'Start Time',
-                                SortOrder.Descending
-                            )
-                        ).'Start Time'
+                        ="Most Recent Time in: "& If(
+                            IsEmpty(LatestSiteReport),
+                            "No report available",
+                            Text(First(LatestSiteReport).TimeStart, DateTimeFormat.LongDate)
+                        )
                     VerticalAlign: =VerticalAlign.Top
                     Width: =217
                     X: =32
@@ -437,14 +485,11 @@
                     Height: =90
                     Size: =14
                     Text: |-
-                        ="Most Recent Time out: "&
-                        First(
-                            Sort(
-                                Filter('Site Histories', SiteName = GlobalSelectedSite),
-                                'Start Time',
-                                SortOrder.Descending
-                            )
-                        ).'End Time' 
+                        ="Most Recent Time out: "& If(
+                            IsEmpty(LatestSiteReport),
+                            "No report available",
+                            Text(First(LatestSiteReport).EndTime, DateTimeFormat.LongDate)
+                        )
                     VerticalAlign: =VerticalAlign.Top
                     Width: =217
                     X: =32
