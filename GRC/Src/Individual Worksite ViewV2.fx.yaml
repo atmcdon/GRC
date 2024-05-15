@@ -55,10 +55,10 @@
                 Filter(SitePeoplePresents, 
                     ReportID in ReportIDsForSite.ReportID
                 ),
-                FirstName, 
-                LookUp(Employees, EmployeeID = ThisRecord.EmployeeID).FirstName,
-                LastName,
-                LookUp(Employees, EmployeeIDString = ThisRecord.EmployeeID).LastName
+                FullName, 
+                LookUp(ColEmployees, EmployeeID = ThisRecord.EmployeeID , FirstName &" "& LastName)
+                //LastName,
+                //LookUp(Employees, EmployeeIDString = ThisRecord.EmployeeID).LastName
             )
         );
         

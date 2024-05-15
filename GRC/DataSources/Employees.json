@@ -19,6 +19,7 @@
       "cr64e_employee_SyncErrors": "Sync Errors",
       "cr64e_employeeid": "Employee",
       "cr64e_employeeid1": "EmployeeID",
+      "cr64e_employeeidstring": "EmployeeIDString",
       "cr64e_enddate": "EndDate",
       "cr64e_firstname": "FirstName",
       "cr64e_jobtitle": "JobTitle",
