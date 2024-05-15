@@ -19,6 +19,7 @@
       "cr64e_sitetoolsused_SyncErrors": "Sync Errors",
       "cr64e_sitetoolsusedid": "SiteToolsUsed",
       "cr64e_toolid": "ToolID",
+      "cr64e_toolidstring": "ToolIDString",
       "createdby": "Created By",
       "createdon": "Created On",
       "createdonbehalfby": "Created By (Delegate)",

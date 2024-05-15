@@ -1,11 +1,18 @@
 "'Individual Worksite ViewV2' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     OnVisible: |+
         =
-        Set(varSiteOwnerID, LookUp(SitesParents, SiteID = GlobalSelectedSite2, SiteOwnerID));
+        //Set(varSiteOwnerID, LookUp(SitesParents, SiteID = GlobalSelectedSite2, SiteOwnerID));
         
-        
+        Set(GlobalSelectedSite2, "0001");
         
         //-------------------------------------------------------------------------------------------
+        ClearCollect(ColSiteProgressReports, SiteProgressReports);
+        ClearCollect(ColDevelopments, Developments);
+        ClearCollect(ColDevelopmentTypes, DevelopmentTypes);
+        ClearCollect(ColSiteToolsUsed, SiteToolsUseds);
+        ClearCollect(ColToolList, ToolsLists);
+        ClearCollect(ColSitePeoplePresent, SitePeoplePresents);
+        ClearCollect(ColEmployees, Employees);
         
         // Check column names and sample data
         ClearCollect(DebugCollection, SiteProgressReports);
@@ -17,7 +24,6 @@
             Filter(SiteProgressReports, SiteID = GlobalSelectedSite2)
         );
         
-        
         // Get Development Types for each ReportID
         ClearCollect(DevelopmentTypesForReports,
             AddColumns(
@@ -25,38 +31,36 @@
                     ReportID in ReportIDsForSite.ReportID
                 ),
                 DevelopmentTypeName, 
-                LookUp(DevelopmentTypes, TypeID = ThisRecord.TypeID).DevelopmentTypeName
+                LookUp(DevelopmentTypes, TypeIDString = ThisRecord.TypeID).DevelopmentTypeName
             )
         );
+        
+        
         
         // Get Tool Names for each ReportID
         ClearCollect(ToolNamesForReports,
             AddColumns(
-                Filter(SiteToolsUsed, 
+                Filter(SiteToolsUseds, 
                     ReportID in ReportIDsForSite.ReportID
                 ),
                 ToolName, 
-                LookUp(ToolList, ToolID = ThisRecord.ToolID).ToolName
+                LookUp(ToolsLists, ToolIDString = ThisRecord.ToolID).ToolName
             )
         );
+        
         
         // Get Employee Names for each ReportID
         ClearCollect(EmployeeNamesForReports,
             AddColumns(
-                Filter(SitePeoplePresent, 
+                Filter(SitePeoplePresents, 
                     ReportID in ReportIDsForSite.ReportID
                 ),
-                "EmployeeName", 
-                LookUp(Employees, EmployeeID = ThisRecord.EmployeeID, FirstName & " " & LastName)
+                FirstName, 
+                LookUp(Employees, EmployeeID = ThisRecord.EmployeeID).FirstName,
+                LastName,
+                LookUp(Employees, EmployeeIDString = ThisRecord.EmployeeID).LastName
             )
         );
-        
-        
-        
-        
-        
-        
-        
         
         
         

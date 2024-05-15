@@ -20,6 +20,7 @@
       "cr64e_developmentsid": "Developments",
       "cr64e_reportid": "ReportID",
       "cr64e_typeid": "TypeID",
+      "cr64e_typeidstring": "TypeIDString",
       "createdby": "Created By",
       "createdon": "Created On",
       "createdonbehalfby": "Created By (Delegate)",
