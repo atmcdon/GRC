@@ -6,10 +6,12 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "cr64e_sitepeople",
+    "MaxGetRowsCount": 500,
     "Name": "SitePeople",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
       "cr64e_employeeid": "EmployeeID",
+      "cr64e_employeeidsp": "EmployeeIDsp",
       "cr64e_newcolumn": "ReportID",
       "cr64e_sitepeople_AsyncOperations": "System Jobs",
       "cr64e_sitepeople_BulkDeleteFailures": "Bulk Delete Failures",

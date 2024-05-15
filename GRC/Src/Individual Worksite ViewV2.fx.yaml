@@ -48,32 +48,16 @@
                 LookUp(ToolsLists, ToolIDString = ThisRecord.ToolID).ToolName
             )
         );
-        ClearCollect(FilteredSitePeoplePresent,
-            Filter(ColSitePeople, ReportID in ReportIDsForSite.ReportID)
-        );
         
-        ClearCollect(EmployeeNamesForReports,
-            AddColumns(
-                FilteredSitePeoplePresent,
-                FullName, 
-                LookUp(Employees, EmployeeID = ThisRecord.EmployeeIDString, FirstName & " " & LastName)
-            )
-        );
         
         // Get Employee Names for each ReportID
         ClearCollect(EmployeeNamesForReports,
             AddColumns(
-                Filter(SitePeoplePresents, 
+                Filter(SitePeople, 
                     ReportID in ReportIDsForSite.ReportID
                 ),
-                FullName, 
-                LookUp(Employees, EmployeeID = ThisRecord.EmployeeID , FirstName &" "& LastName),
-                FullName1, 
-                LookUp(Employees, EmployeeID = ThisRecord.EmployeeIDString , FirstName &" "& LastName),
-                FullName2, 
-                LookUp(Employees, EmployeeIDString = ThisRecord.EmployeeIDString , FirstName &" "& LastName),
-                FullName3, 
-                LookUp(Employees, EmployeeIDString = ThisRecord.EmployeeID , FirstName &" "& LastName)
+                FullName,  
+                LookUp(Employees, EmployeeIDsp = ThisRecord.EmployeeID , FirstName &" "& LastName)
                 //LastName,
                 //LookUp(Employees, EmployeeIDString = ThisRecord.EmployeeID).LastName
             )
