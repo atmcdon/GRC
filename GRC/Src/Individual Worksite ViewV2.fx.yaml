@@ -79,6 +79,9 @@
         
         
         
+        //------------------------------------------
+        
+        
         
         // Get Development Types for each ReportID
         ClearCollect(DevelopmentTypesForReports,
@@ -123,7 +126,40 @@
         
         
         
+        //Summary created
+        //------------------------------------------
         
+        //for ALL Site Reports
+        ClearCollect(AllSiteReports,
+            Sort(SiteProgressReports, EndTime, SortOrder.Ascending)
+        );
+        
+        ClearCollect(SummaryCollection, 
+            ForAll(ReportIDsForSite,
+                {
+                    ReportID: ThisRecord.ReportID,
+                    StartTime: LookUp(SiteProgressReports, ReportID = ThisRecord.ReportID).TimeStart,
+                    EndTime: LookUp(SiteProgressReports, ReportID = ThisRecord.ReportID).EndTime,
+                    TEST: Filter(DevelopmentTypesForReports, ReportID = ThisRecord.ReportID),
+                    TEST1: LookUp(ToolNamesForReports, ReportID = ThisRecord.ReportID).ToolName,
+                    DevelopmentTypes: Concat(
+                        Filter(DevelopmentTypesForReports, ReportID = ThisRecord.ReportID),
+                        DevelopmentTypeName & ", "
+                    ),
+                    lsUsed: Concat(
+                        Filter(ToolNamesForReports, ReportID = ThisRecord.ReportID).ToolName,
+                        ToolName,
+                        
+                        ", "
+                    ),
+                    Employees: Concat(
+                        Filter(EmployeeNamesForReports, ReportID = ThisRecord.ReportID),
+                        FullName,
+                        ", "
+                    )
+                }
+            )
+        );
         
         
         
@@ -743,17 +779,17 @@
                 HeadingFill: =RGBA(99, 139, 44, 1)
                 HeadingSize: =15
                 Height: =300
-                Items: =colFilteredTools
+                Items: =ToolNamesForReports
                 Size: =15
                 Width: =550
                 X: =40
                 Y: =70
                 ZIndex: =1
 
-                ToolName_Column1_1 As dataTableColumn.textualColumn:
+                ToolName_Column3 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
                     FieldDisplayName: ="ToolName"
-                    FieldName: ="cr64e_toolname"
+                    FieldName: ="ToolName"
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
@@ -762,35 +798,7 @@
                     Width: =100
                     X: =0
                     Y: =0
-                    ZIndex: =29
-
-                ReplacementNeeded_Column1_1 As dataTableColumn.complexOptionSetColumn:
-                    DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="ReplacementNeeded"
-                    FieldName: ="cr64e_replacementneeded"
-                    FieldVariantName: ="complexOptionSetColumn"
-                    Height: =Parent.Height
-                    LayoutHeight: =Parent.Height
-                    Order: =6
-                    Text: =ThisItem.ReplacementNeeded
-                    Width: =100
-                    X: =0
-                    Y: =0
-                    ZIndex: =30
-
-                PurchasedDate_Column1_1 As dataTableColumn.dateTimeColumn:
-                    DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="PurchasedDate"
-                    FieldName: ="cr64e_purchaseddate"
-                    FieldVariantName: ="dateTimeColumn"
-                    Height: =Parent.Height
-                    LayoutHeight: =Parent.Height
-                    Order: =2
-                    Text: =Text(ThisItem.PurchasedDate,DateTimeFormat.LongDateTime)
-                    Width: =100
-                    X: =0
-                    Y: =0
-                    ZIndex: =33
+                    ZIndex: =48
 
             Label10_5 As label:
                 Height: =70
