@@ -16,6 +16,7 @@
         ClearCollect(ColSitePeoplePresent, SitePeoplePresents);
         ClearCollect(ColEmployees, Employees);
         ClearCollect(ColSitePeople, SitePeople);
+        ClearCollect(ColSitePlants, SitePlantsUseds);
         
         // Check column names and sample data
         ClearCollect(DebugCollection, SiteProgressReports);
@@ -68,6 +69,14 @@
                 Filter(SiteToolsUseds, ReportID = MostRecentReportID),
                 ToolName, 
                 LookUp(ToolsLists, ToolIDString = ThisRecord.ToolID).ToolName
+            )
+        );
+        
+        ClearCollect(RecentPlantsUsed,
+            AddColumns(
+                Filter(SitePlantsUseds, ReportID = MostRecentReportID),
+                PlantName, 
+                LookUp(PlantsLists, PlantIDStr =ThisRecord.PlantID, PlantName)
             )
         );
         
@@ -133,36 +142,79 @@
         ClearCollect(AllSiteReports,
             Sort(SiteProgressReports, EndTime, SortOrder.Ascending)
         );
-        
-        ClearCollect(SummaryCollection, 
-            ForAll(ReportIDsForSite,
-                {
-                    ReportID: ThisRecord.ReportID,
-                    StartTime: LookUp(SiteProgressReports, ReportID = ThisRecord.ReportID).TimeStart,
-                    EndTime: LookUp(SiteProgressReports, ReportID = ThisRecord.ReportID).EndTime,
-                    TEST: Filter(DevelopmentTypesForReports, ReportID = ThisRecord.ReportID),
-                    TEST1: LookUp(ToolNamesForReports, ReportID = ThisRecord.ReportID).ToolName,
-                    DevelopmentTypes: Concat(
-                        Filter(DevelopmentTypesForReports, ReportID = ThisRecord.ReportID),
-                        DevelopmentTypeName & ", "
-                    ),
-                    lsUsed: Concat(
-                        Filter(ToolNamesForReports, ReportID = ThisRecord.ReportID).ToolName,
-                        ToolName,
-                        
-                        ", "
-                    ),
-                    Employees: Concat(
-                        Filter(EmployeeNamesForReports, ReportID = ThisRecord.ReportID),
-                        FullName,
-                        ", "
-                    )
-                }
+        ClearCollect(
+            SummaryCollection, 
+            ForAll(
+                ReportIDsForSite,
+                With(
+                    {currentReportID: ReportID},
+                    {
+                        ReportID: currentReportID,
+                        StartTime: LookUp(SiteProgressReports, ReportID = currentReportID, TimeStart),
+                        EndTime: LookUp(SiteProgressReports, ReportID = currentReportID, EndTime),
+                        DevelopmentTypes: Concat(
+                            Filter(DevelopmentTypesForReports, ReportID = currentReportID),
+                            DevelopmentTypeName & ", "
+                        ),
+                        ToolsUsed: Concat(
+                            Filter(ToolNamesForReports, ReportID = currentReportID),
+                            ToolName & ", "
+                        ),
+                        Employees: Concat(
+                            Filter(EmployeeNamesForReports, ReportID = currentReportID),
+                            FullName & ", "
+                        )
+                    }
+                )
             )
         );
         
+        // Collects the tools names and dats used
         
+        ClearCollect(
+            DetailedToolsData,
+            ForAll(
+                SiteToolsUseds,
+                With(
+                    {currentReportID: ReportID, currentToolID: ToolIDString},
+                    {ReportID: currentReportID,
+                        StartTime: LookUp(SiteProgressReports, ReportID = currentReportID, TimeStart),
+                        EndTime: LookUp(SiteProgressReports, ReportID = currentReportID, EndTime),
+                        ToolName: LookUp(ToolsLists, ToolID = currentToolID, ToolName)
+                    }
+                )
+            )
+        );
         
+        ClearCollect(
+            DetailedEmployeeData,
+            ForAll(
+                SitePeople,
+                With(
+                    {currentReportID: ReportID, currentEmpID: EmployeeID},
+                    {ReportID: currentReportID,
+                        StartTime: LookUp(SiteProgressReports, ReportID = currentReportID, TimeStart),
+                        EndTime: LookUp(SiteProgressReports, ReportID = currentReportID, EndTime),
+                        Worker: LookUp(Employees, EmployeeID = currentEmpID, FirstName &" "&LastName)
+                    }
+                )
+            )
+        );
+        
+        ClearCollect(
+            DetailedPlantData,
+            ForAll(
+                SitePlantsUseds,
+                With(
+                    {currentReportID: ReportID, currentPlantID:PlantIDStr},
+                    {ReportID: currentReportID,
+                        StartTime: LookUp(SiteProgressReports, ReportID = currentReportID, TimeStart),
+                        EndTime: LookUp(SiteProgressReports, ReportID = currentReportID, EndTime),
+                        Plants: LookUp(PlantsLists, PlantID = currentPlantID, PlantName)
+                    }
+                )
+            )
+        );
         
         
         
@@ -494,13 +546,11 @@
                         =//"Plants Used Last: " & 
                         //        LookUp('Plants', SiteName = GlobalSelectedSite, PlantName)
                         //   &
-                        "Plants Used Last: " & First(
-                            Sort(
-                                Filter(Plants, SiteName = GlobalSelectedSite),
-                                RecentlyUsedAt,
-                                SortOrder.Descending
-                            )
-                        ).PlantName
+                        "Plants Used Last: " & If(
+                            IsEmpty(RecentPlantsUsed),
+                            "No tools used",
+                            Concat(RecentPlantsUsed, PlantName, ", ")
+                        )
                     VerticalAlign: =VerticalAlign.Top
                     Width: =146
                     X: =426
@@ -557,11 +607,11 @@
                 DelayItemLoading: =true
                 Fill: =RGBA(232, 244, 217, 1)
                 Height: =284
-                Items: =colSiteHistorySummary
+                Items: =SummaryCollection
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
-                TemplateSize: =223
+                TemplateSize: =261
                 Width: =594
                 X: =23
                 Y: =120
@@ -592,22 +642,11 @@
                     PaddingRight: =0
                     PaddingTop: =0
                     Text: |-
-                        =ThisItem.Date & Char(10) & ThisItem.TimeRange &
-                        Char(10)  &
-                        Char(10)  &
-                        "Devlopement - " & ThisItem.Activity & 
-                        Char(10)  &
-                        Char(10)  &
-                        "Tools Used      - " & ThisItem.ToolSummary &
-                        
-                        Char(10)  &
-                        Char(10)  
-                        &
-                        "Workers          - " & ThisItem.Workers
+                        ="Star Time: " &ThisItem.StartTime
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Title7_4.Width
                     X: =32
-                    Y: =46
+                    Y: =32
                     ZIndex: =2
 
                 Image7_4 As image:
@@ -641,10 +680,75 @@
                     Image: =
                     ImagePosition: =ImagePosition.Fill
                     OnSelect: =Select(Parent)
-                    Width: =AddMediaButton1.Width
+                    Width: =
                     X: =
                     Y: =
                     ZIndex: =6
+
+                Body5_6 As label:
+                    AutoHeight: =true
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =Self.Size * 4
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: |-
+                        ="End Time: " &ThisItem.EndTime
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Title7_4.Width
+                    X: =32
+                    Y: =57
+                    ZIndex: =7
+
+                Body5_7 As label:
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =46
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: |-
+                        ="Developments: " & ThisItem.DevelopmentTypes
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =463
+                    X: =32
+                    Y: =95
+                    ZIndex: =8
+
+                Body5_8 As label:
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =18
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: |-
+                        ="Workers Present: " & ThisItem.Employees
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =531
+                    X: =32
+                    Y: =147
+                    ZIndex: =9
+
+                Body5_9 As label:
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =23
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: |-
+                        ="Tools Used: " & ThisItem.ToolsUsed
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =531
+                    X: =32
+                    Y: =200
+                    ZIndex: =10
 
             Label3_1 As label:
                 Height: =47
@@ -688,58 +792,54 @@
                 HeadingFill: =RGBA(99, 139, 44, 1)
                 HeadingSize: =15
                 Height: =300
-                Items: |
-                    =Filter(Plants, SiteName = GlobalSelectedSite)
+                Items: =DetailedPlantData
                 Size: =15
                 Width: =550
                 X: =40
                 Y: =70
                 ZIndex: =1
 
-                PlantName_Column1_1 As dataTableColumn.textualColumn:
-                    AutoWidth: =false
+                Plants_Column1 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="PlantName"
-                    FieldName: ="cr64e_plantname"
+                    FieldDisplayName: ="Plants"
+                    FieldName: ="Plants"
                     FieldVariantName: ="textualColumn"
-                    Height: =300
+                    Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     Order: =1
-                    Text: =ThisItem.PlantName
-                    Width: =177
+                    Text: =ThisItem.Plants
+                    Width: =100
                     X: =0
                     Y: =0
-                    ZIndex: =24
+                    ZIndex: =54
 
-                Quantity_Column1_1 As dataTableColumn.numberColumn:
-                    AutoWidth: =false
+                StartTime_Column3 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Quantity"
-                    FieldName: ="cr64e_quantity"
-                    FieldVariantName: ="numberColumn"
-                    Height: =300
+                    FieldDisplayName: ="StartTime"
+                    FieldName: ="StartTime"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     Order: =2
-                    Text: =ThisItem.Quantity
-                    Width: =130
-                    X: =154
+                    Text: =ThisItem.StartTime
+                    Width: =100
+                    X: =0
                     Y: =0
-                    ZIndex: =25
+                    ZIndex: =55
 
-                Schedule_Column1_1 As dataTableColumn.textualColumn:
-                    AutoWidth: =false
+                EndTime_Column3 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Schedule"
-                    FieldName: ="cr64e_schedule"
+                    FieldDisplayName: ="EndTime"
+                    FieldName: ="EndTime"
                     FieldVariantName: ="textualColumn"
-                    Height: =300
+                    Height: =Parent.Height
                     LayoutHeight: =Parent.Height
-                    Order: =5
-                    Text: =ThisItem.Schedule
-                    Width: =243
-                    X: =300
+                    Order: =3
+                    Text: =ThisItem.EndTime
+                    Width: =100
+                    X: =0
                     Y: =0
-                    ZIndex: =28
+                    ZIndex: =56
 
             Label10_4 As label:
                 Height: =70
@@ -779,7 +879,7 @@
                 HeadingFill: =RGBA(99, 139, 44, 1)
                 HeadingSize: =15
                 Height: =300
-                Items: =ToolNamesForReports
+                Items: =DetailedToolsData
                 Size: =15
                 Width: =550
                 X: =40
@@ -799,6 +899,34 @@
                     X: =0
                     Y: =0
                     ZIndex: =48
+
+                StartTime_Column1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="StartTime"
+                    FieldName: ="StartTime"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =2
+                    Text: =ThisItem.StartTime
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =49
+
+                EndTime_Column1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="EndTime"
+                    FieldName: ="EndTime"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =3
+                    Text: =ThisItem.EndTime
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =50
 
             Label10_5 As label:
                 Height: =70
@@ -838,54 +966,54 @@
                 HeadingFill: =RGBA(99, 139, 44, 1)
                 HeadingSize: =15
                 Height: =300
-                Items: =colFilteredWorkers
+                Items: =DetailedEmployeeData
                 Size: =15
                 Width: =550
                 X: =40
                 Y: =108
                 ZIndex: =2
 
-                Name_Column1_1 As dataTableColumn.textualColumn:
+                Worker_Column1 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Name"
-                    FieldName: ="cr64e_name"
+                    FieldDisplayName: ="Worker"
+                    FieldName: ="Worker"
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     Order: =1
-                    Text: =ThisItem.Name
+                    Text: =ThisItem.Worker
                     Width: =100
                     X: =0
                     Y: =0
-                    ZIndex: =40
+                    ZIndex: =51
 
-                WorkDone_Column1_1 As dataTableColumn.textualColumn:
+                StartTime_Column2 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="WorkDone"
-                    FieldName: ="cr64e_workdone"
+                    FieldDisplayName: ="StartTime"
+                    FieldName: ="StartTime"
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
-                    Order: =5
-                    Text: =ThisItem.WorkDone
-                    Width: =100
-                    X: =205
-                    Y: =0
-                    ZIndex: =44
-
-                WorkerType_Column1_1 As dataTableColumn.textualColumn:
-                    DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="WorkerType"
-                    FieldName: ="cr64e_workertype"
-                    FieldVariantName: ="textualColumn"
-                    Height: =Parent.Height
-                    LayoutHeight: =Parent.Height
-                    Order: =8
-                    Text: =ThisItem.WorkerType
+                    Order: =2
+                    Text: =ThisItem.StartTime
                     Width: =100
                     X: =0
                     Y: =0
-                    ZIndex: =47
+                    ZIndex: =52
+
+                EndTime_Column2 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="EndTime"
+                    FieldName: ="EndTime"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =3
+                    Text: =ThisItem.EndTime
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =53
 
             Label10_1 As label:
                 Height: =70

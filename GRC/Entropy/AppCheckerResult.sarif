@@ -365,83 +365,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.UploadedImage1_3.Width"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.UploadedImage1_3.Width",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 15,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "AddMediaButton1"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Width",
-                "module": "Individual Worksite ViewV2",
-                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.UploadedImage1_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "AddMediaButton1"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.UploadedImage1_3.Width"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.UploadedImage1_3.Width",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 15,
-                  "snippet": {
-                    "text": ".Width"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Width",
-                "module": "Individual Worksite ViewV2",
-                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.UploadedImage1_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.UploadedImage1_3.Height"
                 }
               ],
@@ -513,6 +436,86 @@
           },
           "ruleId": "app-ErrInvalidDot",
           "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.Image7_4.Image"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.Image7_4.Image",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 9,
+                  "charOffset": 131,
+                  "snippet": {
+                    "text": ".ImageIDs"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Image",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.Image7_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ImageIDs"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.Image7_4.Image"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.Image7_4.Image",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 117,
+                  "snippet": {
+                    "text": "Split"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Image",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.Image7_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Split"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -11629,6 +11632,36 @@
           },
           "ruleId": "app-UnusedVariables",
           "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.OnVisible",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 9
         },
         {
           "locations": [

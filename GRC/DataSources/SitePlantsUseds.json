@@ -11,6 +11,7 @@
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
       "cr64e_plantid": "PlantID",
+      "cr64e_plantidstr": "PlantIDStr",
       "cr64e_quantity": "QuantityUsed",
       "cr64e_reportid": "ReportID",
       "cr64e_siteplantsused_AsyncOperations": "System Jobs",
