@@ -2145,8 +2145,8 @@
                     Developments, 
                     {
                         ReportID: varCurrentReportID,
-                        TypeID: TypeID1,
                         TypeIDString: TypeID
+                        //TypeIDString: TypeID
                     }
                 )
             );
