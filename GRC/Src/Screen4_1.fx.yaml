@@ -1,0 +1,1586 @@
+"Screen4_1 As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+
+    RectQuickActionBar13_1 As rectangle:
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName13_1 As label:
+        Align: =Align.Center
+        Height: =88
+        Size: =27
+        Text: ="[Title]"
+        Width: =Parent.Width
+        ZIndex: =2
+
+    Canvas10_1 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =RectQuickActionBar13_1.Y + RectQuickActionBar13_1.Height
+        ZIndex: =3
+
+        DataCard34_1 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height - 100
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Container5_1 As groupContainer.manualLayoutContainer:
+                Height: =948
+                Width: =640
+                ZIndex: =1
+
+                Form10_2 As form:
+                    DataSource: =SiteProgressReports
+                    Height: =810
+                    Width: =640
+                    Y: =40
+                    ZIndex: =1
+
+                    SiteID_DataCard5_1 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="cr64e_siteid"
+                        Default: =ThisItem.SiteID
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@SiteProgressReports],DataSourceInfo.DisplayName,cr64e_siteid)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@SiteProgressReports], DataSourceInfo.MaxLength, cr64e_siteid)
+                        Required: =true
+                        Update: =DataCardValue46_1.Text
+                        Width: =640
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                        DataCardKey67_1 As label:
+                            AutoHeight: =true
+                            Height: =48
+                            Size: =21
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue46_1 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            Height: =70
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =21
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey67_1.Y + DataCardKey67_1.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage59_1 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =24
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue46_1.Y + DataCardValue46_1.Height
+                            ZIndex: =3
+
+                        StarVisible59_1 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey67_1.Height
+                            Size: =21
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey67_1.Y
+                            ZIndex: =4
+
+                    ReportID_DataCard8_1 As typedDataCard.textualViewCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="cr64e_reportid"
+                        Default: =ThisItem.ReportID
+                        DisplayMode: =DisplayMode.View
+                        DisplayName: =DataSourceInfo([@SiteProgressReports],DataSourceInfo.DisplayName,cr64e_reportid)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =40
+                        Required: =false
+                        Width: =640
+                        X: =0
+                        Y: =1
+                        ZIndex: =2
+
+                        DataCardKey68_1 As label:
+                            AutoHeight: =true
+                            Height: =48
+                            Size: =21
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue47_1 As label:
+                            AutoHeight: =true
+                            DisplayMode: =Parent.DisplayMode
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =21
+                            Text: =Parent.Default
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey68_1.Y + DataCardKey68_1.Height + 5
+                            ZIndex: =2
+
+                    TimeStart_DataCard5_1 As typedDataCard.dateTimeEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="cr64e_timestart"
+                        Default: =ThisItem.TimeStart
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@SiteProgressReports],DataSourceInfo.DisplayName,cr64e_timestart)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        Required: =false
+                        Update: =If(Not IsBlank(DateValue22_1.SelectedDate), DateTime(Year(DateValue22_1.SelectedDate), Month(DateValue22_1.SelectedDate), Day(DateValue22_1.SelectedDate), Value(HourValue22_1.Selected.Value), Value(MinuteValue22_1.Selected.Value), 0))
+                        Width: =640
+                        X: =0
+                        Y: =2
+                        ZIndex: =2
+
+                        DataCardKey69_1 As label:
+                            AutoHeight: =true
+                            Height: =48
+                            Size: =21
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DateValue22_1 As datepicker:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            DefaultDate: =Parent.Default
+                            DisplayMode: =Parent.DisplayMode
+                            EndYear: =Year(Today())+100
+                            Height: =70
+                            IsEditable: =true
+                            PaddingBottom: =0
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            Size: =24
+                            StartYear: =1899
+                            Tooltip: =Parent.DisplayName
+                            Width: =(Parent.Width - 60) / 2
+                            X: =30
+                            Y: =DataCardKey69_1.Y + DataCardKey69_1.Height + 5
+                            ZIndex: =2
+
+                        HourValue22_1 As dropdown:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Text(Hour(Parent.Default),"00")
+                            DisplayMode: =Parent.DisplayMode
+                            Height: =DateValue22_1.Height
+                            Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23"]
+                            PaddingBottom: =5
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            PaddingRight: =5
+                            PaddingTop: =5
+                            Size: =21
+                            Tooltip: =Parent.DisplayName
+                            Width: =DateValue22_1.Width / 2 - 10
+                            X: =DateValue22_1.X + DateValue22_1.Width + 10
+                            Y: =DateValue22_1.Y
+                            ZIndex: =3
+
+                        Separator27_1 As label:
+                            Align: =Align.Center
+                            FontWeight: =FontWeight.Bold
+                            Height: =HourValue22_1.Height
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =21
+                            Text: |-
+                                =":"
+                            Width: =10
+                            Wrap: =false
+                            X: =HourValue22_1.X + HourValue22_1.Width
+                            Y: =HourValue22_1.Y
+                            ZIndex: =4
+
+                        MinuteValue22_1 As dropdown:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Text(Minute(Parent.Default),"00")
+                            DisplayMode: =Parent.DisplayMode
+                            Height: =HourValue22_1.Height
+                            Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"]
+                            PaddingBottom: =5
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            PaddingRight: =5
+                            PaddingTop: =5
+                            Size: =21
+                            Tooltip: =Parent.DisplayName
+                            Width: =HourValue22_1.Width
+                            X: =HourValue22_1.X + HourValue22_1.Width + Separator27_1.Width
+                            Y: =HourValue22_1.Y
+                            ZIndex: =5
+
+                        ErrorMessage60_1 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =24
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =HourValue22_1.Y + HourValue22_1.Height
+                            ZIndex: =6
+
+                        StarVisible60_1 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey69_1.Height
+                            Size: =21
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey69_1.Y
+                            ZIndex: =7
+
+                    EndTime_DataCard5_1 As typedDataCard.dateTimeEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="cr64e_endtime"
+                        Default: =ThisItem.EndTime
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@SiteProgressReports],DataSourceInfo.DisplayName,cr64e_endtime)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        Required: =false
+                        Update: =If(Not IsBlank(DateValue23_1.SelectedDate), DateTime(Year(DateValue23_1.SelectedDate), Month(DateValue23_1.SelectedDate), Day(DateValue23_1.SelectedDate), Value(HourValue23_1.Selected.Value), Value(MinuteValue23_1.Selected.Value), 0))
+                        Width: =640
+                        X: =0
+                        Y: =3
+                        ZIndex: =2
+
+                        DataCardKey70_1 As label:
+                            AutoHeight: =true
+                            Height: =48
+                            Size: =21
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DateValue23_1 As datepicker:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            DefaultDate: =Parent.Default
+                            DisplayMode: =Parent.DisplayMode
+                            EndYear: =Year(Today())+100
+                            Height: =70
+                            IsEditable: =true
+                            PaddingBottom: =0
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            Size: =24
+                            StartYear: =1899
+                            Tooltip: =Parent.DisplayName
+                            Width: =(Parent.Width - 60) / 2
+                            X: =30
+                            Y: =DataCardKey70_1.Y + DataCardKey70_1.Height + 5
+                            ZIndex: =2
+
+                        HourValue23_1 As dropdown:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Text(Hour(Parent.Default),"00")
+                            DisplayMode: =Parent.DisplayMode
+                            Height: =DateValue23_1.Height
+                            Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23"]
+                            PaddingBottom: =5
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            PaddingRight: =5
+                            PaddingTop: =5
+                            Size: =21
+                            Tooltip: =Parent.DisplayName
+                            Width: =DateValue23_1.Width / 2 - 10
+                            X: =DateValue23_1.X + DateValue23_1.Width + 10
+                            Y: =DateValue23_1.Y
+                            ZIndex: =3
+
+                        Separator28_1 As label:
+                            Align: =Align.Center
+                            FontWeight: =FontWeight.Bold
+                            Height: =HourValue23_1.Height
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =21
+                            Text: |-
+                                =":"
+                            Width: =10
+                            Wrap: =false
+                            X: =HourValue23_1.X + HourValue23_1.Width
+                            Y: =HourValue23_1.Y
+                            ZIndex: =4
+
+                        MinuteValue23_1 As dropdown:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Text(Minute(Parent.Default),"00")
+                            DisplayMode: =Parent.DisplayMode
+                            Height: =HourValue23_1.Height
+                            Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"]
+                            PaddingBottom: =5
+                            PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                            PaddingRight: =5
+                            PaddingTop: =5
+                            Size: =21
+                            Tooltip: =Parent.DisplayName
+                            Width: =HourValue23_1.Width
+                            X: =HourValue23_1.X + HourValue23_1.Width + Separator28_1.Width
+                            Y: =HourValue23_1.Y
+                            ZIndex: =5
+
+                        ErrorMessage61_1 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =24
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =HourValue23_1.Y + HourValue23_1.Height
+                            ZIndex: =6
+
+                        StarVisible61_1 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey70_1.Height
+                            Size: =21
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey70_1.Y
+                            ZIndex: =7
+
+                    DevelopmentID_DataCard5_1 As typedDataCard.textualViewCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="cr64e_developmentid"
+                        Default: =ThisItem.DevelopmentID
+                        DisplayMode: =DisplayMode.View
+                        DisplayName: =DataSourceInfo([@SiteProgressReports],DataSourceInfo.DisplayName,cr64e_developmentid)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =40
+                        Required: =false
+                        Width: =640
+                        X: =0
+                        Y: =4
+                        ZIndex: =2
+
+                        DataCardKey71_1 As label:
+                            AutoHeight: =true
+                            Height: =48
+                            Size: =21
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue48_1 As label:
+                            AutoHeight: =true
+                            DisplayMode: =Parent.DisplayMode
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =21
+                            Text: =Parent.Default
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey71_1.Y + DataCardKey71_1.Height + 5
+                            ZIndex: =2
+
+                    GeneralNotes_DataCard5_1 As typedDataCard.textualMultiLineEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="cr64e_generalnotes"
+                        Default: =ThisItem.GeneralNotes
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@SiteProgressReports],DataSourceInfo.DisplayName,cr64e_generalnotes)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        Required: =false
+                        Update: =DataCardValue49_1.Text
+                        Width: =640
+                        X: =0
+                        Y: =5
+                        ZIndex: =2
+
+                        DataCardKey72_1 As label:
+                            AutoHeight: =true
+                            Height: =48
+                            Size: =21
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue49_1 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            Height: =140
+                            Mode: =TextMode.MultiLine
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =21
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey72_1.Y + DataCardKey72_1.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage62_1 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =24
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue49_1.Y + DataCardValue49_1.Height
+                            ZIndex: =3
+
+                        StarVisible62_1 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey72_1.Height
+                            Size: =21
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey72_1.Y
+                            ZIndex: =4
+
+        DataCard35_1 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =799
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            Container6_1 As groupContainer.manualLayoutContainer:
+                Height: =580
+                Width: =640
+                Y: =5
+                ZIndex: =1
+
+                Form11_4 As form:
+                    DataSource: =Developments
+                    Height: =534
+                    Width: =640
+                    Y: =40
+                    ZIndex: =1
+
+                    DevelopmentID_DataCard6_1 As typedDataCard.textualViewCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="cr64e_developmentid"
+                        Default: =ThisItem.DevelopmentID
+                        DisplayMode: =DisplayMode.View
+                        DisplayName: =DataSourceInfo([@Developments],DataSourceInfo.DisplayName,cr64e_developmentid)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =40
+                        Required: =false
+                        Width: =640
+                        X: =0
+                        Y: =0
+                        ZIndex: =5
+
+                        DataCardKey73_1 As label:
+                            AutoHeight: =true
+                            Height: =48
+                            Size: =21
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue50_1 As label:
+                            AutoHeight: =true
+                            DisplayMode: =Parent.DisplayMode
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =21
+                            Text: =Parent.Default
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey73_1.Y + DataCardKey73_1.Height + 5
+                            ZIndex: =2
+
+                    TypeID_DataCard1_1 As typedDataCard.numberEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="cr64e_typeid"
+                        Default: =ThisItem.TypeID
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@Developments],DataSourceInfo.DisplayName,cr64e_typeid)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        Required: =true
+                        Update: =Value(DataCardValue51_1.Text)
+                        Visible: =true
+                        Width: =640
+                        X: =0
+                        Y: =1
+                        ZIndex: =5
+
+                        DataCardKey74_1 As label:
+                            AutoHeight: =true
+                            Height: =48
+                            Size: =21
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue51_1 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            Format: =TextFormat.Number
+                            Height: =70
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =21
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey74_1.Y + DataCardKey74_1.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage63_1 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =24
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue51_1.Y + DataCardValue51_1.Height
+                            ZIndex: =3
+
+                        StarVisible63_1 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey74_1.Height
+                            Size: =21
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey74_1.Y
+                            ZIndex: =4
+
+                    ReportID_DataCard9_1 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="cr64e_reportid"
+                        Default: =ThisItem.ReportID
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@Developments],DataSourceInfo.DisplayName,cr64e_reportid)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@Developments], DataSourceInfo.MaxLength, cr64e_reportid)
+                        Required: =true
+                        Update: =DataCardValue52_1.Text
+                        Width: =640
+                        X: =0
+                        Y: =2
+                        ZIndex: =5
+
+                        DataCardKey75_1 As label:
+                            AutoHeight: =true
+                            Height: =48
+                            Size: =21
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue52_1 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            Height: =70
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =21
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey75_1.Y + DataCardKey75_1.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage64_1 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =24
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue52_1.Y + DataCardValue52_1.Height
+                            ZIndex: =3
+
+                        StarVisible64_1 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey75_1.Height
+                            Size: =21
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey75_1.Y
+                            ZIndex: =4
+
+                    TypeIDString_DataCard1_1 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="cr64e_typeidstring"
+                        Default: =ThisItem.TypeIDString
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@Developments],DataSourceInfo.DisplayName,cr64e_typeidstring)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@Developments], DataSourceInfo.MaxLength, cr64e_typeidstring)
+                        Required: =false
+                        Update: =DataCardValue53_1.Text
+                        Width: =640
+                        X: =0
+                        Y: =3
+                        ZIndex: =5
+
+                        DataCardKey76_1 As label:
+                            AutoHeight: =true
+                            Height: =48
+                            Size: =21
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue53_1 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            Height: =70
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =21
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey76_1.Y + DataCardKey76_1.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage65_1 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =24
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue53_1.Y + DataCardValue53_1.Height
+                            ZIndex: =3
+
+                        StarVisible65_1 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey76_1.Height
+                            Size: =21
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey76_1.Y
+                            ZIndex: =4
+
+        DataCard36_1 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =511
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =3
+
+            Container8_2 As groupContainer.manualLayoutContainer:
+                Height: =497
+                Width: =640
+                ZIndex: =1
+
+                Form11_5 As form:
+                    DataSource: =SiteToolsUseds
+                    Height: =452
+                    Width: =640
+                    Y: =40
+                    ZIndex: =1
+
+                    ReportID_DataCard10_1 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="cr64e_reportid"
+                        Default: =ThisItem.ReportID
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@SiteToolsUseds],DataSourceInfo.DisplayName,cr64e_reportid)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@SiteToolsUseds], DataSourceInfo.MaxLength, cr64e_reportid)
+                        Required: =true
+                        Update: =DataCardValue54_1.Text
+                        Width: =640
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                        DataCardKey77_1 As label:
+                            AutoHeight: =true
+                            Height: =48
+                            Size: =21
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue54_1 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            Height: =70
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =21
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey77_1.Y + DataCardKey77_1.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage66_1 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =24
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue54_1.Y + DataCardValue54_1.Height
+                            ZIndex: =3
+
+                        StarVisible66_1 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey77_1.Height
+                            Size: =21
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey77_1.Y
+                            ZIndex: =4
+
+                    ToolID_DataCard4_1 As typedDataCard.numberEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="cr64e_toolid"
+                        Default: =ThisItem.ToolID
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@SiteToolsUseds],DataSourceInfo.DisplayName,cr64e_toolid)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        Required: =true
+                        Update: =Value(DataCardValue55_1.Text)
+                        Width: =640
+                        X: =0
+                        Y: =1
+                        ZIndex: =2
+
+                        DataCardKey78_1 As label:
+                            AutoHeight: =true
+                            Height: =48
+                            Size: =21
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue55_1 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            Format: =TextFormat.Number
+                            Height: =70
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =21
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey78_1.Y + DataCardKey78_1.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage67_1 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =24
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue55_1.Y + DataCardValue55_1.Height
+                            ZIndex: =3
+
+                        StarVisible67_1 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey78_1.Height
+                            Size: =21
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey78_1.Y
+                            ZIndex: =4
+
+                    ToolIDString_DataCard2_1 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="cr64e_toolidstring"
+                        Default: =ThisItem.ToolIDString
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@SiteToolsUseds],DataSourceInfo.DisplayName,cr64e_toolidstring)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@SiteToolsUseds], DataSourceInfo.MaxLength, cr64e_toolidstring)
+                        Required: =false
+                        Update: =DataCardValue56_1.Text
+                        Width: =640
+                        X: =0
+                        Y: =2
+                        ZIndex: =2
+
+                        DataCardKey79_1 As label:
+                            AutoHeight: =true
+                            Height: =48
+                            Size: =21
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue56_1 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            Height: =70
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =21
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey79_1.Y + DataCardKey79_1.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage68_1 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =24
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue56_1.Y + DataCardValue56_1.Height
+                            ZIndex: =3
+
+                        StarVisible68_1 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey79_1.Height
+                            Size: =21
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey79_1.Y
+                            ZIndex: =4
+
+        DataCard37_1 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =705
+            Width: =640
+            X: =0
+            Y: =3
+            ZIndex: =4
+
+            Container9_1 As groupContainer.manualLayoutContainer:
+                Height: =687
+                Width: =640
+                ZIndex: =1
+
+                Form11_6 As form:
+                    DataSource: =SitePeoplePresents
+                    Height: =452
+                    Width: =640
+                    Y: =38
+                    ZIndex: =1
+
+                    ReportID_DataCard11_1 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="cr64e_reportid"
+                        Default: =ThisItem.ReportID
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@SitePeoplePresents],DataSourceInfo.DisplayName,cr64e_reportid)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@SitePeoplePresents], DataSourceInfo.MaxLength, cr64e_reportid)
+                        Required: =true
+                        Update: =DataCardValue57_1.Text
+                        Width: =640
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                        DataCardKey80_1 As label:
+                            AutoHeight: =true
+                            Height: =48
+                            Size: =21
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue57_1 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            Height: =70
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =21
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey80_1.Y + DataCardKey80_1.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage69_1 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =24
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue57_1.Y + DataCardValue57_1.Height
+                            ZIndex: =3
+
+                        StarVisible69_1 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey80_1.Height
+                            Size: =21
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey80_1.Y
+                            ZIndex: =4
+
+                    EmployeeID_DataCard3_1 As typedDataCard.numberEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="cr64e_employeeid"
+                        Default: =ThisItem.EmployeeID
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@SitePeoplePresents],DataSourceInfo.DisplayName,cr64e_employeeid)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        Required: =true
+                        Update: =Value(DataCardValue58_1.Text)
+                        Width: =640
+                        X: =0
+                        Y: =1
+                        ZIndex: =2
+
+                        DataCardKey81_1 As label:
+                            AutoHeight: =true
+                            Height: =48
+                            Size: =21
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue58_1 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            Format: =TextFormat.Number
+                            Height: =70
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =21
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey81_1.Y + DataCardKey81_1.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage70_1 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =24
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue58_1.Y + DataCardValue58_1.Height
+                            ZIndex: =3
+
+                        StarVisible70_1 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey81_1.Height
+                            Size: =21
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey81_1.Y
+                            ZIndex: =4
+
+                    EmployeeIDString_DataCard3_1 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="cr64e_employeeidstring"
+                        Default: =ThisItem.EmployeeIDString
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@SitePeoplePresents],DataSourceInfo.DisplayName,cr64e_employeeidstring)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@SitePeoplePresents], DataSourceInfo.MaxLength, cr64e_employeeidstring)
+                        Required: =false
+                        Update: =DataCardValue59_1.Text
+                        Width: =640
+                        X: =0
+                        Y: =2
+                        ZIndex: =2
+
+                        DataCardKey82_1 As label:
+                            AutoHeight: =true
+                            Height: =48
+                            Size: =21
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue59_1 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            Height: =70
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =21
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey82_1.Y + DataCardKey82_1.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage71_1 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =24
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue59_1.Y + DataCardValue59_1.Height
+                            ZIndex: =3
+
+                        StarVisible71_1 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey82_1.Height
+                            Size: =21
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey82_1.Y
+                            ZIndex: =4
+
+        DataCard38_1 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =640
+            X: =0
+            Y: =4
+            ZIndex: =5
+
+            Container8_3 As groupContainer.manualLayoutContainer:
+                Height: =497
+                Width: =640
+                ZIndex: =1
+
+                Form11_7 As form:
+                    DataSource: =SitePlantsUseds
+                    Height: =452
+                    Width: =640
+                    Y: =40
+                    ZIndex: =1
+
+                    PlantIDStr_DataCard1_1 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="cr64e_plantidstr"
+                        Default: =ThisItem.PlantIDStr
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@SitePlantsUseds],DataSourceInfo.DisplayName,cr64e_plantidstr)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@SitePlantsUseds], DataSourceInfo.MaxLength, cr64e_plantidstr)
+                        Required: =false
+                        Update: =DataCardValue60_1.Text
+                        Width: =640
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                        DataCardKey83_1 As label:
+                            AutoHeight: =true
+                            Height: =48
+                            Size: =21
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue60_1 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            Height: =70
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =21
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey83_1.Y + DataCardKey83_1.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage72_1 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =24
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue60_1.Y + DataCardValue60_1.Height
+                            ZIndex: =3
+
+                        StarVisible72_1 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey83_1.Height
+                            Size: =21
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey83_1.Y
+                            ZIndex: =4
+
+                    ReportID_DataCard12_1 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="cr64e_reportid"
+                        Default: =ThisItem.ReportID
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@SitePlantsUseds],DataSourceInfo.DisplayName,cr64e_reportid)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@SitePlantsUseds], DataSourceInfo.MaxLength, cr64e_reportid)
+                        Required: =true
+                        Update: =DataCardValue61_1.Text
+                        Width: =640
+                        X: =0
+                        Y: =1
+                        ZIndex: =2
+
+                        DataCardKey84_1 As label:
+                            AutoHeight: =true
+                            Height: =48
+                            Size: =21
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue61_1 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            Height: =70
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =21
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey84_1.Y + DataCardKey84_1.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage73_1 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =24
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue61_1.Y + DataCardValue61_1.Height
+                            ZIndex: =3
+
+                        StarVisible73_1 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey84_1.Height
+                            Size: =21
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey84_1.Y
+                            ZIndex: =4
+
+                    PlantID_DataCard1_1 As typedDataCard.textualEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="cr64e_plantid"
+                        Default: =ThisItem.PlantID
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@SitePlantsUseds],DataSourceInfo.DisplayName,cr64e_plantid)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        MaxLength: =DataSourceInfo([@SitePlantsUseds], DataSourceInfo.MaxLength, cr64e_plantid)
+                        Required: =true
+                        Update: =DataCardValue62_1.Text
+                        Width: =640
+                        X: =0
+                        Y: =2
+                        ZIndex: =2
+
+                        DataCardKey85_1 As label:
+                            AutoHeight: =true
+                            Height: =48
+                            Size: =21
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue62_1 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            Height: =70
+                            MaxLength: =Parent.MaxLength
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =21
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey85_1.Y + DataCardKey85_1.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage74_1 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =24
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue62_1.Y + DataCardValue62_1.Height
+                            ZIndex: =3
+
+                        StarVisible74_1 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey85_1.Height
+                            Size: =21
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey85_1.Y
+                            ZIndex: =4
+
+                    QuantityUsed_DataCard1_1 As typedDataCard.numberEditCard:
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="cr64e_quantity"
+                        Default: =ThisItem.QuantityUsed
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@SitePlantsUseds],DataSourceInfo.DisplayName,cr64e_quantity)
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =50
+                        Required: =true
+                        Update: =Value(DataCardValue63_1.Text)
+                        Width: =640
+                        X: =0
+                        Y: =3
+                        ZIndex: =2
+
+                        DataCardKey86_1 As label:
+                            AutoHeight: =true
+                            Height: =48
+                            Size: =21
+                            Text: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            Wrap: =false
+                            X: =30
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue63_1 As text:
+                            BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                            Default: =Parent.Default
+                            DelayOutput: =true
+                            DisplayMode: =Parent.DisplayMode
+                            Format: =TextFormat.Number
+                            Height: =70
+                            PaddingLeft: =5
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =21
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardKey86_1.Y + DataCardKey86_1.Height + 5
+                            ZIndex: =2
+
+                        ErrorMessage75_1 As label:
+                            AutoHeight: =true
+                            Height: =10
+                            Live: =Live.Assertive
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =24
+                            Text: =Parent.Error
+                            Visible: =Parent.DisplayMode=DisplayMode.Edit
+                            Width: =Parent.Width - 60
+                            X: =30
+                            Y: =DataCardValue63_1.Y + DataCardValue63_1.Height
+                            ZIndex: =3
+
+                        StarVisible75_1 As label:
+                            Align: =Align.Center
+                            Height: =DataCardKey86_1.Height
+                            Size: =21
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            Wrap: =false
+                            Y: =DataCardKey86_1.Y
+                            ZIndex: =4
+

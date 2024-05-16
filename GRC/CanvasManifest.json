@@ -99,7 +99,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 136,
+    "BindingErrorCount": 139,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "Phone",
@@ -144,6 +144,7 @@
     "New Worksite Entry",
     "Unnamed Screen 2",
     "New Entry Editing Form",
+    "New Entry Editing Form_V2",
     "Plants Overview Screen",
     "Tools Overview Screen",
     "Volunteer Overview Screen",
@@ -160,6 +161,9 @@
     "New volunteer row creation",
     "New Entry For Site History",
     "Files Page",
-    "FAQ Page"
+    "FAQ Page",
+    "New Entry V3",
+    "Screen4",
+    "Screen4_1"
   ]
 }
