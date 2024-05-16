@@ -321,8 +321,8 @@
 
                 Button3_1 As button:
                     OnSelect: |+
-                        =Navigate('New Entry Editing Form', ScreenTransition.Cover, {GlobalSelectedSite: GlobalSelectedSite});
-                        Notify("Navigating to New Entry with Site: " & GlobalSelectedSite)
+                        =Navigate(NewSiteProgressReport, ScreenTransition.Cover, {GlobalSelectedSite: GlobalSelectedSite2});
+                        Notify("Navigating to New Entry with Site: " & GlobalSelectedSite2)
                         
                         
                         

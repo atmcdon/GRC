@@ -1,17 +1,9 @@
-"Screen4 As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+"NewSiteProgressReport As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
 
     RectQuickActionBar13 As rectangle:
         Height: =88
         Width: =Parent.Width
         ZIndex: =1
-
-    LblAppName13 As label:
-        Align: =Align.Center
-        Height: =88
-        Size: =27
-        Text: ="[Title]"
-        Width: =Parent.Width
-        ZIndex: =2
 
     Canvas10 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -64,7 +56,7 @@
                             AutoHeight: =true
                             Height: =48
                             Size: =21
-                            Text: =Parent.DisplayName
+                            Text: ="Site Name"
                             Width: =Parent.Width - 60
                             Wrap: =false
                             X: =30
@@ -73,7 +65,7 @@
 
                         DataCardValue46 As text:
                             BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                            Default: =GlobalSelectedSite2
+                            Default: =LookUp(SitesParents, SiteID = GlobalSelectedSite2).SiteName
                             DelayOutput: =true
                             DisplayMode: =Parent.DisplayMode
                             Height: =70
@@ -888,16 +880,6 @@
                     Y: =215
                     ZIndex: =4
 
-            Label16 As label:
-                Height: =70
-                Size: =21
-                Text: |-
-                    =":"&DevelopmentTypeDropDown.Selected.TypeID1
-                Width: =195
-                X: =30
-                Y: =200
-                ZIndex: =2
-
             Container10 As groupContainer.manualLayoutContainer:
                 Height: =569
                 Width: =640
@@ -981,15 +963,6 @@
                         X: =495
                         Y: =150
                         ZIndex: =3
-
-                    Label16_4 As label:
-                        Height: =70
-                        Size: =21
-                        Text: =DropDownToolsNewEntry_4.Selected.TypeID1
-                        Width: =302
-                        X: =40
-                        Y: =138
-                        ZIndex: =4
 
                     Button10_7 As button:
                         Height: =70
@@ -1322,15 +1295,6 @@
                         Y: =150
                         ZIndex: =3
 
-                    Label16_5 As label:
-                        Height: =70
-                        Size: =21
-                        Text: =DropDownToolsNewEntry_5.Selected.TypeID1
-                        Width: =302
-                        X: =40
-                        Y: =138
-                        ZIndex: =4
-
                     Button10_9 As button:
                         Height: =70
                         OnSelect: |
@@ -1661,15 +1625,6 @@
                         Y: =150
                         ZIndex: =3
 
-                    Label16_6 As label:
-                        Height: =70
-                        Size: =21
-                        Text: =DropDownToolsNewEntry_6.Selected.TypeID1
-                        Width: =302
-                        X: =40
-                        Y: =138
-                        ZIndex: =4
-
                     Button10_11 As button:
                         Height: =70
                         OnSelect: |
@@ -1700,6 +1655,7 @@
                 Form11_3 As form:
                     DataSource: =SitePlantsUseds
                     Height: =452
+                    Visible: =false
                     Width: =640
                     Y: =40
                     ZIndex: =1
@@ -1994,4 +1950,163 @@
                             Wrap: =false
                             Y: =DataCardKey86.Y
                             ZIndex: =4
+
+                ToolAdd_6 As groupContainer.manualLayoutContainer:
+                    Height: =497
+                    Width: =640
+                    ZIndex: =2
+
+                    DropDownToolsNewEntry_7 As dropdown:
+                        Height: =70
+                        Items: |-
+                            =AddColumns(PlantsLists, TEST, "ID: " & PlantID & " - Plant Name:  " & PlantName)
+                        OnSelect: |
+                            =
+                        Size: =21
+                        Width: =575
+                        X: =40
+                        Y: =40
+                        ZIndex: =1
+
+                    "Gallery3_8 As gallery.'BrowseLayout_Flexible_NewsFeed_ver5.0'":
+                        DelayItemLoading: =true
+                        Height: =253
+                        Items: =ColPlantSiteAdd
+                        Layout: =Layout.Vertical
+                        LoadingSpinner: =LoadingSpinner.Data
+                        TemplatePadding: =0
+                        TemplateSize: =95
+                        Y: =247
+                        ZIndex: =1
+
+                        Title6_4 As label:
+                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                            Height: =Self.Size * 1.8
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =ThisItem.PlantID
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =Parent.TemplateWidth - 80
+                            X: =32
+                            Y: =32
+                            ZIndex: =1
+
+                        Body2_4 As label:
+                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =ThisItem.PlantName
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =124
+                            X: =130
+                            Y: =32
+                            ZIndex: =2
+
+                        Separator15_4 As rectangle:
+                            Height: =1
+                            OnSelect: =Select(Parent)
+                            Width: =Parent.TemplateWidth
+                            Y: =94
+                            ZIndex: =4
+
+                        Body2_5 As label:
+                            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                            OnSelect: =Select(Parent)
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Text: =ThisItem.PlantQty
+                            VerticalAlign: =VerticalAlign.Top
+                            Width: =124
+                            X: =281
+                            Y: =32
+                            ZIndex: =5
+
+                    Button10_14 As button:
+                        Height: =70
+                        OnSelect: |
+                            =Collect(ColPlantSiteAdd, {PlantID: DropDownToolsNewEntry_7.Selected.PlantID, PlantName: DropDownToolsNewEntry_7.Selected.PlantName, PlantQty: PlantQTYTextBox.Text});
+                        Size: =24
+                        Text: ="Add"
+                        Width: =108
+                        X: =489
+                        Y: =150
+                        ZIndex: =3
+
+                    Button10_13 As button:
+                        Height: =70
+                        OnSelect: |
+                            =Clear(ColPlantSiteAdd);
+                        Size: =24
+                        Text: ="Clear"
+                        Width: =108
+                        X: =359
+                        Y: =150
+                        ZIndex: =5
+
+            PlantQTYTextBox As text:
+                Default: ="Text input"
+                Format: =TextFormat.Number
+                Height: =70
+                HintText: ="40"
+                Size: =21
+                Width: =200
+                X: =122
+                Y: =150
+                ZIndex: =2
+
+            Label24 As label:
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Qty Used:"
+                Width: =94
+                X: =22
+                Y: =150
+                ZIndex: =3
+
+    IconCancel1_4 As icon.Cancel:
+        AccessibleLabel: =Self.Tooltip
+        Height: =88
+        Icon: =Icon.Cancel
+        OnSelect: =Back()
+        PaddingBottom: =22
+        PaddingLeft: =22
+        PaddingRight: =22
+        PaddingTop: =22
+        TabIndex: =0
+        Tooltip: ="Cancel item"
+        Width: =88
+        ZIndex: =4
+
+    IconAccept1_4 As icon.Check:
+        AccessibleLabel: =Self.Tooltip
+        Height: =88
+        Icon: =Icon.Check
+        OnSelect: =SubmitForm(EditForm1) && Navigate('Main DashboardV2')
+        PaddingBottom: =22
+        PaddingLeft: =22
+        PaddingRight: =22
+        PaddingTop: =22
+        TabIndex: =0
+        Tooltip: ="Submit item"
+        Width: =88
+        X: =Parent.Width - Self.Width
+        ZIndex: =5
+
+    LblAppName2_4 As label:
+        Height: =88
+        Size: =27
+        Text: ="New Entry"
+        Width: =Parent.Width - IconCancel1_4.Width - IconAccept1_4.Width
+        Wrap: =false
+        X: =88
+        ZIndex: =6
 
