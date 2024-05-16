@@ -54,7 +54,7 @@
                 Width: =640
                 ZIndex: =1
 
-                Form10_1 As form:
+                Form_add_SiteProgressReport As form:
                     DataSource: =SiteProgressReports
                     Height: =661
                     Width: =640
@@ -2126,6 +2126,8 @@
         Icon: =Icon.Check
         OnSelect: |-
             =
+            SubmitForm(Form_add_SiteProgressReport);
+            
             ForAll(
                 ColToolsLists,
                 Collect(
