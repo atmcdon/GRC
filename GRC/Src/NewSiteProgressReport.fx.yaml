@@ -1,6 +1,6 @@
 "NewSiteProgressReport As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     OnVisible: |
-        =// This code assumes you are performing this operation on the OnVisible property of a screen or similar event
+        =
         Set(varCurrentReportID,
             LookUp(
                 SiteProgressReports,
@@ -9,19 +9,19 @@
             )
         );
         
-        // Check if varCurrentReportID is blank, which means no existing report was found
+        
         If(
             IsBlank(varCurrentReportID),
-            // Since no existing report was found, create a new one and set varCurrentReportID
+        
             With(
                 {newReport: Patch(
                     SiteProgressReports,
                     Defaults(SiteProgressReports),
                     {SiteID: GlobalSelectedSite2}
                 )},
-                Set(varCurrentReportID, newReport.ReportID)  // Store the new ReportID in varCurrentReportID
+                Set(varCurrentReportID, newReport.ReportID)  
             ),
-            // Optional: Notify the user that an existing report is being used
+           
             Notify("Using existing open report.", NotificationType.Information)
         );
 
@@ -2145,6 +2145,28 @@
                         ReportID: varCurrentReportID,
                         TypeID: TypeID1,
                         TypeIDString: TypeID
+                    }
+                )
+            );
+            ForAll(
+                ColEmployeesAdd,
+                Collect(
+                    SitePeople, 
+                    {
+                        ReportID: varCurrentReportID,
+                        EmployeeID:EmployeeID
+                    }
+                )
+            );
+            
+            ForAll(
+                ColPlantSiteAdd,
+                Collect(
+                    SitePlantsUseds, 
+                    {
+                        ReportID: varCurrentReportID,
+                        PlantID:PlantID
+                        //need to add quantity 
                     }
                 )
             );
