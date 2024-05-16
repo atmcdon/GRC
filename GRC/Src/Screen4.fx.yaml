@@ -648,10 +648,12 @@
                         DevelopmentTypeDropDown As dropdown:
                             Height: =70
                             Items: =DevelopmentTypes
+                            OnSelect: |
+                                =Collect(colSelectedDevType, {DevelopmentType: DevelopmentTypeDropDown.Selected.DevelopmentTypeName, TypeID: DevelopmentTypeDropDown.Selected.TypeID1});
                             Size: =21
                             Width: =575
-                            X: =30
-                            Y: =63
+                            X: =35
+                            Y: =58
                             ZIndex: =5
 
                     ReportID_DataCard9 As typedDataCard.textualEditCard:
@@ -1639,7 +1641,7 @@
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: =ThisItem.DevelopmentType
+            Text: =ThisItem.TypeID
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - Image10_3.Width - 80
             X: =32

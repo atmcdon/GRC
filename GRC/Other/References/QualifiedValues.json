@@ -166,6 +166,13 @@
       }
     },
     {
+      "Kind": "default.cds_cr64e_sitepeople_forms",
+      "Namespace": "SitePeople (Forms)",
+      "Values": {
+        "Information": "bab1d9d6-2db7-4234-9e88-e0a9e068539d"
+      }
+    },
+    {
       "Kind": "default.cds_cr64e_siteassociated_forms",
       "Namespace": "SiteAssociateds (Forms)",
       "Values": {
@@ -233,13 +240,6 @@
       "Namespace": "Site Associated (Forms)",
       "Values": {
         "Information": "cd658c6e-ef37-4bee-8a59-c2c7d44ba092"
-      }
-    },
-    {
-      "Kind": "default.cds_cr64e_sitepeople_forms",
-      "Namespace": "SitePeople (Forms)",
-      "Values": {
-        "Information": "bab1d9d6-2db7-4234-9e88-e0a9e068539d"
       }
     }
   ]
