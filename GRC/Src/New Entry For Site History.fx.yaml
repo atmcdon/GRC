@@ -122,7 +122,7 @@
                 Label16_2 As label:
                     Height: =70
                     Size: =21
-                    Text: =DropDownToolsNewEntry.Selected.ToolID
+                    Text: =DropDownToolsNewEntry_2.Selected.ToolID
                     Width: =302
                     X: =40
                     Y: =138
@@ -149,6 +149,103 @@
             X: =0
             Y: =2
             ZIndex: =3
+
+            ToolAdd_2 As groupContainer.manualLayoutContainer:
+                Height: =501
+                Width: =640
+                ZIndex: =1
+
+                DropDownToolsNewEntry_3 As dropdown:
+                    Height: =70
+                    Items: |-
+                        =AddColumns(DevelopmentTypes, TEST, "IDNUM: " & TypeID & " - " & DevelopmentTypeName)
+                    OnSelect: |
+                        =
+                    Size: =21
+                    Width: =575
+                    X: =40
+                    Y: =40
+                    ZIndex: =1
+
+                "Gallery3_4 As gallery.'BrowseLayout_Flexible_NewsFeed_ver5.0'":
+                    DelayItemLoading: =true
+                    Height: =253
+                    Items: =ColDevelopmentTypes
+                    Layout: =Layout.Vertical
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplatePadding: =0
+                    TemplateSize: =95
+                    Y: =247
+                    ZIndex: =1
+
+                    Title6 As label:
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =Self.Size * 1.8
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Text: =ThisItem.DevelopmentName
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Parent.TemplateWidth - 80
+                        X: =32
+                        Y: =32
+                        ZIndex: =1
+
+                    Body2 As label:
+                        AutoHeight: =true
+                        FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                        Height: =Self.Size * 4
+                        OnSelect: =Select(Parent)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Text: =ThisItem.DevelopmentTypeName
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Title6.Width
+                        X: =32
+                        Y: =Title6.Y + Title6.Height + 8
+                        ZIndex: =2
+
+                    Separator15 As rectangle:
+                        Height: =1
+                        OnSelect: =Select(Parent)
+                        Width: =Parent.TemplateWidth
+                        Y: =Max(Parent.TemplateHeight - 1, Body2.Y + Body2.Height + 10)
+                        ZIndex: =4
+
+                Button10_6 As button:
+                    Height: =70
+                    OnSelect: |
+                        =Collect(ColDevelopmentTypes, {DevlopmentID: DropDownToolsNewEntry_3.Selected.TypeID1, DevelopmentName: DropDownToolsNewEntry_3.Selected.DevelopmentTypeName});
+                    Size: =24
+                    Text: ="Add"
+                    Width: =108
+                    X: =495
+                    Y: =150
+                    ZIndex: =3
+
+                Label16_3 As label:
+                    Height: =70
+                    Size: =21
+                    Text: =DropDownToolsNewEntry_3.Selected.TypeID1
+                    Width: =302
+                    X: =40
+                    Y: =138
+                    ZIndex: =4
+
+                Button10_5 As button:
+                    Height: =70
+                    OnSelect: |
+                        =Clear(ColDevelopmentTypes);
+                    Size: =24
+                    Text: ="Clear"
+                    Width: =108
+                    X: =359
+                    Y: =150
+                    ZIndex: =5
 
         DataCard11 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
