@@ -2144,7 +2144,8 @@
                     Developments, 
                     {
                         ReportID: varCurrentReportID,
-                        TypeID: Value(DevlopmentID)
+                        TypeIDString: TypeID,
+                        TypeID: Value(TypeID)
                     }
                 )
             );
