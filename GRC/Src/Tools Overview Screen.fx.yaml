@@ -1,4 +1,30 @@
 "'Tools Overview Screen' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    OnVisible: |
+        =
+          //          StartTime: LookUp(SiteProgressReports, ReportID = ReportID, TimeStart),
+         //       EndTime: LookUp(SiteProgressReports, ReportID = ReportID, EndTime)
+        ClearCollect(
+            DetailedEmployeeDataAll,
+            ForAll(
+                Distinct(SitePeople, EmployeeID),
+                With(
+                    {CurEmpID: Value}, 
+                    {
+                        EmployeeID: CurEmpID,
+                        SitesVisited: CountRows(
+                            Distinct(
+                                Filter(
+                                    SiteProgressReports,
+                                    ReportID in Filter(SitePeople, EmployeeID = CurEmpID).ReportID
+                                ),
+                                SiteID
+                            )
+                        ),
+                        EmployeeName: LookUp(Employees, EmployeeID = CurEmpID, FirstName)
+                    }
+                )
+            )
+        );
 
     RectQuickActionBar6_1 As rectangle:
         Fill: =RGBA(127, 178, 57, 1)
@@ -36,7 +62,7 @@
                 DelayItemLoading: =true
                 Fill: =RGBA(174, 230, 115, 0.22)
                 Height: =439
-                Items: =ToolLists
+                Items: =ToolsLists
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
@@ -54,7 +80,7 @@
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Text: =ThisItem.ToolName
+                    Text: =ThisItem.ToolID
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Parent.TemplateWidth - 86
                     X: =16
@@ -69,7 +95,7 @@
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Text: =ThisItem.IDnum
+                    Text: =ThisItem.ToolName
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Title11_1.Width
                     X: =Title11_1.X
@@ -84,7 +110,7 @@
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Text: =ThisItem.RecentlyUsedAt
+                    Text: =ThisItem.ToolSN
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Title11_1.Width
                     X: =Title11_1.X
