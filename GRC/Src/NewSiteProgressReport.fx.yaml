@@ -2266,15 +2266,71 @@
         Icon: =Icon.Check
         OnSelect: |+
             =
-            SubmitForm(Form_add_SiteProgressReport);
+            //SubmitForm(Form_add_SiteProgressReport);
             
             ClearCollect(colProgressTime, {TimeStarted: StartTimeDate.SelectedDate + Time(Value(StarTimeHr.Selected.Value), Value(StartTimeMin.Selected.Value),0), TimeEnded: EndTimeDate.SelectedDate + Time(Value(EndTimeHr.Selected.Value), Value(EndTimeMin.Selected.Value),0), GeneralNotes: GeneralNotesAdd.Text});
             
-            
+            ForAll(
+                colProgressTime,
+                Patch(
+                    SiteProgressReports,
+                    LookUp(SiteProgressReports, ReportID = varCurrentReportID),
+                    {
+                        TimeStart: TimeStarted,
+                        EndTime: TimeEnded
+                    }
+                )
+            );
             
             //ClearCollect(colProgressTime, {TimeStart: TimeStart_DataCardCurr.DataField});
             
+            ForAll(
+                ColToolsLists,
+                Collect(
+                    SiteToolsUseds, 
+                    {
+                        ReportID: varCurrentReportID,
+                        ToolIDString: ToolID,
+                        ToolID: Value(ToolID)
+                    }
+                )
+            );
+            ForAll(
+                ColDevelopmentTypes,
+                Collect(
+                    Developments, 
+                    {
+                        ReportID: varCurrentReportID,
+                        TypeIDString: TypeID,
+                        TypeID: Value(TypeID)
+                    }
+                )
+            );
+            ForAll(
+                ColEmployeesAdd,
+                Collect(
+                    SitePeople, 
+                    {
+                        ReportID: varCurrentReportID,
+                        EmployeeID:EmployeeID
+                    }
+                )
+            );
             
+            ForAll(
+                ColPlantSiteAdd,
+                Collect(
+                    SitePlantsUseds, 
+                    {
+                        ReportID: varCurrentReportID,
+                        PlantID:PlantID,
+                        PlantIDStr:PlantID,
+                        PlantQtyUsed: PlantQty
+                    }
+                )
+            );
+            
+            //Navigate('Main DashboardV2')
             
             
             
