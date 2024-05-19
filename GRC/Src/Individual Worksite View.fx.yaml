@@ -166,6 +166,7 @@
         BorderThickness: =0
         Height: =Parent.Height - Self.Y
         Width: =Parent.Width
+        Y: =
         ZIndex: =3
 
         DataCard1_1 As dataCard:
@@ -1012,6 +1013,9 @@
                 Y: =36
                 ZIndex: =6
 
-    Header_3 As Header:
-        ZIndex: =4
+    HeaderArea_3 As rectangle:
+        Fill: =RGBA(146, 201, 68, 1)
+        Width: =Parent.Width
+        Y: =HeaderArea_3
+        ZIndex: =5
 

@@ -320,6 +320,7 @@
                     ZIndex: =3
 
                 Button3_1 As button:
+                    Fill: =RGBA(130, 110, 94, 1)
                     OnSelect: |+
                         =Navigate(NewSiteProgressReport, ScreenTransition.Cover, {GlobalSelectedSite: GlobalSelectedSite2});
                         Notify("Navigating to New Entry with Site: " & GlobalSelectedSite2)
@@ -374,7 +375,7 @@
                     ZIndex: =8
 
                 Button5_4 As button:
-                    Fill: =RGBA(187, 221, 140, 1)
+                    Fill: =RGBA(99, 139, 44, 1)
                     Height: =49
                     OnSelect: =Navigate(ImageView, ScreenTransition.Cover)
                     Size: =24
@@ -385,7 +386,7 @@
                     ZIndex: =9
 
                 Button5_2 As button:
-                    Fill: =RGBA(187, 221, 140, 1)
+                    Fill: =RGBA(99, 139, 44, 1)
                     Height: =50
                     Size: =24
                     Text: ="Plant Map"
@@ -468,7 +469,7 @@
                     ZIndex: =17
 
                 Button5_5 As button:
-                    Fill: =RGBA(187, 221, 140, 1)
+                    Fill: =RGBA(99, 139, 44, 1)
                     Height: =49
                     Size: =24
                     Text: ="Notes"
@@ -760,7 +761,7 @@
                 ZIndex: =2
 
             Button2_1 As button:
-                Fill: =RGBA(127, 178, 57, 1)
+                Fill: =RGBA(130, 110, 94, 1)
                 Height: =45
                 OnSelect: |+
                     =Navigate(UploadRecording, ScreenTransition.Cover, {GlobalSelectedSite: GlobalSelectedSite})
@@ -779,7 +780,7 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =359
+            Height: =580
             Width: =640
             X: =0
             Y: =2
@@ -850,6 +851,7 @@
                 ZIndex: =2
 
             Icon7_4 As icon.Edit:
+                Color: =RGBA(130, 110, 94, 1)
                 Height: =42
                 Icon: =Icon.Edit
                 OnSelect: |-
@@ -859,12 +861,54 @@
                 Y: =14
                 ZIndex: =3
 
+            "'Plant table extension' As dataTable.datatable":
+                BorderStyle: =BorderStyle.Solid
+                DisplayMode: =DisplayMode.Edit
+                Fill: =RGBA(0, 0, 0, 0)
+                HeadingFill: =RGBA(99, 139, 44, 1)
+                HeadingSize: =15
+                Height: =225
+                Items: =DetailedPlantData
+                Size: =15
+                Width: =550
+                X: =40
+                Y: =359
+                ZIndex: =4
+
+                Plants_Column1_1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Plants"
+                    FieldName: ="Plants"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =1
+                    Text: =ThisItem.Plants
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =54
+
+                ReportID_Column1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="ReportID"
+                    FieldName: ="ReportID"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =2
+                    Text: =ThisItem.ReportID
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =57
+
         "'Tools Data Card_1' As dataCard.blankCard":
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =381
+            Height: =743
             Width: =640
             X: =0
             Y: =3
@@ -937,6 +981,7 @@
                 ZIndex: =2
 
             Icon7_5 As icon.Edit:
+                Color: =RGBA(130, 110, 94, 1)
                 Height: =42
                 Icon: =Icon.Edit
                 OnSelect: |-
@@ -945,6 +990,50 @@
                 X: =540
                 Y: =14
                 ZIndex: =3
+
+            "'Tools table_2' As dataTable.datatable":
+                BorderColor: =RGBA(202, 202, 202, 1)
+                BorderStyle: =BorderStyle.Solid
+                BorderThickness: =1
+                DisplayMode: =DisplayMode.Edit
+                Fill: =RGBA(0, 0, 0, 0)
+                HeadingFill: =RGBA(99, 139, 44, 1)
+                HeadingSize: =15
+                Height: =300
+                Items: =DetailedToolsData
+                Size: =15
+                Width: =550
+                X: =40
+                Y: =407
+                ZIndex: =4
+
+                ToolName_Column3_1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="ToolName"
+                    FieldName: ="ToolName"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =1
+                    Text: =ThisItem.ToolName
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =48
+
+                ReportID_Column2 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="ReportID"
+                    FieldName: ="ReportID"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =2
+                    Text: =ThisItem.ReportID
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =58
 
         "'People Data Card_1' As dataCard.blankCard":
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -975,7 +1064,7 @@
 
                 Worker_Column1 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Worker"
+                    FieldDisplayName: ="Name"
                     FieldName: ="Worker"
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
@@ -1018,7 +1107,7 @@
             Label10_1 As label:
                 Height: =70
                 Size: =21
-                Text: ="Hourly Workers at " & GlobalSelectedSite
+                Text: ="Employees at" & GlobalSelectedSite
                 Width: =560
                 X: =40
                 Y: =22
@@ -1035,6 +1124,7 @@
                 ZIndex: =5
 
             Icon7_6 As icon.Edit:
+                Color: =RGBA(130, 110, 94, 1)
                 Height: =42
                 Icon: =Icon.Edit
                 OnSelect: |-
@@ -1044,12 +1134,57 @@
                 Y: =36
                 ZIndex: =6
 
+            "'Worker table_2' As dataTable.datatable":
+                BorderColor: =RGBA(219, 219, 219, 1)
+                BorderStyle: =BorderStyle.Solid
+                BorderThickness: =1
+                DisplayMode: =DisplayMode.Edit
+                Fill: =RGBA(0, 0, 0, 0)
+                HeadingFill: =RGBA(99, 139, 44, 1)
+                HeadingSize: =15
+                Height: =300
+                Items: =DetailedEmployeeData
+                Size: =15
+                Width: =550
+                X: =40
+                Y: =427
+                ZIndex: =7
+
+                Worker_Column1_1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Name"
+                    FieldName: ="Worker"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =1
+                    Text: =ThisItem.Worker
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =51
+
+                ReportID_Column3 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="ReportID"
+                    FieldName: ="ReportID"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =2
+                    Text: =ThisItem.ReportID
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =59
+
     HeaderArea_1 As rectangle:
-        Fill: =RGBA(187, 221, 140, 1)
+        Fill: =RGBA(99, 139, 44, 1)
         Width: =Parent.Width
         ZIndex: =5
 
     "'Header Label_1' As label":
+        Color: =RGBA(255, 255, 255, 1)
         Height: =70
         Size: =21
         Text: ="Green River Coalition "

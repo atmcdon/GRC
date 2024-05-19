@@ -2,7 +2,7 @@
     OnVisible: =NewForm(EditForm1)
 
     RectQuickActionBar2 As rectangle:
-        Fill: =RGBA(127, 178, 57, 1)
+        Fill: =RGBA(179, 141, 118, 1)
         Height: =88
         Width: =Parent.Width
         ZIndex: =1
@@ -53,6 +53,7 @@
         ZIndex: =5
 
         SiteID_DataCard1 As typedDataCard.textualEditCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="cr64e_siteid"
             Default: =ThisItem.SiteID
@@ -70,6 +71,7 @@
 
             DataCardKey1 As label:
                 AutoHeight: =true
+                Color: =RGBA(51, 51, 51, 1)
                 Height: =48
                 Size: =21
                 Text: =Parent.DisplayName
@@ -141,6 +143,7 @@
 
             DataCardKey30 As label:
                 AutoHeight: =true
+                Color: =RGBA(51, 51, 51, 1)
                 Height: =48
                 Size: =21
                 Text: =Parent.DisplayName
@@ -164,6 +167,7 @@
                 ZIndex: =2
 
         TimeStart_DataCard1 As typedDataCard.dateTimeEditCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="cr64e_timestart"
             Default: =ThisItem.TimeStart
@@ -180,6 +184,7 @@
 
             DataCardKey31 As label:
                 AutoHeight: =true
+                Color: =RGBA(51, 51, 51, 1)
                 Height: =48
                 Size: =21
                 Text: =Parent.DisplayName
@@ -194,12 +199,15 @@
                 DefaultDate: =Parent.Default
                 DisplayMode: =Parent.DisplayMode
                 EndYear: =Year(Today())+100
+                Fill: =RGBA(0, 0, 0, 0)
                 Height: =70
+                IconBackground: =RGBA(179, 141, 118, 100)
+                IconFill: =RGBA(255,255,255,1)
                 IsEditable: =true
                 PaddingBottom: =0
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 Size: =24
-                StartYear: =1899
+                StartYear: =2000
                 Tooltip: =Parent.DisplayName
                 Width: =(Parent.Width - 60) / 2
                 X: =30
@@ -208,6 +216,7 @@
 
             HourValue13 As dropdown:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =RGBA(179, 141, 118, 1)
                 Default: =Text(Hour(Parent.Default),"00")
                 DisplayMode: =Parent.DisplayMode
                 Height: =DateValue13.Height
@@ -242,6 +251,7 @@
 
             MinuteValue13 As dropdown:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =RGBA(179, 141, 118, 1)
                 Default: =Text(Minute(Parent.Default),"00")
                 DisplayMode: =Parent.DisplayMode
                 Height: =HourValue13.Height
@@ -285,6 +295,7 @@
                 ZIndex: =7
 
         EndTime_DataCard1 As typedDataCard.dateTimeEditCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="cr64e_endtime"
             Default: =ThisItem.EndTime
@@ -301,6 +312,7 @@
 
             DataCardKey32 As label:
                 AutoHeight: =true
+                Color: =RGBA(51, 51, 51, 1)
                 Height: =48
                 Size: =21
                 Text: =Parent.DisplayName
@@ -316,6 +328,7 @@
                 DisplayMode: =Parent.DisplayMode
                 EndYear: =Year(Today())+100
                 Height: =70
+                IconBackground: =RGBA(179,141, 118,100)
                 IsEditable: =true
                 PaddingBottom: =0
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
@@ -329,6 +342,7 @@
 
             HourValue14 As dropdown:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =RGBA(179, 141, 118, 1)
                 Default: =Text(Hour(Parent.Default),"00")
                 DisplayMode: =Parent.DisplayMode
                 Height: =DateValue14.Height
@@ -363,6 +377,7 @@
 
             MinuteValue14 As dropdown:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =RGBA(179, 141, 118, 1)
                 Default: =Text(Minute(Parent.Default),"00")
                 DisplayMode: =Parent.DisplayMode
                 Height: =HourValue14.Height
@@ -421,6 +436,7 @@
 
             DataCardKey33 As label:
                 AutoHeight: =true
+                Color: =RGBA(51, 51, 51, 1)
                 Height: =48
                 Size: =21
                 Text: =Parent.DisplayName
@@ -444,6 +460,7 @@
                 ZIndex: =2
 
         GeneralNotes_DataCard1 As typedDataCard.textualMultiLineEditCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="cr64e_generalnotes"
             Default: =ThisItem.GeneralNotes
@@ -460,6 +477,7 @@
 
             DataCardKey34 As label:
                 AutoHeight: =true
+                Color: =RGBA(51, 51, 51, 1)
                 Height: =48
                 Size: =21
                 Text: =Parent.DisplayName
