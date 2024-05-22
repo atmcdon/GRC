@@ -121,7 +121,7 @@
     "ShowStatusBar": false
   },
   "PublishInfo": {
-    "AppName": "b36ea1dd-b44b-4881-be2c-0d7006338f23",
+    "AppName": "App GRC",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
@@ -139,6 +139,7 @@
     "ImageView",
     "UploadRecording",
     "Make Site",
+    "Make SiteV2",
     "LoginPage",
     "New Worksite Entry",
     "New Entry Editing Form",
@@ -164,6 +165,7 @@
     "New Entry V3",
     "NewSiteProgressReport",
     "Screen4_1",
-    "Screen1"
+    "Screen1",
+    "Make Site V3"
   ]
 }

@@ -1,0 +1,126 @@
+"'Make SiteV2' As screen":
+
+    Container3_2 As groupContainer.manualLayoutContainer:
+        Height: =1014
+        Width: =576
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+        Button4_2 As button:
+            Height: =56
+            OnSelect: |-
+                =Patch(
+                    Sites, 
+                    Defaults(Sites), 
+                    {
+                        SiteMainImage: UploadImageRecording_2.Image,
+                        'Site name': "Green River Gorge",
+                        'Plant Inventory': 600,
+                        SiteLocation: "Auburn",
+                        LandOwner: "Green River"
+                    }
+                )
+            Size: =24
+            Text: ="Upload"
+            Width: =161
+            X: =400
+            Y: =155
+            ZIndex: =1
+
+        AddMediaWithImage2_2 As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =40
+            ZIndex: =2
+
+            UploadImageRecording_2 As image:
+                Height: =207
+                Image: =If(IsBlank(AddMediaButton2_2.Media), SampleImage, AddMediaButton2_2.Media)
+                ImagePosition: =ImagePosition.Fill
+                Width: =372
+                X: =AddMediaButton2_2.X
+                Y: =AddMediaButton2_2.Y
+                ZIndex: =3
+
+            AddMediaButton2_2 As addMedia:
+                Height: =207
+                Size: =25
+                Width: =372
+                X: =16
+                Y: =155
+                ZIndex: =4
+
+        SiteName As text:
+            Clear: =true
+            Default: =""
+            EnableSpellCheck: =true
+            Height: =53
+            HintText: ="River View"
+            Mode: =TextMode.MultiLine
+            Size: =21
+            Width: =545
+            X: =16
+            Y: =490
+            ZIndex: =5
+
+        Label4_2 As label:
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =70
+            Size: =21
+            Text: ="Creating New Site"
+            Width: =560
+            X: =16
+            Y: =40
+            ZIndex: =6
+
+        Image3_2 As image:
+            Height: =133
+            Image: =UploadImageRecording_2.Image
+            Width: =176
+            X: =400
+            Y: =244
+            ZIndex: =7
+
+        Label4_3 As label:
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =70
+            Size: =21
+            Text: ="Site Name"
+            Width: =560
+            X: =8
+            Y: =398
+            ZIndex: =8
+
+        SiteName_1 As text:
+            Clear: =true
+            Default: =""
+            EnableSpellCheck: =true
+            Height: =53
+            HintText: ="123 A ST Tacoma, Wa, 98403 "
+            Mode: =TextMode.MultiLine
+            Size: =21
+            Width: =545
+            X: =16
+            Y: =663
+            ZIndex: =9
+
+        Label4_4 As label:
+            Fill: =RGBA(209, 232, 178, 1)
+            Height: =70
+            Size: =21
+            Text: ="Site Address - Location"
+            Width: =560
+            X: =8
+            Y: =571
+            ZIndex: =10
+
+    Icon1_4 As icon.ArrowLeft:
+        Icon: =Icon.ArrowLeft
+        OnSelect: |
+            =Navigate('Main DashboardV2', ScreenTransition.UnCover)
+        X: =20
+        Y: =15
+        ZIndex: =2
+
