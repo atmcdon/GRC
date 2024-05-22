@@ -14333,19 +14333,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard6.Container3_3.SiteName_2.AccessibleLabel"
+                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard6.Container3_3.SiteNamev3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard6.Container3_3.SiteName_2.AccessibleLabel",
+                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard6.Container3_3.SiteNamev3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Make Site V3",
-                "type": "'Make Site V3'.Canvas3.DataCard6.Container3_3.SiteName_2"
+                "type": "'Make Site V3'.Canvas3.DataCard6.Container3_3.SiteNamev3"
               }
             }
           ],
@@ -14363,19 +14363,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard6.Container3_3.SiteName_3.AccessibleLabel"
+                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard6.Container3_3.'Site Address'.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard6.Container3_3.SiteName_3.AccessibleLabel",
+                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard6.Container3_3.'Site Address'.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Make Site V3",
-                "type": "'Make Site V3'.Canvas3.DataCard6.Container3_3.SiteName_3"
+                "type": "'Make Site V3'.Canvas3.DataCard6.Container3_3.'Site Address'"
               }
             }
           ],
@@ -14453,19 +14453,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard8.Container3_4.SiteOwnerName.AccessibleLabel"
+                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard8.Container3_4.SiteOwnerNameFirst.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard8.Container3_4.SiteOwnerName.AccessibleLabel",
+                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard8.Container3_4.SiteOwnerNameFirst.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Make Site V3",
-                "type": "'Make Site V3'.Canvas3.DataCard8.Container3_4.SiteOwnerName"
+                "type": "'Make Site V3'.Canvas3.DataCard8.Container3_4.SiteOwnerNameFirst"
               }
             }
           ],
@@ -14483,19 +14483,139 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard8.Container3_4.SiteName_5.AccessibleLabel"
+                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard8.Container3_4.'company name'.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard8.Container3_4.SiteName_5.AccessibleLabel",
+                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard8.Container3_4.'company name'.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Make Site V3",
-                "type": "'Make Site V3'.Canvas3.DataCard8.Container3_4.SiteName_5"
+                "type": "'Make Site V3'.Canvas3.DataCard8.Container3_4.'company name'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard8.Container3_4.SiteOwnerNameLAst.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard8.Container3_4.SiteOwnerNameLAst.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Make Site V3",
+                "type": "'Make Site V3'.Canvas3.DataCard8.Container3_4.SiteOwnerNameLAst"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard8.Container3_4.emailaddresscompany.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard8.Container3_4.emailaddresscompany.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Make Site V3",
+                "type": "'Make Site V3'.Canvas3.DataCard8.Container3_4.emailaddresscompany"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard8.Container3_4.'phone numberowner'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard8.Container3_4.'phone numberowner'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Make Site V3",
+                "type": "'Make Site V3'.Canvas3.DataCard8.Container3_4.'phone numberowner'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard8.Container3_4.companyaddressheadquart.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Make Site V3'.Canvas3.DataCard8.Container3_4.companyaddressheadquart.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Make Site V3",
+                "type": "'Make Site V3'.Canvas3.DataCard8.Container3_4.companyaddressheadquart"
               }
             }
           ],

@@ -9,7 +9,7 @@
         Align: =Align.Center
         Height: =88
         Size: =27
-        Text: ="[Title]"
+        Text: ="New Site"
         Width: =Parent.Width
         ZIndex: =2
 
@@ -38,27 +38,6 @@
                 X: =24
                 ZIndex: =1
 
-                Button4_3 As button:
-                    Height: =56
-                    OnSelect: |-
-                        =Patch(
-                            Sites, 
-                            Defaults(Sites), 
-                            {
-                                SiteMainImage: UploadImageRecording_3.Image,
-                                'Site name': "Green River Gorge",
-                                'Plant Inventory': 600,
-                                SiteLocation: "Auburn",
-                                LandOwner: "Green River"
-                            }
-                        )
-                    Size: =24
-                    Text: ="Upload"
-                    Width: =161
-                    X: =400
-                    Y: =155
-                    ZIndex: =1
-
                 AddMediaWithImage2_3 As group:
                     Height: =5
                     Width: =5
@@ -83,7 +62,7 @@
                         Y: =285
                         ZIndex: =4
 
-                SiteName_2 As text:
+                SiteNamev3 As text:
                     Clear: =true
                     Default: =""
                     EnableSpellCheck: =true
@@ -124,7 +103,7 @@
                     Y: =559
                     ZIndex: =8
 
-                SiteName_3 As text:
+                "'Site Address' As text":
                     Clear: =true
                     Default: =""
                     EnableSpellCheck: =true
@@ -157,34 +136,55 @@
                     Y: =199
                     ZIndex: =11
 
+                Button4_4 As button:
+                    Height: =56
+                    OnSelect: |-
+                        =Patch(
+                            Sites, 
+                            Defaults(Sites), 
+                            {
+                                SiteMainImage: UploadImageRecording_2.Image,
+                                'Site name': "Green River Gorge",
+                                'Plant Inventory': 600,
+                                SiteLocation: "Auburn",
+                                LandOwner: "Green River"
+                            }
+                        )
+                    Size: =24
+                    Text: ="Upload"
+                    Width: =161
+                    X: =415
+                    Y: =285
+                    ZIndex: =12
+
         DataCard8 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =29
+            Height: =1267
             Width: =640
             X: =0
             Y: =1
             ZIndex: =2
 
             Container3_4 As groupContainer.manualLayoutContainer:
-                Height: =1006
+                Height: =1247
                 Width: =594
                 X: =20
                 Y: =4
                 ZIndex: =1
 
-                SiteOwnerName As text:
+                SiteOwnerNameFirst As text:
                     Clear: =true
                     Default: =""
                     EnableSpellCheck: =true
                     Height: =53
-                    HintText: ="River View"
+                    HintText: ="Hally"
                     Mode: =TextMode.MultiLine
                     Size: =21
-                    Width: =545
-                    X: =16
+                    Width: =344
+                    X: =215
                     Y: =252
                     ZIndex: =5
 
@@ -202,13 +202,115 @@
                     Fill: =RGBA(209, 232, 178, 1)
                     Height: =70
                     Size: =21
-                    Text: ="Site Name"
+                    Text: ="Owner Name"
                     Width: =560
                     X: =16
                     Y: =161
                     ZIndex: =8
 
-                SiteName_5 As text:
+                "'company name' As text":
+                    Clear: =true
+                    Default: =""
+                    EnableSpellCheck: =true
+                    Height: =53
+                    HintText: ="Lowes"
+                    Mode: =TextMode.MultiLine
+                    Size: =21
+                    Width: =545
+                    X: =23
+                    Y: =535
+                    ZIndex: =9
+
+                Label4_11 As label:
+                    Fill: =RGBA(209, 232, 178, 1)
+                    Height: =70
+                    Size: =21
+                    Text: ="Company Name"
+                    Width: =560
+                    X: =9
+                    Y: =432
+                    ZIndex: =10
+
+                Label4_12 As label:
+                    Fill: =RGBA(209, 232, 178, 1)
+                    Height: =70
+                    Size: =21
+                    Text: ="First Name"
+                    Width: =180
+                    X: =16
+                    Y: =243
+                    ZIndex: =11
+
+                SiteOwnerNameLAst As text:
+                    Clear: =true
+                    Default: =""
+                    EnableSpellCheck: =true
+                    Height: =53
+                    HintText: ="Edgar"
+                    Mode: =TextMode.MultiLine
+                    Size: =21
+                    Width: =344
+                    X: =215
+                    Y: =344
+                    ZIndex: =12
+
+                Label4_13 As label:
+                    Fill: =RGBA(209, 232, 178, 1)
+                    Height: =70
+                    Size: =21
+                    Text: ="Last Name"
+                    Width: =180
+                    X: =16
+                    Y: =335
+                    ZIndex: =13
+
+                emailaddresscompany As text:
+                    Clear: =true
+                    Default: =""
+                    EnableSpellCheck: =true
+                    Height: =53
+                    HintText: ="hallye@lowes.com"
+                    Mode: =TextMode.MultiLine
+                    Size: =21
+                    Width: =545
+                    X: =29
+                    Y: =898
+                    ZIndex: =14
+
+                Label4_14 As label:
+                    Fill: =RGBA(209, 232, 178, 1)
+                    Height: =70
+                    Size: =21
+                    Text: ="Email Address"
+                    Width: =560
+                    X: =15
+                    Y: =795
+                    ZIndex: =15
+
+                "'phone numberowner' As text":
+                    Clear: =true
+                    Default: =""
+                    EnableSpellCheck: =true
+                    Height: =53
+                    HintText: ="253-555-5555"
+                    Mode: =TextMode.MultiLine
+                    Size: =21
+                    Width: =545
+                    X: =23
+                    Y: =724
+                    ZIndex: =16
+
+                Label4_15 As label:
+                    Fill: =RGBA(209, 232, 178, 1)
+                    Height: =70
+                    Size: =21
+                    Text: ="Phone Number"
+                    Width: =560
+                    X: =9
+                    Y: =621
+                    ZIndex: =17
+
+                companyaddressheadquart As text:
                     Clear: =true
                     Default: =""
                     EnableSpellCheck: =true
@@ -217,19 +319,19 @@
                     Mode: =TextMode.MultiLine
                     Size: =21
                     Width: =545
-                    X: =24
-                    Y: =824
-                    ZIndex: =9
+                    X: =30
+                    Y: =1083
+                    ZIndex: =18
 
-                Label4_11 As label:
+                Label4_16 As label:
                     Fill: =RGBA(209, 232, 178, 1)
                     Height: =70
                     Size: =21
-                    Text: ="Site Address - Location"
+                    Text: ="Site Owner Headquarters"
                     Width: =560
                     X: =16
-                    Y: =732
-                    ZIndex: =10
+                    Y: =980
+                    ZIndex: =19
 
         DataCard12 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -249,4 +351,26 @@
         X: =40
         Y: =15
         ZIndex: =4
+
+    Button4_3 As button:
+        Fill: =RGBA(102, 182, 227, 1)
+        Height: =56
+        OnSelect: |-
+            =Patch(
+                Sites, 
+                Defaults(Sites), 
+                {
+                    SiteMainImage: UploadImageRecording_2.Image,
+                    'Site name': "Green River Gorge",
+                    'Plant Inventory': 600,
+                    SiteLocation: "Auburn",
+                    LandOwner: "Green River"
+                }
+            )
+        Size: =24
+        Text: ="Create"
+        Width: =161
+        X: =458
+        Y: =15
+        ZIndex: =5
 

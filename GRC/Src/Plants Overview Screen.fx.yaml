@@ -198,7 +198,7 @@
                     Order: =3
                     Text: =ThisItem.Vendor
                     Width: =290
-                    X: =0
+                    X: =288
                     Y: =12
                     ZIndex: =9
 
