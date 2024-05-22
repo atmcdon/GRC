@@ -139,15 +139,13 @@
                 Button4_4 As button:
                     Height: =56
                     OnSelect: |-
-                        =Patch(
-                            Sites, 
-                            Defaults(Sites), 
+                        =
+                        
+                        Patch(
+                            Images, 
+                            Defaults(Images), 
                             {
-                                SiteMainImage: UploadImageRecording_2.Image,
-                                'Site name': "Green River Gorge",
-                                'Plant Inventory': 600,
-                                SiteLocation: "Auburn",
-                                LandOwner: "Green River"
+                                Image: UploadImageRecording_3.Image
                             }
                         )
                     Size: =24
@@ -355,18 +353,38 @@
     Button4_3 As button:
         Fill: =RGBA(102, 182, 227, 1)
         Height: =56
-        OnSelect: |-
+        OnSelect: |
             =Patch(
-                Sites, 
-                Defaults(Sites), 
+                Images, 
+                Defaults(Images), 
                 {
-                    SiteMainImage: UploadImageRecording_2.Image,
-                    'Site name': "Green River Gorge",
-                    'Plant Inventory': 600,
-                    SiteLocation: "Auburn",
-                    LandOwner: "Green River"
+                    Image: UploadImageRecording_3.Image
                 }
-            )
+            );
+            
+            Patch(
+                SitesParents, 
+                Defaults(SitesParents), 
+                {
+                    SiteName: SiteNamev3,
+                    SiteLocation: 'Site Address'
+                }
+            );
+            Set(
+                NewSiteOwner,
+                Patch(
+                    SiteOwners,
+                    Defaults(SiteOwners),
+                    {
+                        FirstName: SiteOwnerNameFirst.Text,
+                        LastName: SiteOwnerNameLAst.Text,
+                        Company: 'company name',
+                        PhoneNumber: 'phone numberowner',
+                        Email: emailaddresscompany.Text,
+                        Address: companyaddressheadquart.Text
+                    }
+                )
+            );
         Size: =24
         Text: ="Create"
         Width: =161
