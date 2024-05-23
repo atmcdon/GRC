@@ -5,6 +5,7 @@
         
         Set(varSiteOwnerID, LookUp(SitesParents, SiteID = GlobalSelectedSite2, SiteOwnerID));
         
+        Set(varSiteImageID, LookUp(SitesParents, SiteID = GlobalSelectedSite2, SiteImageID));
         
         
         //-------------------------------------------------------------------------------------------

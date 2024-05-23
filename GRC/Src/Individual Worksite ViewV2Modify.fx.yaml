@@ -344,12 +344,38 @@
                 Button3_2 As button:
                     Fill: =RGBA(130, 110, 94, 1)
                     Height: =61
-                    OnSelect: |+
-                        =Navigate(NewSiteProgressReport, ScreenTransition.Cover, {GlobalSelectedSite: GlobalSelectedSite2});
-                        Notify("Navigating to New Entry with Site: " & GlobalSelectedSite2)
+                    OnSelect: |-
+                        =If(
+                            IsBlank(ModSiteLoacation),
+                            Patch(SitesParents,
+                            LookUp(SitesParents, SiteID = ThisRecord.SiteID),
+                                {
+                                    SiteLocation: ModSiteLoacation.Text
                         
+                                }
+                            )
+                        );
+                        If(
+                            IsBlank(ModSIteOwnerName),
+                            Patch(SiteOwners,
+                            LookUp(SiteOwners, SiteOwnerID = varSiteOwnerID ),
+                                {
+                                    SiteOwnerID: ModSIteOwnerName.Text
                         
+                                }
+                            )
+                        );
                         
+                        If(
+                            !IsBlank(UploadImageRecording_4.Image),
+                            Patch(
+                                Images,
+                                LookUp(Images, ImageID = varSiteImageID),
+                                {
+                                    Image: UploadImageRecording_4.Image
+                                }
+                            )
+                        )
                     Size: =12
                     Text: ="Done Editing"
                     Width: =262
@@ -811,8 +837,8 @@
                     Size: =24
                     Text: ="Delete"
                     Width: =120
-                    X: =474
-                    Y: =165
+                    X: =423
+                    Y: =166
                     ZIndex: =11
 
                 Button12_2 As button:
@@ -829,8 +855,8 @@
                     Size: =24
                     Text: ="Edit"
                     Width: =120
-                    X: =474
-                    Y: =215
+                    X: =423
+                    Y: =216
                     ZIndex: =12
 
             Label3_2 As label:
