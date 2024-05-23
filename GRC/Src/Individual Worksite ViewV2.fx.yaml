@@ -1,7 +1,7 @@
 "'Individual Worksite ViewV2' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     OnVisible: |+
         =
-        Set(GlobalSelectedSite2, "0001");
+        //Set(GlobalSelectedSite2, "0001");
         
         Set(varSiteOwnerID, LookUp(SitesParents, SiteID = GlobalSelectedSite2, SiteOwnerID));
         
@@ -163,7 +163,8 @@
                         Employees: Concat(
                             Filter(EmployeeNamesForReports, ReportID = currentReportID),
                             FullName & ", "
-                        )
+                        ),
+                        Images: LookUp(Images, ImageID = LookUp(SiteImages, ReportID = currentReportID), Image)
                     }
                 )
             )
@@ -764,12 +765,12 @@
                 Fill: =RGBA(130, 110, 94, 1)
                 Height: =45
                 OnSelect: |+
-                    =Navigate(UploadRecording, ScreenTransition.Cover, {GlobalSelectedSite: GlobalSelectedSite})
+                    =Navigate(UploadImages, ScreenTransition.Cover, {GlobalSelectedSite: GlobalSelectedSite})
                     
                     
                     
                 Size: =14
-                Text: ="Add Entry"
+                Text: ="Add Photo"
                 Width: =172
                 X: =428
                 Y: =24

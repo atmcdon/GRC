@@ -99,7 +99,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 133,
+    "BindingErrorCount": 123,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "Phone",
@@ -137,7 +137,7 @@
     "Individual Worksite View",
     "Individual Worksite ViewV2",
     "ImageView",
-    "UploadRecording",
+    "UploadImages",
     "Make Site",
     "Make SiteV2",
     "LoginPage",
