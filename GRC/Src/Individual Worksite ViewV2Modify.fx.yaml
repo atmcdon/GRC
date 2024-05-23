@@ -351,11 +351,13 @@
                             
                         )
                     Width: =594
-                    Y: =308
-                    ZIndex: =3
+                    X: =27
+                    Y: =306
+                    ZIndex: =2
 
                 Button3_2 As button:
                     Fill: =RGBA(130, 110, 94, 1)
+                    Height: =61
                     OnSelect: |+
                         =Navigate(NewSiteProgressReport, ScreenTransition.Cover, {GlobalSelectedSite: GlobalSelectedSite2});
                         Notify("Navigating to New Entry with Site: " & GlobalSelectedSite2)
@@ -363,11 +365,11 @@
                         
                         
                     Size: =12
-                    Text: ="New Entry"
-                    Width: =111
-                    X: =461
-                    Y: =17
-                    ZIndex: =4
+                    Text: ="Done Editing"
+                    Width: =262
+                    X: =312
+                    Y: =15
+                    ZIndex: =3
 
                 Label2_4 As label:
                     Height: =59
@@ -377,7 +379,7 @@
                     Width: =218
                     X: =328
                     Y: =963
-                    ZIndex: =5
+                    ZIndex: =4
 
                 Label2_5 As label:
                     Height: =48
@@ -387,7 +389,7 @@
                     Width: =218
                     X: =330
                     Y: =1023
-                    ZIndex: =6
+                    ZIndex: =5
 
                 Label5_4 As label:
                     Color: =RGBA(203, 102, 102, 1)
@@ -397,7 +399,7 @@
                     Width: =88
                     X: =506
                     Y: =957
-                    ZIndex: =7
+                    ZIndex: =6
 
                 Label5_5 As label:
                     Color: =RGBA(127, 178, 57, 1)
@@ -407,7 +409,7 @@
                     Width: =88
                     X: =506
                     Y: =1012
-                    ZIndex: =8
+                    ZIndex: =7
 
                 Button5_7 As button:
                     Fill: =RGBA(99, 139, 44, 1)
@@ -418,7 +420,7 @@
                     Width: =134
                     X: =32
                     Y: =1127
-                    ZIndex: =9
+                    ZIndex: =8
 
                 Button5_6 As button:
                     Fill: =RGBA(99, 139, 44, 1)
@@ -428,7 +430,7 @@
                     Width: =178
                     X: =387
                     Y: =1126
-                    ZIndex: =10
+                    ZIndex: =9
 
                 Label6_20 As label:
                     Color: =RGBA(99, 139, 44, 1)
@@ -442,19 +444,7 @@
                     Width: =255
                     X: =27
                     Y: =87
-                    ZIndex: =12
-
-                Label6_24 As label:
-                    Color: =RGBA(99, 139, 44, 1)
-                    Fill: =RGBA(232, 244, 217, 1)
-                    Height: =49
-                    Size: =14
-                    Text: |-
-                        ="Land Owner: " & LookUp(SiteOwners, SiteOwnerID = varSiteOwnerID, FirstName & " " & LastName)
-                    Width: =540
-                    X: =27
-                    Y: =235
-                    ZIndex: =13
+                    ZIndex: =10
 
                 Label6_21 As label:
                     Color: =RGBA(99, 139, 44, 1)
@@ -462,22 +452,22 @@
                     Height: =50
                     Size: =14
                     Text: |-
-                        ="Location: " & LookUp(SitesParents, SiteID = GlobalSelectedSite2).SiteLocation
+                        ="Location: "
                     Width: =255
                     X: =310
                     Y: =87
-                    ZIndex: =14
+                    ZIndex: =11
 
                 Label6_22 As label:
                     Color: =RGBA(99, 139, 44, 1)
                     Fill: =RGBA(232, 244, 217, 1)
                     Height: =50
                     Size: =14
-                    Text: ="Work Began on " & LookUp(SitesParents, SiteID = GlobalSelectedSite2).'Created On'
+                    Text: ="Work Began on " 
                     Width: =255
                     X: =27
                     Y: =164
-                    ZIndex: =15
+                    ZIndex: =12
 
                 Label6_23 As label:
                     Color: =RGBA(99, 139, 44, 1)
@@ -485,15 +475,11 @@
                     Height: =50
                     Size: =14
                     Text: |-
-                        ="Last worked on: " & If(
-                            IsEmpty(LatestSiteReport),
-                            "No report available",
-                            Text(First(LatestSiteReport).EndTime, DateTimeFormat.LongDate)
-                        )
+                        ="Last worked on: " 
                     Width: =255
                     X: =310
                     Y: =164
-                    ZIndex: =16
+                    ZIndex: =13
 
                 Image4_2 As image:
                     Height: =154
@@ -501,7 +487,7 @@
                     Width: =217
                     X: =32
                     Y: =951
-                    ZIndex: =17
+                    ZIndex: =14
 
                 Button5_8 As button:
                     Fill: =RGBA(99, 139, 44, 1)
@@ -511,29 +497,24 @@
                     Width: =127
                     X: =211
                     Y: =1127
-                    ZIndex: =18
+                    ZIndex: =15
 
                 Label11_2 As label:
                     Color: =RGBA(99, 139, 44, 1)
                     Fill: =RGBA(232, 244, 217, 1)
                     Height: =81
                     Size: =14
-                    Text: |
-                        ="Recent Development Types: " & If(
-                            IsEmpty(RecentDevelopmentTypes),
-                            "No development types available",
-                            Concat(RecentDevelopmentTypes, DevelopmentTypeName, ", ")
-                        )
+                    Text: |-
+                        ="Recent Development Types: " 
                     VerticalAlign: =VerticalAlign.Top
                     Width: =540
                     X: =32
                     Y: =532
-                    ZIndex: =19
+                    ZIndex: =16
 
                 Label6_25 As label:
                     Color: =RGBA(99, 139, 44, 1)
                     Fill: =RGBA(232, 244, 217, 1)
-                    FontWeight: =FontWeight.Lighter
                     Height: =82
                     OnSelect: |-
                         ="Recent Workers: " & If(
@@ -542,19 +523,14 @@
                             LookUp('Site Histories', SiteName = GlobalSelectedSite).'Workers (cr64e_workers)'
                         )
                     Size: =14
-                    Text: |+
+                    Text: |-
                         =
-                        "Recent Workers: " & If(
-                            IsEmpty(RecentEmployees),
-                            "No Workers",
-                            Concat(RecentEmployees, FullName, ", ")
-                        )
-                        
+                        "Recent Workers: " 
                     VerticalAlign: =VerticalAlign.Top
                     Width: =542
                     X: =32
                     Y: =628
-                    ZIndex: =20
+                    ZIndex: =17
 
                 Label6_27 As label:
                     Color: =RGBA(99, 139, 44, 1)
@@ -562,16 +538,12 @@
                     Height: =209
                     Size: =14
                     Text: |-
-                        ="Tools Used Last: " & If(
-                            IsEmpty(RecentToolsUsed),
-                            "No tools used",
-                            Concat(RecentToolsUsed, ToolName, ", ")
-                        )
+                        ="Tools Used Last: " 
                     VerticalAlign: =VerticalAlign.Top
                     Width: =148
                     X: =263
                     Y: =734
-                    ZIndex: =21
+                    ZIndex: =18
 
                 Label6_28 As label:
                     Color: =RGBA(99, 139, 44, 1)
@@ -582,16 +554,12 @@
                         =//"Plants Used Last: " & 
                         //        LookUp('Plants', SiteName = GlobalSelectedSite, PlantName)
                         //   &
-                        "Plants Used Last: " & If(
-                            IsEmpty(RecentPlantsUsed),
-                            "No tools used",
-                            Concat(RecentPlantsUsed, PlantName, ", ")
-                        )
+                        "Plants Used Last: " 
                     VerticalAlign: =VerticalAlign.Top
                     Width: =146
                     X: =426
                     Y: =734
-                    ZIndex: =22
+                    ZIndex: =19
 
                 Label6_26 As label:
                     Color: =RGBA(99, 139, 44, 1)
@@ -599,16 +567,12 @@
                     Height: =90
                     Size: =14
                     Text: |-
-                        ="Most Recent Time in: "& If(
-                            IsEmpty(LatestSiteReport),
-                            "No report available",
-                            Text(First(LatestSiteReport).TimeStart, DateTimeFormat.LongDate)
-                        )
+                        ="Most Recent Time in: "
                     VerticalAlign: =VerticalAlign.Top
                     Width: =217
                     X: =32
                     Y: =734
-                    ZIndex: =23
+                    ZIndex: =20
 
                 Label6_29 As label:
                     Color: =RGBA(99, 139, 44, 1)
@@ -616,16 +580,76 @@
                     Height: =90
                     Size: =14
                     Text: |-
-                        ="Most Recent Time out: "& If(
-                            IsEmpty(LatestSiteReport),
-                            "No report available",
-                            Text(First(LatestSiteReport).EndTime, DateTimeFormat.LongDate)
-                        )
+                        ="Most Recent Time out: "
                     VerticalAlign: =VerticalAlign.Top
                     Width: =217
                     X: =32
                     Y: =851
+                    ZIndex: =21
+
+                Label6_24 As label:
+                    Color: =RGBA(99, 139, 44, 1)
+                    Fill: =RGBA(232, 244, 217, 1)
+                    Height: =49
+                    Size: =14
+                    Text: |-
+                        ="Land Owner: " 
+                    Width: =540
+                    X: =27
+                    Y: =235
+                    ZIndex: =22
+
+                ModSIteOwnerName As text:
+                    Default: =""
+                    Height: =35
+                    HintText: =LookUp(SiteOwners, SiteOwnerID = varSiteOwnerID, FirstName & " " & LastName)
+                    Size: =14
+                    Width: =392
+                    X: =156
+                    Y: =242
+                    ZIndex: =23
+
+                ModSiteLoacation As text:
+                    Default: =""
+                    Height: =35
+                    HintText: =LookUp(SitesParents, SiteID = GlobalSelectedSite2).SiteLocation
+                    Size: =14
+                    Width: =161
+                    X: =399
+                    Y: =94
                     ZIndex: =24
+
+                AddMediaWithImage2_4 As group:
+                    Height: =5
+                    Width: =5
+                    X: =18
+                    Y: =-115
+                    ZIndex: =25
+
+                    UploadImageRecording_4 As image:
+                        Height: =190
+                        Image: =If(IsBlank(AddMediaButton2_4.Media), SampleImage, AddMediaButton2_4.Media)
+                        ImagePosition: =ImagePosition.Fill
+                        Width: =262
+                        X: =312
+                        Y: =320
+                        ZIndex: =26
+
+                    AddMediaButton2_4 As addMedia:
+                        Height: =190
+                        Size: =25
+                        Width: =262
+                        X: =312
+                        Y: =318
+                        ZIndex: =27
+
+                Image3_4 As image:
+                    Height: =53
+                    Image: =UploadImageRecording_4.Image
+                    Width: =99
+                    X: =211
+                    Y: =454
+                    ZIndex: =28
 
         DataCard3_2 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -686,7 +710,7 @@
                     ZIndex: =2
 
                 Image7_6 As image:
-                    Height: =160
+                    Height: =115
                     Image: =LookUp(Images, ImageID = ThisItem.Images).Image
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =8
@@ -780,6 +804,42 @@
                     Y: =200
                     ZIndex: =10
 
+                Button12_1 As button:
+                    Height: =45
+                    OnSelect: |-
+                        =
+                        //If(
+                        //    Confirm("Are you sure you want to delete this report and all associated data?", 'Confirm Deletion'),
+                        //    Remove(SiteProgressReports, ThisItem),
+                        //    RemoveIf(SitePeoplePresent, ReportID = ThisItem.ReportID)
+                        //);
+                        RemoveIf(SiteProgressReports, ReportID = ThisItem.ReportID);
+                        RemoveIf(SitePeople, ReportID = ThisItem.ReportID);
+                    Size: =24
+                    Text: ="Delete"
+                    Width: =120
+                    X: =474
+                    Y: =165
+                    ZIndex: =11
+
+                Button12_2 As button:
+                    Height: =45
+                    OnSelect: |-
+                        =
+                        //If(
+                        //    Confirm("Are you sure you want to delete this report and all associated data?", 'Confirm Deletion'),
+                        //    Remove(SiteProgressReports, ThisItem),
+                        //    RemoveIf(SitePeoplePresent, ReportID = ThisItem.ReportID)
+                        //);
+                        RemoveIf(SiteProgressReports, ReportID = ThisItem.ReportID);
+                        RemoveIf(SitePeople, ReportID = ThisItem.ReportID);
+                    Size: =24
+                    Text: ="Edit"
+                    Width: =120
+                    X: =474
+                    Y: =215
+                    ZIndex: =12
+
             Label3_2 As label:
                 Height: =47
                 Size: =21
@@ -803,399 +863,6 @@
                 X: =428
                 Y: =24
                 ZIndex: =3
-
-        "'Plants Data Card_2' As dataCard.blankCard":
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderStyle: =BorderStyle.Solid
-            DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =580
-            Width: =640
-            X: =0
-            Y: =2
-            ZIndex: =4
-
-            "'Plants Table_2' As dataTable.datatable":
-                BorderStyle: =BorderStyle.Solid
-                DisplayMode: =DisplayMode.Edit
-                Fill: =RGBA(0, 0, 0, 0)
-                HeadingFill: =RGBA(99, 139, 44, 1)
-                HeadingSize: =15
-                Height: =300
-                Items: =DetailedPlantData
-                Size: =15
-                Width: =550
-                X: =40
-                Y: =70
-                ZIndex: =1
-
-                Plants_Column1_2 As dataTableColumn.textualColumn:
-                    DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Plants"
-                    FieldName: ="Plants"
-                    FieldVariantName: ="textualColumn"
-                    Height: =Parent.Height
-                    LayoutHeight: =Parent.Height
-                    Order: =1
-                    Text: =ThisItem.Plants
-                    Width: =100
-                    X: =0
-                    Y: =0
-                    ZIndex: =54
-
-                StartTime_Column3_1 As dataTableColumn.textualColumn:
-                    DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="StartTime"
-                    FieldName: ="StartTime"
-                    FieldVariantName: ="textualColumn"
-                    Height: =Parent.Height
-                    LayoutHeight: =Parent.Height
-                    Order: =2
-                    Text: =ThisItem.StartTime
-                    Width: =100
-                    X: =0
-                    Y: =0
-                    ZIndex: =55
-
-                EndTime_Column3_1 As dataTableColumn.textualColumn:
-                    DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="EndTime"
-                    FieldName: ="EndTime"
-                    FieldVariantName: ="textualColumn"
-                    Height: =Parent.Height
-                    LayoutHeight: =Parent.Height
-                    Order: =3
-                    Text: =ThisItem.EndTime
-                    Width: =100
-                    X: =0
-                    Y: =0
-                    ZIndex: =56
-
-            Label10_6 As label:
-                Height: =70
-                Size: =21
-                Text: ="Plant Species at " & GlobalSelectedSite
-                Width: =560
-                X: =40
-                ZIndex: =2
-
-            Icon7_8 As icon.Edit:
-                Color: =RGBA(130, 110, 94, 1)
-                Height: =42
-                Icon: =Icon.Edit
-                OnSelect: |-
-                    =Navigate('Editing Table for plants',Transition.None,{SelectedSite : 'Individual Worksite ViewV2Modify'})
-                Width: =50
-                X: =540
-                Y: =14
-                ZIndex: =3
-
-            "'Plant table extension_1' As dataTable.datatable":
-                BorderStyle: =BorderStyle.Solid
-                DisplayMode: =DisplayMode.Edit
-                Fill: =RGBA(0, 0, 0, 0)
-                HeadingFill: =RGBA(99, 139, 44, 1)
-                HeadingSize: =15
-                Height: =225
-                Items: =DetailedPlantData
-                Size: =15
-                Width: =550
-                X: =40
-                Y: =359
-                ZIndex: =4
-
-                Plants_Column1_3 As dataTableColumn.textualColumn:
-                    DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Plants"
-                    FieldName: ="Plants"
-                    FieldVariantName: ="textualColumn"
-                    Height: =Parent.Height
-                    LayoutHeight: =Parent.Height
-                    Order: =1
-                    Text: =ThisItem.Plants
-                    Width: =100
-                    X: =0
-                    Y: =0
-                    ZIndex: =54
-
-                ReportID_Column1_1 As dataTableColumn.textualColumn:
-                    DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="ReportID"
-                    FieldName: ="ReportID"
-                    FieldVariantName: ="textualColumn"
-                    Height: =Parent.Height
-                    LayoutHeight: =Parent.Height
-                    Order: =2
-                    Text: =ThisItem.ReportID
-                    Width: =100
-                    X: =0
-                    Y: =0
-                    ZIndex: =57
-
-        "'Tools Data Card_2' As dataCard.blankCard":
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderStyle: =BorderStyle.Solid
-            DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =743
-            Width: =640
-            X: =0
-            Y: =3
-            ZIndex: =5
-
-            "'Tools table_3' As dataTable.datatable":
-                BorderColor: =RGBA(202, 202, 202, 1)
-                BorderStyle: =BorderStyle.Solid
-                BorderThickness: =1
-                DisplayMode: =DisplayMode.Edit
-                Fill: =RGBA(0, 0, 0, 0)
-                HeadingFill: =RGBA(99, 139, 44, 1)
-                HeadingSize: =15
-                Height: =300
-                Items: =DetailedToolsData
-                Size: =15
-                Width: =550
-                X: =40
-                Y: =70
-                ZIndex: =1
-
-                ToolName_Column3_2 As dataTableColumn.textualColumn:
-                    DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="ToolName"
-                    FieldName: ="ToolName"
-                    FieldVariantName: ="textualColumn"
-                    Height: =Parent.Height
-                    LayoutHeight: =Parent.Height
-                    Order: =1
-                    Text: =ThisItem.ToolName
-                    Width: =100
-                    X: =0
-                    Y: =0
-                    ZIndex: =48
-
-                StartTime_Column1_1 As dataTableColumn.textualColumn:
-                    DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="StartTime"
-                    FieldName: ="StartTime"
-                    FieldVariantName: ="textualColumn"
-                    Height: =Parent.Height
-                    LayoutHeight: =Parent.Height
-                    Order: =2
-                    Text: =ThisItem.StartTime
-                    Width: =100
-                    X: =0
-                    Y: =0
-                    ZIndex: =49
-
-                EndTime_Column1_1 As dataTableColumn.textualColumn:
-                    DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="EndTime"
-                    FieldName: ="EndTime"
-                    FieldVariantName: ="textualColumn"
-                    Height: =Parent.Height
-                    LayoutHeight: =Parent.Height
-                    Order: =3
-                    Text: =ThisItem.EndTime
-                    Width: =100
-                    X: =0
-                    Y: =0
-                    ZIndex: =50
-
-            Label10_7 As label:
-                Height: =70
-                Size: =21
-                Text: ="Tools Used at "& GlobalSelectedSite
-                Width: =560
-                X: =40
-                ZIndex: =2
-
-            Icon7_11 As icon.Edit:
-                Color: =RGBA(130, 110, 94, 1)
-                Height: =42
-                Icon: =Icon.Edit
-                OnSelect: |-
-                    =Navigate('Editing table for tools',Transition.None,{SelectedSite : 'Individual Worksite ViewV2Modify'})
-                Width: =50
-                X: =540
-                Y: =14
-                ZIndex: =3
-
-            "'Tools table_4' As dataTable.datatable":
-                BorderColor: =RGBA(202, 202, 202, 1)
-                BorderStyle: =BorderStyle.Solid
-                BorderThickness: =1
-                DisplayMode: =DisplayMode.Edit
-                Fill: =RGBA(0, 0, 0, 0)
-                HeadingFill: =RGBA(99, 139, 44, 1)
-                HeadingSize: =15
-                Height: =300
-                Items: =DetailedToolsData
-                Size: =15
-                Width: =550
-                X: =40
-                Y: =407
-                ZIndex: =4
-
-                ToolName_Column3_3 As dataTableColumn.textualColumn:
-                    DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="ToolName"
-                    FieldName: ="ToolName"
-                    FieldVariantName: ="textualColumn"
-                    Height: =Parent.Height
-                    LayoutHeight: =Parent.Height
-                    Order: =1
-                    Text: =ThisItem.ToolName
-                    Width: =100
-                    X: =0
-                    Y: =0
-                    ZIndex: =48
-
-                ReportID_Column2_1 As dataTableColumn.textualColumn:
-                    DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="ReportID"
-                    FieldName: ="ReportID"
-                    FieldVariantName: ="textualColumn"
-                    Height: =Parent.Height
-                    LayoutHeight: =Parent.Height
-                    Order: =2
-                    Text: =ThisItem.ReportID
-                    Width: =100
-                    X: =0
-                    Y: =0
-                    ZIndex: =58
-
-        "'People Data Card_2' As dataCard.blankCard":
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderStyle: =BorderStyle.Solid
-            DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =857
-            Width: =640
-            X: =0
-            Y: =4
-            ZIndex: =6
-
-            "'Worker table_3' As dataTable.datatable":
-                BorderColor: =RGBA(219, 219, 219, 1)
-                BorderStyle: =BorderStyle.Solid
-                BorderThickness: =1
-                DisplayMode: =DisplayMode.Edit
-                Fill: =RGBA(0, 0, 0, 0)
-                HeadingFill: =RGBA(99, 139, 44, 1)
-                HeadingSize: =15
-                Height: =300
-                Items: =DetailedEmployeeData
-                Size: =15
-                Width: =550
-                X: =40
-                Y: =108
-                ZIndex: =2
-
-                Worker_Column1_2 As dataTableColumn.textualColumn:
-                    DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Name"
-                    FieldName: ="Worker"
-                    FieldVariantName: ="textualColumn"
-                    Height: =Parent.Height
-                    LayoutHeight: =Parent.Height
-                    Order: =1
-                    Text: =ThisItem.Worker
-                    Width: =100
-                    X: =0
-                    Y: =0
-                    ZIndex: =51
-
-                StartTime_Column2_1 As dataTableColumn.textualColumn:
-                    DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="StartTime"
-                    FieldName: ="StartTime"
-                    FieldVariantName: ="textualColumn"
-                    Height: =Parent.Height
-                    LayoutHeight: =Parent.Height
-                    Order: =2
-                    Text: =ThisItem.StartTime
-                    Width: =100
-                    X: =0
-                    Y: =0
-                    ZIndex: =52
-
-                EndTime_Column2_1 As dataTableColumn.textualColumn:
-                    DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="EndTime"
-                    FieldName: ="EndTime"
-                    FieldVariantName: ="textualColumn"
-                    Height: =Parent.Height
-                    LayoutHeight: =Parent.Height
-                    Order: =3
-                    Text: =ThisItem.EndTime
-                    Width: =100
-                    X: =0
-                    Y: =0
-                    ZIndex: =53
-
-            Label10_8 As label:
-                Height: =70
-                Size: =21
-                Text: ="Employees at" & GlobalSelectedSite
-                Width: =560
-                X: =40
-                Y: =22
-                ZIndex: =3
-
-            Icon7_12 As icon.Edit:
-                Color: =RGBA(130, 110, 94, 1)
-                Height: =42
-                Icon: =Icon.Edit
-                OnSelect: |-
-                    =Navigate('Editing table for tools',Transition.None,{SelectedSite : 'Individual Worksite ViewV2Modify'})
-                Width: =50
-                X: =540
-                Y: =36
-                ZIndex: =6
-
-            "'Worker table_4' As dataTable.datatable":
-                BorderColor: =RGBA(219, 219, 219, 1)
-                BorderStyle: =BorderStyle.Solid
-                BorderThickness: =1
-                DisplayMode: =DisplayMode.Edit
-                Fill: =RGBA(0, 0, 0, 0)
-                HeadingFill: =RGBA(99, 139, 44, 1)
-                HeadingSize: =15
-                Height: =300
-                Items: =DetailedEmployeeData
-                Size: =15
-                Width: =550
-                X: =40
-                Y: =427
-                ZIndex: =7
-
-                Worker_Column1_3 As dataTableColumn.textualColumn:
-                    DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Name"
-                    FieldName: ="Worker"
-                    FieldVariantName: ="textualColumn"
-                    Height: =Parent.Height
-                    LayoutHeight: =Parent.Height
-                    Order: =1
-                    Text: =ThisItem.Worker
-                    Width: =100
-                    X: =0
-                    Y: =0
-                    ZIndex: =51
-
-                ReportID_Column3_1 As dataTableColumn.textualColumn:
-                    DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="ReportID"
-                    FieldName: ="ReportID"
-                    FieldVariantName: ="textualColumn"
-                    Height: =Parent.Height
-                    LayoutHeight: =Parent.Height
-                    Order: =2
-                    Text: =ThisItem.ReportID
-                    Width: =100
-                    X: =0
-                    Y: =0
-                    ZIndex: =59
 
     HeaderArea_4 As rectangle:
         Fill: =RGBA(99, 139, 44, 1)

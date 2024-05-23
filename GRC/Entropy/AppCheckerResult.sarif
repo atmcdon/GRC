@@ -14109,19 +14109,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Individual Worksite ViewV2Modify'.Canvas1_4.'Plants Data Card_2'.Icon7_8.AccessibleLabel"
+                  "fullyQualifiedName": "'Individual Worksite ViewV2Modify'.Canvas1_4.DataCard1_4.Container1_4.ModSIteOwnerName.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Individual Worksite ViewV2Modify'.Canvas1_4.'Plants Data Card_2'.Icon7_8.AccessibleLabel",
+                  "fullyQualifiedName": "'Individual Worksite ViewV2Modify'.Canvas1_4.DataCard1_4.Container1_4.ModSIteOwnerName.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Individual Worksite ViewV2Modify",
-                "type": "'Individual Worksite ViewV2Modify'.Canvas1_4.'Plants Data Card_2'.Icon7_8"
+                "type": "'Individual Worksite ViewV2Modify'.Canvas1_4.DataCard1_4.Container1_4.ModSIteOwnerName"
               }
             }
           ],
@@ -14139,49 +14139,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Individual Worksite ViewV2Modify'.Canvas1_4.'Plants Data Card_2'.Icon7_8.TabIndex"
+                  "fullyQualifiedName": "'Individual Worksite ViewV2Modify'.Canvas1_4.DataCard1_4.Container1_4.ModSiteLoacation.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Individual Worksite ViewV2Modify'.Canvas1_4.'Plants Data Card_2'.Icon7_8.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Individual Worksite ViewV2Modify",
-                "type": "'Individual Worksite ViewV2Modify'.Canvas1_4.'Plants Data Card_2'.Icon7_8"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Individual Worksite ViewV2Modify'.Canvas1_4.'Tools Data Card_2'.Icon7_11.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Individual Worksite ViewV2Modify'.Canvas1_4.'Tools Data Card_2'.Icon7_11.AccessibleLabel",
+                  "fullyQualifiedName": "'Individual Worksite ViewV2Modify'.Canvas1_4.DataCard1_4.Container1_4.ModSiteLoacation.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Individual Worksite ViewV2Modify",
-                "type": "'Individual Worksite ViewV2Modify'.Canvas1_4.'Tools Data Card_2'.Icon7_11"
+                "type": "'Individual Worksite ViewV2Modify'.Canvas1_4.DataCard1_4.Container1_4.ModSiteLoacation"
               }
             }
           ],
@@ -14199,49 +14169,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Individual Worksite ViewV2Modify'.Canvas1_4.'Tools Data Card_2'.Icon7_11.TabIndex"
+                  "fullyQualifiedName": "'Individual Worksite ViewV2Modify'.Canvas1_4.DataCard1_4.Container1_4.AddMediaButton2_4.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Individual Worksite ViewV2Modify'.Canvas1_4.'Tools Data Card_2'.Icon7_11.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Individual Worksite ViewV2Modify",
-                "type": "'Individual Worksite ViewV2Modify'.Canvas1_4.'Tools Data Card_2'.Icon7_11"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Individual Worksite ViewV2Modify'.Canvas1_4.'People Data Card_2'.Icon7_12.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Individual Worksite ViewV2Modify'.Canvas1_4.'People Data Card_2'.Icon7_12.AccessibleLabel",
+                  "fullyQualifiedName": "'Individual Worksite ViewV2Modify'.Canvas1_4.DataCard1_4.Container1_4.AddMediaButton2_4.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Individual Worksite ViewV2Modify",
-                "type": "'Individual Worksite ViewV2Modify'.Canvas1_4.'People Data Card_2'.Icon7_12"
+                "type": "'Individual Worksite ViewV2Modify'.Canvas1_4.DataCard1_4.Container1_4.AddMediaButton2_4"
               }
             }
           ],
@@ -14253,36 +14193,6 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Individual Worksite ViewV2Modify'.Canvas1_4.'People Data Card_2'.Icon7_12.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Individual Worksite ViewV2Modify'.Canvas1_4.'People Data Card_2'.Icon7_12.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Individual Worksite ViewV2Modify",
-                "type": "'Individual Worksite ViewV2Modify'.Canvas1_4.'People Data Card_2'.Icon7_12"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 8
         },
         {
           "locations": [
