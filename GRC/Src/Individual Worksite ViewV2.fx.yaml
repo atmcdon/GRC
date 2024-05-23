@@ -164,7 +164,7 @@
                             Filter(EmployeeNamesForReports, ReportID = currentReportID),
                             FullName & ", "
                         ),
-                        Images: LookUp(Images, ImageID = LookUp(SiteImages, ReportID = currentReportID), Image)
+                        Images: LookUp(SiteImages, ReportID = currentReportID).ImageID
                     }
                 )
             )
@@ -653,13 +653,7 @@
 
                 Image7_4 As image:
                     Height: =160
-                    Image: |-
-                        =//LookUp(ImageGRCS, ImageIDNum = ThisItem.ImageID).Image
-                        LookUp(
-                                ImageGRCS, 
-                                ImageIDNum = Trim(First(Split(ThisItem.ImageIDs, ",")).Value)
-                            ).Image
-                        //ThisItem.ImageIDs
+                    Image: =LookUp(Images, ImageID = ThisItem.Images).Image
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =8
                     RadiusBottomRight: =8
