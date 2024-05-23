@@ -341,20 +341,6 @@
                     Y: =969
                     ZIndex: =1
 
-                Image8_2 As image:
-                    Height: =204
-                    Image: |
-                        =If(
-                            IsBlank(LookUp(Images, ImageID = varGlobalSelSiteImage).Image),
-                            '93492771',
-                            LookUp(Images, ImageID = varGlobalSelSiteImage).Image
-                            
-                        )
-                    Width: =594
-                    X: =27
-                    Y: =306
-                    ZIndex: =2
-
                 Button3_2 As button:
                     Fill: =RGBA(130, 110, 94, 1)
                     Height: =61
@@ -628,7 +614,12 @@
 
                     UploadImageRecording_4 As image:
                         Height: =190
-                        Image: =If(IsBlank(AddMediaButton2_4.Media), SampleImage, AddMediaButton2_4.Media)
+                        Image: |-
+                            =If(IsBlank(AddMediaButton2_4.Media), If(
+                                    IsBlank(LookUp(Images, ImageID = varGlobalSelSiteImage).Image),
+                                    '93492771',
+                                    LookUp(Images, ImageID = varGlobalSelSiteImage).Image
+                                ), AddMediaButton2_4.Media)
                         ImagePosition: =ImagePosition.Fill
                         Width: =262
                         X: =312
@@ -644,11 +635,13 @@
                         ZIndex: =27
 
                 Image3_4 As image:
-                    Height: =53
-                    Image: =UploadImageRecording_4.Image
-                    Width: =99
-                    X: =211
-                    Y: =454
+                    Height: =188
+                    Image: |
+                        =
+                            UploadImageRecording_4.Image
+                    Width: =293
+                    X: =17
+                    Y: =318
                     ZIndex: =28
 
         DataCard3_2 As dataCard.blankCard:
