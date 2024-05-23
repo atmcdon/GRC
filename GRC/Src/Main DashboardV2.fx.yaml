@@ -25,7 +25,8 @@
                         Employees: Concat(
                             Filter(EmployeeNamesForReports, ReportID = currentReportID),
                             FullName & ", "
-                        )
+                        ),
+                        ImageID: LookUp(SiteImages, ReportID = currentReportID).ImageID
                     }
                 )
             )
@@ -90,7 +91,7 @@
 
                 Image2_1 As image:
                     Height: =72
-                    Image: =ThisItem.SiteMainImage
+                    Image: =LookUp(Images, ImageID = ThisItem.SiteImageID).Image
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =8
                     RadiusBottomRight: =8

@@ -3427,46 +3427,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard1_2.Gallery1_1.Image2_1.Image"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard1_2.Gallery1_1.Image2_1.Image",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 14,
-                  "charOffset": 8,
-                  "snippet": {
-                    "text": ".SiteMainImage"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Image",
-                "module": "Main DashboardV2",
-                "type": "'Main DashboardV2'.Canvas1_2.DataCard1_2.Gallery1_1.Image2_1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "SiteMainImage"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Main DashboardV2'.Canvas1_2.DataCard4_1.Gallery5_5.UploadedImage1_4.Height"
                 }
               ],
