@@ -663,7 +663,7 @@
                     ZIndex: =4
 
                 UploadedImage1_3 As image:
-                    Height: =AddMediaButton1.Height
+                    Height: =
                     Image: =
                     ImagePosition: =ImagePosition.Fill
                     OnSelect: =Select(Parent)
