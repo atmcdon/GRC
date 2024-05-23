@@ -20,6 +20,7 @@
       "cr64e_images_ProcessSession": "Process Sessions",
       "cr64e_images_SyncErrors": "Sync Errors",
       "cr64e_imagesid": "Images",
+      "cr64e_siteid": "SiteID",
       "createdby": "Created By",
       "createdon": "Created On",
       "createdonbehalfby": "Created By (Delegate)",

@@ -1,7 +1,7 @@
 "'Individual Worksite ViewV2' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     OnVisible: |+
         =
-        //Set(GlobalSelectedSite2, "0001");
+        Set(GlobalSelectedSite2, "0001");
         
         Set(varSiteOwnerID, LookUp(SitesParents, SiteID = GlobalSelectedSite2, SiteOwnerID));
         
@@ -216,6 +216,49 @@
                 )
             )
         );
+        
+        ClearCollect(
+            AllSiteImages1,
+            ForAll(
+                SiteProgressReports,
+                With(
+                    {currentReportID: ReportID},
+                    {
+                        ReportID: currentReportID,
+                        ImageID: LookUp(SiteImages, ReportID = currentReportID, ImageID)
+                    }
+                )
+        
+            )
+        
+        );
+        
+        ClearCollect(
+            AllSiteImages,
+            ForAll(
+                SiteProgressReports,
+                With(
+                    {currentReportID: ReportID, curImageID: LookUp(SiteImages, ReportID = ThisRecord.ReportID).ImageID},
+                    If(
+                        Not(IsBlank(curImageID)), // Check if the ImageID is not blank
+                        {
+                            ReportID: currentReportID,
+                            ImageID: curImageID
+                        }
+                    )
+                    
+                )
+            )
+        );
+        
+        
+        ClearCollect(
+            UniqueSiteImages,
+            Distinct(
+                AllSiteImages, ImageID
+            )
+        );
+        
         
         
         
@@ -1026,7 +1069,7 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =944
+            Height: =857
             Width: =640
             X: =0
             Y: =4
@@ -1098,16 +1141,6 @@
                 X: =40
                 Y: =22
                 ZIndex: =3
-
-            Label12_1 As label:
-                Height: =70
-                Size: =21
-                Text: |-
-                    ="Worker IDs: " & Concat(colWorkerIDsFromSiteHistory, Value & ", ")
-                Width: =560
-                X: =205
-                Y: =813
-                ZIndex: =5
 
             Icon7_6 As icon.Edit:
                 Color: =RGBA(130, 110, 94, 1)

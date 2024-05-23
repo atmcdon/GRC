@@ -9,11 +9,7 @@ ImageView As screen:
             '#CopilotOverlayLabel': ="Filtered"
             DelayItemLoading: =true
             Height: =992
-            Items: |-
-                =Sort(Images,
-                 'Created On',
-                  SortOrder.Descending)
-                  
+            Items: =UniqueSiteImages
             LoadingSpinner: =LoadingSpinner.Data
             TemplatePadding: =0
             TemplateSize: =640
@@ -22,7 +18,8 @@ ImageView As screen:
 
             Image6 As image:
                 Height: =865
-                Image: =ThisItem.Image
+                Image: |
+                    =LookUp(Images, ImageID = ThisRecord.ImageID).Image
                 OnSelect: =Select(Parent)
                 RadiusBottomLeft: =8
                 RadiusBottomRight: =8
@@ -41,7 +38,7 @@ ImageView As screen:
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Text: =ThisItem.ImageID
+                Text: =ThisItem.Value
                 VerticalAlign: =VerticalAlign.Top
                 Width: =Parent.TemplateWidth - 64
                 X: =32
@@ -56,7 +53,7 @@ ImageView As screen:
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Text: =ThisItem.'Created On'
+                Text: =ThisItem.Value
                 VerticalAlign: =VerticalAlign.Top
                 Width: =Title4.Width
                 X: =Title4.X
@@ -65,7 +62,7 @@ ImageView As screen:
 
         Icon1 As icon.ArrowLeft:
             Icon: =Icon.ArrowLeft
-            OnSelect: =Navigate('Individual Worksite View', ScreenTransition.Cover)
+            OnSelect: =Navigate('Individual Worksite ViewV2', ScreenTransition.Cover)
             X: =20
             Y: =15
             ZIndex: =2
