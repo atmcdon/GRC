@@ -19,7 +19,7 @@ ImageView As screen:
             Image6 As image:
                 Height: =865
                 Image: |
-                    =LookUp(Images, ImageID = ThisRecord.ImageID).Image
+                    =LookUp(Images, ImageID = ThisItem.Value).Image
                 OnSelect: =Select(Parent)
                 RadiusBottomLeft: =8
                 RadiusBottomRight: =8
