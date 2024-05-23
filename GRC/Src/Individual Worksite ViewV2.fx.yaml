@@ -302,9 +302,10 @@
                     Height: =204
                     Image: |
                         =If(
-                            IsBlank(LookUp(Sites, 'Site name' = GlobalSelectedSite).SiteMainImage),
+                            IsBlank(LookUp(Images, ImageID = varGlobalSelSiteImage).Image),
                             '93492771',
-                            LookUp(Sites, 'Site name' = GlobalSelectedSite).SiteMainImage
+                            LookUp(Images, ImageID = varGlobalSelSiteImage).Image
+                            
                         )
                     Width: =594
                     Y: =308

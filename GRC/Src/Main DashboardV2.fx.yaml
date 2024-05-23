@@ -143,6 +143,7 @@
                         =
                         Set(GlobalSelectedSite2, ThisItem.SiteID);
                         //Set(varworkerID, LookUp('Site Histories', SiteName = GlobalSelectedSite, 'Workers (cr64e_workers)'));
+                        Set(varGlobalSelSiteImage, ThisItem.SiteImageID);
                         
                         
                         Navigate('Individual Worksite ViewV2', ScreenTransition.Cover);
@@ -306,13 +307,7 @@
 
                 Image7_5 As image:
                     Height: =160
-                    Image: |-
-                        =//LookUp(ImageGRCS, ImageIDNum = ThisItem.ImageID).Image
-                        LookUp(
-                                ImageGRCS, 
-                                ImageIDNum = Trim(First(Split(ThisItem.ImageIDs, ",")).Value)
-                            ).Image
-                        //ThisItem.ImageIDs
+                    Image: =LookUp(Images, ImageID = ThisItem.ImageID).Image
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =8
                     RadiusBottomRight: =8
@@ -331,7 +326,7 @@
                     ZIndex: =4
 
                 UploadedImage1_4 As image:
-                    Height: =AddMediaButton1.Height
+                    Height: =
                     Image: =
                     ImagePosition: =ImagePosition.Fill
                     OnSelect: =Select(Parent)
