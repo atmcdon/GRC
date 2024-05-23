@@ -2246,6 +2246,17 @@
                 Y: =150
                 ZIndex: =3
 
+        DataCard14 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =640
+            X: =0
+            Y: =5
+            ZIndex: =6
+
     IconCancel1_4 As icon.Cancel:
         AccessibleLabel: =Self.Tooltip
         Height: =88

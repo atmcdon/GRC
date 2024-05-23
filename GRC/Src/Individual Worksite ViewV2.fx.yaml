@@ -273,29 +273,19 @@
             Label1_7 As label:
                 Height: =70
                 Size: =21
-                Text: |-
-                    ="Site: "& GlobalSelectedSite
+                Text: |
+                    ="Site: "&LookUp(SitesParents,SiteID = GlobalSelectedSite2).SiteName
                 Width: =334
-                X: =43
-                Y: =125
+                X: =45
+                Y: =25
                 ZIndex: =5
 
-            Container1_2 As groupContainer.manualLayoutContainer:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                Height: =700
-                Visible: =false
-                Width: =594
-                X: =20
-                Y: =125
-                ZIndex: =7
-
             Container1_3 As groupContainer.manualLayoutContainer:
-                ContentLanguage: |
-                    ="Site: "&LookUp(Sites,'Site name' = GlobalSelectedSite).'Site name'
-                Height: =1200
+                ContentLanguage: =
+                Height: =1315
                 Width: =594
                 X: =20
-                Y: =125
+                Y: =10
                 ZIndex: =8
 
                 Rectangle5_3 As rectangle:
