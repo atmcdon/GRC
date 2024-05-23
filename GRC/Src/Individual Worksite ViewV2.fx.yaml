@@ -236,7 +236,7 @@
         ClearCollect(
             AllSiteImages,
             ForAll(
-                SiteProgressReports,
+                ReportIDsForSite,
                 With(
                     {currentReportID: ReportID, curImageID: LookUp(SiteImages, ReportID = ThisRecord.ReportID).ImageID},
                     If(
