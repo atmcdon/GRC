@@ -378,8 +378,8 @@
                         )
                     Size: =12
                     Text: ="Done Editing"
-                    Width: =262
-                    X: =312
+                    Width: =148
+                    X: =426
                     Y: =15
                     ZIndex: =3
 
@@ -669,6 +669,47 @@
                     X: =17
                     Y: =318
                     ZIndex: =28
+
+                Button3_3 As button:
+                    Fill: =RGBA(151, 0, 0, 1)
+                    Height: =61
+                    OnSelect: |-
+                        =RemoveIf(SiteProgressReports, SiteID = GlobalSelectedSite2);
+                        
+                        
+                        ForAll(
+                            Filter(SiteProgressReports, SiteID = GlobalSelectedSite2),
+                            RemoveIf(SiteToolsUseds, ReportID = ReportID)
+                        
+                        );
+                        ForAll(
+                            Filter(SiteProgressReports, SiteID = GlobalSelectedSite2),
+                            RemoveIf(SitePeople, ReportID =ReportID)
+                        
+                        );
+                        ForAll(
+                            Filter(SiteProgressReports, SiteID = GlobalSelectedSite2),
+                            RemoveIf(SitePlantsUseds, ReportID =ReportID)
+                        
+                        );
+                        
+                        ForAll(
+                            Filter(SiteProgressReports, SiteID = GlobalSelectedSite2),
+                            RemoveIf(SiteImages, ReportID =ReportID)
+                        
+                        );
+                        ForAll(
+                            Filter(SiteProgressReports, SiteID = GlobalSelectedSite2),
+                            RemoveIf(Developments, ReportID =ReportID)
+                        
+                        );
+                        Remove(SitesParents, LookUp(SitesParents, SiteID = GlobalSelectedSite2))
+                    Size: =12
+                    Text: ="Delete Site"
+                    Width: =148
+                    X: =251
+                    Y: =15
+                    ZIndex: =29
 
         DataCard3_2 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
