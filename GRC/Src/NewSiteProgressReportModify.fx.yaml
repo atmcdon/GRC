@@ -1,42 +1,25 @@
 "NewSiteProgressReportModify As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
-    OnVisible: |+
+    OnVisible: |-
         =
         Set(varCurrentReportID,
-            LookUp(
-                SiteProgressReports,
-                SiteID = GlobalSelectedSite2 && IsBlank(EndTime),
-                ReportID  
-            )
+            varModReportID
         );
         
         
-        If(
-            IsBlank(varCurrentReportID),
-        
-            With(
-                {newReport: Patch(
-                    SiteProgressReports,
-                    Defaults(SiteProgressReports),
-                    {SiteID: GlobalSelectedSite2}
-                )},
-                Set(varCurrentReportID, newReport.ReportID)  
-            ),
-           
-            Notify("Using existing open report.", NotificationType.Information)
-        );
         
         ClearCollect(
             ColDevelopmentTypes,
-            Filter(
-                DevelopmentTypes,
-                Developments in Filter(
-                    Developments,
-                    ReportID = varModReportID
-                ).DevelopmentTypeID
+            ForAll(
+                Developments,
+                {
+                    TypeID: TypeIDString,
+                    DevelopmentName: LookUp(DevelopmentTypes, TypeID = TypeIDString).DevelopmentTypeName
+                }
             )
-        );
+        )
         
         
+        //Collect(ColDevelopmentTypes, {TypeID: DropDownToolsNewEntry_8.Selected.TypeID, DevelopmentName: DropDownToolsNewEntry_8.Selected.DevelopmentTypeName});
 
     RectQuickActionBar13_2 As rectangle:
         Height: =88

@@ -774,13 +774,14 @@
                     ZIndex: =25
 
                     UploadImageRecording_4 As image:
+                        AccessibleLabel: =
                         Height: =190
                         Image: |-
-                            =If(IsBlank(AddMediaButton2_4.Media), If(
-                                    IsBlank(LookUp(Images, ImageID = varGlobalSelSiteImage).Image),
-                                    '93492771',
-                                    LookUp(Images, ImageID = varGlobalSelSiteImage).Image
-                                ), AddMediaButton2_4.Media)
+                            =
+                            //LookUp(Images, ImageID = varSiteImageID).Image
+                            //If(IsBlank(AddMediaButton2_4.Media), SampleImage, AddMediaButton2_4.Media)
+                            
+                            If(IsBlank(LookUp(Images, ImageID = varSiteImageID).Image), SampleImage, AddMediaButton2_4.Media)
                         ImagePosition: =ImagePosition.Fill
                         Width: =262
                         X: =312
@@ -799,7 +800,9 @@
                     Height: =188
                     Image: |
                         =
-                            UploadImageRecording_4.Image
+                        //    UploadImageRecording_4.Image
+                        
+                        LookUp(Images, ImageID = varSiteImageID).Image
                     Width: =293
                     X: =17
                     Y: =318
@@ -1049,8 +1052,9 @@
 
                 Button12_2 As button:
                     Height: =45
-                    OnSelect: |
+                    OnSelect: |-
                         =Set(varModReportID, ThisItem.ReportID);
+                        Navigate(NewSiteProgressReportModify)
                     Size: =24
                     Text: ="Edit"
                     Width: =120
