@@ -1,243 +1,368 @@
 "'Individual Worksite ViewV2Modify' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
-    OnVisible: |+
-        =
-        Set(GlobalSelectedSite2, "0001");
-        
-        Set(varSiteOwnerID, LookUp(SitesParents, SiteID = GlobalSelectedSite2, SiteOwnerID));
-        
-        
-        
-        //-------------------------------------------------------------------------------------------
-        ClearCollect(ColSiteProgressReports, SiteProgressReports);
-        ClearCollect(ColDevelopments, Developments);
-        ClearCollect(ColDevelopmentTypes, DevelopmentTypes);
-        ClearCollect(ColSiteToolsUsed, SiteToolsUseds);
-        ClearCollect(ColToolList, ToolsLists);
-        ClearCollect(ColSitePeoplePresent, SitePeoplePresents);
-        ClearCollect(ColEmployees, Employees);
-        ClearCollect(ColSitePeople, SitePeople);
-        ClearCollect(ColSitePlants, SitePlantsUseds);
-        
-        // Check column names and sample data
-        ClearCollect(DebugCollection, SiteProgressReports);
-        
-        
-        // Get all ReportIDs for a specific SiteID
-        
-        ClearCollect(ReportIDsForSite,
-            Filter(SiteProgressReports, SiteID = GlobalSelectedSite2)
+    OnVisible: |
+        =Set(
+            GlobalSelectedSite2,
+            "0001"
         );
-        
+        Set(
+            varSiteOwnerID,
+            LookUp(
+                SitesParents,
+                SiteID = GlobalSelectedSite2,
+                SiteOwnerID
+            )
+        );
+        //-------------------------------------------------------------------------------------------
+        ClearCollect(
+            ColSiteProgressReports,
+            SiteProgressReports
+        );
+        ClearCollect(
+            ColDevelopments,
+            Developments
+        );
+        ClearCollect(
+            ColDevelopmentTypes,
+            DevelopmentTypes
+        );
+        ClearCollect(
+            ColSiteToolsUsed,
+            SiteToolsUseds
+        );
+        ClearCollect(
+            ColToolList,
+            ToolsLists
+        );
+        ClearCollect(
+            ColSitePeoplePresent,
+            SitePeoplePresents
+        );
+        ClearCollect(
+            ColEmployees,
+            Employees
+        );
+        ClearCollect(
+            ColSitePeople,
+            SitePeople
+        );
+        ClearCollect(
+            ColSitePlants,
+            SitePlantsUseds
+        );
+        // Check column names and sample data
+        ClearCollect(
+            DebugCollection,
+            SiteProgressReports
+        );
+        // Get all ReportIDs for a specific SiteID
+        ClearCollect(
+            ReportIDsForSite,
+            Filter(
+                SiteProgressReports,
+                SiteID = GlobalSelectedSite2
+            )
+        );
         //------------------------------------------
         //Most recent Report
-        ClearCollect(LatestSiteReport,
+        ClearCollect(
+            LatestSiteReport,
             First(
                 Sort(
                     Filter(
                         SiteProgressReports,
                         SiteID = GlobalSelectedSite2
                     ),
-                    EndTime,  
+                    EndTime,
                     SortOrder.Descending
                 )
             )
         );
         If(
             !IsEmpty(LatestSiteReport),
-            Set(MostRecentReportID, First(LatestSiteReport).ReportID)
-        );
-        ClearCollect(RecentDevelopmentTypes,
-            AddColumns(
-                Filter(Developments, ReportID = MostRecentReportID),
-                DevelopmentTypeName, 
-                LookUp(DevelopmentTypes, TypeIDString = ThisRecord.TypeID).DevelopmentTypeName
+            Set(
+                MostRecentReportID,
+                First(LatestSiteReport).ReportID
             )
         );
-        
-        
-        ClearCollect(RecentEmployees,
+        ClearCollect(
+            RecentDevelopmentTypes,
             AddColumns(
-                Filter(SitePeople, ReportID = MostRecentReportID),
+                Filter(
+                    Developments,
+                    ReportID = MostRecentReportID
+                ),
+                DevelopmentTypeName,
+                LookUp(
+                    DevelopmentTypes,
+                    TypeIDString = ThisRecord.TypeID
+                ).DevelopmentTypeName
+            )
+        );
+        ClearCollect(
+            RecentEmployees,
+            AddColumns(
+                Filter(
+                    SitePeople,
+                    ReportID = MostRecentReportID
+                ),
                 FullName,
-                LookUp(Employees, EmployeeIDsp = ThisRecord.EmployeeID, FirstName & " " & LastName)
-                
+                LookUp(
+                    Employees,
+                    EmployeeIDsp = ThisRecord.EmployeeID,
+                    FirstName & " " & LastName
+                )
             )
         );
-        
-        ClearCollect(RecentToolsUsed,
+        ClearCollect(
+            RecentToolsUsed,
             AddColumns(
-                Filter(SiteToolsUseds, ReportID = MostRecentReportID),
-                ToolName, 
-                LookUp(ToolsLists, ToolIDString = ThisRecord.ToolID).ToolName
+                Filter(
+                    SiteToolsUseds,
+                    ReportID = MostRecentReportID
+                ),
+                ToolName,
+                LookUp(
+                    ToolsLists,
+                    ToolIDString = ThisRecord.ToolID
+                ).ToolName
             )
         );
-        
-        ClearCollect(RecentPlantsUsed,
+        ClearCollect(
+            RecentPlantsUsed,
             AddColumns(
-                Filter(SitePlantsUseds, ReportID = MostRecentReportID),
-                PlantName, 
-                LookUp(PlantsLists, PlantIDStr =ThisRecord.PlantID, PlantName)
+                Filter(
+                    SitePlantsUseds,
+                    ReportID = MostRecentReportID
+                ),
+                PlantName,
+                LookUp(
+                    PlantsLists,
+                    PlantIDStr = ThisRecord.PlantID,
+                    PlantName
+                )
             )
         );
-        
-        
         //------------------------------------------
-        
-        
-        
-        
-        
-        
         //------------------------------------------
-        
-        
-        
         // Get Development Types for each ReportID
-        ClearCollect(DevelopmentTypesForReports,
+        ClearCollect(
+            DevelopmentTypesForReports,
             AddColumns(
-                Filter(Developments, 
+                Filter(
+                    Developments,
                     ReportID in ReportIDsForSite.ReportID
                 ),
-                DevelopmentTypeName, 
-                LookUp(DevelopmentTypes, TypeIDString = ThisRecord.TypeID).DevelopmentTypeName
+                DevelopmentTypeName,
+                LookUp(
+                    DevelopmentTypes,
+                    TypeIDString = ThisRecord.TypeID
+                ).DevelopmentTypeName
             )
         );
-        
-        
-        
         // Get Tool Names for each ReportID
-        ClearCollect(ToolNamesForReports,
+        ClearCollect(
+            ToolNamesForReports,
             AddColumns(
-                Filter(SiteToolsUseds, 
+                Filter(
+                    SiteToolsUseds,
                     ReportID in ReportIDsForSite.ReportID
                 ),
-                ToolName, 
-                LookUp(ToolsLists, ToolIDString = ThisRecord.ToolID).ToolName
+                ToolName,
+                LookUp(
+                    ToolsLists,
+                    ToolIDString = ThisRecord.ToolID
+                ).ToolName
             )
         );
-        
-        
         // Get Employee Names for each ReportID
-        ClearCollect(EmployeeNamesForReports,
+        ClearCollect(
+            EmployeeNamesForReports,
             AddColumns(
-                Filter(SitePeople, 
+                Filter(
+                    SitePeople,
                     ReportID in ReportIDsForSite.ReportID
                 ),
-                FullName,  
-                LookUp(Employees, EmployeeIDsp = ThisRecord.EmployeeID , FirstName &" "& LastName)
+                FullName,
+                LookUp(
+                    Employees,
+                    EmployeeIDsp = ThisRecord.EmployeeID,
+                    FirstName & " " & LastName
+                )
                 //LastName,
-                //LookUp(Employees, EmployeeIDString = ThisRecord.EmployeeID).LastName
+        //LookUp(Employees, EmployeeIDString = ThisRecord.EmployeeID).LastName
             )
         );
         ClearCollect(
             PlantsForReports,
             AddColumns(
                 Filter(
-                    SitePlantsUseds, 
+                    SitePlantsUseds,
                     ReportID in ReportIDsForSite.ReportID
                 ),
-                'PlantName',  
+                'PlantName',
                 LookUp(
-                    PlantsLists, 
+                    PlantsLists,
                     PlantIDStr = ThisRecord.PlantID,
                     PlantName
                 )
             )
         );
-        
-        
-        
-        
-        
-        
         //Summary created
         //------------------------------------------
-        
         //for ALL Site Reports
-        ClearCollect(AllSiteReports,
-            Sort(SiteProgressReports, EndTime, SortOrder.Ascending)
+        ClearCollect(
+            AllSiteReports,
+            Sort(
+                SiteProgressReports,
+                EndTime,
+                SortOrder.Ascending
+            )
         );
         ClearCollect(
-            SummaryCollection, 
+            SummaryCollection,
             ForAll(
                 ReportIDsForSite,
                 With(
                     {currentReportID: ReportID},
                     {
                         ReportID: currentReportID,
-                        StartTime: LookUp(SiteProgressReports, ReportID = currentReportID, TimeStart),
-                        EndTime: LookUp(SiteProgressReports, ReportID = currentReportID, EndTime),
+                        StartTime: LookUp(
+                            SiteProgressReports,
+                            ReportID = currentReportID,
+                            TimeStart
+                        ),
+                        EndTime: LookUp(
+                            SiteProgressReports,
+                            ReportID = currentReportID,
+                            EndTime
+                        ),
                         DevelopmentTypes: Concat(
-                            Filter(DevelopmentTypesForReports, ReportID = currentReportID),
+                            Filter(
+                                DevelopmentTypesForReports,
+                                ReportID = currentReportID
+                            ),
                             DevelopmentTypeName & ", "
                         ),
                         ToolsUsed: Concat(
-                            Filter(ToolNamesForReports, ReportID = currentReportID),
+                            Filter(
+                                ToolNamesForReports,
+                                ReportID = currentReportID
+                            ),
                             ToolName & ", "
                         ),
                         Employees: Concat(
-                            Filter(EmployeeNamesForReports, ReportID = currentReportID),
+                            Filter(
+                                EmployeeNamesForReports,
+                                ReportID = currentReportID
+                            ),
                             FullName & ", "
                         ),
-                        Images: LookUp(SiteImages, ReportID = currentReportID).ImageID,
+                        Images: LookUp(
+                            SiteImages,
+                            ReportID = currentReportID
+                        ).ImageID,
                         PlantsPlanted: Concat(
-                            Filter(PlantsForReports, ReportID = currentReportID),
-                            PlantID & ", "
+                            Filter(
+                                PlantsForReports,
+                                ReportID = currentReportID
+                            ),
+                            PlantName & "Qty: " & Text(PlantQtyUsed) & ", "
                         )
-        
-                        
                     }
                 )
             )
         );
-        
         // Collects the tools names and dats used
-        
         ClearCollect(
             DetailedToolsData,
             ForAll(
                 SiteToolsUseds,
                 With(
-                    {currentReportID: ReportID, currentToolID: ToolIDString},
-                    {ReportID: currentReportID,
-                        StartTime: LookUp(SiteProgressReports, ReportID = currentReportID, TimeStart),
-                        EndTime: LookUp(SiteProgressReports, ReportID = currentReportID, EndTime),
-                        ToolName: LookUp(ToolsLists, ToolID = currentToolID, ToolName)
+                    {
+                        currentReportID: ReportID,
+                        currentToolID: ToolIDString
+                    },
+                    {
+                        ReportID: currentReportID,
+                        StartTime: LookUp(
+                            SiteProgressReports,
+                            ReportID = currentReportID,
+                            TimeStart
+                        ),
+                        EndTime: LookUp(
+                            SiteProgressReports,
+                            ReportID = currentReportID,
+                            EndTime
+                        ),
+                        ToolName: LookUp(
+                            ToolsLists,
+                            ToolID = currentToolID,
+                            ToolName
+                        )
                     }
                 )
             )
         );
-        
         ClearCollect(
             DetailedEmployeeData,
             ForAll(
                 SitePeople,
                 With(
-                    {currentReportID: ReportID, currentEmpID: EmployeeID},
-                    {ReportID: currentReportID,
-                        StartTime: LookUp(SiteProgressReports, ReportID = currentReportID, TimeStart),
-                        EndTime: LookUp(SiteProgressReports, ReportID = currentReportID, EndTime),
-                        Worker: LookUp(Employees, EmployeeID = currentEmpID, FirstName &" "&LastName)
+                    {
+                        currentReportID: ReportID,
+                        currentEmpID: EmployeeID
+                    },
+                    {
+                        ReportID: currentReportID,
+                        StartTime: LookUp(
+                            SiteProgressReports,
+                            ReportID = currentReportID,
+                            TimeStart
+                        ),
+                        EndTime: LookUp(
+                            SiteProgressReports,
+                            ReportID = currentReportID,
+                            EndTime
+                        ),
+                        Worker: LookUp(
+                            Employees,
+                            EmployeeID = currentEmpID,
+                            FirstName & " " & LastName
+                        )
                     }
                 )
             )
         );
-        
         ClearCollect(
             DetailedPlantData,
             ForAll(
                 SitePlantsUseds,
                 With(
-                    {currentReportID: ReportID, currentPlantID:PlantIDStr},
-                    {ReportID: currentReportID,
-                        StartTime: LookUp(SiteProgressReports, ReportID = currentReportID, TimeStart),
-                        EndTime: LookUp(SiteProgressReports, ReportID = currentReportID, EndTime),
-                        Plants: LookUp(PlantsLists, PlantID = currentPlantID, PlantName)
+                    {
+                        currentReportID: ReportID,
+                        currentPlantID: PlantIDStr
+                    },
+                    {
+                        ReportID: currentReportID,
+                        StartTime: LookUp(
+                            SiteProgressReports,
+                            ReportID = currentReportID,
+                            TimeStart
+                        ),
+                        EndTime: LookUp(
+                            SiteProgressReports,
+                            ReportID = currentReportID,
+                            EndTime
+                        ),
+                        Plants: LookUp(
+                            PlantsLists,
+                            PlantID = currentPlantID,
+                            PlantName
+                        )
                     }
                 )
             )
         );
-        
         ClearCollect(
             AllSiteImages1,
             ForAll(
@@ -246,77 +371,60 @@
                     {currentReportID: ReportID},
                     {
                         ReportID: currentReportID,
-                        ImageID: LookUp(SiteImages, ReportID = currentReportID, ImageID)
+                        ImageID: LookUp(
+                            SiteImages,
+                            ReportID = currentReportID,
+                            ImageID
+                        )
                     }
                 )
-        
             )
-        
         );
-        
         ClearCollect(
             AllSiteImages,
             ForAll(
                 ReportIDsForSite,
                 With(
-                    {currentReportID: ReportID, curImageID: LookUp(SiteImages, ReportID = ThisRecord.ReportID).ImageID},
+                    {
+                        currentReportID: ReportID,
+                        curImageID: LookUp(
+                            SiteImages,
+                            ReportID = ThisRecord.ReportID
+                        ).ImageID
+                    },
                     If(
-                        Not(IsBlank(curImageID)), // Check if the ImageID is not blank
+                        Not(IsBlank(curImageID)),// Check if the ImageID is not blank
                         {
                             ReportID: currentReportID,
                             ImageID: curImageID
                         }
                     )
-                    
                 )
             )
         );
-        
-        
         ClearCollect(
             UniqueSiteImages,
             Distinct(
-                AllSiteImages, ImageID
+                AllSiteImages,
+                ImageID
             )
         );
-        
-        
         ClearCollect(
             ColSitePlantsUseds,
-                ForAll(
-                    SiteProgressReports,
-                    With(
-                        {curReportID: ReportID},
-                        {
-                            ReportID: curReportID,
-                            Plantsused: LookUp(SitePlantsUseds, ReportID = curReportID).PlantQtyUsed 
-                        }
-                    )
+            ForAll(
+                SiteProgressReports,
+                With(
+                    {curReportID: ReportID},
+                    {
+                        ReportID: curReportID,
+                        Plantsused: LookUp(
+                            SitePlantsUseds,
+                            ReportID = curReportID
+                        ).PlantQtyUsed
+                    }
                 )
-            
-        
+            )
         );
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
 
     Canvas1_4 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
