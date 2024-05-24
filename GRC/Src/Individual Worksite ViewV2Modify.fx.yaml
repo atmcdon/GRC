@@ -335,7 +335,7 @@
                     BorderColor: =RGBA(204, 231, 246, 1)
                     BorderThickness: =3
                     Fill: =RGBA(0, 0, 0, 0)
-                    Height: =118
+                    Height: =220
                     Width: =239
                     X: =330
                     Y: =969
@@ -387,17 +387,16 @@
                     Height: =59
                     Size: =18
                     Text: |-
-                        ="Plants needed:"
+                        ="Plants Needed:"
                     Width: =218
-                    X: =328
+                    X: =331
                     Y: =963
                     ZIndex: =4
 
                 Label2_5 As label:
                     Height: =48
                     Size: =18
-                    Text: |-
-                        ="Plants planted:"
+                    Text: ="Plants Left"
                     Width: =218
                     X: =330
                     Y: =1023
@@ -430,8 +429,8 @@
                     Size: =24
                     Text: ="Photos"
                     Width: =134
-                    X: =32
-                    Y: =1127
+                    X: =30
+                    Y: =1223
                     ZIndex: =8
 
                 Button5_6 As button:
@@ -440,8 +439,8 @@
                     Size: =24
                     Text: ="Plant Map"
                     Width: =178
-                    X: =387
-                    Y: =1126
+                    X: =385
+                    Y: =1222
                     ZIndex: =9
 
                 Label6_20 As label:
@@ -507,8 +506,8 @@
                     Size: =24
                     Text: ="Notes"
                     Width: =127
-                    X: =211
-                    Y: =1127
+                    X: =209
+                    Y: =1223
                     ZIndex: =15
 
                 Label11_2 As label:
@@ -710,6 +709,25 @@
                     X: =251
                     Y: =15
                     ZIndex: =29
+
+                Label2_6 As label:
+                    Height: =48
+                    Size: =18
+                    Text: ="Plants Planted"
+                    Width: =218
+                    X: =330
+                    Y: =1082
+                    ZIndex: =30
+
+                Label5_6 As label:
+                    Color: =RGBA(127, 178, 57, 1)
+                    Height: =70
+                    Size: =21
+                    Text: ="20"
+                    Width: =88
+                    X: =506
+                    Y: =1071
+                    ZIndex: =31
 
         DataCard3_2 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
