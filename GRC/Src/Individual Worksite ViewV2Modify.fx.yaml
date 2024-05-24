@@ -335,7 +335,7 @@
                     BorderColor: =RGBA(204, 231, 246, 1)
                     BorderThickness: =3
                     Fill: =RGBA(0, 0, 0, 0)
-                    Height: =220
+                    Height: =172
                     Width: =239
                     X: =330
                     Y: =969
@@ -423,17 +423,6 @@
                     Y: =1012
                     ZIndex: =7
 
-                Button5_7 As button:
-                    Fill: =RGBA(99, 139, 44, 1)
-                    Height: =49
-                    OnSelect: =Navigate(ImageView, ScreenTransition.Cover)
-                    Size: =24
-                    Text: ="Photos"
-                    Width: =134
-                    X: =30
-                    Y: =1223
-                    ZIndex: =8
-
                 Button5_6 As button:
                     Fill: =RGBA(99, 139, 44, 1)
                     Height: =50
@@ -500,16 +489,6 @@
                     X: =32
                     Y: =951
                     ZIndex: =14
-
-                Button5_8 As button:
-                    Fill: =RGBA(99, 139, 44, 1)
-                    Height: =49
-                    Size: =24
-                    Text: ="Notes"
-                    Width: =127
-                    X: =209
-                    Y: =1223
-                    ZIndex: =15
 
                 Label11_2 As label:
                     Color: =RGBA(99, 139, 44, 1)
@@ -729,6 +708,26 @@
                     X: =506
                     Y: =1071
                     ZIndex: =31
+
+                ModLabPlantsNeeded As text:
+                    Default: =""
+                    Height: =35
+                    HintText: =LabPlantsNeeded.Text
+                    Size: =18
+                    Width: =62
+                    X: =507
+                    Y: =975
+                    ZIndex: =32
+
+                ModLabPlantsNeeded_1 As text:
+                    Default: =""
+                    Height: =35
+                    HintText: =LabPlantsPlanted.Text
+                    Size: =18
+                    Width: =62
+                    X: =506
+                    Y: =1088
+                    ZIndex: =33
 
         DataCard3_2 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
