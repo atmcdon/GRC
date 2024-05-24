@@ -99,7 +99,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 113,
+    "BindingErrorCount": 114,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "Phone",
@@ -165,6 +165,7 @@
     "FAQ Page",
     "New Entry V3",
     "NewSiteProgressReport",
+    "NewSiteProgressReportModify",
     "Screen4_1",
     "Screen1",
     "Make Site V3"

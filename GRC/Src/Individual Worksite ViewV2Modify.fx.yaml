@@ -884,15 +884,8 @@
 
                 Button12_2 As button:
                     Height: =45
-                    OnSelect: |-
-                        =
-                        //If(
-                        //    Confirm("Are you sure you want to delete this report and all associated data?", 'Confirm Deletion'),
-                        //    Remove(SiteProgressReports, ThisItem),
-                        //    RemoveIf(SitePeoplePresent, ReportID = ThisItem.ReportID)
-                        //);
-                        RemoveIf(SiteProgressReports, ReportID = ThisItem.ReportID);
-                        RemoveIf(SitePeople, ReportID = ThisItem.ReportID);
+                    OnSelect: |
+                        =Set(varModReportID, ThisItem.ReportID);
                     Size: =24
                     Text: ="Edit"
                     Width: =120
