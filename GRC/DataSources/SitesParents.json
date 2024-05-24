@@ -11,6 +11,7 @@
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
       "cr64e_finisheddate": "FinishedDate",
+      "cr64e_plantsqtyneeded": "PlantsQtyNeeded",
       "cr64e_siteid": "SiteID",
       "cr64e_siteimageid": "SiteImageID",
       "cr64e_sitelocation": "SiteLocation",
