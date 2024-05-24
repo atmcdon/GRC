@@ -1,9 +1,9 @@
 "'Individual Worksite ViewV2Modify' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     OnVisible: |
-        =Set(
-            GlobalSelectedSite2,
-            "0001"
-        );
+        =//Set(
+        //    GlobalSelectedSite2,
+        //    "0001"
+        //);
         Set(
             varSiteOwnerID,
             LookUp(
@@ -266,7 +266,7 @@
                                 PlantsForReports,
                                 ReportID = currentReportID
                             ),
-                            PlantName & "Qty: " & Text(PlantQtyUsed) & ", "
+                            PlantName & " Qty: " & Text(PlantQtyUsed) & ", "
                         )
                     }
                 )
@@ -412,7 +412,7 @@
         ClearCollect(
             ColSitePlantsUseds,
             ForAll(
-                SiteProgressReports,
+                ReportIDsForSite,
                 With(
                     {curReportID: ReportID},
                     {
@@ -518,9 +518,22 @@
                                     Image: UploadImageRecording_4.Image
                                 }
                             )
-                        )
+                        );
+                        
+                        If(
+                            !IsBlank(ModLabPlantsNeeded),
+                            Patch(
+                                SitesParents,
+                                LookUp(SitesParents, SiteID = GlobalSelectedSite2),
+                                {
+                                    PlantsQtyNeeded: ModLabPlantsNeeded.Text
+                                }
+                            )
+                        );
+                        
+                        Navigate('Individual Worksite ViewV2Modify')
                     Size: =12
-                    Text: ="Done Editing"
+                    Text: ="Submit Change"
                     Width: =148
                     X: =426
                     Y: =15
@@ -847,7 +860,7 @@
                     Height: =70
                     Size: =21
                     Text: |
-                        =Text(Sum(ColSitePlantsUseds, Plantsused), "[$-en-US]#,###")
+                        =Text(Sum(PlantsForReports, PlantQtyUsed ), "[$-en-US]#,###")
                     Width: =88
                     X: =506
                     Y: =1071
@@ -1054,9 +1067,9 @@
                     PaddingRight: =0
                     PaddingTop: =0
                     Text: |-
-                        ="Plants Planted: " & ThisItem.Employees
+                        ="Plants Planted: " & ThisItem.PlantsPlanted
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =185
+                    Width: =355
                     X: =31
                     Y: =211
                     ZIndex: =13
