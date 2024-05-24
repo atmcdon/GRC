@@ -10,7 +10,7 @@
         ClearCollect(
             ColDevelopmentTypes,
             ForAll(
-                Developments,
+                Filter(Developments, ReportID = varCurrentReportID),
                 {
                     TypeID: TypeIDString,
                     DevelopmentName: LookUp(DevelopmentTypes, TypeID = TypeIDString).DevelopmentTypeName
