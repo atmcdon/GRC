@@ -5,7 +5,7 @@
             varModReportID
         );
         
-        Set(varCurrentReportID,
+        Set(varCurrentImageID,
             LookUp(SiteImages, ReportID = varModReportID)
         );
         
