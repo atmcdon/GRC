@@ -1816,7 +1816,7 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =635
+            Height: =498
             Width: =640
             X: =0
             Y: =4
@@ -2256,6 +2256,49 @@
             X: =0
             Y: =5
             ZIndex: =6
+
+            AddMediaWithImage2_6 As group:
+                Height: =5
+                Width: =5
+                X: =10
+                Y: =-110
+                ZIndex: =1
+
+                UploadImageRecording_6 As image:
+                    AccessibleLabel: =
+                    Height: =185
+                    Image: |+
+                        =
+                        //LookUp(Images, ImageID = varSiteImageID).Image
+                        //If(IsBlank(AddMediaButton2_4.Media), SampleImage, AddMediaButton2_4.Media)
+                        
+                        If(IsBlank(AddMediaButton2_6.Media), SampleImage, AddMediaButton2_6.Media)
+                        
+                    ImagePosition: =ImagePosition.Fill
+                    Width: =262
+                    X: =345
+                    Y: =110
+                    ZIndex: =2
+
+                AddMediaButton2_6 As addMedia:
+                    Height: =188
+                    Size: =25
+                    Width: =262
+                    X: =345
+                    Y: =110
+                    ZIndex: =3
+
+            Image3_6 As image:
+                Height: =188
+                Image: |
+                    =
+                        UploadImageRecording_6.Image
+                    
+                    //LookUp(Images, ImageID = varCurrentImageID).Image
+                Width: =293
+                X: =40
+                Y: =110
+                ZIndex: =4
 
     IconCancel1_4 As icon.Cancel:
         AccessibleLabel: =Self.Tooltip
