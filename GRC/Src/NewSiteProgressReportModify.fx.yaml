@@ -16,7 +16,38 @@
                     DevelopmentName: LookUp(DevelopmentTypes, TypeID = TypeIDString).DevelopmentTypeName
                 }
             )
-        )
+        );
+        
+        ClearCollect(
+            colProgressTime,
+            ForAll(
+                Filter(SiteProgressReports, ReportID = varCurrentReportID),
+                {
+                    TimeStart: TimeStart,
+                    EndTime: EndTime
+                }
+                
+                )
+            );
+        ClearCollect(
+            colProgressDates,
+            ForAll(
+                colProgressTime,
+                {
+                    StartDate: DateValue(Text(TimeStart, "[$-en-US]yyyy-mm-dd")),
+                    EndDate: DateValue(Text(EndTime, "[$-en-US]yyyy-mm-dd")),
+                    StartHour: If(Len(Text(Hour(TimeStart))) = 1, "0" & Text(Hour(TimeStart)), Text(Hour(TimeStart))),
+                    StartMinute: If(Len(Text(Minute(TimeStart))) = 1, "0" & Text(Minute(TimeStart)), Text(Minute(TimeStart))),
+                    EndHour: If(Len(Text(Hour(EndTime))) = 1, "0" & Text(Hour(EndTime)), Text(Hour(EndTime))),
+                    EndMinute: If(Len(Text(Minute(EndTime))) = 1, "0" & Text(Minute(EndTime)), Text(Minute(EndTime)))
+                }
+            )
+        );
+        
+        
+        
+        
+        
         
         
         //Collect(ColDevelopmentTypes, {TypeID: DropDownToolsNewEntry_8.Selected.TypeID, DevelopmentName: DropDownToolsNewEntry_8.Selected.DevelopmentTypeName});
@@ -545,6 +576,7 @@
 
                 StartTimeDate_1 As datepicker:
                     BorderColor: =
+                    DefaultDate: =First(colProgressDates).StartDate
                     DisplayMode: =Parent.DisplayMode
                     EndYear: =Year(Today())+100
                     Height: =70
@@ -561,7 +593,7 @@
 
                 StarTimeHr_1 As dropdown:
                     BorderColor: =
-                    Default: ="00"
+                    Default: =First(colProgressDates).StartHour
                     DisplayMode: =Parent.DisplayMode
                     Height: =StartTimeDate_1.Height
                     Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23"]
@@ -578,7 +610,7 @@
 
                 StartTimeMin_1 As dropdown:
                     BorderColor: =
-                    Default: ="00"
+                    Default: =First(colProgressDates).StartMinute
                     DisplayMode: =Parent.DisplayMode
                     Height: =StarTimeHr_1.Height
                     Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"]
@@ -624,6 +656,7 @@
 
                 EndTimeDate_1 As datepicker:
                     BorderColor: =
+                    DefaultDate: =First(colProgressDates).EndDate
                     DisplayMode: =Parent.DisplayMode
                     EndYear: =Year(Today())+100
                     Height: =70
@@ -640,7 +673,7 @@
 
                 EndTimeHr_1 As dropdown:
                     BorderColor: =
-                    Default: ="00"
+                    Default: =First(colProgressDates).EndHour
                     DisplayMode: =Parent.DisplayMode
                     Height: =EndTimeDate_1.Height
                     Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23"]
@@ -657,7 +690,7 @@
 
                 EndTimeMin_1 As dropdown:
                     BorderColor: =
-                    Default: ="00"
+                    Default: =First(colProgressDates).EndMinute
                     DisplayMode: =Parent.DisplayMode
                     Height: =EndTimeHr_1.Height
                     Items: =["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"]
