@@ -5,7 +5,9 @@
             varModReportID
         );
         
-        
+        Set(varCurrentReportID,
+            LookUp(SiteImages, ReportID = varModReportID)
+        );
         
         ClearCollect(
             ColDevelopmentTypes,
