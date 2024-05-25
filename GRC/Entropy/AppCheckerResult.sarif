@@ -8230,49 +8230,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.AccessibleLabel"
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_7.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Individual Worksite ViewV2",
-                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4.TabIndex",
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_7.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Individual Worksite ViewV2",
-                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_4"
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_7"
               }
             }
           ],
@@ -8284,6 +8254,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_7.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_7.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Individual Worksite ViewV2",
+                "type": "'Individual Worksite ViewV2'.Canvas1_3.DataCard3_1.Gallery5_7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
         },
         {
           "locations": [
