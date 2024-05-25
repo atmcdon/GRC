@@ -26,7 +26,16 @@
                             Filter(EmployeeNamesForReports, ReportID = currentReportID),
                             FullName & ", "
                         ),
-                        ImageID: LookUp(SiteImages, ReportID = currentReportID).ImageID
+                        ImageID: LookUp(SiteImages, ReportID = currentReportID).ImageID,
+                        
+                        PlantsPlanted: Concat(
+                            Filter(
+                                PlantsForReports,
+                                ReportID = currentReportID
+                            ),
+                            PlantName & " Qty: " & Text(PlantQtyUsed) & ", "
+                        )
+        
                     }
                 )
             )
@@ -258,22 +267,22 @@
                 Y: =110
                 ZIndex: =2
 
-            "Gallery5_5 As gallery.'BrowseLayout_Flexible_NewsFeed_ver5.0'":
+            "Gallery5_8 As gallery.'BrowseLayout_Flexible_NewsFeed_ver5.0'":
                 '#CopilotOverlayLabel': ="Filtered"
                 DelayItemLoading: =true
                 Fill: =RGBA(232, 244, 217, 1)
-                Height: =398
+                Height: =284
                 Items: =SummaryCollectionAll
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
-                TemplateSize: =254
+                TemplateSize: =284
                 Width: =594
-                X: =23
-                Y: =124
-                ZIndex: =3
+                X: =22
+                Y: =131
+                ZIndex: =4
 
-                Title7_5 As label:
+                Title7_8 As label:
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =Self.Size * 1.8
                     OnSelect: =Select(Parent)
@@ -283,12 +292,12 @@
                     PaddingTop: =0
                     Text: =
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =Parent.TemplateWidth - Image7_5.Width - 80
+                    Width: =Parent.TemplateWidth - Image7_8.Width - 80
                     X: =32
                     Y: =32
                     ZIndex: =1
 
-                Body5_11 As label:
+                Body5_29 As label:
                     AutoHeight: =true
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =Self.Size * 4
@@ -300,13 +309,13 @@
                     Text: |-
                         ="Star Time: " &ThisItem.StartTime
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =Title7_5.Width
+                    Width: =Title7_8.Width
                     X: =32
                     Y: =32
                     ZIndex: =2
 
-                Image7_5 As image:
-                    Height: =160
+                Image7_8 As image:
+                    Height: =115
                     Image: =LookUp(Images, ImageID = ThisItem.ImageID).Image
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =8
@@ -315,17 +324,17 @@
                     RadiusTopRight: =8
                     Width: =160
                     X: =403
-                    Y: =Title7_5.Y
+                    Y: =Title7_8.Y
                     ZIndex: =3
 
-                Separator5_5 As rectangle:
+                Separator5_8 As rectangle:
                     Height: =1
                     OnSelect: =Select(Parent)
                     Width: =Parent.TemplateWidth
-                    Y: =Max(Parent.TemplateHeight - 1, Body5_11.Y + Body5_11.Height + 10)
+                    Y: =Max(Parent.TemplateHeight - 1, Body5_29.Y + Body5_29.Height + 10)
                     ZIndex: =4
 
-                UploadedImage1_4 As image:
+                UploadedImage1_7 As image:
                     Height: =
                     Image: =
                     ImagePosition: =ImagePosition.Fill
@@ -335,7 +344,7 @@
                     Y: =
                     ZIndex: =6
 
-                Body5_12 As label:
+                Body5_30 As label:
                     AutoHeight: =true
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =Self.Size * 4
@@ -347,12 +356,12 @@
                     Text: |-
                         ="End Time: " &ThisItem.EndTime
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =Title7_5.Width
+                    Width: =Title7_8.Width
                     X: =32
                     Y: =57
                     ZIndex: =7
 
-                Body5_13 As label:
+                Body5_31 As label:
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =46
                     OnSelect: =Select(Parent)
@@ -368,7 +377,7 @@
                     Y: =95
                     ZIndex: =8
 
-                Body5_14 As label:
+                Body5_32 As label:
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =18
                     OnSelect: =Select(Parent)
@@ -381,10 +390,10 @@
                     VerticalAlign: =VerticalAlign.Top
                     Width: =531
                     X: =32
-                    Y: =147
+                    Y: =132
                     ZIndex: =9
 
-                Body5_15 As label:
+                Body5_33 As label:
                     FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
                     Height: =23
                     OnSelect: =Select(Parent)
@@ -396,9 +405,25 @@
                         ="Tools Used: " & ThisItem.ToolsUsed
                     VerticalAlign: =VerticalAlign.Top
                     Width: =531
-                    X: =32
-                    Y: =200
+                    X: =31
+                    Y: =171
                     ZIndex: =10
+
+                Body5_34 As label:
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =37
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: |-
+                        ="Plants Planted: " & ThisItem.PlantsPlanted
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =355
+                    X: =31
+                    Y: =211
+                    ZIndex: =13
 
         DataCard5_1 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
