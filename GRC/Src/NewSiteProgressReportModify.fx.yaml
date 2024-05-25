@@ -1,5 +1,5 @@
 "NewSiteProgressReportModify As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
-    OnVisible: |-
+    OnVisible: |
         =
         Set(varCurrentReportID,
             varModReportID
@@ -44,9 +44,60 @@
             )
         );
         
+        ClearCollect(
+            ColToolsLists,
+            ForAll(
+                Filter(SiteToolsUseds, ReportID = varCurrentReportID),
+                With(
+                    {
+                        currentToolID: ToolIDString
+                    },
+                    {
+                        ToolName: LookUp(ToolsLists, ToolID = currentToolID).ToolName,
+                        ToolID: currentToolID
+                    }
+                )
         
+            )
+        );
         
+        ClearCollect(
+            ColEmployeesAdd,
+            ForAll(
+                Filter(SitePeople, ReportID = varCurrentReportID),
+                With(
+                    {
+                        currentEmp: EmployeeID
+                    },
+                    {
+                        ReportID: varCurrentReportID,
+                        EmployeeID: currentEmp,
+                        EmpName: "Employee Name: " & 
+                                 LookUp(Employees, EmployeeID = currentEmp).FirstName & 
+                                 " - " & 
+                                 LookUp(Employees, EmployeeID = currentEmp).LastName
+                    }
+                )
+            )
+        );
         
+        ClearCollect(
+            ColPlantSiteAdd,
+            ForAll(
+                Filter(SitePlantsUseds, ReportID = varCurrentReportID),
+                With(
+                    {
+                        currentPlantID: PlantIDStr
+                    },
+                    {
+                        PlantName: LookUp(PlantsLists, PlantID = currentPlantID).PlantName,
+                        PlantID: currentPlantID,
+                        PlantQty: PlantQtyUsed
+                    }
+                )
+        
+            )
+        );
         
         
         
@@ -644,7 +695,7 @@
                     ZIndex: =12
 
                 GeneralNotesAdd_1 As text:
-                    Default: =""
+                    Default: =LookUp(SiteProgressReports, ReportID = varCurrentReportID).GeneralNotes
                     Height: =278
                     HintText: ="General Notes"
                     Mode: =TextMode.MultiLine
@@ -1085,7 +1136,7 @@
                     ZIndex: =4
 
             Container10_1 As groupContainer.manualLayoutContainer:
-                Height: =569
+                Height: =541
                 Width: =640
                 Y: =16
                 ZIndex: =3
@@ -1110,7 +1161,7 @@
 
                     "Gallery3_10 As gallery.'BrowseLayout_Flexible_NewsFeed_ver5.0'":
                         DelayItemLoading: =true
-                        Height: =253
+                        Height: =254
                         Items: =ColDevelopmentTypes
                         Layout: =Layout.Vertical
                         LoadingSpinner: =LoadingSpinner.Data
@@ -2321,6 +2372,13 @@
                     }
                 )
             );
+            
+            Patch(
+                SiteProgressReports,
+                LookUp(SiteProgressReports, ReportID = varCurrentReportID),
+                { GeneralNotes: GeneralNotesAdd_1.Text }
+            );
+            
             
             //ClearCollect(colProgressTime, {TimeStart: TimeStart_DataCardCurr.DataField});
             
