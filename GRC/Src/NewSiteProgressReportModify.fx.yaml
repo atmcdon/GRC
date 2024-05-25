@@ -6,7 +6,7 @@
         );
         
         Set(varCurrentImageID,
-            LookUp(SiteImages, ReportID = varModReportID)
+            LookUp(SiteImages, ReportID = varModReportID).ImageID
         );
         
         ClearCollect(
@@ -2333,11 +2333,53 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =100
+            Height: =415
             Width: =640
             X: =0
             Y: =5
             ZIndex: =6
+
+            AddMediaWithImage2_5 As group:
+                Height: =5
+                Width: =5
+                X: =23
+                Y: =-318
+                ZIndex: =1
+
+                UploadImageRecording_5 As image:
+                    AccessibleLabel: =
+                    Height: =185
+                    Image: |-
+                        =
+                        //LookUp(Images, ImageID = varSiteImageID).Image
+                        //If(IsBlank(AddMediaButton2_4.Media), SampleImage, AddMediaButton2_4.Media)
+                        
+                        If(IsBlank(LookUp(Images, ImageID = varSiteImageID).Image), SampleImage, AddMediaButton2_5.Media)
+                    ImagePosition: =ImagePosition.Fill
+                    Width: =262
+                    X: =335
+                    Y: =110
+                    ZIndex: =2
+
+                AddMediaButton2_5 As addMedia:
+                    Height: =188
+                    Size: =25
+                    Width: =262
+                    X: =335
+                    Y: =110
+                    ZIndex: =3
+
+            Image3_5 As image:
+                Height: =188
+                Image: |
+                    =
+                    //    UploadImageRecording_4.Image
+                    
+                    LookUp(Images, ImageID = varCurrentImageID).Image
+                Width: =293
+                X: =30
+                Y: =110
+                ZIndex: =4
 
     IconCancel1_6 As icon.Cancel:
         AccessibleLabel: =Self.Tooltip
@@ -2429,6 +2471,25 @@
                     }
                 )
             );
+            
+            // Step 1: Look up the ImageID based on the ReportID
+            Set(
+                varImageID,
+                LookUp(SiteImages, ReportID = varCurrentReportID).ImageID
+            );
+            
+            // Step 2: Patch the record in the Images table with the new image
+            If(
+                !IsBlank(varImageID),
+                Patch(
+                    Images,
+                    LookUp(Images, ImageID = varImageID),
+                    {
+                        Image: UploadImageRecording_5.Image
+                    }
+                )
+            );
+            
             
             //Navigate('Main DashboardV2')
             
