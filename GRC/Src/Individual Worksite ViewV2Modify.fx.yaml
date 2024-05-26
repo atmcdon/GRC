@@ -464,16 +464,16 @@
                 Text: |
                     ="Site: "&LookUp(SitesParents,SiteID = GlobalSelectedSite2).SiteName
                 Width: =334
-                X: =45
-                Y: =25
+                X: =40
+                Y: =95
                 ZIndex: =5
 
             Container1_4 As groupContainer.manualLayoutContainer:
                 ContentLanguage: =
-                Height: =1315
+                Height: =1244
                 Width: =594
                 X: =20
-                Y: =10
+                Y: =81
                 ZIndex: =8
 
                 Rectangle5_4 As rectangle:
@@ -810,47 +810,6 @@
                     Y: =318
                     ZIndex: =28
 
-                Button3_3 As button:
-                    Fill: =RGBA(151, 0, 0, 1)
-                    Height: =61
-                    OnSelect: |-
-                        =RemoveIf(SiteProgressReports, SiteID = GlobalSelectedSite2);
-                        
-                        
-                        ForAll(
-                            Filter(SiteProgressReports, SiteID = GlobalSelectedSite2),
-                            RemoveIf(SiteToolsUseds, ReportID = ReportID)
-                        
-                        );
-                        ForAll(
-                            Filter(SiteProgressReports, SiteID = GlobalSelectedSite2),
-                            RemoveIf(SitePeople, ReportID =ReportID)
-                        
-                        );
-                        ForAll(
-                            Filter(SiteProgressReports, SiteID = GlobalSelectedSite2),
-                            RemoveIf(SitePlantsUseds, ReportID =ReportID)
-                        
-                        );
-                        
-                        ForAll(
-                            Filter(SiteProgressReports, SiteID = GlobalSelectedSite2),
-                            RemoveIf(SiteImages, ReportID =ReportID)
-                        
-                        );
-                        ForAll(
-                            Filter(SiteProgressReports, SiteID = GlobalSelectedSite2),
-                            RemoveIf(Developments, ReportID =ReportID)
-                        
-                        );
-                        Remove(SitesParents, LookUp(SitesParents, SiteID = GlobalSelectedSite2))
-                    Size: =12
-                    Text: ="Delete Site"
-                    Width: =148
-                    X: =251
-                    Y: =15
-                    ZIndex: =29
-
                 Label2_6 As label:
                     Height: =48
                     Size: =18
@@ -880,6 +839,55 @@
                     X: =505
                     Y: =977
                     ZIndex: =32
+
+            Icon1_6 As icon.ArrowLeft:
+                Icon: =Icon.ArrowLeft
+                OnSelect: |
+                    =Back()
+                X: =20
+                Y: =14
+                ZIndex: =9
+
+            Button3_3 As button:
+                Fill: =RGBA(151, 0, 0, 1)
+                Height: =61
+                OnSelect: |-
+                    =RemoveIf(SiteProgressReports, SiteID = GlobalSelectedSite2);
+                    
+                    
+                    ForAll(
+                        Filter(SiteProgressReports, SiteID = GlobalSelectedSite2),
+                        RemoveIf(SiteToolsUseds, ReportID = ReportID)
+                    
+                    );
+                    ForAll(
+                        Filter(SiteProgressReports, SiteID = GlobalSelectedSite2),
+                        RemoveIf(SitePeople, ReportID =ReportID)
+                    
+                    );
+                    ForAll(
+                        Filter(SiteProgressReports, SiteID = GlobalSelectedSite2),
+                        RemoveIf(SitePlantsUseds, ReportID =ReportID)
+                    
+                    );
+                    
+                    ForAll(
+                        Filter(SiteProgressReports, SiteID = GlobalSelectedSite2),
+                        RemoveIf(SiteImages, ReportID =ReportID)
+                    
+                    );
+                    ForAll(
+                        Filter(SiteProgressReports, SiteID = GlobalSelectedSite2),
+                        RemoveIf(Developments, ReportID =ReportID)
+                    
+                    );
+                    Remove(SitesParents, LookUp(SitesParents, SiteID = GlobalSelectedSite2))
+                Size: =12
+                Text: ="Delete Site"
+                Width: =148
+                X: =446
+                Y: =17
+                ZIndex: =10
 
         DataCard3_2 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
