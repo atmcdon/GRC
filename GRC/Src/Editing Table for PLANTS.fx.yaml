@@ -159,7 +159,7 @@
     Icon6 As icon.ChevronLeft:
         Color: =RGBA(255, 255, 255, 1)
         Icon: =Icon.ChevronLeft
-        OnSelect: =Navigate('Individual Worksite View')
+        OnSelect: =Back()
         X: =4
         Y: =12
         ZIndex: =12

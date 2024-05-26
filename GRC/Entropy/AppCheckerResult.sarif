@@ -3470,46 +3470,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Editing Table for plants'.Icon6.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Editing Table for plants'.Icon6.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 26,
-                  "charOffset": 9,
-                  "snippet": {
-                    "text": "'Individual Worksite View'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Editing Table for plants",
-                "type": "'Editing Table for plants'.Icon6"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Individual Worksite View"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "LoginPage.Button7.OnSelect"
                 }
               ],
@@ -13551,6 +13511,66 @@
                 "member": "TabIndex",
                 "module": "Editing table for tools",
                 "type": "'Editing table for tools'.Icon6_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Editing Table for plants'.Icon6.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Editing Table for plants'.Icon6.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Editing Table for plants",
+                "type": "'Editing Table for plants'.Icon6"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Editing Table for plants'.Icon6.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Editing Table for plants'.Icon6.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Editing Table for plants",
+                "type": "'Editing Table for plants'.Icon6"
               }
             }
           ],
