@@ -430,7 +430,9 @@
         BorderThickness: =0
         Height: =Parent.Height - Self.Y
         Width: =Parent.Width
-        Y: =HeaderArea.Y + HeaderArea.Height
+        Y: |-
+            =//HeaderArea.Y + HeaderArea.Height
+            HeaderArea_1.Y + HeaderArea_1.Height
         ZIndex: =3
 
         DataCard1_4 As dataCard:
@@ -595,7 +597,7 @@
                     Height: =54
                     Size: =14
                     Text: |
-                        ="Status: " & If(IsBlank(LookUp(SitesParents, SiteID = GlobalSelectedSite, FinishedDate)),
+                        ="Status: " & If(IsBlank(LookUp(SitesParents, SiteID = GlobalSelectedSite2, FinishedDate)),
                          "Active", 
                          "Inactive")
                     Width: =255
@@ -665,9 +667,9 @@
                     Height: =82
                     OnSelect: |-
                         ="Recent Workers: " & If(
-                            IsBlank(LookUp('Site Histories', SiteName = GlobalSelectedSite)),
+                            IsBlank(LookUp('Site Histories', SiteName = GlobalSelectedSite2)),
                             "No workers found",
-                            LookUp('Site Histories', SiteName = GlobalSelectedSite).'Workers (cr64e_workers)'
+                            LookUp('Site Histories', SiteName = GlobalSelectedSite2).'Workers (cr64e_workers)'
                         )
                     Size: =14
                     Text: |-

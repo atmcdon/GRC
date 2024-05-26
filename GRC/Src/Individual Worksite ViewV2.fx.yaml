@@ -331,7 +331,7 @@
         BorderThickness: =0
         Height: =Parent.Height - Self.Y
         Width: =Parent.Width
-        Y: =HeaderArea.Y + HeaderArea.Height
+        Y: =HeaderArea_1.Y + HeaderArea_1.Height
         ZIndex: =3
 
         DataCard1_3 As dataCard:
@@ -965,7 +965,7 @@
             Label10_4 As label:
                 Height: =70
                 Size: =21
-                Text: ="Plant Species at " & GlobalSelectedSite2
+                Text: ="Plant Species at " & LookUp(SitesParents, SiteID = GlobalSelectedSite2).SiteName
                 Width: =560
                 X: =40
                 ZIndex: =2
@@ -1095,7 +1095,7 @@
             Label10_5 As label:
                 Height: =70
                 Size: =21
-                Text: ="Tools Used at "& GlobalSelectedSite2
+                Text: ="Tools Used at "& LookUp(SitesParents, SiteID = GlobalSelectedSite2).SiteName
                 Width: =560
                 X: =40
                 ZIndex: =2
@@ -1227,7 +1227,7 @@
             Label10_1 As label:
                 Height: =70
                 Size: =21
-                Text: ="Employees at" & GlobalSelectedSite2
+                Text: ="Employees at " & LookUp(SitesParents, SiteID = GlobalSelectedSite2).SiteName
                 Width: =560
                 X: =40
                 Y: =22
