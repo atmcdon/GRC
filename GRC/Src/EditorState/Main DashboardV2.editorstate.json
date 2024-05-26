@@ -3536,7 +3536,7 @@
       "MetaDataIDKey": "",
       "Name": "Canvas1_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4811,7 +4811,7 @@
       "MetaDataIDKey": "",
       "Name": "Header Label",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5071,7 +5071,7 @@
       "MetaDataIDKey": "",
       "Name": "HeaderArea_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7508,7 +7508,7 @@
       "MetaDataIDKey": "",
       "Name": "NavbarGallery_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

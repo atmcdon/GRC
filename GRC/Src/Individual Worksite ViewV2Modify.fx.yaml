@@ -587,8 +587,8 @@
                     Size: =24
                     Text: ="Plant Map"
                     Width: =178
-                    X: =385
-                    Y: =1222
+                    X: =370
+                    Y: =1170
                     ZIndex: =9
 
                 Label6_20 As label:
