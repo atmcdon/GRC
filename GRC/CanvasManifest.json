@@ -99,7 +99,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 113,
+    "BindingErrorCount": 104,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "Phone",
@@ -132,9 +132,7 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "Main DashboardV1",
     "Main DashboardV2",
-    "Individual Worksite View",
     "Individual Worksite ViewV2",
     "Individual Worksite ViewV2Modify",
     "ImageView",

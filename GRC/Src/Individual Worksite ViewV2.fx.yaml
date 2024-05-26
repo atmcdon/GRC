@@ -430,7 +430,7 @@
                     Height: =54
                     Size: =14
                     Text: |
-                        ="Status: " & If(IsBlank(LookUp(SitesParents, SiteID = GlobalSelectedSite, FinishedDate)),
+                        ="Status: " & If(IsBlank(LookUp(SitesParents, SiteID = GlobalSelectedSite2, FinishedDate)),
                          "Active", 
                          "Inactive")
                     Width: =255
@@ -531,9 +531,9 @@
                     Height: =82
                     OnSelect: |-
                         ="Recent Workers: " & If(
-                            IsBlank(LookUp('Site Histories', SiteName = GlobalSelectedSite)),
+                            IsBlank(LookUp('Site Histories', SiteName = GlobalSelectedSite2)),
                             "No workers found",
-                            LookUp('Site Histories', SiteName = GlobalSelectedSite).'Workers (cr64e_workers)'
+                            LookUp('Site Histories', SiteName = GlobalSelectedSite2).'Workers (cr64e_workers)'
                         )
                     Size: =14
                     Text: |+
@@ -725,7 +725,7 @@
                 Fill: =RGBA(130, 110, 94, 1)
                 Height: =45
                 OnSelect: |+
-                    =Navigate(UploadImages, ScreenTransition.Cover, {GlobalSelectedSite: GlobalSelectedSite})
+                    =Navigate(UploadImages, ScreenTransition.Cover, {GlobalSelectedSite: GlobalSelectedSite2})
                     
                     
                     
@@ -965,7 +965,7 @@
             Label10_4 As label:
                 Height: =70
                 Size: =21
-                Text: ="Plant Species at " & GlobalSelectedSite
+                Text: ="Plant Species at " & GlobalSelectedSite2
                 Width: =560
                 X: =40
                 ZIndex: =2
@@ -1095,7 +1095,7 @@
             Label10_5 As label:
                 Height: =70
                 Size: =21
-                Text: ="Tools Used at "& GlobalSelectedSite
+                Text: ="Tools Used at "& GlobalSelectedSite2
                 Width: =560
                 X: =40
                 ZIndex: =2
@@ -1227,7 +1227,7 @@
             Label10_1 As label:
                 Height: =70
                 Size: =21
-                Text: ="Employees at" & GlobalSelectedSite
+                Text: ="Employees at" & GlobalSelectedSite2
                 Width: =560
                 X: =40
                 Y: =22
