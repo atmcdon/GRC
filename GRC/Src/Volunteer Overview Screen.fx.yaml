@@ -141,7 +141,7 @@
                 Y: =579
                 ZIndex: =3
 
-            plnatAddImp_1 As text:
+            FirstNamImp As text:
                 Default: =""
                 Height: =70
                 HintText: ="Bob"
@@ -158,8 +158,8 @@
                         PlantsLists,
                         Defaults(PlantsLists),
                         {
-                            PlantName: plnatAddImp_1.Text,
-                            QuantityAtSite: Value(plnatQtyImp_2.Text)
+                            PlantName: FirstNamImp.Text,
+                            QuantityAtSite: Value(LastNamImp.Text)
                         }
                     );
                 Size: =24
@@ -169,7 +169,7 @@
                 Y: =649
                 ZIndex: =5
 
-            plnatQtyImp_2 As text:
+            LastNamImp As text:
                 Default: =""
                 Height: =70
                 HintText: ="Heart"
