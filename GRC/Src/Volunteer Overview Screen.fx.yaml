@@ -135,7 +135,7 @@
             Label1_2 As label:
                 Height: =70
                 Size: =21
-                Text: ="Add New Plant name & Qty Amount "
+                Text: ="Add First Name & Last Name"
                 Width: =560
                 X: =47
                 Y: =579
@@ -144,7 +144,7 @@
             plnatAddImp_1 As text:
                 Default: =""
                 Height: =70
-                HintText: ="Trees"
+                HintText: ="Bob"
                 Size: =21
                 Width: =204
                 X: =52
@@ -172,7 +172,7 @@
             plnatQtyImp_2 As text:
                 Default: =""
                 Height: =70
-                HintText: ="76"
+                HintText: ="Heart"
                 Size: =21
                 Width: =204
                 X: =276
