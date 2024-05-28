@@ -158,7 +158,8 @@
                         PlantsLists,
                         Defaults(PlantsLists),
                         {
-                            PlantName: plnatAddImp.Text
+                            PlantName: plnatAddImp.Text,
+                            QuantityAtSite: plnatQtyImp_1.Text
                         }
                     );
                 Size: =24
@@ -167,6 +168,16 @@
                 X: =501
                 Y: =668
                 ZIndex: =6
+
+            plnatQtyImp_1 As text:
+                Default: =""
+                Height: =70
+                HintText: ="76"
+                Size: =21
+                Width: =204
+                X: =276
+                Y: =668
+                ZIndex: =7
 
         DataCard17 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
