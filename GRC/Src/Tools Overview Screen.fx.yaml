@@ -187,7 +187,7 @@
                 Y: =607
                 ZIndex: =3
 
-            TextInput1 As text:
+            ToolNameInp As text:
                 Default: =""
                 Height: =70
                 HintText: ="Shovel"
@@ -196,6 +196,16 @@
                 X: =47
                 Y: =677
                 ZIndex: =4
+
+            ToolSnImp As text:
+                Default: =""
+                Height: =70
+                HintText: ="143"
+                Size: =21
+                Width: =204
+                X: =378
+                Y: =677
+                ZIndex: =5
 
         DataCard17_1 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
