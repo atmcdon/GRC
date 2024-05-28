@@ -492,6 +492,7 @@
                 OnSelect: =Navigate('Worker Overview Screen')
                 Size: =24
                 Text: ="Workers"
+                Visible: =false
                 Width: =555
                 X: =40
                 Y: =472
