@@ -631,6 +631,7 @@
 
                 EndTimeDate As datepicker:
                     BorderColor: =
+                    DisabledBorderColor: =RGBA(200, 190, 160, 1)
                     DisplayMode: =Parent.DisplayMode
                     EndYear: =Year(Today())+100
                     Height: =70
@@ -647,6 +648,7 @@
 
                 EndTimeHr As dropdown:
                     BorderColor: =
+                    ChevronBackground: =RGBA(200, 190, 160, 1)
                     Default: ="00"
                     DisplayMode: =Parent.DisplayMode
                     Height: =EndTimeDate.Height
@@ -664,6 +666,7 @@
 
                 EndTimeMin As dropdown:
                     BorderColor: =
+                    ChevronBackground: =RGBA(200, 190, 160, 1)
                     Default: ="00"
                     DisplayMode: =Parent.DisplayMode
                     Height: =EndTimeHr.Height
