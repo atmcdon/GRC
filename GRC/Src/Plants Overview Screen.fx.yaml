@@ -26,7 +26,7 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =618
+            Height: =781
             Width: =640
             X: =0
             Y: =0
@@ -130,6 +130,53 @@
                 X: =40
                 Y: =40
                 ZIndex: =2
+
+            Label1_1 As label:
+                Height: =70
+                Size: =21
+                Text: ="Add new tool - Name and Serial Number"
+                Width: =560
+                X: =47
+                Y: =598
+                ZIndex: =3
+
+            ToolNameInp_1 As text:
+                Default: =""
+                Height: =70
+                HintText: ="Shovel"
+                Size: =21
+                Width: =204
+                X: =52
+                Y: =668
+                ZIndex: =4
+
+            ToolSnImp_1 As text:
+                Default: =""
+                Height: =70
+                HintText: ="143"
+                Size: =21
+                Width: =204
+                X: =268
+                Y: =668
+                ZIndex: =5
+
+            Button1_1 As button:
+                Height: =70
+                OnSelect: |
+                    =Patch(
+                        ToolsLists,
+                        Defaults(ToolsLists),
+                        {
+                            ToolName: ToolNameInp_1.Text,
+                            ToolSN: Value(ToolSnImp_1.Text)
+                        }
+                    );
+                Size: =24
+                Text: ="Add"
+                Width: =87
+                X: =501
+                Y: =668
+                ZIndex: =6
 
         DataCard17 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)

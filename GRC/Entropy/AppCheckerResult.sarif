@@ -13768,6 +13768,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Plants Overview Screen'.Canvas5.DataCard16.ToolNameInp_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Plants Overview Screen'.Canvas5.DataCard16.ToolNameInp_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Plants Overview Screen",
+                "type": "'Plants Overview Screen'.Canvas5.DataCard16.ToolNameInp_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Plants Overview Screen'.Canvas5.DataCard16.ToolSnImp_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Plants Overview Screen'.Canvas5.DataCard16.ToolSnImp_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Plants Overview Screen",
+                "type": "'Plants Overview Screen'.Canvas5.DataCard16.ToolSnImp_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.NewSiteOwner"
                 }
               ],
