@@ -586,6 +586,7 @@
                     Height: =50
                     Size: =24
                     Text: ="Plant Map"
+                    Visible: =false
                     Width: =178
                     X: =370
                     Y: =1170

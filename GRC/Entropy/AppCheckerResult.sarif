@@ -3470,46 +3470,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "LoginPage.Button7.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "LoginPage.Button7.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 18,
-                  "charOffset": 149,
-                  "snippet": {
-                    "text": "'Main DashboardV1'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "LoginPage",
-                "type": "LoginPage.Button7"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Main DashboardV1"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "NavBar.Gallery9.AccessibleLabel"
                 }
               ],

@@ -995,6 +995,7 @@
                 Icon: =Icon.Edit
                 OnSelect: |-
                     =Navigate('Editing Table for plants',Transition.None,{SelectedSite : 'Individual Worksite ViewV2'})
+                Visible: =false
                 Width: =50
                 X: =540
                 Y: =14
@@ -1125,6 +1126,7 @@
                 Icon: =Icon.Edit
                 OnSelect: |-
                     =Navigate('Editing table for tools',Transition.None,{SelectedSite : 'Individual Worksite ViewV2'})
+                Visible: =false
                 Width: =50
                 X: =540
                 Y: =14
@@ -1258,6 +1260,7 @@
                 Icon: =Icon.Edit
                 OnSelect: |-
                     =Navigate('Editing table for tools',Transition.None,{SelectedSite : 'Individual Worksite ViewV2'})
+                Visible: =false
                 Width: =50
                 X: =540
                 Y: =36
