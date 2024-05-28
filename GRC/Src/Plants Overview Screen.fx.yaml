@@ -96,8 +96,9 @@
                     Color: =RGBA(166, 166, 166, 1)
                     Fill: =RGBA(209, 232, 178, 1)
                     Height: =50
-                    Icon: =Icon.Search
-                    OnSelect: =Select(Parent)
+                    Icon: =Icon.CancelBadge
+                    OnSelect: |
+                        =Remove(PlantsLists, ThisItem)
                     PaddingBottom: =16
                     PaddingLeft: =16
                     PaddingRight: =16
