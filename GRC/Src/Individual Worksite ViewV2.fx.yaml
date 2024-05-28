@@ -502,6 +502,7 @@
                     Height: =49
                     Size: =24
                     Text: ="Notes"
+                    Visible: =false
                     Width: =127
                     X: =215
                     Y: =1152
