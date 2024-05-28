@@ -551,7 +551,7 @@
                 ZIndex: =2
 
     HeaderArea_2 As rectangle:
-        Fill: =RGBA(146, 201, 68, 1)
+        Fill: =RGBA(99, 139, 44, 1)
         Width: =Parent.Width
         ZIndex: =5
 
@@ -587,7 +587,7 @@
         ZIndex: =6
 
         Icon7_7 As icon.Add:
-            Color: =RGBA(116, 116, 116, 1)
+            Color: =RGBA(255, 255, 255, 1)
             Height: =51
             Icon: =ThisItem.MenuIcon
             OnSelect: =Navigate(ThisItem.ScreenToGoTo)
@@ -597,7 +597,7 @@
 
         Label19_1 As label:
             Align: =Align.Center
-            Color: =RGBA(116, 116, 116, 1)
+            Color: =RGBA(255, 255, 255, 1)
             Height: =23
             OnSelect: =ThisItem.ScreenToGoTo
             Text: =ThisItem.MenuText
