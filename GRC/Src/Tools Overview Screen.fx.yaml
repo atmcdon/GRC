@@ -215,7 +215,7 @@
                         Defaults(ToolsLists),
                         {
                             ToolName: ToolNameInp.Text,
-                            ToolSN: ToolSnImp.Text
+                            ToolSN: Value(ToolSnImp.Text)
                         }
                     );
                 Size: =24
