@@ -203,9 +203,27 @@
                 HintText: ="143"
                 Size: =21
                 Width: =204
-                X: =378
+                X: =263
                 Y: =677
                 ZIndex: =5
+
+            Button1 As button:
+                Height: =70
+                OnSelect: |
+                    =Patch(
+                        ToolsLists,
+                        Defaults(ToolsLists),
+                        {
+                            ToolName: ToolNameInp.Text,
+                            ToolSN: ToolSnImp.Text
+                        }
+                    );
+                Size: =24
+                Text: ="Add"
+                Width: =87
+                X: =496
+                Y: =677
+                ZIndex: =6
 
         DataCard17_1 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
