@@ -566,6 +566,7 @@
 
                 StarTimeHr As dropdown:
                     BorderColor: =
+                    ChevronBackground: =RGBA(200, 190, 160, 1)
                     Default: ="00"
                     DisplayMode: =Parent.DisplayMode
                     Height: =StartTimeDate.Height
@@ -583,6 +584,7 @@
 
                 StartTimeMin As dropdown:
                     BorderColor: =
+                    ChevronBackground: =RGBA(200, 190, 160, 1)
                     Default: ="00"
                     DisplayMode: =Parent.DisplayMode
                     Height: =StarTimeHr.Height
