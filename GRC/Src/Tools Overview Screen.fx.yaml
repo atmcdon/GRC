@@ -285,7 +285,7 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =100
+            Height: =540
             Width: =640
             X: =0
             Y: =3
@@ -297,14 +297,31 @@
                 X: =5
                 ZIndex: =1
 
-                Rectangle14_3 As rectangle:
+        DataCard1 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =640
+            X: =0
+            Y: =4
+            ZIndex: =6
+
+            Container7_10 As groupContainer.manualLayoutContainer:
+                Height: =102
+                Width: =635
+                X: =5
+                ZIndex: =1
+
+                Rectangle14_6 As rectangle:
                     DisplayMode: =DisplayMode.View
                     Fill: =RGBA(209, 232, 178, 1)
                     Height: =101
                     Width: =635
                     ZIndex: =1
 
-            Label15_2 As label:
+            Label15_6 As label:
                 Height: =57
                 Size: =21
                 Text: =Concatenate("Green River Coalition ", Char(169), "2024")
