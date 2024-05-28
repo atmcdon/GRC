@@ -1096,7 +1096,8 @@
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Text: ="Report ID" & ThisItem.ReportID
+                    Text: |-
+                        ="Report ID: " & ThisItem.ReportID
                     VerticalAlign: =VerticalAlign.Top
                     Width: =355
                     X: =31
