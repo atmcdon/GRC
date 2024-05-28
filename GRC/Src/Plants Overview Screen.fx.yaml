@@ -197,7 +197,7 @@
                 HeadingFill: =RGBA(127, 178, 57, 1)
                 HeadingSize: =15
                 Height: =255
-                Items: =Plants
+                Items: =ToolsLists
                 SelectedFill: =
                 Size: =15
                 Width: =578
@@ -205,78 +205,59 @@
                 Y: =109
                 ZIndex: =1
 
-                PlantName_Column3 As dataTableColumn.textualColumn:
-                    AutoWidth: =false
+                ToolID_Column2 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Name"
-                    FieldName: ="cr64e_plantname"
+                    FieldDisplayName: ="ToolID"
+                    FieldName: ="cr64e_toolid"
                     FieldVariantName: ="textualColumn"
-                    Height: =242
+                    Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     Order: =1
-                    Text: =ThisItem.PlantName
-                    Width: =212
-                    X: =0
-                    Y: =0
-                    ZIndex: =7
-
-                Quantity_Column3 As dataTableColumn.numberColumn:
-                    AutoWidth: =false
-                    DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Qty"
-                    FieldName: ="cr64e_quantity"
-                    FieldVariantName: ="numberColumn"
-                    Height: =255
-                    LayoutHeight: =Parent.Height
-                    Order: =2
-                    Text: =ThisItem.Quantity
-                    Width: =59
+                    Text: =ThisItem.ToolID
+                    Width: =100
                     X: =0
                     Y: =0
                     ZIndex: =8
 
-                Vendor_Column2 As dataTableColumn.textualColumn:
-                    AutoWidth: =false
+                Replacement_Column2 As dataTableColumn.complexOptionSetColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Vendor"
-                    FieldName: ="cr64e_vendor"
-                    FieldVariantName: ="textualColumn"
-                    Height: =242
+                    FieldDisplayName: ="Replacement"
+                    FieldName: ="cr64e_replacement"
+                    FieldVariantName: ="complexOptionSetColumn"
+                    Height: =Parent.Height
                     LayoutHeight: =Parent.Height
-                    Order: =3
-                    Text: =ThisItem.Vendor
-                    Width: =290
-                    X: =288
-                    Y: =12
+                    Order: =2
+                    Text: =ThisItem.Replacement
+                    Width: =100
+                    X: =0
+                    Y: =0
                     ZIndex: =9
 
-                RecentlyUsedAt_Column2 As dataTableColumn.dateTimeColumn:
-                    AutoWidth: =false
+                ToolName_Column2 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="RecentlyUsedAt"
-                    FieldName: ="cr64e_recentlyusedat"
-                    FieldVariantName: ="dateTimeColumn"
-                    Height: =242
-                    LayoutHeight: =Parent.Height
-                    Order: =4
-                    Text: =Text(ThisItem.RecentlyUsedAt,DateTimeFormat.LongDateTime)
-                    Width: =430
-                    X: =188
-                    Y: =0
-                    ZIndex: =10
-
-                Schedule_Column3 As dataTableColumn.textualColumn:
-                    AutoWidth: =false
-                    DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Schedule"
-                    FieldName: ="cr64e_schedule"
+                    FieldDisplayName: ="ToolName"
+                    FieldName: ="cr64e_toolname"
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
+                    Order: =4
+                    Text: =ThisItem.ToolName
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =10
+
+                ToolSN_Column2 As dataTableColumn.numberColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="ToolSN"
+                    FieldName: ="cr64e_toolsn"
+                    FieldVariantName: ="numberColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
                     Order: =5
-                    Text: =ThisItem.Schedule
-                    Width: =287
-                    X: =581
+                    Text: =ThisItem.ToolSN
+                    Width: =100
+                    X: =0
                     Y: =0
                     ZIndex: =11
 
