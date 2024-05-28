@@ -2392,10 +2392,10 @@
             ForAll(
                 ColEmployeesAdd,
                 Collect(
-                    SitePeople, 
+                    SitePeoplePresents, 
                     {
                         ReportID: varCurrentReportID,
-                        EmployeeID:EmployeeID
+                        EmployeeID: Value(EmployeeID)
                     }
                 )
             );
