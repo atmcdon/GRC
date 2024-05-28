@@ -36,7 +36,7 @@
                 DelayItemLoading: =true
                 Fill: =RGBA(174, 230, 115, 0.21)
                 Height: =439
-                Items: =Workers
+                Items: =Employees
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
@@ -54,7 +54,7 @@
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Text: =ThisItem.Name
+                    Text: =ThisItem.EmployeeID
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Parent.TemplateWidth - 86
                     X: =16
@@ -69,7 +69,7 @@
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Text: =ThisItem.SiteWorked
+                    Text: =ThisItem.FirstName
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Title11_2.Width
                     X: =Title11_2.X
@@ -84,7 +84,7 @@
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Text: =ThisItem.StartDateWorked
+                    Text: =ThisItem.LastName
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Title11_2.Width
                     X: =Title11_2.X
@@ -96,8 +96,9 @@
                     Color: =RGBA(166, 166, 166, 1)
                     Fill: =RGBA(187, 221, 140, 1)
                     Height: =50
-                    Icon: =Icon.Search
-                    OnSelect: =Select(Parent)
+                    Icon: =Icon.CancelBadge
+                    OnSelect: |
+                        =Remove(Employees, ThisItem)
                     PaddingBottom: =16
                     PaddingLeft: =16
                     PaddingRight: =16
