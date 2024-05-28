@@ -159,7 +159,7 @@
                         Defaults(PlantsLists),
                         {
                             PlantName: plnatAddImp.Text,
-                            QuantityAtSite: plnatQtyImp_1.Text
+                            QuantityAtSite: Value(plnatQtyImp_1.Text)
                         }
                     );
                 Size: =24
