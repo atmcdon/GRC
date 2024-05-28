@@ -417,6 +417,8 @@
                 Button5_2 As button:
                     Fill: =RGBA(99, 139, 44, 1)
                     Height: =50
+                    OnSelect: |-
+                        =Launch("https://1drv.ms/f/s!AkN71JFRNKObh7EkAaNR2Mhxev3ccA?e=P66vSg")
                     Size: =24
                     Text: ="Plant Map"
                     Width: =178
