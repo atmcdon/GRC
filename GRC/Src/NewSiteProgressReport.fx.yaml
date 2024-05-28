@@ -1136,6 +1136,7 @@
                             ZIndex: =4
 
                     Button10_8 As button:
+                        Fill: =RGBA(127, 178, 57, 1)
                         Height: =70
                         OnSelect: |
                             =Collect(ColDevelopmentTypes, {TypeID: DropDownToolsNewEntry_4.Selected.TypeID, DevelopmentName: DropDownToolsNewEntry_4.Selected.DevelopmentTypeName});
@@ -1147,6 +1148,7 @@
                         ZIndex: =3
 
                     Button10_7 As button:
+                        Fill: =RGBA(203, 102, 102, 1)
                         Height: =70
                         OnSelect: |
                             =Clear(ColDevelopmentTypes);
@@ -1468,6 +1470,7 @@
                             ZIndex: =4
 
                     Button10_10 As button:
+                        Fill: =RGBA(127, 178, 57, 1)
                         Height: =70
                         OnSelect: |
                             =Collect(ColToolsLists, {ToolName: DropDownToolsNewEntry_5.Selected.ToolName, ToolID: DropDownToolsNewEntry_5.Selected.ToolID});
@@ -1479,6 +1482,7 @@
                         ZIndex: =3
 
                     Button10_9 As button:
+                        Fill: =RGBA(203, 102, 102, 1)
                         Height: =70
                         OnSelect: |
                             =Clear(ColToolsLists);
@@ -1799,6 +1803,7 @@
                             ZIndex: =4
 
                     Button10_12 As button:
+                        Fill: =RGBA(127, 178, 57, 1)
                         Height: =70
                         OnSelect: |
                             =Collect(ColEmployeesAdd, {EmployeeID: DropDownToolsNewEntry_6.Selected.EmployeeIDString, EmpName: DropDownToolsNewEntry_6.Selected.TEST});
@@ -1810,6 +1815,7 @@
                         ZIndex: =3
 
                     Button10_11 As button:
+                        Fill: =RGBA(203, 102, 102, 1)
                         Height: =70
                         OnSelect: |
                             =Clear(ColEmployeesAdd);
@@ -2215,6 +2221,7 @@
                             ZIndex: =5
 
                     Button10_14 As button:
+                        Fill: =RGBA(127, 178, 57, 1)
                         Height: =70
                         OnSelect: |
                             =Collect(ColPlantSiteAdd, {PlantID: DropDownToolsNewEntry_7.Selected.PlantID, PlantName: DropDownToolsNewEntry_7.Selected.PlantName, PlantQty: PlantQTYTextBox.Text});
