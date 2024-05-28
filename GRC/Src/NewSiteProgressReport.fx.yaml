@@ -26,6 +26,7 @@
         );
 
     RectQuickActionBar13 As rectangle:
+        Fill: =RGBA(200, 190, 160, 1)
         Height: =88
         Width: =Parent.Width
         ZIndex: =1
