@@ -1170,7 +1170,7 @@
 
         Label19_4 As label:
             Align: =Align.Center
-            Color: =RGBA(116, 116, 116, 1)
+            Color: =RGBA(255, 255, 255, 1)
             Height: =23
             OnSelect: =ThisItem.ScreenToGoTo
             Text: =ThisItem.MenuText
