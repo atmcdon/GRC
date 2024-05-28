@@ -358,7 +358,7 @@
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Title7_8.Width
                     X: =32
-                    Y: =57
+                    Y: =65
                     ZIndex: =7
 
                 Body5_31 As label:

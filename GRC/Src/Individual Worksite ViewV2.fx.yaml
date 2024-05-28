@@ -895,6 +895,22 @@
                     Y: =211
                     ZIndex: =13
 
+                Body5_35 As label:
+                    FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+                    Height: =38
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Text: |-
+                        ="Report ID: " &ThisItem.ReportID
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =121
+                    X: =441
+                    Y: =197
+                    ZIndex: =14
+
         "'Plants Data Card_1' As dataCard.blankCard":
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
