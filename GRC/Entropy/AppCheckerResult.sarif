@@ -13858,6 +13858,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Volunteer Overview Screen'.Canvas5_2.DataCard16_2.plnatAddImp_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Volunteer Overview Screen'.Canvas5_2.DataCard16_2.plnatAddImp_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Volunteer Overview Screen",
+                "type": "'Volunteer Overview Screen'.Canvas5_2.DataCard16_2.plnatAddImp_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Volunteer Overview Screen'.Canvas5_2.DataCard16_2.plnatQtyImp_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Volunteer Overview Screen'.Canvas5_2.DataCard16_2.plnatQtyImp_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Volunteer Overview Screen",
+                "type": "'Volunteer Overview Screen'.Canvas5_2.DataCard16_2.plnatQtyImp_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.varGlobalSelSiteImage"
                 }
               ],

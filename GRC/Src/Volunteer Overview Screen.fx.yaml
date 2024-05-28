@@ -131,6 +131,53 @@
                 Y: =40
                 ZIndex: =2
 
+            Label1_2 As label:
+                Height: =70
+                Size: =21
+                Text: ="Add New Plant name & Qty Amount "
+                Width: =560
+                X: =47
+                Y: =579
+                ZIndex: =3
+
+            plnatAddImp_1 As text:
+                Default: =""
+                Height: =70
+                HintText: ="Trees"
+                Size: =21
+                Width: =204
+                X: =52
+                Y: =649
+                ZIndex: =4
+
+            Button1_2 As button:
+                Height: =70
+                OnSelect: |
+                    =Patch(
+                        PlantsLists,
+                        Defaults(PlantsLists),
+                        {
+                            PlantName: plnatAddImp_1.Text,
+                            QuantityAtSite: Value(plnatQtyImp_2.Text)
+                        }
+                    );
+                Size: =24
+                Text: ="Add"
+                Width: =87
+                X: =501
+                Y: =649
+                ZIndex: =5
+
+            plnatQtyImp_2 As text:
+                Default: =""
+                Height: =70
+                HintText: ="76"
+                Size: =21
+                Width: =204
+                X: =276
+                Y: =649
+                ZIndex: =6
+
         DataCard17_2 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
