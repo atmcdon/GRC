@@ -908,7 +908,7 @@
                     VerticalAlign: =VerticalAlign.Top
                     Width: =121
                     X: =441
-                    Y: =197
+                    Y: =210
                     ZIndex: =14
 
         "'Plants Data Card_1' As dataCard.blankCard":
