@@ -135,7 +135,7 @@
             Label1_1 As label:
                 Height: =70
                 Size: =21
-                Text: ="Add new tool - Name and Serial Number"
+                Text: ="Add New Plant name & Qty Amount "
                 Width: =560
                 X: =47
                 Y: =598
