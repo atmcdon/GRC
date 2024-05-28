@@ -193,7 +193,8 @@
             Button1_3 As button:
                 Fill: =RGBA(127, 178, 57, 1)
                 Height: =64
-                OnSelect: =Navigate('Files Page')
+                OnSelect: |-
+                    =Launch("https://1drv.ms/f/s!AkN71JFRNKObh7EkAaNR2Mhxev3ccA?e=P66vSg")
                 Size: =24
                 Text: ="Files"
                 Width: =188
@@ -204,6 +205,9 @@
             Button1_5 As button:
                 Fill: =RGBA(127, 178, 57, 1)
                 Height: =64
+                OnSelect: |+
+                    =Launch("https://1drv.ms/b/s!AkN71JFRNKObh7EjtQzqhb4t3eqRWw?e=8Hq0Ah");
+                    
                 Size: =24
                 Text: ="Tutorials"
                 Width: =188
