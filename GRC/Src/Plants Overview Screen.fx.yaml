@@ -155,11 +155,10 @@
                 Height: =70
                 OnSelect: |
                     =Patch(
-                        ToolsLists,
-                        Defaults(ToolsLists),
+                        PlantsLists,
+                        Defaults(PlantsLists),
                         {
-                            ToolName: plnatAddImp.Text,
-                            ToolSN: Value(ToolSnImp_1.Text)
+                            PlantName: plnatAddImp.Text
                         }
                     );
                 Size: =24
