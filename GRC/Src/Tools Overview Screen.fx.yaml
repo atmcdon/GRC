@@ -1,5 +1,5 @@
 "'Tools Overview Screen' As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
-    OnVisible: |
+    OnVisible: |+
         =
           //          StartTime: LookUp(SiteProgressReports, ReportID = ReportID, TimeStart),
          //       EndTime: LookUp(SiteProgressReports, ReportID = ReportID, EndTime)
@@ -25,6 +25,24 @@
                 )
             )
         );
+        
+        ClearCollect(
+            ColToolsLists,
+            ForAll(
+                Filter(SiteToolsUseds, ReportID = varCurrentReportID),
+                With(
+                    {
+                        currentToolID: ToolIDString
+                    },
+                    {
+                        ToolName: LookUp(ToolsLists, ToolID = currentToolID).ToolName,
+                        ToolID: currentToolID
+                    }
+                )
+        
+            )
+        );
+        
 
     RectQuickActionBar6_1 As rectangle:
         Fill: =RGBA(127, 178, 57, 1)
@@ -290,12 +308,6 @@
             X: =0
             Y: =3
             ZIndex: =5
-
-            Container7_4 As groupContainer.manualLayoutContainer:
-                Height: =102
-                Width: =635
-                X: =5
-                ZIndex: =1
 
             ToolAdd_11 As groupContainer.manualLayoutContainer:
                 Height: =497
