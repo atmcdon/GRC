@@ -1333,7 +1333,7 @@
                 { 
                     MenuText: "New Site", 
                     MenuIcon: Icon.Add, 
-                    ScreenToGoTo:'New Entry Editing Form'
+                    ScreenToGoTo:'Make Site V3'
                 },
                 {
                     MenuText: "Logout", 
