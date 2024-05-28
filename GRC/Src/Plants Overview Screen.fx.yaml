@@ -36,7 +36,7 @@
                 DelayItemLoading: =true
                 Fill: =RGBA(174, 230, 115, 0.21)
                 Height: =439
-                Items: =Plants
+                Items: =PlantsLists
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
@@ -54,7 +54,7 @@
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Text: =ThisItem.RecentlyUsedAt
+                    Text: =ThisItem.PlantID
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Parent.TemplateWidth - 86
                     X: =16
@@ -84,7 +84,7 @@
                     PaddingLeft: =0
                     PaddingRight: =0
                     PaddingTop: =0
-                    Text: =ThisItem.Vendor
+                    Text: =ThisItem.QuantityTotal
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Title11.Width
                     X: =Title11.X
@@ -140,25 +140,15 @@
                 Y: =598
                 ZIndex: =3
 
-            ToolNameInp_1 As text:
+            plnatAddImp As text:
                 Default: =""
                 Height: =70
-                HintText: ="Shovel"
+                HintText: ="Trees"
                 Size: =21
                 Width: =204
                 X: =52
                 Y: =668
                 ZIndex: =4
-
-            ToolSnImp_1 As text:
-                Default: =""
-                Height: =70
-                HintText: ="143"
-                Size: =21
-                Width: =204
-                X: =268
-                Y: =668
-                ZIndex: =5
 
             Button1_1 As button:
                 Height: =70
@@ -167,7 +157,7 @@
                         ToolsLists,
                         Defaults(ToolsLists),
                         {
-                            ToolName: ToolNameInp_1.Text,
+                            ToolName: plnatAddImp.Text,
                             ToolSN: Value(ToolSnImp_1.Text)
                         }
                     );
