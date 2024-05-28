@@ -155,11 +155,11 @@
                 Height: =70
                 OnSelect: |
                     =Patch(
-                        PlantsLists,
-                        Defaults(PlantsLists),
+                        Employees,
+                        Defaults(Employees),
                         {
-                            PlantName: FirstNamImp.Text,
-                            QuantityAtSite: Value(LastNamImp.Text)
+                            FirstName: FirstNamImp.Text,
+                            LastName: LastNamImp.Text
                         }
                     );
                 Size: =24
