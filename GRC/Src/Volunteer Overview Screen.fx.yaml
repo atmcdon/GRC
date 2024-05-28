@@ -197,7 +197,7 @@
                 HeadingFill: =RGBA(127, 178, 57, 1)
                 HeadingSize: =15
                 Height: =256
-                Items: =Workers
+                Items: =Employees
                 SelectedFill: =
                 Size: =15
                 Width: =570
@@ -205,131 +205,117 @@
                 Y: =107
                 ZIndex: =1
 
-                Name_Column3 As dataTableColumn.textualColumn:
+                EmployeeID_Column1 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Name"
-                    FieldName: ="cr64e_name"
+                    FieldDisplayName: ="EmployeeID"
+                    FieldName: ="cr64e_employeeid1"
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     Order: =1
-                    Text: =ThisItem.Name
+                    Text: =ThisItem.EmployeeID
                     Width: =100
                     X: =0
                     Y: =0
                     ZIndex: =7
 
-                SiteWorked_Column2 As dataTableColumn.textualColumn:
+                FirstName_Column1 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="SiteWorked"
-                    FieldName: ="cr64e_siteworked"
+                    FieldDisplayName: ="FirstName"
+                    FieldName: ="cr64e_firstname"
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     Order: =2
-                    Text: =ThisItem.SiteWorked
+                    Text: =ThisItem.FirstName
                     Width: =100
                     X: =0
                     Y: =0
                     ZIndex: =8
 
-                StartDateWorked_Column1 As dataTableColumn.dateTimeColumn:
+                LastName_Column1 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="StartDateWorked"
-                    FieldName: ="cr64e_startdateworked"
-                    FieldVariantName: ="dateTimeColumn"
+                    FieldDisplayName: ="LastName"
+                    FieldName: ="cr64e_lastname"
+                    FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     Order: =3
-                    Text: =Text(ThisItem.StartDateWorked,DateTimeFormat.LongDateTime)
+                    Text: =ThisItem.LastName
                     Width: =100
                     X: =0
                     Y: =0
                     ZIndex: =9
 
-                EndDateWorked_Column1 As dataTableColumn.dateTimeColumn:
+                StartDate_Column1 As dataTableColumn.dateTimeColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="EndDateWorked"
-                    FieldName: ="cr64e_enddateworked"
+                    FieldDisplayName: ="StartDate"
+                    FieldName: ="cr64e_startdate"
                     FieldVariantName: ="dateTimeColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     Order: =4
-                    Text: =Text(ThisItem.EndDateWorked,DateTimeFormat.LongDateTime)
+                    Text: =Text(ThisItem.StartDate,DateTimeFormat.LongDateTime)
                     Width: =100
                     X: =0
                     Y: =0
                     ZIndex: =10
 
-                WorkDone_Column3 As dataTableColumn.textualColumn:
+                EndDate_Column1 As dataTableColumn.dateTimeColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="WorkDone"
-                    FieldName: ="cr64e_workdone"
-                    FieldVariantName: ="textualColumn"
+                    FieldDisplayName: ="EndDate"
+                    FieldName: ="cr64e_enddate"
+                    FieldVariantName: ="dateTimeColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     Order: =5
-                    Text: =ThisItem.WorkDone
+                    Text: =Text(ThisItem.EndDate,DateTimeFormat.LongDateTime)
                     Width: =100
                     X: =0
                     Y: =0
                     ZIndex: =11
 
-                TimeIn_Column2 As dataTableColumn.dateTimeColumn:
+                JobTitle_Column1 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="TimeIn"
-                    FieldName: ="cr64e_timein"
-                    FieldVariantName: ="dateTimeColumn"
+                    FieldDisplayName: ="JobTitle"
+                    FieldName: ="cr64e_jobtitle"
+                    FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     Order: =6
-                    Text: =Text(ThisItem.TimeIn,DateTimeFormat.LongDateTime)
+                    Text: =ThisItem.JobTitle
                     Width: =100
                     X: =0
                     Y: =0
                     ZIndex: =12
 
-                TimeOut_Column2 As dataTableColumn.dateTimeColumn:
+                DevelopmentID_Column1 As dataTableColumn.numberColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="TimeOut"
-                    FieldName: ="cr64e_timeout"
-                    FieldVariantName: ="dateTimeColumn"
+                    FieldDisplayName: ="DevelopmentID"
+                    FieldName: ="cr64e_developmentid"
+                    FieldVariantName: ="numberColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     Order: =7
-                    Text: =Text(ThisItem.TimeOut,DateTimeFormat.LongDateTime)
+                    Text: =ThisItem.DevelopmentID
                     Width: =100
                     X: =0
                     Y: =0
                     ZIndex: =13
 
-                WorkerType_Column3 As dataTableColumn.textualColumn:
+                EmployeeIDString_Column1 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="WorkerType"
-                    FieldName: ="cr64e_workertype"
+                    FieldDisplayName: ="EmployeeIDString"
+                    FieldName: ="cr64e_employeeidstring"
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     Order: =8
-                    Text: =ThisItem.WorkerType
+                    Text: =ThisItem.EmployeeIDString
                     Width: =100
                     X: =0
                     Y: =0
                     ZIndex: =14
-
-                WorkerID_Column1 As dataTableColumn.textualColumn:
-                    DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="WorkerID"
-                    FieldName: ="cr64e_workerid"
-                    FieldVariantName: ="textualColumn"
-                    Height: =Parent.Height
-                    LayoutHeight: =Parent.Height
-                    Order: =9
-                    Text: =ThisItem.WorkerID
-                    Width: =100
-                    X: =0
-                    Y: =0
-                    ZIndex: =15
 
             Label14_2 As label:
                 Height: =70
