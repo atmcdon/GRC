@@ -13708,6 +13708,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Tools Overview Screen'.Canvas5_1.DataCard16_1.TextInput1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Tools Overview Screen'.Canvas5_1.DataCard16_1.TextInput1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Tools Overview Screen",
+                "type": "'Tools Overview Screen'.Canvas5_1.DataCard16_1.TextInput1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.NewSiteOwner"
                 }
               ],
